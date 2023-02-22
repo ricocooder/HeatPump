@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, flash, render_template, request
 import RPi.GPIO as GPIO
 import time as t
 import webbrowser
@@ -7,6 +7,7 @@ import glob
 import os
 
 app = Flask(__name__)
+app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'
 pickFolder = os.path.join("static")
 app.config["UPLOAD_FOLDER"]=pickFolder
 mainState = True
@@ -83,6 +84,7 @@ def result():
             try:
                 tz1=float(request.form['tempZad1'])
             except ValueError:
+                flash('Error wrond input variable')
                 print('error wrong variable')
         if request.form.get('Save2')=='Save':
             tz2=request.form['tempZad2']

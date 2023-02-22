@@ -1,0 +1,71 @@
+<html>
+<meta http-equiv="refresh" content="5">
+<head>
+    <style>
+        body {
+            background-repeat:no-repeat; # wylaczenia powtarzanie tzn jak zdjecie bedzie zamale to nie bedzie ustawiana kolo siebie
+            background-attached:fixed;
+            background-size:cover;
+            background-image: url({{image1}});
+            font-size: 20px;
+             }
+        meter{
+            width: 300px;
+            }
+    </style>
+</head>
+
+<body>
+    <form class = "grid" action = "/result" method = "POST">
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <label >Tamperatura czujnika {{to1}} : {{t1}} <span>&#8451;</span> </label><br><br>
+        <label >Tamperatura czujnika {{to2}} : {{t2}} <span>&#8451;</span> </label><br><br>
+        <label >Tamperatura czujnika {{to3}} : {{t3}} <span>&#8451;</span> </label><br><br>
+        <label >Tamperatura czujnika {{to4}} : {{t4}} <span>&#8451;</span> </label><br><br>
+        <label >Tamperatura czujnika {{to5}} : {{t5}} <span>&#8451;</span> </label><br><br>
+        <label >Tamperatura czujnika {{to6}} : {{t6}} <span>&#8451;</span> </label><br><br><br><br><br><br>
+        <input type='float' placeholder='Put New Temp Here ex.:34.1' step ='0.1' name = 'tempZad1'>
+        <input type="Submit" value="Save" name='Save1'/>
+        <br>
+        <label >Tamperatura zadana boiler : {{tz1}}</label><span>&#8451;</span> </label>
+        <input type="Submit" value="Przycisk_1" name='Przycisk_1'/>
+        <br>
+        <input type='number' placeholder='Put New Interval Here' step ='0.1' name = 'tempZad1'>
+        <input type="Submit" value="Save" name='Save1'/>
+        <br>
+        <label >Tamperatura zadana boiler : {{tz1}}</label><span>&#8451;</span> </label>
+        <br>
+        <input type='number' placeholder='Put New Temp Dif' step ='0.1' name = 'tempZad1'>
+        <input type="Submit" value="Save" name='Save1'/>
+        <br>
+        {%if tzo2 and tz2%}
+        <label >Tamperatura zadana boiler : {{tz1}}</label><span>&#8451;</span> </label>
+        <br>
+        <input type='number' placeholder='Put New Temp Here' step ='0.1' name = 'tempZad2'>
+        <input type="Submit" value="Save" name='Save2'/>
+        <br>
+        <label >Tamperatura zadana {{tzo2}} : {{tz2}}</label><span>&#8451;</span> </label>
+        <input type="Submit" value="Przycisk_2" name='Przycisk_2'/><br>
+        
+        <br>
+        {%endif%}
+        <label > Stopien wysterowania pompy --> {{pump}}%</label>
+        <br>
+        <label width: 350px>
+        <meter low = '30' high = '50' optimum='80' max = '100' value={{pump}}></meter>
+        </label>
+        <br><br>
+        
+        
+        
+        {%if mainState == true%}
+        <label > Pompa pracuje </label><br>
+        </label><input type="Submit" value="Turn OFF Pump" name='Turn OFF Pump'/>
+        {%else%}
+        <label > Piec pracuje </label><br>
+        </label><input type="Submit" value="Turn ON Pump" name='Turn ON Pump'/>
+        {%endif%}
+    </form>
+
+</body>
+</html>

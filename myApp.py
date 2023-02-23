@@ -120,6 +120,12 @@ def result():
     checkPumpEfi(tz1, c, 5)
     return render_template("index.html", t1=c, to1=to1, t2=t2, to2=to2, t3=t3, to3=to3, t4=t4, to4=to4, t5=t5, to5=to5, t6=t6, to6=to6, tz1=tz1, tz2=tz2, tzo2=tzo2, image1=pick1, pump=BaseEfiInPercent, mainState=mainState)
 
+@app.route("/settings", methods = ["POST", "GET"])
+def settings():
+    return render_template("settings.html")
+
+
+
 def read_temp_raw():
     with open(device_path +'/w1_slave','r') as f:
         valid, temp = f.readlines()

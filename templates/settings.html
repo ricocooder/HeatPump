@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<br/>
+
+Settings
+<br/><br/>
+
+<input type='float' placeholder='Put New Temp Here ex.:34.1' step ='0.1' name = 'tempZad1'>
+<input type="Submit" value="Save" name='Save1'/>
+<br><br>
+<label >Tamperatura zadana boiler : {{tz1}}</label><span>&#8451;</span> </label>
+<input type="Submit" value="Przycisk_1" name='Przycisk_1'/>
+<br><br>
+<input type='number' placeholder='Put New Interval Here' step ='0.1' name = 'tempZad1'>
+<input type="Submit" value="Save" name='Save1'/>
+<br><br>
+<label >Tamperatura zadana boiler : {{tz1}}</label><span>&#8451;</span> </label>
+<br><br>
+<input type='number' placeholder='Put New Temp Dif' step ='0.1' name = 'tempZad1'>
+<input type="Submit" value="Save" name='Save1'/>
+<br><br>
+<label >Tamperatura zadana boiler : {{tz1}}</label><span>&#8451;</span> </label>
+<br><br>
+<input type='number' placeholder='Put New Temp Here' step ='0.1' name = 'tempZad2'>
+<input type="Submit" value="Save" name='Save2'/>
+<br><br>
+<label >Tamperatura zadana {{tzo2}} : {{tz2}}</label><span>&#8451;</span> </label>
+<input type="Submit" value="Przycisk_2" name='Przycisk_2'/><br>
+
+
+{% endblock %}

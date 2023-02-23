@@ -51,7 +51,7 @@ def hello_world():
             try:
                 tz1=float(request.form['tempZad1'])
             except ValueError:
-                flash('Error wrond input variable')
+                flash('Error wrong input variable')
                 print('error wrong variable')
         if request.form.get('Save2')=='Save':
             tz2=request.form['tempZad2']
@@ -91,7 +91,7 @@ def result():
             try:
                 tz1=float(request.form['tempZad1'])
             except ValueError:
-                flash('Error wrond input variable')
+                flash('Error wrong input variable')
                 print('error wrong variable')
         if request.form.get('Save2')=='Save':
             tz2=request.form['tempZad2']

@@ -124,7 +124,9 @@ def result():
 def settings():
     return render_template("settings.html")
 
-
+@app.route("/history", methods = ["POST", "GET"])
+def history():
+    return render_template("history.html")
 
 def read_temp_raw():
     with open(device_path +'/w1_slave','r') as f:

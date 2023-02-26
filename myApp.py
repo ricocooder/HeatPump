@@ -14,7 +14,6 @@ app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'
 pickFolder = os.path.join("static")
 app.config["UPLOAD_FOLDER"]=pickFolder
 mainState = True
-pumpEfi = 1
 t1=21
 to1="opis czujnika 1"
 t2=22
@@ -40,7 +39,6 @@ tzo2="ogrzewanie podłogowe"
 def hello_world():
     output = request.form.to_dict()
     global mainState
-    global pumpEfi
     global tz1
     global tz2
     if request.method =='POST':
@@ -53,18 +51,18 @@ def hello_world():
         if request.form.get('Save2')=='Save':
             tz2=request.form['tempZad2']
         if request.form.get('Przycisk_1')=='Przycisk_1':
-            if pumpEfi < 8:
-                pumpEfi = pumpEfi + 1
+            if g.pumpEfi < 8:
+                g.pumpEfi = g.pumpEfi + 1
             else:
-                pumpEfi = 0
-            print('-------->>>>>   Przycisk_1 zostal wcisneity pumpEfi = ', pumpEfi)
+                g.pumpEfi = 0
+            print('-------->>>>>   Przycisk_1 zostal wcisneity g.pumpEfi = ', g.pumpEfi)
             print('-------->>>>>   Przycisk_1 zostal wcisneity')           
         if request.form.get('Przycisk_2')=='Przycisk_2':
-            if pumpEfi >= 0:
-                pumpEfi = pumpEfi - 1
+            if g.pumpEfi >= 0:
+                g.pumpEfi = g.pumpEfi - 1
             else:
-                pumpEfi = 0
-            print('-------->>>>>   Przycisk_2 zostal wcisneity pumpEfi = ', pumpEfi)
+                g.pumpEfi = 0
+            print('-------->>>>>   Przycisk_2 zostal wcisneity g.pumpEfi = ', g.pumpEfi)
             print('-------->>>>>   Przycisk_2 zostal wcisneity')
         if request.form.get('Turn OFF Pump')=='Turn OFF Pump':
             mainState = False
@@ -73,14 +71,13 @@ def hello_world():
             print('-------->>>>>   przycisk wlaczenia pompy zostal wcisniety')
             mainState = True
     c, f = read_temp()
-    pick1, BaseEfiInPercent = setOutputs(mainState, c, pumpEfi)
+    pick1, BaseEfiInPercent = setOutputs(mainState, c, g.pumpEfi)
     return render_template("index.html", t1=c, to1=to1, t2=t2, to2=to2, t3=t3, to3=to3, t4=t4, to4=to4, t5=t5, to5=to5, t6=t6, to6=to6, tz1=tz1, tz2=tz2, tzo2=tzo2, image1=pick1, pump=BaseEfiInPercent, mainState=mainState)
 
 @app.route("/result", methods = ["POST", "GET"])
 def result():
     output = request.form.to_dict()
     global mainState
-    global pumpEfi
     global tz1
     global tz2
     if request.method =='POST':
@@ -93,18 +90,18 @@ def result():
         if request.form.get('Save2')=='Save':
             tz2=request.form['tempZad2']
         if request.form.get('Przycisk_1')=='Przycisk_1':
-            if pumpEfi < 8:
-                pumpEfi = pumpEfi + 1
+            if g.pumpEfi < 8:
+                g.pumpEfi = g.pumpEfi + 1
             else:
-                pumpEfi = 0
-            print('-------->>>>>   Przycisk_1 zostal wcisneity pumpEfi = ', pumpEfi)
+                g.pumpEfi = 0
+            print('-------->>>>>   Przycisk_1 zostal wcisneity g.pumpEfi = ', g.pumpEfi)
             print('-------->>>>>   Przycisk_1 zostal wcisneity')           
         if request.form.get('Przycisk_2')=='Przycisk_2':
-            if pumpEfi >= 0:
-                pumpEfi = pumpEfi - 1
+            if g.pumpEfi >= 0:
+                g.pumpEfi = g.pumpEfi - 1
             else:
-                pumpEfi = 0
-            print('-------->>>>>   Przycisk_2 zostal wcisneity pumpEfi = ', pumpEfi)
+                g.pumpEfi = 0
+            print('-------->>>>>   Przycisk_2 zostal wcisneity g.pumpEfi = ', g.pumpEfi)
             print('-------->>>>>   Przycisk_2 zostal wcisneity')
         if request.form.get('Turn OFF Pump')=='Turn OFF Pump':
             mainState = False
@@ -113,7 +110,7 @@ def result():
             print('-------->>>>>   przycisk wlaczenia pompy zostal wcisniety')
             mainState = True
     c, f = read_temp()
-    BaseEfiInPercent = setOutputs(mainState, c, pumpEfi)
+    BaseEfiInPercent = setOutputs(mainState, c, g.pumpEfi)
     pick1=os.path.join(app.config["UPLOAD_FOLDER"], "6.jpg")
     checkPumpEfi(tz1, c, 5)
     return render_template("index.html", t1=c, to1=to1, t2=t2, to2=to2, t3=t3, to3=to3, t4=t4, to4=to4, t5=t5, to5=to5, t6=t6, to6=to6, tz1=tz1, tz2=tz2, tzo2=tzo2, image1=pick1, pump=BaseEfiInPercent, mainState=mainState)
@@ -133,7 +130,6 @@ def pumpControl():
     print('jestem w funkcji punpControl')
 
 def checkPumpEfi(t_set: float, t_accual: float, offset: int):
-        global pumpEfi
         interval1=60
         interval2=120
         accualTime = time.time()
@@ -144,19 +140,19 @@ def checkPumpEfi(t_set: float, t_accual: float, offset: int):
         print('drukuje typ zmiennej: t_set',type(t_set))
         print('drukuje typ zmiennej: t_accual',type(t_accual))
         print('drukuje typ zmiennej: offset',type(offset))
-        print('drukuje typ zmiennej: pumpEfi',type(pumpEfi))
+        print('drukuje typ zmiennej: pumpEfi',type(g.pumpEfi))
         if accualTime >g.acTimePLusInterwal + interval1:
             print('Interwal doliczyl do zadanej wartosci nastepuje triger')
             g.acTimePLusInterwal=accualTime
             
-            if t_accual > (t_set + offset) and pumpEfi >= 0:
+            if t_accual > (t_set + offset) and g.pumpEfi >= 0:
                 print('Interwal doliczyl do zadanej wartosci nastepuje dekrementacja acTimePLusInterwal', g.acTimePLusInterwal)
-                pumpEfi=pumpEfi-1
-            elif t_accual < (t_set - offset) and pumpEfi < 7:
+                g.pumpEfi=g.pumpEfi-1
+            elif t_accual < (t_set - offset) and g.pumpEfi < 7:
                 print('Interwal doliczyl do zadanej wartosci nastepuje inkrementacja acTimePLusInterwal', g.acTimePLusInterwal)
-                pumpEfi=pumpEfi+1
+                g.pumpEfi=g.pumpEfi+1
         
-        print("------------>>>>>>>>jestem w funkcji 'checkPumpEfi' wyswietlam dane t_set:",t_set, 't_accual:', t_accual, 'Wydajnosc pompy:', pumpEfi, 'offset:', offset)
+        print("------------>>>>>>>>jestem w funkcji 'checkPumpEfi' wyswietlam dane t_set:",t_set, 't_accual:', t_accual, 'Wydajnosc pompy:', g.pumpEfi, 'offset:', offset)
 if __name__ == "__main__":
         app.run(host='0.0.0.0', port = 5000, debug=True)
         

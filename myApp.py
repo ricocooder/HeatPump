@@ -252,8 +252,8 @@ def pumpControl():
 
 def checkPumpEfi(t_set: float, t_accual: float, offset: int):
         global pumpEfi
-        interval1=6
-        interval2=12
+        interval1=60
+        interval2=120
         accualTime = t.time()
         global acTimePLusInterwal
         print('JEstem w funkcji checkPumpEfi')

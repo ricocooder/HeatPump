@@ -7,6 +7,10 @@ import time
 import os
 import globals as g
 
+# TODO uporzadkowac ekran ustawienia
+# TODO dodac obrazek obok temepratur
+# TODO
+
 app = Flask(__name__)
 scheduler = APScheduler()
 

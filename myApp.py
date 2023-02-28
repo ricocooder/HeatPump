@@ -9,7 +9,9 @@ import globals as g
 
 # TODO uporzadkowac ekran ustawienia
 # TODO dodac obrazek obok temepratur
-# TODO
+# TODO dodac baze danych 
+# TODO dodac logike momenty zapisu do abzy dancyh
+# TODO implementacje wykresow i danych histor
 
 app = Flask(__name__)
 scheduler = APScheduler()

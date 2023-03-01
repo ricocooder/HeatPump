@@ -15,6 +15,7 @@ import globals as g
 # TODO Podlaczyc modol wejsc analogowych
 # TODO podlaczyc potencjoimetry w celu symulacji czujnika napiecia i pradu
 # TODO rozwiazac problem kiedy mamy za duzo odczytanych czujnikow - sheduler wpada w blad i zawiszeja sie wejscia wyjscia
+# TODO Dodac mechanizm sprawdzania ile jest przypisanych czjenikow przez utzytkowniaka a ile zostalo wyktytych w tablicy
 
 
 app = Flask(__name__)

@@ -2,16 +2,18 @@ import time
 import glob
 
 base_dir = '/sys/bus/w1/devices/'
-device_path = glob.glob(base_dir + '28*')[0] #get file path of sensor
-rom = device_path.split('/')[-1] #get rom name
+#device_path = glob.glob(base_dir + '28*')[0] #get file path of sensor
+#rom = device_path.split('/')[-1] #get rom name
 
-def read_temp_raw():
+def read_temp_raw(sensor_number):
+    device_path = glob.glob(base_dir + '28*')[sensor_number]
+    rom = device_path.split('/')[-1]
     with open(device_path +'/w1_slave','r') as f:
         valid, temp = f.readlines()
     return valid, temp
  
-def read_temp():
-    valid, temp = read_temp_raw()
+def read_temp(sensor_number):
+    valid, temp = read_temp_raw(sensor_number)
 
     while 'YES' not in valid:
         time.sleep(0.2)

@@ -12,12 +12,15 @@ import globals as g
 # TODO dodac baze danych 
 # TODO dodac logike momenty zapisu do abzy dancyh
 # TODO implementacje wykresow i danych histor
+# TODO Podlaczyc modol wejsc analogowych
+# TODO podlaczyc potencjoimetry w celu symulacji czujnika napiecia i pradu
+
 
 app = Flask(__name__)
 scheduler = APScheduler()
 
 def scheduleTask():
-    g.c = read_temp()
+    g.c = read_temp(0)
     checkPumpEfi(g.tz1, g.c, 5)
     g.BaseEfiInPercent = setOutputs(g.mainState, g.c, g.pumpEfi)
     print("This test runs every 3 seconds")

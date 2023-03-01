@@ -20,9 +20,11 @@ app = Flask(__name__)
 scheduler = APScheduler()
 
 def scheduleTask():
-    g.c = read_temp(0)
-    checkPumpEfi(g.tz1, g.c, 5)
-    g.BaseEfiInPercent = setOutputs(g.mainState, g.c, g.pumpEfi)
+    g.readTemp1 = read_temp(0)
+    g.readTemp2 = read_temp(1)
+    g.readTemp3 = read_temp(2)
+    checkPumpEfi(g.tz1, g.readTemp1, 5)
+    g.BaseEfiInPercent = setOutputs(g.mainState, g.readTemp1, g.pumpEfi)
     print("This test runs every 3 seconds")
 app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'
 pickFolder = os.path.join("static")
@@ -63,7 +65,7 @@ def hello_world():
             print('-------->>>>>   przycisk wlaczenia pompy zostal wcisniety')
             g.mainState = True
 #     g.c = read_temp()
-    return render_template("index.html", t1=c, to1=g.to1, t2=g.t2, to2=g.to2, t3=g.t3, to3=g.to3, t4=g.t4, to4=g.to4, t5=g.t5, to5=g.to5, t6=g.t6, to6=g.to6, tz1=g.tz1, tz2=g.tz2, tzo2=g.tzo2, image1=pick1, pump=g.BaseEfiInPercent, mainState=g.mainState)
+    return render_template("index.html", t1=g.readTemp1, to1=g.to1, t2=g.readTemp2, to2=g.to2, t3=g.readTemp3, to3=g.to3, t4=g.t4, to4=g.to4, t5=g.t5, to5=g.to5, t6=g.t6, to6=g.to6, tz1=g.tz1, tz2=g.tz2, tzo2=g.tzo2, image1=pick1, pump=g.BaseEfiInPercent, mainState=g.mainState)
 
 @app.route("/result", methods = ["POST", "GET"])
 def result():
@@ -81,7 +83,7 @@ def result():
 #     g.BaseEfiInPercent = setOutputs(g.mainState, g.c, g.pumpEfi)
     pick1=os.path.join(app.config["UPLOAD_FOLDER"], "6.jpg")
 
-    return render_template("index.html", t1=g.c, to1=g.to1, t2=g.t2, to2=g.to2, t3=g.t3, to3=g.to3, t4=g.t4, to4=g.to4, t5=g.t5, to5=g.to5, t6=g.t6, to6=g.to6, tz1=g.tz1, tz2=g.tz2, tzo2=g.tzo2, image1=pick1, pump=g.BaseEfiInPercent, mainState=g.mainState)
+    return render_template("index.html", t1=g.readTemp1, to1=g.to1, t2=g.readTemp2, to2=g.to2, t3=g.readTemp3, to3=g.to3, t4=g.t4, to4=g.to4, t5=g.t5, to5=g.to5, t6=g.t6, to6=g.to6, tz1=g.tz1, tz2=g.tz2, tzo2=g.tzo2, image1=pick1, pump=g.BaseEfiInPercent, mainState=g.mainState)
 
 @app.route("/settings", methods = ["POST", "GET"])
 def settings():

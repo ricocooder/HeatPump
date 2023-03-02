@@ -15,7 +15,8 @@ import globals as g
 # TODO Podlaczyc modol wejsc analogowych
 # TODO podlaczyc potencjoimetry w celu symulacji czujnika napiecia i pradu
 # TODO rozwiazac problem kiedy mamy za duzo odczytanych czujnikow - sheduler wpada w blad i zawiszeja sie wejscia wyjscia
-# TODO Dodac mechanizm sprawdzania ile jest przypisanych czjenikow przez utzytkowniaka a ile zostalo wyktytych w tablicy
+# TODO Dodac mechanizm sprawdzania ile jest przypisanych czjenikow przez utzytkowniaka a ile zostalo wyktytych w tablicy i obsluge bledu
+# TODO Zrobic obsluge czujnokow w preli po sprawdzeniu ile jest czujnikow w tablicy
 
 
 app = Flask(__name__)
@@ -23,8 +24,8 @@ scheduler = APScheduler()
 
 def scheduleTask():
     g.readTemp1 = read_temp(0)
-    g.readTemp2 = read_temp(1)
-    g.readTemp3 = read_temp(2)
+#     g.readTemp2 = read_temp(1)
+#     g.readTemp3 = read_temp(2)
     # g.readTemp4 = read_temp(3)
     # g.readTemp5 = read_temp(4)
     checkPumpEfi(g.tz1, g.readTemp1, 5)

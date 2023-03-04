@@ -3,7 +3,7 @@
 <head>
     <style>
         body {
-            background-repeat:no-repeat; # wylaczenia powtarzanie tzn jak zdjecie bedzie zamale to nie bedzie ustawiana kolo siebie
+            background-repeat:no-repeat; /* wylaczenia powtarzanie tzn jak zdjecie bedzie zamale to nie bedzie ustawiana kolo siebie*/
             background-attached:fixed;
             background-size:cover;
             /* background-image: url({{image1}}); */
@@ -27,31 +27,44 @@
   {% endif %}
 {% endwith %}
 <body>
-    <form class = "grid" action = "/result" method = "POST">
-        <br><br>
-        <label >Tryb pracy instalacji: Pompa - podlogowka </label><br><br>
-        <label >Temp. czujnika {{to1}} : {{t1}} <span>&#8451;</span> </label><br><br>
-        <label >Temp. czujnika {{to2}} : {{t2}} <span>&#8451;</span> </label><br><br>
-        <label >Temp. czujnika {{to3}} : {{t3}} <span>&#8451;</span> </label><br><br>
-        <label >Temp. czujnika {{to4}} : {{t4}} <span>&#8451;</span> </label><br><br>
-        <label >Temp. czujnika {{to5}} : {{t5}} <span>&#8451;</span> </label><br><br>
-        <label >Temp. czujnika {{to6}} : {{t6}} <span>&#8451;</span> </label><br><br>
-        <label >Stopien wysterowania pompy --> {{pump}}%</label>
-        <br>
-        <label width: 350px>
-        <meter low = '30' high = '50' optimum='80' max = '100' value={{pump}}></meter>
-        </label>
-        <br><br>
-        
-        
-        
-        {%if mainState == true%}
-        <label > Pompa pracuje </label><br>
-        </label><input type="Submit" value="Turn OFF Pump" name='Turn OFF Pump'/>
-        {%else%}
-        <label > Piec pracuje </label><br>
-        </label><input type="Submit" value="Turn ON Pump" name='Turn ON Pump'/>
-        {%endif%}
+    <form class = "container text-center" action = "/result" method = "POST">
+
+      <div class="container text-start">
+        <div class="col-10 order-last">
+          <label ><h1>Tryb pracy instalacji: Pompa - podlogowka </h1></label><br><br>
+        </div>
+        <div class="row align-items-start">
+          <div class="col-4 align-self-start">
+            <label >Temp. czujnika {{to1}} : {{t1}} <span>&#8451;</span> </label><br><br>
+            <label >Temp. czujnika {{to2}} : {{t2}} <span>&#8451;</span> </label><br><br>
+            <label >Temp. czujnika {{to3}} : {{t3}} <span>&#8451;</span> </label><br><br>
+            <label >Temp. czujnika {{to4}} : {{t4}} <span>&#8451;</span> </label><br><br>
+            <label >Temp. czujnika {{to5}} : {{t5}} <span>&#8451;</span> </label><br><br>
+            <label >Temp. czujnika {{to6}} : {{t6}} <span>&#8451;</span> </label><br><br>
+            <label >Stopien wysterowania pompy --> {{pump}}%</label>
+            <br>
+            <label width: 350px>
+            <meter low = '30' high = '50' optimum='80' max = '100' value={{pump}}></meter>
+            </label>
+            <br><br>
+            {%if mainState == true%}
+            <label > Pompa pracuje </label><br>
+            </label><input type="Submit" value="Turn OFF Pump" name='Turn OFF Pump'/>
+            {%else%}
+            <label > Piec pracuje </label><br>
+            </label><input type="Submit" value="Turn ON Pump" name='Turn ON Pump'/>
+            {%endif%}
+          </div>
+
+          <div class="col-6 order-last">
+            <img src="{{image1}}" class="img-fluid" alt="...">
+          </div>
+        </div>
+      </div>
+
+
+
+
     </form>
 
 </body>

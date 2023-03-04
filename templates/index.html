@@ -17,7 +17,7 @@
     {% block content %}
 
 </head>
-{% with messages = get_flashed_messages() %}
+<!-- {% with messages = get_flashed_messages() %}
   {% if messages %}
     <ul class=flashes>
     {% for message in messages %}
@@ -25,7 +25,7 @@
     {% endfor %}
     </ul>
   {% endif %}
-{% endwith %}
+{% endwith %} -->
 <body>
     <form class = "container text-center" action = "/result" method = "POST">
 
@@ -34,20 +34,26 @@
           <label ><h1>Tryb pracy instalacji: Pompa - podlogowka </h1></label><br><br>
         </div>
         <div class="row align-items-start">
-          <div class="col-4 align-self-start">
-            <label >Temp. czujnika {{to1}} : {{t1}} <span>&#8451;</span> </label><br><br>
-            <label >Temp. czujnika {{to2}} : {{t2}} <span>&#8451;</span> </label><br><br>
-            <label >Temp. czujnika {{to3}} : {{t3}} <span>&#8451;</span> </label><br><br>
-            <label >Temp. czujnika {{to4}} : {{t4}} <span>&#8451;</span> </label><br><br>
-            <label >Temp. czujnika {{to5}} : {{t5}} <span>&#8451;</span> </label><br><br>
-            <label >Temp. czujnika {{to6}} : {{t6}} <span>&#8451;</span> </label><br><br>
-            <label >Stopien wysterowania pompy --> {{pump}}%</label>
-            <br>
-            <label width: 350px>
-            <meter low = '30' high = '50' optimum='80' max = '100' value={{pump}}></meter>
-            </label>
-            <br><br>
+          <div class="col-3 align-self-start">
+            <label >T1 - Piec : {{t4}} <span>&#8451;</span> </label><br><br>
+            <label >T2 - Boiler : {{t3}} <span>&#8451;</span> </label><br><br>
+            <label >T3 - Pompa wyjscie : {{t1}} <span>&#8451;</span> </label><br><br>
+            <label >T4 - Pompa powrot : {{t2}} <span>&#8451;</span> </label><br><br>
+            <label >T5 - Temp. zewnetrzna : {{t5}} <span>&#8451;</span> </label><br><br>
+            <label >Wydajnosc pompy: {{pump}}% </label><br><br>
+            <!-- <label width: 350px> -->
+            
             {%if mainState == true%}
+              
+            <label>  
+              <div class="progress" role="progressbar" style="width: 250px" aria-label="Example 40px high" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar" style="width: {{pump}}%">
+                  <div class="text-warning">{{pump}}%</div>
+                </div>
+              </div>
+            <!-- <meter low = '30' high = '50' optimum='80' max = '100' value={{pump}}></meter> -->
+            </label>
+            <br>
             <label > Pompa pracuje </label><br>
             </label><input type="Submit" value="Turn OFF Pump" name='Turn OFF Pump'/>
             {%else%}
@@ -56,7 +62,7 @@
             {%endif%}
           </div>
 
-          <div class="col-6 order-last">
+          <div class="col-9 order-last">
             <img src="{{image1}}" class="img-fluid" alt="...">
           </div>
         </div>

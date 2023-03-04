@@ -1,9 +1,7 @@
 import time
 import globals as g
 
-def checkPumpEfi(t_set: float, t_accual: float, offset: int):
-        interval1=60
-        interval2=120
+def checkPumpEfi(t_set: float, t_accual: float, offset: int, interval: int):
         accualTime = time.time()
         #print('JEstem w funkcji checkPumpEfi')
         #print('Aktualny czas:',accualTime)
@@ -13,7 +11,7 @@ def checkPumpEfi(t_set: float, t_accual: float, offset: int):
         #print('drukuje typ zmiennej: t_accual',type(t_accual))
         #print('drukuje typ zmiennej: offset',type(offset))
         #print('drukuje typ zmiennej: pumpEfi',type(g.pumpEfi))
-        if accualTime >g.acTimePLusInterwal + interval1:
+        if accualTime >g.acTimePLusInterwal + interval:
             #print('Interwal doliczyl do zadanej wartosci nastepuje triger')
             g.acTimePLusInterwal=accualTime
             

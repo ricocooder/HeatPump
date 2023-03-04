@@ -5,6 +5,6 @@ import globals as g
 
 def scheduleTask():
     g.c = read_temp()
-    checkPumpEfi(g.tz1, g.c, 5)
+    checkPumpEfi(g.tz1, g.readTemp[3], g.pumpTempOfset, g.pumpInterval)
     g.BaseEfiInPercent = setOutputs(g.mainState, g.c, g.pumpEfi)
     print("This test runs every 3 seconds")

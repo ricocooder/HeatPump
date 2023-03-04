@@ -1,9 +1,13 @@
 acTimePLusInterwal = 0
 pumpEfi = 1
+pumpInterval = 60
+pumpTempOfset = 2
 mainState = False
 BaseEfiInPercent=0
 tempSensFoundNumber=0
 readTemp=[-999]*64
+setTemp=[0]*64
+discriptions=['brak opisu']*64
 t1=21
 to1="zasilanie boiler"
 t2=22

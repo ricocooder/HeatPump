@@ -12,11 +12,24 @@
 
     <title>Hello, world!</title>
   </head>
+
   <body>
     <br/>
     <div class="container">
         {% include 'navbar.html' %}
-
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+          <ul class=flashes>
+          {% for category, message in messages %}
+          <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <li class="{{ category }}">{{ message }}</li>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+            
+          {% endfor %}
+          </ul>
+        {% endif %}
+      {% endwith %}
         {% block content %}
         
         {% endblock %}

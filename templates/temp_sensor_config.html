@@ -14,8 +14,8 @@
 <body>
     <form class = "grid" action = "/settings" method = "POST">
 
-<h1>Temperature sensor setting page</h1>
-<label>Here you can pick the name, number of the sensors, this will be realy important in case of sensor replacement.</label><br/><br/><br/>
+<h1>Strona na ktorej mozna zmienic konfigoracje czujnikow</h1>
+<label>Tu mozesz wybrac nazwe, przypisac numer czujnika - bedzie to bardzo wazne w przypadku wymiany czujnika.</label><br/><br/><br/>
 
 <label>Wykryta liczba czujnikow: {{ sensFoundNumber }}</label><br/><br/>
 {% for sensor in sensFoundList %}
@@ -23,27 +23,6 @@
           <label>[{{loop.index -1}}] - Wykryto czujnik w tablicy o indeksie {{loop.index -1}}, wskazanie: {{sensor}} <span>&#8451;</span></label> <br/><br/>
         {% endif %}
 {% endfor %}
-<input type='float' placeholder='Put New Temp Here ex.:34.1' step ='0.1' name = 'tempZad1'>
-<input type="Submit" value="Save" name='Save1'/>
-<br><br>
-<label >Tamperatura zadana boiler : {{tz1}}</label><span>&#8451;</span> </label>
-<input type="Submit" value="Przycisk_1" name='Przycisk_1'/>
-<br><br>
-<input type='number' placeholder='Put New Interval Here' step ='0.1' name = 'tempZad1'>
-<input type="Submit" value="Save" name='Save1'/>
-<br><br>
-<label >Tamperatura zadana boiler : {{tz1}}</label><span>&#8451;</span> </label>
-<br><br>
-<input type='number' placeholder='Put New Temp Dif' step ='0.1' name = 'tempZad1'>
-<input type="Submit" value="Save" name='Save1'/>
-<br><br>
-<label >Tamperatura zadana boiler : {{tz1}}</label><span>&#8451;</span> </label>
-<br><br>
-<input type='number' placeholder='Put New Temp Here' step ='0.1' name = 'tempZad2'>
-<input type="Submit" value="Save" name='Save2'/>
-<br><br>
-<label >Tamperatura zadana {{tzo2}} : {{tz2}}</label><span>&#8451;</span> </label>
-<input type="Submit" value="Przycisk_2" name='Przycisk_2'/><br>
         
 
     </form>

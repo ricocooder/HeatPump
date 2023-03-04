@@ -2,19 +2,11 @@
 
 {% block content %}
 <br/>
-{% with messages = get_flashed_messages(with_categories=true) %}
-  {% if messages %}
-    <ul class=flashes>
-    {% for category, message in messages %}
-      <li class="{{ category }}">{{ message }}</li>
-    {% endfor %}
-    </ul>
-  {% endif %}
-{% endwith %}
+
 <body>
     <form class = "grid" action = "/settings" method = "POST">
 
-<h1>Settings</h1>
+<h1>Nastawy parametrow pracy ukladu</h1>
 <br/><br/>
 
 <input type='float' placeholder='Put New Temp Here ex.:34.1' step ='0.1' name = 'tempZad1'>

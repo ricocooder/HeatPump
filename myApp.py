@@ -30,9 +30,11 @@ def scheduleTask():
     # g.readTemp4 = read_temp(3)
     # g.readTemp5 = read_temp(4)
     checkPumpEfi(g.tz1, g.readTemp[0], 5)
-    g.BaseEfiInPercent = setOutputs(g.mainState, g.readTemp[0], g.pumpEfi)
-    print("This test runs every 3 seconds")
+    print("This test runs every 4 seconds")
 
+def scheduleTask1s():
+    g.BaseEfiInPercent = setOutputs(g.mainState, g.readTemp[0], g.pumpEfi)
+    print("This test runs every 1 seconds")
 
 app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'
 pickFolder = os.path.join("static")
@@ -191,6 +193,8 @@ def checkPumpEfi(t_set: float, t_accual: float, offset: int):
 
 if __name__ == "__main__":
     scheduler.add_job(id='Scheduled Task', func=scheduleTask,
-                      trigger="interval", seconds=3)
+                      trigger="interval", seconds=4)
+    scheduler.add_job(id='Scheduler Task 1s', func=scheduleTask1s, 
+                      trigger="interval", seconds=1)
     scheduler.start()
     app.run(host='0.0.0.0', port=5000, debug=True, use_reloader=False)

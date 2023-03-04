@@ -18,6 +18,7 @@ import globals as g
 # TODO rozwiazac problem kiedy mamy za duzo odczytanych czujnikow - sheduler wpada w blad i zawiszeja sie wejscia wyjscia
 # TODO Dodac mechanizm sprawdzania ile jest przypisanych czjenikow przez utzytkowniaka a ile zostalo wyktytych w tablicy i obsluge bledu
 # TODO Zrobic obsluge czujnokow w preli po sprawdzeniu ile jest czujnikow w tablicy
+# TODO posprzatac PumpEfi (wywolujemy funkcje z parametrami wejsciowymi a mozna to zrobic bez parametrow i zaczytywac z globalsow w sanej funkcji)
 
 
 app = Flask(__name__)
@@ -25,10 +26,6 @@ scheduler = APScheduler()
 
 def scheduleTask():
     read_temp()
-#     g.readTemp2 = read_temp(1)
-#     g.readTemp3 = read_temp(2)
-    # g.readTemp4 = read_temp(3)
-    # g.readTemp5 = read_temp(4)
     checkPumpEfi(g.tz1, g.readTemp[3], g.pumpTempOfset, g.pumpInterval)
     print("This test runs every 4 seconds")
 
@@ -41,9 +38,6 @@ pickFolder = os.path.join("static")
 app.config["UPLOAD_FOLDER"] = pickFolder
 pick1 = os.path.join(app.config["UPLOAD_FOLDER"], "6.jpg")
 
-# g.c = read_temp()
-
-
 @app.route('/')
 def hello_world():
     output = request.form.to_dict()
@@ -54,7 +48,6 @@ def hello_world():
                 g.tz1 = float(request.form['tempZad1'])
             except ValueError:
                 flash('Error wrong input variable', 'danger')
-                # print('error wrong variable')
         if request.form.get('Save2') == 'Save':
             g.tz2 = request.form['tempZad2']
         if request.form.get('Przycisk_1') == 'Przycisk_1':
@@ -62,22 +55,15 @@ def hello_world():
                 g.pumpEfi = g.pumpEfi + 1
             else:
                 g.pumpEfi = 0
-            # print('-------->>>>>   Przycisk_1 zostal wcisneity g.pumpEfi = ', g.pumpEfi)
-            # print('-------->>>>>   Przycisk_1 zostal wcisneity')
         if request.form.get('Przycisk_2') == 'Przycisk_2':
             if g.pumpEfi >= 0:
                 g.pumpEfi = g.pumpEfi - 1
             else:
                 g.pumpEfi = 0
-            # print('-------->>>>>   Przycisk_2 zostal wcisneity g.pumpEfi = ', g.pumpEfi)
-            # print('-------->>>>>   Przycisk_2 zostal wcisneity')
         if request.form.get('Turn OFF Pump') == 'Turn OFF Pump':
             g.mainState = False
-            # print('-------->>>>>   przycisk wylaczenia pompy zostal wcisniety')
         if request.form.get('Turn ON Pump') == 'Turn ON Pump':
-            # print('-------->>>>>   przycisk wlaczenia pompy zostal wcisniety')
             g.mainState = True
-#     g.c = read_temp()
     return render_template("index.html", t1=g.readTemp[0], t2=g.readTemp[1], t3=g.readTemp[2], 
                             t4=g.readTemp[3],  t5=g.readTemp[4], t6=g.readTemp[5], tz1=g.tz1, 
                             tzo2=g.tzo2, image1=pick1, pump=g.BaseEfiInPercent, mainState=g.mainState)
@@ -91,16 +77,10 @@ def result():
         g.mainState = False
         flash('Pompa wyłączona', 'primary')
         pick1 = os.path.join(app.config["UPLOAD_FOLDER"], "PonWU.jpg")
-        # print('-------->>>>>   przycisk wylaczenia pompy zostal wcisniety')
     if request.form.get('Turn ON Pump') == 'Turn ON Pump':
         flash('Pompa załączona', 'success')
         pick1 = os.path.join(app.config["UPLOAD_FOLDER"], "PonCO.jpg")
-        # print('-------->>>>>   przycisk wlaczenia pompy zostal wcisniety')
         g.mainState = True
-
-#     g.c = read_temp()
-#     g.BaseEfiInPercent = setOutputs(g.mainState, g.c, g.pumpEfi)
-    # pick1 = os.path.join(app.config["UPLOAD_FOLDER"], "6.jpg")
 
     return render_template("index.html", t1=g.readTemp[0], t2=g.readTemp[1],  t3=g.readTemp[2], 
                             t4=g.readTemp[3],  t5=g.readTemp[4], tz1=g.tz1, 
@@ -116,7 +96,6 @@ def temp_sensor_config():
                 g.tz1 = float(request.form['tempZad1'])
             except ValueError:
                 flash('Error wrong input variable', 'danger')
-                # print('error wrong variable')
         if request.form.get('Save2') == 'Save':
             g.tz2 = request.form['tempZad2']
         if request.form.get('Przycisk_1') == 'Przycisk_1':
@@ -124,15 +103,11 @@ def temp_sensor_config():
                 g.pumpEfi = g.pumpEfi + 1
             else:
                 g.pumpEfi = 0
-            # print('-------->>>>>   Przycisk_1 zostal wcisneity g.pumpEfi = ', g.pumpEfi)
-            # print('-------->>>>>   Przycisk_1 zostal wcisneity')
         if request.form.get('Przycisk_2') == 'Przycisk_2':
             if g.pumpEfi >= 0:
                 g.pumpEfi = g.pumpEfi - 1
             else:
                 g.pumpEfi = 0
-            # print('-------->>>>>   Przycisk_2 zostal wcisneity g.pumpEfi = ', g.pumpEfi)
-            # print('-------->>>>>   Przycisk_2 zostal wcisneity')
     return render_template("temp_sensor_config.html", sensFoundNumber = g.tempSensFoundNumber, sensFoundList=g.readTemp)
 
 
@@ -145,7 +120,6 @@ def settings():
                 g.tz1 = float(request.form['tempZad1'])
             except ValueError:
                 flash('Error wrong input variable', 'danger')
-                # print('error wrong variable')
         if request.form.get('Save2') == 'Save':
             g.tz2 = request.form['tempZad2']
         if request.form.get('Przycisk_1') == 'Przycisk_1':
@@ -153,15 +127,11 @@ def settings():
                 g.pumpEfi = g.pumpEfi + 1
             else:
                 g.pumpEfi = 0
-            # print('-------->>>>>   Przycisk_1 zostal wcisneity g.pumpEfi = ', g.pumpEfi)
-            # print('-------->>>>>   Przycisk_1 zostal wcisneity')
         if request.form.get('Przycisk_2') == 'Przycisk_2':
             if g.pumpEfi >= 0:
                 g.pumpEfi = g.pumpEfi - 1
             else:
                 g.pumpEfi = 0
-            # print('-------->>>>>   Przycisk_2 zostal wcisneity g.pumpEfi = ', g.pumpEfi)
-            # print('-------->>>>>   Przycisk_2 zostal wcisneity')
     return render_template("settings.html", tz1=g.tz1, tz2=g.tz2,)
 
 

@@ -15,8 +15,14 @@
     <form class = "grid" action = "/settings" method = "POST">
 
 <h1>Temperature sensor setting page</h1>
-<label>Here you can pick the name, number of the sensors, this will be realy important in case of sensor replacement.</label><br/>
+<label>Here you can pick the name, number of the sensors, this will be realy important in case of sensor replacement.</label><br/><br/><br/>
 
+<label>Wykryta liczba czujnikow: {{ sensFoundNumber }}</label><br/><br/>
+{% for sensor in sensFoundList %}
+        {% if sensFoundList[loop.index-1] != -999 %}
+          <label>[{{loop.index -1}}] - Wykryto czujnik w tablicy o indeksie {{loop.index -1}}, wskazanie: {{sensor}} <span>&#8451;</span></label> <br/><br/>
+        {% endif %}
+{% endfor %}
 <input type='float' placeholder='Put New Temp Here ex.:34.1' step ='0.1' name = 'tempZad1'>
 <input type="Submit" value="Save" name='Save1'/>
 <br><br>

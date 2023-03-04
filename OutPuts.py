@@ -22,28 +22,28 @@ def setOutputs(state, temp, pumpEfi):
         GPIO.setup(pins[7], GPIO.OUT)
         accualTime = t.time()
         global acTimePLusInterwal
-        print('Aktualny czas:',accualTime)
+        #print('Aktualny czas:',accualTime)
         
-        print('acTimePLusInterwal:',acTimePLusInterwal)
-        print('accualTime - acTimePLusInterwal:',accualTime-acTimePLusInterwal)
+        #print('acTimePLusInterwal:',acTimePLusInterwal)
+        #print('accualTime - acTimePLusInterwal:',accualTime-acTimePLusInterwal)
         if accualTime >acTimePLusInterwal +interval1:
-            print('Interwal doliczyl do zadanej wartosci nastepuje triger')
+            #print('Interwal doliczyl do zadanej wartosci nastepuje triger')
             acTimePLusInterwal=accualTime
-            print('Interwal doliczyl do zadanej wartosci nastepuje inkrementacja acTimePLusInterwal', acTimePLusInterwal)
-        print("------------>>>>>>>>jestem w funkcji 'setOutputs' wyswietlam dane state:",state, 'Temp:', temp, 'Wydajnosc pompy:', pumpEfi)
+            #print('Interwal doliczyl do zadanej wartosci nastepuje inkrementacja acTimePLusInterwal', acTimePLusInterwal)
+        #print("------------>>>>>>>>jestem w funkcji 'setOutputs' wyswietlam dane state:",state, 'Temp:', temp, 'Wydajnosc pompy:', pumpEfi)
         pick1=os.path.join(app.config["UPLOAD_FOLDER"], "6.jpg")
         if state and temp < 25.0:
-            print("------------>>>>>>>>jestem w funkcji 'setOutputs' ustawiam tlo na pompa woda urzytkowa - PonWU.jpg ")
+            #print("------------>>>>>>>>jestem w funkcji 'setOutputs' ustawiam tlo na pompa woda urzytkowa - PonWU.jpg ")
             pick1=os.path.join(app.config["UPLOAD_FOLDER"], "PonWU.jpg")
         if state and temp > 25.0 and temp < 30.0:
-            print("------------>>>>>>>>jestem w funkcji 'setOutputs' ustawiam tlo na pompa centralne ogrzewanie PonCO.jpg ")
+            #print("------------>>>>>>>>jestem w funkcji 'setOutputs' ustawiam tlo na pompa centralne ogrzewanie PonCO.jpg ")
             pick1=os.path.join(app.config["UPLOAD_FOLDER"], "PonCO.jpg")
         if state==False:
-            print("------------>>>>>>>>jestem w funkcji 'setOutputs' ustawiam tlo na pompa wylaczona P_off.jpg ")
+            #print("------------>>>>>>>>jestem w funkcji 'setOutputs' ustawiam tlo na pompa wylaczona P_off.jpg ")
             pick1=os.path.join(app.config["UPLOAD_FOLDER"], "P_off.jpg")
             
         if state == True:
-            print("------------>>>>>>>>jestem w funkcji 'setOutputs' sprawdzam warunek state == True", state)
+            #print("------------>>>>>>>>jestem w funkcji 'setOutputs' sprawdzam warunek state == True", state)
             GPIO.output(pins[3], GPIO.HIGH)
 
         else:
@@ -51,49 +51,49 @@ def setOutputs(state, temp, pumpEfi):
         
         if pumpEfi==0 and state == True:
             BaseEfiInPercent = BaseEfiInPercent*pumpEfi
-            print("------------>>>>>>>>jestem w funkcji 'setOutputs' sprawdzam warunek pumpEfi == 0")
+            #print("------------>>>>>>>>jestem w funkcji 'setOutputs' sprawdzam warunek pumpEfi == 0")
             GPIO.output(pins[0], GPIO.LOW)
             GPIO.output(pins[1], GPIO.LOW)
             GPIO.output(pins[2], GPIO.LOW)
         elif pumpEfi==1 and state == True:
             BaseEfiInPercent = BaseEfiInPercent*pumpEfi
-            print("------------>>>>>>>>jestem w funkcji 'setOutputs' sprawdzam warunek pumpEfi == 1")
+            #print("------------>>>>>>>>jestem w funkcji 'setOutputs' sprawdzam warunek pumpEfi == 1")
             GPIO.output(pins[0], GPIO.LOW)
             GPIO.output(pins[1], GPIO.LOW)
             GPIO.output(pins[2], GPIO.HIGH)
         elif pumpEfi == 2 and state == True:
             BaseEfiInPercent = BaseEfiInPercent*pumpEfi
-            print("------------>>>>>>>>jestem w funkcji 'setOutputs' sprawdzam warunek pumpEfi == 2")
+            #print("------------>>>>>>>>jestem w funkcji 'setOutputs' sprawdzam warunek pumpEfi == 2")
             GPIO.output(pins[0], GPIO.LOW)
             GPIO.output(pins[1], GPIO.HIGH)
             GPIO.output(pins[2], GPIO.LOW)
         elif pumpEfi == 3 and state == True:
             BaseEfiInPercent = BaseEfiInPercent*pumpEfi
-            print("------------>>>>>>>>jestem w funkcji 'setOutputs' sprawdzam warunek pumpEfi == 3")
+            #print("------------>>>>>>>>jestem w funkcji 'setOutputs' sprawdzam warunek pumpEfi == 3")
             GPIO.output(pins[0], GPIO.HIGH)
             GPIO.output(pins[1], GPIO.LOW)
             GPIO.output(pins[2], GPIO.LOW)
         elif pumpEfi == 4 and state == True:
             BaseEfiInPercent = BaseEfiInPercent*pumpEfi
-            print("------------>>>>>>>>jestem w funkcji 'setOutputs' sprawdzam warunek pumpEfi == 4")
+            #print("------------>>>>>>>>jestem w funkcji 'setOutputs' sprawdzam warunek pumpEfi == 4")
             GPIO.output(pins[0], GPIO.LOW)
             GPIO.output(pins[1], GPIO.HIGH)
             GPIO.output(pins[2], GPIO.HIGH)
         elif pumpEfi == 5 and state == True:
             BaseEfiInPercent = BaseEfiInPercent*pumpEfi
-            print("------------>>>>>>>>jestem w funkcji 'setOutputs' sprawdzam warunek pumpEfi == 5")
+            #print("------------>>>>>>>>jestem w funkcji 'setOutputs' sprawdzam warunek pumpEfi == 5")
             GPIO.output(pins[0], GPIO.HIGH)
             GPIO.output(pins[1], GPIO.LOW)
             GPIO.output(pins[2], GPIO.HIGH)
         elif pumpEfi == 6 and state == True:
             BaseEfiInPercent = BaseEfiInPercent*pumpEfi
-            print("------------>>>>>>>>jestem w funkcji 'setOutputs' sprawdzam warunek pumpEfi == 6")
+            #print("------------>>>>>>>>jestem w funkcji 'setOutputs' sprawdzam warunek pumpEfi == 6")
             GPIO.output(pins[0], GPIO.HIGH)
             GPIO.output(pins[1], GPIO.HIGH)
             GPIO.output(pins[2], GPIO.LOW)
         elif pumpEfi == 7 and state == True:
             BaseEfiInPercent = BaseEfiInPercent*pumpEfi
-            print("------------>>>>>>>>jestem w funkcji 'setOutputs' sprawdzam warunek pumpEfi == 7")
+            #print("------------>>>>>>>>jestem w funkcji 'setOutputs' sprawdzam warunek pumpEfi == 7")
             GPIO.output(pins[0], GPIO.HIGH)
             GPIO.output(pins[1], GPIO.HIGH)
             GPIO.output(pins[2], GPIO.HIGH)

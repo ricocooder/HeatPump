@@ -21,14 +21,12 @@ def read_temp_raw(sensor_number):
  
 def read_temp():
     tempfile = open('/sys/bus/w1/devices/w1_bus_master1/w1_master_slave_count')
-    temptemp = tempfile.read()
+    g.tempSensFoundNumber = int(tempfile.read())
     tempfile.close()
-    print('Znalziono',temptemp,'podlaczonych czujnikow')
-    print(type(int(temptemp)))
-    looprange = int(temptemp)
-    # looprange = 5
-    for x in range(looprange):
-        print('przypisuje wartosc dla',x, 'czujnika')
+    # print('Znalziono',g.tempSensFoundNumber,'podlaczonych czujnikow')
+    # print(type(int(g.tempSensFoundNumber)))
+    for x in range(int(g.tempSensFoundNumber)):
+        # print('przypisuje wartosc dla',x, 'czujnika')
 
 
         valid, temp = read_temp_raw(x)
@@ -41,10 +39,10 @@ def read_temp():
         if pos != -1:
             temp_string = temp[pos+2:]
             temp_c = float(temp_string)/1000.0 
-            print("odczyt temperatury z miejsca ", x,": ", temp_c)
+            # print("odczyt temperatury z miejsca ", x,": ", temp_c)
             # setString = 'readTemp'+ str(x)
             # print(setString)
-            g.readTemp[x]=temp_c
-            print('oraz g.readTemp[x]', g.readTemp[x])
+            g.readTemp[x]=round(temp_c, 1)
+            # print('oraz g.readTemp[x]', g.readTemp[x])
             # return temp_c
 

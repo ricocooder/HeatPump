@@ -18,3 +18,5 @@ Now change into the devices directory and use the ls command to see the folders 
 cd /sys/bus/w1/devices 
 ls
 List the file and a 28-xxxxxxxxxxxx device directory (e.g. here is 28-00000674869d) will be found. This is the ROM of DS18B20. If more than one DS18B20 is connected, you will find a certain directory of more than one.
+
+![Screenshot](RasGPIO.jpg)

@@ -143,7 +143,8 @@ def settings():
             else:
                 g.heatObject = 1
                 pick1 = os.path.join(app.config["UPLOAD_FOLDER"], "PonWU_v3.jpg")
-    return render_template("settings.html", tz1=g.tz1, tz2=g.tz2,)
+    return render_template("settings.html", setTempList=g.setTemp, pumpIntervalList=g.pumpInterval, 
+                            pumpTempOfsetList=g.pumpTempOfset )
 
 
 @app.route("/history", methods=["POST", "GET"])

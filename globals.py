@@ -1,13 +1,13 @@
-acTimePLusInterwal = 0
+acTimePLusInterwal=0
 pumpEfi = 1
 heatObject=0
-pumpInterval = 60
-pumpTempOfset = 2
+pumpInterval = [0, 30, 60]
+pumpTempOfset = [0, 2,2]
 mainState = False
 BaseEfiInPercent=0
 tempSensFoundNumber=0
 readTemp=[-999]*64
-setTemp=[0]*64
+setTemp=[0, 55, 33]
 pumpI=0
 pumpV=0
 pumpP=0

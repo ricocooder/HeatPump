@@ -3,6 +3,7 @@ from ReadTemp import read_temp
 from flask_apscheduler import APScheduler
 from setOutputs import setOutputs
 from checkPumpEfi import checkPumpEfi
+from mapValue import mapValue
 import webbrowser
 import time
 import os
@@ -26,17 +27,19 @@ scheduler = APScheduler()
 
 def scheduleTask():
     read_temp()
-    checkPumpEfi(g.tz1, g.readTemp[3], g.pumpTempOfset, g.pumpInterval)
+    checkPumpEfi(g.tz1, g.readTemp[2], g.pumpTempOfset, g.pumpInterval)
     print("This test runs every 4 seconds")
 
 def scheduleTask1s():
     g.BaseEfiInPercent = setOutputs(g.mainState, g.readTemp[3], g.pumpEfi)
-    print("This test runs every 1 seconds")
+    g.pumpI = mapValue(443, 0, 1000, 0, 30)
+    g.pumpV = mapValue(935, 0, 1000, 0, 250)
+    g.pumpP = g.pumpI*g.pumpV/1000
 
 app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'
 pickFolder = os.path.join("static")
 app.config["UPLOAD_FOLDER"] = pickFolder
-pick1 = os.path.join(app.config["UPLOAD_FOLDER"], "6.jpg")
+pick1 = os.path.join(app.config["UPLOAD_FOLDER"], "P_off_v3.jpg")
 
 @app.route('/')
 def hello_world():
@@ -56,16 +59,18 @@ def hello_world():
             else:
                 g.pumpEfi = 0
         if request.form.get('Przycisk_2') == 'Przycisk_2':
-            if g.pumpEfi >= 0:
-                g.pumpEfi = g.pumpEfi - 1
+            if g.heatObject == 1:
+                g.heatObject = 2
             else:
-                g.pumpEfi = 0
+                g.heatObject = 1
         if request.form.get('Turn OFF Pump') == 'Turn OFF Pump':
             g.mainState = False
+            g.heatObject = 0
         if request.form.get('Turn ON Pump') == 'Turn ON Pump':
+            g.heatObject = 1
             g.mainState = True
     return render_template("index.html", t1=g.readTemp[0], t2=g.readTemp[1], t3=g.readTemp[2], 
-                            t4=g.readTemp[3],  t5=g.readTemp[4], t6=g.readTemp[5], tz1=g.tz1, 
+                            t4=g.readTemp[3],  t5=g.readTemp[4], t6=g.readTemp[5], tz1=g.tz1, pumpI=g.pumpI, pumpV=g.pumpV, pumpP=round(g.pumpP, 2),
                             tzo2=g.tzo2, image1=pick1, pump=g.BaseEfiInPercent, mainState=g.mainState)
 
 
@@ -74,17 +79,20 @@ def result():
     output = request.form.to_dict()
     global pick1
     if request.form.get('Turn OFF Pump') == 'Turn OFF Pump':
+        g.heatObject = 0
         g.mainState = False
         flash('Pompa wyłączona', 'primary')
-        pick1 = os.path.join(app.config["UPLOAD_FOLDER"], "PonWU.jpg")
+        pick1 = os.path.join(app.config["UPLOAD_FOLDER"], "P_off_v3.jpg")
     if request.form.get('Turn ON Pump') == 'Turn ON Pump':
         flash('Pompa załączona', 'success')
-        pick1 = os.path.join(app.config["UPLOAD_FOLDER"], "PonCO.jpg")
+        pick1 = os.path.join(app.config["UPLOAD_FOLDER"], "PonCO_v3.jpg")
+        g.heatObject = 2
         g.mainState = True
 
     return render_template("index.html", t1=g.readTemp[0], t2=g.readTemp[1],  t3=g.readTemp[2], 
-                            t4=g.readTemp[3],  t5=g.readTemp[4], tz1=g.tz1, 
-                            tzo2=g.tzo2, image1=pick1, pump=g.BaseEfiInPercent, mainState=g.mainState)
+                            t4=g.readTemp[3],  t5=g.readTemp[4], Tzadana=g.tz1, pumpI=g.pumpI, pumpV=g.pumpV, pumpP=round(g.pumpP, 2),
+                            tzo2=g.tzo2, image1=pick1, pump=g.BaseEfiInPercent, mainState=g.mainState, sensFoundList=g.readTemp, discriptionList=g.discriptions,
+                            heatObject=g.heatObject, trybDiscriptions=g.trybDiscriptions)
 
 
 @app.route("/temp_sensor_config", methods=["POST", "GET"])
@@ -113,6 +121,7 @@ def temp_sensor_config():
 
 @app.route("/settings", methods=["POST", "GET"])
 def settings():
+    global pick1
     output = request.form.to_dict()
     if request.method == 'POST':
         if request.form.get('Save1') == 'Save':
@@ -128,10 +137,12 @@ def settings():
             else:
                 g.pumpEfi = 0
         if request.form.get('Przycisk_2') == 'Przycisk_2':
-            if g.pumpEfi >= 0:
-                g.pumpEfi = g.pumpEfi - 1
+            if g.heatObject == 1:
+                g.heatObject = 2
+                pick1 = os.path.join(app.config["UPLOAD_FOLDER"], "PonCO_v3.jpg")
             else:
-                g.pumpEfi = 0
+                g.heatObject = 1
+                pick1 = os.path.join(app.config["UPLOAD_FOLDER"], "PonWU_v3.jpg")
     return render_template("settings.html", tz1=g.tz1, tz2=g.tz2,)
 
 

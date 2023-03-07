@@ -1,6 +1,7 @@
 import time
 import glob
 from flask import flash
+from datetime import datetime
 import globals as g
 
 base_dir = '/sys/bus/w1/devices/'
@@ -26,7 +27,7 @@ def read_temp():
     # print('Znalziono',g.tempSensFoundNumber,'podlaczonych czujnikow')
     # print(type(int(g.tempSensFoundNumber)))
     for x in range(int(g.tempSensFoundNumber)):
-        # print('przypisuje wartosc dla',x, 'czujnika')
+        #print('przypisuje wartosc dla',x, 'czujnika', datetime.now())
 
 
         valid, temp = read_temp_raw(x)

@@ -26,6 +26,13 @@ def setOutputs(state, temp, pumpEfi):
 
         else:
            GPIO.output(pins[3], GPIO.LOW)
+           
+        if g.heatObject == 2:
+            GPIO.output(pins[4], GPIO.HIGH)
+
+        else:
+           GPIO.output(pins[4], GPIO.LOW)
+           
         
         if pumpEfi==0 and state == True:
             BaseEfiInPercent = BaseEfiInPercent*pumpEfi

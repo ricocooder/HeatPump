@@ -11,7 +11,7 @@
              }
         meter{
             width: 300px;
-            }
+            }   
     </style>
     {% extends 'base.html' %}
     {% block content %}
@@ -31,15 +31,34 @@
 
       <div class="container text-start">
         <div class="col-10 order-last">
-          <label ><h1>Tryb pracy instalacji: Pompa - podlogowka </h1></label><br><br>
+          <label ><h1>Tryb pracy: {{trybDiscriptions[heatObject]}}, temp. zadana: {{Tzadana}} <span>&#8451;</span></h1></label><br><br>
         </div>
+        
+        
         <div class="row align-items-start">
           <div class="col-3 align-self-start">
-            <label >T1 - Piec : {{t4}} <span>&#8451;</span> </label><br><br>
+            <label >Prad pobierany : {{pumpI}} [A] </label><br><br>
+            <label >Napiecie pompy : {{pumpV}} [V] </label><br><br>
+            <label >Moc pompy : {{pumpP}} [kW] </label><br><br>
+            
+            {% for sensor in sensFoundList %}
+                {% if sensFoundList[loop.index-1] != -999 %}
+                    {% if heatObject == loop.index-1 and heatObject > 0 %}
+                        <label><h5>{{discriptionList[loop.index-1]}}: {{sensor}} <span>&#8451;</span></h5></label> <br/><br/>
+                    {% else %}
+                        <label>{{discriptionList[loop.index-1]}}: {{sensor}} <span>&#8451;</span></label> <br/><br/>
+                    {% endif %} 
+                {% endif %}
+            {% endfor %}
+            
+            
+            
+            
+            <!--<label >T1 - Piec : {{t4}} <span>&#8451;</span> </label><br><br>
             <label >T2 - Boiler : {{t3}} <span>&#8451;</span> </label><br><br>
             <label >T3 - Pompa wyjscie : {{t1}} <span>&#8451;</span> </label><br><br>
             <label >T4 - Pompa powrot : {{t2}} <span>&#8451;</span> </label><br><br>
-            <label >T5 - Temp. zewnetrzna : {{t5}} <span>&#8451;</span> </label><br><br>
+            <label >T5 - Temp. zewnetrzna : {{t5}} <span>&#8451;</span> </label><br><br> -->
             <label >Wydajnosc pompy: {{pump}}% </label><br><br>
             <!-- <label width: 350px> -->
             
@@ -62,8 +81,8 @@
             {%endif%}
           </div>
 
-          <div class="col-9 order-last">
-            <img src="{{image1}}" class="img-fluid" alt="...">
+          <div class="col-7 order-last">
+            <img src="{{image1}}" class="img-fluid" alt="..." width=100%>
           </div>
         </div>
       </div>

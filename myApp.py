@@ -27,7 +27,7 @@ scheduler = APScheduler()
 
 def scheduleTask():
     read_temp()
-    checkPumpEfi(g.tz1, g.readTemp[2], g.pumpTempOfset, g.pumpInterval)
+    checkPumpEfi(g.tz1, g.readTemp[2], g.pumpTempOfset, g.pumpInterval, g.heatObject)
     print("This test runs every 4 seconds")
 
 def scheduleTask1s():
@@ -106,11 +106,8 @@ def temp_sensor_config():
                 flash('Error wrong input variable', 'danger')
         if request.form.get('Save2') == 'Save':
             g.tz2 = request.form['tempZad2']
-        if request.form.get('Przycisk_1') == 'Przycisk_1':
-            if g.pumpEfi < 8:
-                g.pumpEfi = g.pumpEfi + 1
-            else:
-                g.pumpEfi = 0
+        if request.form.get('radio-1') :
+            print("wybrano podlogowke")
         if request.form.get('Przycisk_2') == 'Przycisk_2':
             if g.pumpEfi >= 0:
                 g.pumpEfi = g.pumpEfi - 1

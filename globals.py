@@ -1,8 +1,8 @@
 acTimePLusInterwal=0
 pumpEfi = 1
-heatObject=0
+heatObject=1
 pumpInterval = [0, 30, 60]
-pumpTempOfset = [0, 2,2]
+pumpTempOfset = [0, 2.0, 2.0]
 mainState = False
 BaseEfiInPercent=0
 tempSensFoundNumber=0

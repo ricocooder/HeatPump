@@ -12,7 +12,7 @@
   {% endif %}
 {% endwith %}
 <body>
-    <form class = "grid" action = "/settings" method = "POST">
+    <form class = "grid" action = "/temp_sensor_config" method = "POST">
 
 <h1>Strona na ktorej mozna zmienic konfigoracje czujnikow</h1>
 <label>Tu mozesz wybrac nazwe, przypisac numer czujnika - bedzie to bardzo wazne w przypadku wymiany czujnika.</label><br/><br/><br/>
@@ -29,31 +29,6 @@
       <label>Regulacja temparatury w trybie grzania podłogówki ma odbywac sie wzgledem czujnika? Obecnie: [2] </label>  
       <input type='int' placeholder='new index' step ='0.1' name = 'tempZad1'>
       <input type="Submit" value="Save5" name='Save5'/> <br><br>
-
-
-      <fieldset>
-        <legend>Wybierz priorytet pracy pompy: </legend>
-        <label for="radio-1">Boiler</label>
-        <input type="radio" name="radio-1" id="radio-1">
-        <label for="radio-2">Podlogowka</label>
-        <input type="radio" name="radio-1" id="radio-2">
-      </fieldset>
-     
-      <fieldset>
-        <legend>Wybierz elementy, ktore chcesz obslugiwac: </legend>
-        <label for="checkbox-1">Boiler</label>
-        <input type="checkbox" name="checkbox-1" id="checkbox-1">
-        <label for="checkbox-2">Podlogowka</label>
-        <input type="checkbox" name="checkbox-2" id="checkbox-2">
-      </fieldset>
-
-
-
-
-
-
-
-
     </form>
 
 </body>

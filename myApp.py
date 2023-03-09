@@ -106,8 +106,6 @@ def temp_sensor_config():
                 flash('Error wrong input variable', 'danger')
         if request.form.get('Save2') == 'Save':
             g.tz2 = request.form['tempZad2']
-        if request.form.get('radio-1') :
-            print("wybrano podlogowke")
         if request.form.get('Przycisk_2') == 'Przycisk_2':
             if g.pumpEfi >= 0:
                 g.pumpEfi = g.pumpEfi - 1
@@ -121,25 +119,45 @@ def settings():
     global pick1
     output = request.form.to_dict()
     if request.method == 'POST':
-        if request.form.get('Save1') == 'Save':
+        # obsluga przycisku zapisu temparatury podlogowki
+        if request.form.get('Save1'):
             try:
-                g.tz1 = float(request.form['tempZad1'])
+                g.setTemp[2] = float(request.form['tempZad1'])
+            except ValueError:
+                flash('Error wrong input variable - dont use "," - use "." ', 'danger')
+        # obsluga przycisku zapisu temparatury boilera
+        if request.form.get('Save2'):
+            try:
+                g.setTemp[1] = float(request.form['tempZad2'])
+            except ValueError:
+                flash('Error wrong input variable - dont use "," - use "." ', 'danger')
+        # obsluga przycisku zapisu interwal podlogowki
+        if request.form.get('Save3'):
+            try:
+                g.pumpInterval[2] = int(request.form['setInterval1'])
             except ValueError:
                 flash('Error wrong input variable', 'danger')
-        if request.form.get('Save2') == 'Save':
-            g.tz2 = request.form['tempZad2']
-        if request.form.get('Przycisk_1') == 'Przycisk_1':
-            if g.pumpEfi < 8:
-                g.pumpEfi = g.pumpEfi + 1
-            else:
-                g.pumpEfi = 0
-        if request.form.get('Przycisk_2') == 'Przycisk_2':
-            if g.heatObject == 1:
-                g.heatObject = 2
-                pick1 = os.path.join(app.config["UPLOAD_FOLDER"], "PonCO_v3.jpg")
-            else:
-                g.heatObject = 1
-                pick1 = os.path.join(app.config["UPLOAD_FOLDER"], "PonWU_v3.jpg")
+        # obsluga przycisku zapisu interwal boiler
+        if request.form.get('Save4'):
+            try:
+                g.pumpInterval[1] = int(request.form['setInterval2'])
+            except ValueError:
+                flash('Error wrong input variable', 'danger')
+        # obsluga przycisku zapisu offset podlogowka
+        if request.form.get('Save5'):
+            try:
+                g.pumpTempOfset[2] = float(request.form['setAmplitude1'])
+            except ValueError:
+                flash('Error wrong input variable - dont use "," - use "." ', 'danger')
+        # obsluga przycisku zapisu offset boiler
+        if request.form.get('Save6'):
+            try:
+                g.pumpTempOfset[1] = float(request.form['setAmplitude2'])
+            except ValueError:
+                flash('Error wrong input variable - dont use "," - use "." ', 'danger')
+        
+        
+        
     return render_template("settings.html", setTempList=g.setTemp, pumpIntervalList=g.pumpInterval, 
                             pumpTempOfsetList=g.pumpTempOfset )
 

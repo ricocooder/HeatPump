@@ -35,5 +35,7 @@ def checkPumpEfi(t_set: float, t_accual: float, offset: int, interval: int, heat
             
     #logika pracy pompy zima    
     else:
+        
+        #tu napisze logike dla pracy zima ale glownie kopie tego co na gorze jest
         print("else")
         

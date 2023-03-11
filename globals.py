@@ -1,9 +1,10 @@
 acTimePLusInterwal=0
+pins = [26,5,6,12,25,24,23,22]
+tempPins = [0,0,0,0,0,0,0,0]
 pumpEfi = 1
 heatObject=1
 pumpInterval = [0, 30, 60]
 pumpTempOfset = [0, 2.0, 2.0]
-mainState = False
 sezon='Lato'
 BaseEfiInPercent=0
 tempSensFoundNumber=0

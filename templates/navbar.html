@@ -9,15 +9,25 @@
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="{{url_for('settings')}}">Nastawy</a>
           </li>
+          
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="{{url_for('history')}}">Historia/Wykresy</a>
           </li>
+          
           <li class="nav-item">
-
             <a class="nav-link active" aria-current="page" href="{{url_for('temp_sensor_config')}}">Konfigoracja czujnikow</a>
           </li>
-         
+            
         </ul>
+        
+        <a class="nav-link active" aria-current="page" href="">
+            Temperatura: {{ sensFoundList[1] }} <span>&#8451;</span>
+          </a>
+
+  
+          <a class="nav-link active" aria-current="page" href="">
+            {% include 'clock.html' %}
+          </a>
       </div>
     </div>
   </nav>

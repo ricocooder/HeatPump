@@ -15,23 +15,13 @@
     </style>
     {% extends 'base.html' %}
     {% block content %}
-
 </head>
-<!-- {% with messages = get_flashed_messages() %}
-  {% if messages %}
-    <ul class=flashes>
-    {% for message in messages %}
-      <li>{{ message }}</li>
-    {% endfor %}
-    </ul>
-  {% endif %}
-{% endwith %} -->
 <body>
     <form class = "container text-center" action = "/result" method = "POST">
 
       <div class="container text-start">
         <div class="col-10 order-last">
-          <label ><h1>Tryb pracy: {{trybDiscriptions[heatObject]}}, temp. zadana: {{Tzadana}} <span>&#8451;</span></h1></label><br><br>
+          <label ><h1>Tryb pracy: {{trybDiscriptions[heatObject]}}, temp. zadana: {{setTempList[heatObject]}} <span>&#8451;</span></h1></label><br><br>
         </div>
         
         
@@ -53,16 +43,9 @@
             
             
             
+        
             
-            <!--<label >T1 - Piec : {{t4}} <span>&#8451;</span> </label><br><br>
-            <label >T2 - Boiler : {{t3}} <span>&#8451;</span> </label><br><br>
-            <label >T3 - Pompa wyjscie : {{t1}} <span>&#8451;</span> </label><br><br>
-            <label >T4 - Pompa powrot : {{t2}} <span>&#8451;</span> </label><br><br>
-            <label >T5 - Temp. zewnetrzna : {{t5}} <span>&#8451;</span> </label><br><br> -->
-            <label >Wydajnosc pompy: {{pump}}% </label><br><br>
-            <!-- <label width: 350px> -->
-            
-            {%if mainState == true%}
+            {%if heatObject != 0 %}
               
             <label>  
               <div class="progress" role="progressbar" style="width: 250px" aria-label="Example 40px high" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">
@@ -79,6 +62,8 @@
             <label > Piec pracuje </label><br>
             </label><input type="Submit" value="Turn ON Pump" name='Turn ON Pump'/>
             {%endif%}
+            <br><br>
+            </label><input type="Submit" value="Switch" name='Switch'/>
           </div>
 
           <div class="col-7 order-last">

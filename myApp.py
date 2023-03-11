@@ -27,11 +27,11 @@ scheduler = APScheduler()
 
 def scheduleTask():
     read_temp()
-    checkPumpEfi(g.tz1, g.readTemp[2], g.pumpTempOfset, g.pumpInterval, g.heatObject)
+    checkPumpEfi(g.setTemp[g.heatObject], g.readTemp[g.heatObject], g.pumpTempOfset, g.pumpInterval, g.heatObject)
     print("This test runs every 4 seconds")
 
 def scheduleTask1s():
-    g.BaseEfiInPercent = setOutputs(g.mainState, g.readTemp[3], g.pumpEfi)
+    g.BaseEfiInPercent = setOutputs(g.heatObject, g.readTemp[g.heatObject], g.pumpEfi)
     g.pumpI = mapValue(443, 0, 1000, 0, 30)
     g.pumpV = mapValue(935, 0, 1000, 0, 250)
     g.pumpP = g.pumpI*g.pumpV/1000
@@ -45,33 +45,8 @@ pick1 = os.path.join(app.config["UPLOAD_FOLDER"], "P_off_v3.jpg")
 def hello_world():
     output = request.form.to_dict()
     global pick1
-    if request.method == 'POST':
-        if request.form.get('Save1') == 'Save':
-            try:
-                g.tz1 = float(request.form['tempZad1'])
-            except ValueError:
-                flash('Error wrong input variable', 'danger')
-        if request.form.get('Save2') == 'Save':
-            g.tz2 = request.form['tempZad2']
-        if request.form.get('Przycisk_1') == 'Przycisk_1':
-            if g.pumpEfi < 8:
-                g.pumpEfi = g.pumpEfi + 1
-            else:
-                g.pumpEfi = 0
-        if request.form.get('Przycisk_2') == 'Przycisk_2':
-            if g.heatObject == 1:
-                g.heatObject = 2
-            else:
-                g.heatObject = 1
-        if request.form.get('Turn OFF Pump') == 'Turn OFF Pump':
-            g.mainState = False
-            g.heatObject = 0
-        if request.form.get('Turn ON Pump') == 'Turn ON Pump':
-            g.heatObject = 1
-            g.mainState = True
-    return render_template("index.html", t1=g.readTemp[0], t2=g.readTemp[1], t3=g.readTemp[2], 
-                            t4=g.readTemp[3],  t5=g.readTemp[4], t6=g.readTemp[5], tz1=g.tz1, pumpI=g.pumpI, pumpV=g.pumpV, pumpP=round(g.pumpP, 2),
-                            tzo2=g.tzo2, image1=pick1, pump=g.BaseEfiInPercent, mainState=g.mainState)
+    return render_template("index.html", tz1=g.tz1, pumpI=g.pumpI, pumpV=g.pumpV, pumpP=round(g.pumpP, 2),
+                            tzo2=g.tzo2, image1=pick1, pump=g.BaseEfiInPercent)
 
 
 @app.route("/result", methods=["POST", "GET"])
@@ -80,19 +55,31 @@ def result():
     global pick1
     if request.form.get('Turn OFF Pump') == 'Turn OFF Pump':
         g.heatObject = 0
-        g.mainState = False
         flash('Pompa wyłączona', 'primary')
-        pick1 = os.path.join(app.config["UPLOAD_FOLDER"], "P_off_v3.jpg")
     if request.form.get('Turn ON Pump') == 'Turn ON Pump':
         flash('Pompa załączona', 'success')
-        pick1 = os.path.join(app.config["UPLOAD_FOLDER"], "PonCO_v3.jpg")
         g.heatObject = 2
-        g.mainState = True
-
-    return render_template("index.html", t1=g.readTemp[0], t2=g.readTemp[1],  t3=g.readTemp[2], 
-                            t4=g.readTemp[3],  t5=g.readTemp[4], Tzadana=g.tz1, pumpI=g.pumpI, pumpV=g.pumpV, pumpP=round(g.pumpP, 2),
-                            tzo2=g.tzo2, image1=pick1, pump=g.BaseEfiInPercent, mainState=g.mainState, sensFoundList=g.readTemp, discriptionList=g.discriptions,
-                            heatObject=g.heatObject, trybDiscriptions=g.trybDiscriptions)
+        
+    # do skasowania po testach    
+    if request.form.get('Switch'):
+        flash('Zmiana Trybu Pracy', 'success')
+        if g.heatObject ==2:
+            g.heatObject = 0
+        else:
+            g.heatObject = g.heatObject+1
+            
+            
+    if g.heatObject == 0:
+        #pompa wylaczona - pracuje piec
+        pick1 = os.path.join(app.config["UPLOAD_FOLDER"], "P_off_v3.jpg")
+    if g.heatObject == 2:
+        #pompa pracuje - grzenia boilera
+        pick1 = os.path.join(app.config["UPLOAD_FOLDER"], "PonCO_v3.jpg")
+    if g.heatObject == 1:
+        #pompa pracuje - grzenia podlogi
+        pick1 = os.path.join(app.config["UPLOAD_FOLDER"], "PonWU_v3.jpg")
+    return render_template("index.html", pumpI=g.pumpI, pumpV=g.pumpV, pumpP=round(g.pumpP, 2), image1=pick1, pump=g.BaseEfiInPercent, sensFoundList=g.readTemp,
+                           discriptionList=g.discriptions, heatObject=g.heatObject, trybDiscriptions=g.trybDiscriptions, setTempList = g.setTemp)
 
 
 @app.route("/temp_sensor_config", methods=["POST", "GET"])
@@ -154,17 +141,14 @@ def settings():
             try:
                 g.pumpTempOfset[1] = float(request.form['setAmplitude2'])
             except ValueError:
-                flash('Error wrong input variable - dont use "," - use "." ', 'danger')
-        
-        
-        
+                flash('Error wrong input variable - dont use "," - use "." ', 'danger')  
     return render_template("settings.html", setTempList=g.setTemp, pumpIntervalList=g.pumpInterval, 
-                            pumpTempOfsetList=g.pumpTempOfset )
+                            pumpTempOfsetList=g.pumpTempOfset, sensFoundList=g.readTemp )
 
 
 @app.route("/history", methods=["POST", "GET"])
 def history():
-    return render_template("history.html")
+    return render_template("history.html", sensFoundList=g.readTemp, ledStrip = g.tempPins)
 
 if __name__ == "__main__":
     scheduler.add_job(id='Scheduled Task', func=scheduleTask,

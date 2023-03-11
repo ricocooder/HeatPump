@@ -20,7 +20,7 @@ def checkPumpEfi(t_set: float, t_accual: float, offset: int, interval: int, heat
         if dayOfWeek > 5:
             #ustalam harmonogram od poniedzialku do piatku dni tygodnie to zakres 0-6
             print('zwracam dzien tygodnia', dayOfWeek)
-            if actualHour >=7 and < 9 or actualHour >= 18 and < 22:
+            if actualHour >=7 and actualHour < 9 or actualHour >= 18 and actualHour < 22:
                 #wieczorne grzanie
                 print('wieczoren grzanie')
         else:

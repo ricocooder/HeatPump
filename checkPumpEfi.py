@@ -35,7 +35,14 @@ def checkPumpEfi(t_set: float, t_accual: float, offset: int, interval: int, heat
             
     #logika pracy pompy zima    
     else:
-        
-        #tu napisze logike dla pracy zima ale glownie kopie tego co na gorze jest
-        print("else")
+        #jesli temp zadana boiler + offset boiler jest mniejsza nie odczytana na boilerze
+        if g.setTemp[1]-g.pumpTempOfset[1] < g.readTemp[1]:
+            #grzanie boilera - przesterowanie zaworu ustawienie pompy na maxa?
+            g.heatObject = 1
+            g.pumpEfi = 7
+        #jesli temperatura zadana boiler plus offset boiler jest wieksza/rowna temp odczytana boiler
+        elif g.setTemp[1] + g.pumpTempOfset[1] >= g.readTemp[1]:
+            #grzanie podlogowki ustawiam pompe na "srodkowy" tryb
+            g.heatObject = 2
+            g.pumpEfi = 3
         

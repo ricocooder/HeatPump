@@ -17,32 +17,36 @@ def checkPumpEfi(t_set: float, t_accual: float, offset: int, interval: int, heat
         actualHour = actualTime.hour
         dayOfWeek = actualTime.today().weekday()
         print(g.sezon, actualHour, dayOfWeek)
-        if dayOfWeek > 5:
+        if dayOfWeek < 5:
             #ustalam harmonogram od poniedzialku do piatku dni tygodnie to zakres 0-6
             print('zwracam dzien tygodnia', dayOfWeek)
             if actualHour >=7 and actualHour < 9 or actualHour >= 18 and actualHour < 22:
+                g.heatObject = 1
                 #wieczorne grzanie
                 print('wieczoren grzanie')
         else:
             #pozostale dni tygodnia czyli sobota i niedziela
             print('zwracam dzien tygodnia', dayOfWeek)
             if actualHour >= 7 and actualHour < 22:
+                g.heatObject = 1
                 #ustawiam harmonogram od 7 do 22 godziny w niedziele i sobote
                 print('praca od 7 do 22')
             else:
                 #wylaczam pompe
+                g.heatObject = 0
                 print('pompa wylaczona')
             
     #logika pracy pompy zima    
     else:
+        print('jestes w logice dla zima',g.setTemp[1], g.pumpTempOfset[1], g.readTemp[1])
         #jesli temp zadana boiler + offset boiler jest mniejsza nie odczytana na boilerze
-        if g.setTemp[1]-g.pumpTempOfset[1] < g.readTemp[1]:
+        if g.setTemp[1]-g.pumpTempOfset[1] > g.readTemp[1]:
             #grzanie boilera - przesterowanie zaworu ustawienie pompy na maxa?
             g.heatObject = 1
-            g.pumpEfi = 7
+            # g.pumpEfi = 7
         #jesli temperatura zadana boiler plus offset boiler jest wieksza/rowna temp odczytana boiler
-        elif g.setTemp[1] + g.pumpTempOfset[1] >= g.readTemp[1]:
+        elif g.setTemp[1] + g.pumpTempOfset[1] <= g.readTemp[1]:
             #grzanie podlogowki ustawiam pompe na "srodkowy" tryb
             g.heatObject = 2
-            g.pumpEfi = 3
+            # g.pumpEfi = 3
         

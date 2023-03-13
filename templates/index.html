@@ -63,6 +63,13 @@
             </label><input type="Submit" value="Turn ON Pump" name='Turn ON Pump'/>
             {%endif%}
             <br><br>
+            <label > Aktualnie wybrany tryb pracy: {{sezon}} </label><br><br>
+            {% if sezon == 'Lato' %}
+            </label><input type="Submit" value="Przelacz na - Zima" name='sezonSwitch'/>
+            {% else %}
+            </label><input type="Submit" value="Przelacz na - Lato" name='sezonSwitch'/>
+            {% endif %}
+            <br><br>
             </label><input type="Submit" value="Switch" name='Switch'/>
           </div>
 

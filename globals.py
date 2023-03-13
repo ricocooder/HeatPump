@@ -15,6 +15,9 @@ pumpV=0
 pumpP=0
 trybDiscriptions=['Piec', 'Pompa - boiler', 'Pompa - podlogówka']
 discriptions=['T1 - Piec', 'T2 - Bouler', 'T3 - Pompa wyjscie', 'T4 - Pompa powrot', 'T5 - Temp. zewnetrzna']
+ledStripDiscription=['[1] Sterowanie bitowe wydajnosci pompy', '[2] Sterowanie bitowe wydajnosci pompy', '[3] Sterowanie bitowe wydajnosci pompy', 
+                     '[4] Sterowanie bitowe wydajnosci pompy', '[5] Sterowanie bitowe wydajnosci pompy', '[6] Sterowanie bitowe wydajnosci pompy', 
+                     '[7] Sterowanie bitowe wydajnosci pompy', '[8] Sterowanie bitowe wydajnosci pompy']
 t1=21
 to1="zasilanie boiler"
 t2=22

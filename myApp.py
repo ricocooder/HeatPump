@@ -67,6 +67,13 @@ def result():
             g.heatObject = 0
         else:
             g.heatObject = g.heatObject+1
+
+    if request.form.get('sezonSwitch'):
+        flash('Zmiana Trybu Pracy', 'success')
+        if g.sezon == 'Lato':
+            g.sezon = 'Zima'
+        else:
+            g.sezon = 'Lato'
             
             
     if g.heatObject == 0:
@@ -79,7 +86,7 @@ def result():
         #pompa pracuje - grzenia podlogi
         pick1 = os.path.join(app.config["UPLOAD_FOLDER"], "PonWU_v3.jpg")
     return render_template("index.html", pumpI=g.pumpI, pumpV=g.pumpV, pumpP=round(g.pumpP, 2), image1=pick1, pump=g.BaseEfiInPercent, sensFoundList=g.readTemp,
-                           discriptionList=g.discriptions, heatObject=g.heatObject, trybDiscriptions=g.trybDiscriptions, setTempList = g.setTemp)
+                           discriptionList=g.discriptions, heatObject=g.heatObject, trybDiscriptions=g.trybDiscriptions, setTempList = g.setTemp, sezon=g.sezon)
 
 
 @app.route("/temp_sensor_config", methods=["POST", "GET"])
@@ -148,7 +155,7 @@ def settings():
 
 @app.route("/history", methods=["POST", "GET"])
 def history():
-    return render_template("history.html", sensFoundList=g.readTemp, ledStrip = g.tempPins)
+    return render_template("history.html", sensFoundList=g.readTemp, ledStrip = g.tempPins, ledStripDiscription=g.ledStripDiscription)
 
 if __name__ == "__main__":
     scheduler.add_job(id='Scheduled Task', func=scheduleTask,

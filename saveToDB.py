@@ -2,7 +2,7 @@ import sqlite3
 import sys
 
 def log_values(temp1, temp2,temp3, curr, volt, efi):
-	conn=sqlite3.connect('/home/pi/Documents/HeatPump/myDB.sql')  #It is important to provide an
+	conn=sqlite3.connect('/home/pi/Documents/HeatPump/myDB.db')  #It is important to provide an
 							     #absolute path to the database
 							     #file, otherwise Cron won't be
 							     #able to find it!
@@ -12,17 +12,17 @@ def log_values(temp1, temp2,temp3, curr, volt, efi):
 	# In general, servers are assumed to be in UTC.
 	curs=conn.cursor()
 	curs.execute("""INSERT INTO temp1 values(datetime(CURRENT_TIMESTAMP, 'localtime'),
-         (?), (?))""", (1,temp1))
+         (?), (?))""", ("1",temp1))
 	curs.execute("""INSERT INTO temp1 values(datetime(CURRENT_TIMESTAMP, 'localtime'),
-         (?), (?))""", (2,temp2))
+         (?), (?))""", ("2",temp2))
 	curs.execute("""INSERT INTO temp1 values(datetime(CURRENT_TIMESTAMP, 'localtime'),
-         (?), (?))""", (3,temp3))
+         (?), (?))""", ("3",temp3))
 	curs.execute("""INSERT INTO volt values(datetime(CURRENT_TIMESTAMP, 'localtime'),
-         (?), (?))""", (1,volt))
+         (?), (?))""", ("1",volt))
 	curs.execute("""INSERT INTO cur values(datetime(CURRENT_TIMESTAMP, 'localtime'),
-         (?), (?))""", (1,curr))
+         (?), (?))""", ("1",curr))
 	curs.execute("""INSERT INTO efi values(datetime(CURRENT_TIMESTAMP, 'localtime'),
-         (?), (?))""", (1,efi))
+         (?), (?))""", ("1",efi))
 	
 	conn.commit()
 	conn.close()

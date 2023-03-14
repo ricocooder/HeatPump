@@ -44,8 +44,11 @@ def checkPumpEfi(t_set: float, t_accual: float, offset: int, interval: int, heat
             #grzanie boilera - przesterowanie zaworu ustawienie pompy na maxa?
             g.heatObject = 1
             # g.pumpEfi = 7
-        #jesli temperatura zadana boiler plus offset boiler jest wieksza/rowna temp odczytana boiler
-        elif g.setTemp[1] + g.pumpTempOfset[1] <= g.readTemp[1]:
+        #jesli temperatura zadana boiler jest wieksza temp odczytana 
+        elif g.setTemp[1] < g.readTemp[1]:
+        # elif g.setTemp[1] < g.readTemp[1] and g.setTemp[2] > g.readTemp[2]:
+        #jesli temperatura zadana boiler plus offset boiler jest wieksza/rowna temp odczytana boiler            
+        # elif g.setTemp[1] + g.pumpTempOfset[1] <= g.readTemp[1]:
             #grzanie podlogowki ustawiam pompe na "srodkowy" tryb
             g.heatObject = 2
             # g.pumpEfi = 3

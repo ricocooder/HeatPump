@@ -8,6 +8,7 @@ import webbrowser
 import time
 import os
 import globals as g
+import saveToDB as db
 
 # TODO uporzadkowac ekran ustawienia
 # TODO dodac obrazek obok temepratur
@@ -59,6 +60,11 @@ def result():
     if request.form.get('Turn ON Pump') == 'Turn ON Pump':
         flash('Pompa załączona', 'success')
         g.heatObject = 2
+        
+    # do skasowania po testach    
+    if request.form.get('SaveDB'):
+        flash('Zmiana Trybu Pracy', 'success')
+        db.log_values(g.redTemp[0], g.redTemp[1],g.redTemp[2], g.pumpI, g.pumpV, g.BaseEfiInPercent)
         
     # do skasowania po testach    
     if request.form.get('Switch'):

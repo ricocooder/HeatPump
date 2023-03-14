@@ -64,7 +64,7 @@ def result():
     # do skasowania po testach    
     if request.form.get('SaveDB'):
         flash('Zmiana Trybu Pracy', 'success')
-        db.log_values(g.redTemp[0], g.redTemp[1],g.redTemp[2], g.pumpI, g.pumpV, g.BaseEfiInPercent)
+        db.log_values(g.readTemp[0], g.readTemp[1],g.readTemp[2], g.pumpI, g.pumpV, g.BaseEfiInPercent)
         
     # do skasowania po testach    
     if request.form.get('Switch'):

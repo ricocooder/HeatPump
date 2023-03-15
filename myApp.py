@@ -4,14 +4,15 @@ from flask_apscheduler import APScheduler
 from setOutputs import setOutputs
 from checkPumpEfi import checkPumpEfi
 from mapValue import mapValue
+import sqlite3
 import webbrowser
 import time
 import os
 import globals as g
 import saveToDB as db
 
-# TODO uporzadkowac ekran ustawienia
-# TODO dodac obrazek obok temepratur
+# TODO uporzadkowac ekran ustawienia - #DONE
+# TODO dodac obrazek obok temepratur - #DONE
 # TODO dodac baze danych
 # TODO dodac logike momenty zapisu do abzy dancyh
 # TODO implementacje wykresow i danych histor
@@ -33,7 +34,7 @@ def scheduleTask():
 
 def scheduleTask1s():
     g.BaseEfiInPercent = setOutputs(g.heatObject, g.readTemp[g.heatObject], g.pumpEfi)
-    #włczyc po zakonczeniu testow
+    #FIXME włczyc po zakonczeniu testow
     # g.pumpI = mapValue(443, 0, 1000, 0, 30)
     # g.pumpV = mapValue(935, 0, 1000, 0, 250)
     g.pumpP = g.pumpI*g.pumpV/1000
@@ -62,12 +63,12 @@ def result():
         flash('Pompa załączona', 'success')
         g.heatObject = 2
         
-    # do skasowania po testach    
+    #FIXME do skasowania po testach    
     if request.form.get('SaveDB'):
         flash('Zmiana Trybu Pracy', 'success')
         db.log_values(g.readTemp[0], g.readTemp[1],g.readTemp[2], g.pumpI, g.pumpV, g.BaseEfiInPercent)
         
-    # do skasowania po testach    
+    #FIXME do skasowania po testach    
     if request.form.get('Switch'):
         flash('Zmiana Trybu Pracy', 'success')
         if g.heatObject ==2:
@@ -158,11 +159,24 @@ def settings():
                 flash('Error wrong input variable - dont use "," - use "." ', 'danger')  
     return render_template("settings.html", setTempList=g.setTemp, pumpIntervalList=g.pumpInterval, 
                             pumpTempOfsetList=g.pumpTempOfset, sensFoundList=g.readTemp )
-
+def getDataFromDB():
+    conn=sqlite3.connect('/home/pi/Documents/HeatPump/myDB.db')
+    curs=conn.cursor()
+    curs.execute("SELECT * FROM temp1")
+    temp = curs.fetchall()
+    curs.execute("SELECT * FROM volt")
+    volt = curs.fetchall()
+    curs.execute("SELECT * FROM cur")
+    curr = curs.fetchall()
+    curs.execute("SELECT * FROM efi")
+    efi = curs.fetchall()
+    conn.close()
+    return temp, volt, curr, efi
 
 @app.route("/history", methods=["POST", "GET"])
 def history():
-    return render_template("history.html", sensFoundList=g.readTemp, ledStrip = g.tempPins, ledStripDiscription=g.ledStripDiscription)
+    temp, volt, curr, efi = getDataFromDB()
+    return render_template("history.html", sensFoundList=g.readTemp, ledStrip = g.tempPins, ledStripDiscription=g.ledStripDiscription, temp=temp, volt=volt, curr=curr, efi=efi)
 
 if __name__ == "__main__":
     scheduler.add_job(id='Scheduled Task', func=scheduleTask,
@@ -171,3 +185,4 @@ if __name__ == "__main__":
                       trigger="interval", seconds=1)
     scheduler.start()
     app.run(host='0.0.0.0', port=5000, debug=True, use_reloader=False)
+	

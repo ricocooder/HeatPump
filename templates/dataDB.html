@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Basic Page Needs
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta charset="utf-8">
+    <title>Lab Conditions by RPi</title>
+    <meta name="description" content="Lab conditions - RPi">
+    <meta name="author" content="Peter Dalmaris">
+    <!-- Mobile Specific Metas
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- FONT
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+    <!-- CSS
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" href="/static/css/normalize.css">
+    <link rel="stylesheet" href="/static/css/skeleton.css">
+    <!-- Favicon
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="icon" type="image/png" href="/static/images/favicon.png">
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="one-third column" style="margin-top: 5%">
+          <strong>Showing all records</strong>                
+          <h2>Temperatures</h2>                    
+            <table class="u-full-width">
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>&deg;C</th>                        
+                </tr>
+              </thead>
+              <tbody>S
+                {% for row in temp %}
+                <tr>
+                  <td>{{row[0]}}</td>
+                  <td>{{'%0.2f'|format(row[2])}}</td>
+                </tr>
+                {% endfor %}
+              </tbody>
+            </table>  
+            
+            <h2>Current</h2>
+            <table class="u-full-width">
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>[A]</th>                        
+                </tr>
+              </thead>
+              <tbody>
+                {% for row in curr %}
+                <tr>
+                  <td>{{row[0]}}</td>
+                  <td>{{'%0.2f'|format(row[2])}}</td>
+                </tr>          
+                {% endfor %}
+              </tbody>
+            </table>  
+            
+            <h2>Pump Efi</h2>
+            <table class="u-full-width">
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>%</th>                        
+                </tr>
+              </thead>
+              <tbody>
+                {% for row in efi %}
+                <tr>
+                  <td>{{row[0]}}</td>
+                  <td>{{'%0.2f'|format(row[2])}}</td>
+                </tr>          
+                {% endfor %}
+              </tbody>
+            </table>  
+            
+            
+            <h2>Pump Voltage</h2>
+            <table class="u-full-width">
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>[V]</th>                        
+                </tr>
+              </thead>
+              <tbody>
+                {% for row in volt %}
+                <tr>
+                  <td>{{row[0]}}</td>
+                  <td>{{'%0.2f'|format(row[2])}}</td>
+                </tr>          
+                {% endfor %}
+              </tbody>
+            </table>  
+            
+            
+        </div>
+    </div>           
+  </body>
+</html>

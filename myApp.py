@@ -171,12 +171,14 @@ def getDataFromDB():
     curs.execute("SELECT * FROM efi")
     efi = curs.fetchall()
     conn.close()
+    print(temp)
     return temp, volt, curr, efi
 
 @app.route("/history", methods=["POST", "GET"])
 def history():
     temp, volt, curr, efi = getDataFromDB()
-    return render_template("history.html", sensFoundList=g.readTemp, ledStrip = g.tempPins, ledStripDiscription=g.ledStripDiscription, temp=temp, volt=volt, curr=curr, efi=efi)
+    return render_template("history.html", sensFoundList=g.readTemp, ledStrip = g.tempPins, ledStripDiscription=g.ledStripDiscription,
+                           temp=temp, volt=volt, curr=curr, efi=efi, temp_items=len(temp), volt_items=len(volt), curr_items=len(curr), efi_items=len(efi))
 
 if __name__ == "__main__":
     scheduler.add_job(id='Scheduled Task', func=scheduleTask,

@@ -22,12 +22,37 @@
     <link rel="icon" type="image/png" href="/static/images/favicon.png">
   </head>
   <body>
+  <style>
+  u-full-width, tr, th, td{
+  border:1px solid black;
+  padding: 5px
+  
+  }
+  </style>
     <div class="container">
       <div class="row">
         <div class="one-third column" style="margin-top: 5%">
           <strong>Showing all records</strong> 
           
           <h2>Temperatures</h2>                    
+            <table class="u-full-width" style="wigth:100%">
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>&deg;C</th>                        
+                </tr>
+              </thead>
+              <tbody>
+                {% for row in temp1 %}
+                <tr>
+                  <td>{{row[0]}}</td>
+                  <td>{{'%0.2f'|format(row[2])}}</td>
+                </tr>
+                {% endfor %}
+              </tbody>
+            </table>  
+            
+                      <h2>Temperatures</h2>                    
             <table class="u-full-width">
               <thead>
                 <tr>
@@ -36,7 +61,25 @@
                 </tr>
               </thead>
               <tbody>
-                {% for row in temp %}
+                {% for row in temp2 %}
+                <tr>
+                  <td>{{row[0]}}</td>
+                  <td>{{'%0.2f'|format(row[2])}}</td>
+                </tr>
+                {% endfor %}
+              </tbody>
+            </table>  
+            
+                      <h2>Temperatures</h2>                    
+            <table class="u-full-width">
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>&deg;C</th>                        
+                </tr>
+              </thead>
+              <tbody>
+                {% for row in temp3 %}
                 <tr>
                   <td>{{row[0]}}</td>
                   <td>{{'%0.2f'|format(row[2])}}</td>
@@ -108,7 +151,9 @@
         <div class="row">                  
           <div class="row">
             <div class="three columns">
-              <div id="chart_temps"></div>
+              <div id="chart_temps1"></div>
+              <div id="chart_temps2"></div>
+              <div id="chart_temps3"></div>
               <div id="chart_curr"></div>
               <div id="chart_efi"></div>
               <div id="chart_volt"></div>
@@ -133,18 +178,18 @@
       data.addColumn('datetime', 'Time');  
       data.addColumn('number', 'Temperature');      
       data.addRows([
-          {% for row in temp %} 
+          {% for row in temp1 %} 
             [new Date({{row[0][0:4]}},{{row[0][5:7]}},{{row[0][8:10]}},{{row[0][11:13]}},{{row[0][14:16]}}),
                 {{'%0.2f'|format(row[2])}}],
           {% endfor %}
         ]);
 
       var options = {
-        width: 600,
-        height: 563,
+        width:900,
+        height: 900,
         hAxis: {
           title: "Date",
-          gridlines: { count: {{temp_items}}, color: '#CCC' },
+          gridlines: { count: {{temp_items1}}, color: '#CCC' },
           format: 'dd-MMM-yyyy HH:mm' },
         vAxis: {
           title: 'Degrees'
@@ -153,7 +198,81 @@
         curveType: 'function'  //Makes line curved
       };
 
-      var chart = new google.visualization.LineChart(document.getElementById('chart_temps'));
+      var chart = new google.visualization.LineChart(document.getElementById('chart_temps1'));
+
+      chart.draw(data, options);
+
+    }
+  </script>
+  
+  <script>
+    google.load('visualization', '1', {packages: ['corechart']});
+    google.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+
+      var data = new google.visualization.DataTable();
+      data.addColumn('datetime', 'Time');  
+      data.addColumn('number', 'Temperature');      
+      data.addRows([
+          {% for row in temp2 %} 
+            [new Date({{row[0][0:4]}},{{row[0][5:7]}},{{row[0][8:10]}},{{row[0][11:13]}},{{row[0][14:16]}}),
+                {{'%0.2f'|format(row[2])}}],
+          {% endfor %}
+        ]);
+
+      var options = {
+        width:900,
+        height: 900,
+        hAxis: {
+          title: "Date",
+          gridlines: { count: {{temp_items2}}, color: '#CCC' },
+          format: 'dd-MMM-yyyy HH:mm' },
+        vAxis: {
+          title: 'Degrees'
+        },
+        title: 'Temperature',
+        curveType: 'function'  //Makes line curved
+      };
+
+      var chart = new google.visualization.LineChart(document.getElementById('chart_temps2'));
+
+      chart.draw(data, options);
+
+    }
+  </script>
+  
+  <script>
+    google.load('visualization', '1', {packages: ['corechart']});
+    google.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+
+      var data = new google.visualization.DataTable();
+      data.addColumn('datetime', 'Time');  
+      data.addColumn('number', 'Temperature');      
+      data.addRows([
+          {% for row in temp3 %} 
+            [new Date({{row[0][0:4]}},{{row[0][5:7]}},{{row[0][8:10]}},{{row[0][11:13]}},{{row[0][14:16]}}),
+                {{'%0.2f'|format(row[2])}}],
+          {% endfor %}
+        ]);
+
+      var options = {
+        width:900,
+        height: 900,
+        hAxis: {
+          title: "Date",
+          gridlines: { count: {{temp_items3}}, color: '#CCC' },
+          format: 'dd-MMM-yyyy HH:mm' },
+        vAxis: {
+          title: 'Degrees'
+        },
+        title: 'Temperature',
+        curveType: 'function'  //Makes line curved
+      };
+
+      var chart = new google.visualization.LineChart(document.getElementById('chart_temps3'));
 
       chart.draw(data, options);
 
@@ -176,8 +295,8 @@
         ]);
 
       var options = {
-        width: 600,
-        height: 563,
+        width:900,
+        height: 900,
         hAxis: {
           title: "Date",
           gridlines: { count: {{curr_items}}, color: '#CCC' },
@@ -213,8 +332,8 @@
         ]);
 
       var options = {
-        width: 600,
-        height: 563,
+        width:900,
+        height: 900,
         hAxis: {
           title: "Date",
           gridlines: { count: {{efi_items}}, color: '#CCC' },
@@ -250,8 +369,8 @@
         ]);
 
       var options = {
-        width: 600,
-        height: 563,
+        width:900,
+        height: 900,
         hAxis: {
           title: "Date",
           gridlines: { count: {{volt_items}}, color: '#CCC' },

@@ -163,7 +163,11 @@ def getDataFromDB():
     conn=sqlite3.connect('/home/pi/Documents/HeatPump/myDB.db')
     curs=conn.cursor()
     curs.execute("SELECT * FROM temp1")
-    temp = curs.fetchall()
+    temp1 = curs.fetchall()
+    curs.execute("SELECT * FROM temp2")
+    temp2 = curs.fetchall()
+    curs.execute("SELECT * FROM temp3")
+    temp3 = curs.fetchall()
     curs.execute("SELECT * FROM volt")
     volt = curs.fetchall()
     curs.execute("SELECT * FROM cur")
@@ -171,14 +175,13 @@ def getDataFromDB():
     curs.execute("SELECT * FROM efi")
     efi = curs.fetchall()
     conn.close()
-    print(temp)
-    return temp, volt, curr, efi
+    return temp1, temp2, temp3, volt, curr, efi
 
 @app.route("/history", methods=["POST", "GET"])
 def history():
-    temp, volt, curr, efi = getDataFromDB()
+    temp1, temp2, temp3, volt, curr, efi = getDataFromDB()
     return render_template("history.html", sensFoundList=g.readTemp, ledStrip = g.tempPins, ledStripDiscription=g.ledStripDiscription,
-                           temp=temp, volt=volt, curr=curr, efi=efi, temp_items=len(temp), volt_items=len(volt), curr_items=len(curr), efi_items=len(efi))
+                           temp1=temp1, temp2=temp2, temp3=temp3, volt=volt, curr=curr, efi=efi, temp_items1=len(temp1), temp_items2=len(temp2), temp_items3=len(temp3), volt_items=len(volt), curr_items=len(curr), efi_items=len(efi))
 
 if __name__ == "__main__":
     scheduler.add_job(id='Scheduled Task', func=scheduleTask,

@@ -13,10 +13,10 @@ def log_values(temp1, temp2,temp3, curr, volt, efi):
 	curs=conn.cursor()
 	curs.execute("""INSERT INTO temp1 values(datetime(CURRENT_TIMESTAMP, 'localtime'),
          (?), (?))""", ("1",temp1))
-	curs.execute("""INSERT INTO temp1 values(datetime(CURRENT_TIMESTAMP, 'localtime'),
-         (?), (?))""", ("2",temp2))
-	curs.execute("""INSERT INTO temp1 values(datetime(CURRENT_TIMESTAMP, 'localtime'),
-         (?), (?))""", ("3",temp3))
+	curs.execute("""INSERT INTO temp2 values(datetime(CURRENT_TIMESTAMP, 'localtime'),
+         (?), (?))""", ("1",temp2))
+	curs.execute("""INSERT INTO temp3 values(datetime(CURRENT_TIMESTAMP, 'localtime'),
+         (?), (?))""", ("1",temp3))
 	curs.execute("""INSERT INTO volt values(datetime(CURRENT_TIMESTAMP, 'localtime'),
          (?), (?))""", ("1",volt))
 	curs.execute("""INSERT INTO cur values(datetime(CURRENT_TIMESTAMP, 'localtime'),

@@ -5,6 +5,7 @@ from setOutputs import setOutputs
 from checkPumpEfi import checkPumpEfi
 from mapValue import mapValue
 import sqlite3
+import datetime
 import webbrowser
 import time
 import os
@@ -22,7 +23,7 @@ import saveToDB as db
 # TODO Dodac mechanizm sprawdzania ile jest przypisanych czjenikow przez utzytkowniaka a ile zostalo wyktytych w tablicy i obsluge bledu
 # TODO Zrobic obsluge czujnokow w preli po sprawdzeniu ile jest czujnikow w tablicy
 # TODO posprzatac PumpEfi (wywolujemy funkcje z parametrami wejsciowymi a mozna to zrobic bez parametrow i zaczytywac z globalsow w sanej funkcji)
-
+# TODO skasowalem to z histiry ale trzeba gdzies wrzucic  {% include 'ledStrip.html' %}
 
 app = Flask(__name__)
 scheduler = APScheduler()
@@ -33,7 +34,7 @@ def scheduleTask():
     print("This test runs every 4 seconds")
 
 def scheduleTask1s():
-    g.BaseEfiInPercent = setOutputs(g.heatObject, g.readTemp[g.heatObject], g.pumpEfi)
+    #g.BaseEfiInPercent = setOutputs(g.heatObject, g.readTemp[g.heatObject], g.pumpEfi)
     #FIXME włczyc po zakonczeniu testow
     # g.pumpI = mapValue(443, 0, 1000, 0, 30)
     # g.pumpV = mapValue(935, 0, 1000, 0, 250)
@@ -159,29 +160,50 @@ def settings():
                 flash('Error wrong input variable - dont use "," - use "." ', 'danger')  
     return render_template("settings.html", setTempList=g.setTemp, pumpIntervalList=g.pumpInterval, 
                             pumpTempOfsetList=g.pumpTempOfset, sensFoundList=g.readTemp )
-def getDataFromDB():
+def getDataFromDB(from_date_str, to_date_str):
     conn=sqlite3.connect('/home/pi/Documents/HeatPump/myDB.db')
     curs=conn.cursor()
-    curs.execute("SELECT * FROM temp1")
+    curs.execute("SELECT * FROM temp1 WHERE rDateTime BETWEEN ? AND ?", (from_date_str, to_date_str))
     temp1 = curs.fetchall()
-    curs.execute("SELECT * FROM temp2")
+    curs.execute("SELECT * FROM temp2 WHERE rDateTime BETWEEN ? AND ?", (from_date_str, to_date_str))
     temp2 = curs.fetchall()
-    curs.execute("SELECT * FROM temp3")
+    curs.execute("SELECT * FROM temp3 WHERE rDateTime BETWEEN ? AND ?", (from_date_str, to_date_str))
     temp3 = curs.fetchall()
-    curs.execute("SELECT * FROM volt")
+    curs.execute("SELECT * FROM volt WHERE rDateTime BETWEEN ? AND ?", (from_date_str, to_date_str))
     volt = curs.fetchall()
-    curs.execute("SELECT * FROM cur")
+    curs.execute("SELECT * FROM cur WHERE rDateTime BETWEEN ? AND ?", (from_date_str, to_date_str))
     curr = curs.fetchall()
-    curs.execute("SELECT * FROM efi")
+    curs.execute("SELECT * FROM efi WHERE rDateTime BETWEEN ? AND ?", (from_date_str, to_date_str))
     efi = curs.fetchall()
     conn.close()
     return temp1, temp2, temp3, volt, curr, efi
 
 @app.route("/history", methods=["POST", "GET"])
 def history():
-    temp1, temp2, temp3, volt, curr, efi = getDataFromDB()
+    from_date_str   = request.args.get('from',time.strftime("%Y-%m-%d %H:%M")) #Get the from date value from the URL
+    to_date_str     = request.args.get('to',time.strftime("%Y-%m-%d %H:%M"))   #Get the to date value from the URL
+    
+    
+    if not validate_date(from_date_str):      # Validate date before sending it to the DB
+        from_date_str = time.strftime("%Y-%m-%d 00:00")
+    if not validate_date(to_date_str):
+        to_date_str = time.strftime("%Y-%m-%d %H:%M")  # Validate date before sending it to the DB
+
+    
+    temp1, temp2, temp3, volt, curr, efi = getDataFromDB(from_date_str, to_date_str)
     return render_template("history.html", sensFoundList=g.readTemp, ledStrip = g.tempPins, ledStripDiscription=g.ledStripDiscription,
                            temp1=temp1, temp2=temp2, temp3=temp3, volt=volt, curr=curr, efi=efi, temp_items1=len(temp1), temp_items2=len(temp2), temp_items3=len(temp3), volt_items=len(volt), curr_items=len(curr), efi_items=len(efi))
+
+
+def validate_date(d):
+    try:
+        datetime.datetime.strptime(d, '%Y-%m-%d %H:%M')
+        return True
+    except ValueError:
+        flash('Zly format zakresu daty', 'danger')
+        return False
+
+
 
 if __name__ == "__main__":
     scheduler.add_job(id='Scheduled Task', func=scheduleTask,

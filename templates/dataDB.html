@@ -28,10 +28,13 @@
   padding: 5px
   
   }
+  .u-full-width{
+  height:100px;
+  }
   </style>
     <div class="container">
       <div class="row">
-        <div class="one-third column" style="margin-top: 5%">
+        <div class="col-4" style="margin-top: 5%">
           <strong>Showing all records</strong> 
           
           <h2>Temperatures</h2>                    
@@ -147,19 +150,13 @@
         </div>
 
       <!-- Google Charts Code start -->
-      <div class="two-thirds column" style="margin-top: 5%">
-        <div class="row">                  
-          <div class="row">
-            <div class="three columns">
+      <div class="col-7" >
               <div id="chart_temps1"></div>
               <div id="chart_temps2"></div>
               <div id="chart_temps3"></div>
               <div id="chart_curr"></div>
               <div id="chart_efi"></div>
-              <div id="chart_volt"></div>
-            </div>
-          </div>
-        </div>     
+              <div id="chart_volt"></div>    
       </div>
       <!-- Google Charts Code end -->
     </div>           
@@ -192,7 +189,7 @@
           gridlines: { count: {{temp_items1}}, color: '#CCC' },
           format: 'dd-MMM-yyyy HH:mm' },
         vAxis: {
-          title: 'Degrees'
+          title: 'Stopnie [C]'
         },
         title: 'Temperature',
         curveType: 'function'  //Makes line curved
@@ -229,7 +226,7 @@
           gridlines: { count: {{temp_items2}}, color: '#CCC' },
           format: 'dd-MMM-yyyy HH:mm' },
         vAxis: {
-          title: 'Degrees'
+          title: 'Stopnie [C]'
         },
         title: 'Temperature',
         curveType: 'function'  //Makes line curved
@@ -266,7 +263,7 @@
           gridlines: { count: {{temp_items3}}, color: '#CCC' },
           format: 'dd-MMM-yyyy HH:mm' },
         vAxis: {
-          title: 'Degrees'
+          title: 'Stopnie [C]'
         },
         title: 'Temperature',
         curveType: 'function'  //Makes line curved
@@ -297,12 +294,13 @@
       var options = {
         width:900,
         height: 900,
+        colors: ['#5cb85c', '#000000'],
         hAxis: {
           title: "Date",
           gridlines: { count: {{curr_items}}, color: '#CCC' },
           format: 'dd-MMM-yyyy HH:mm'        },
         vAxis: {
-          title: 'Amps'
+          title: 'Ampery[A]'
         },
         title: 'Current',
         curveType: 'function'  //Makes line curved

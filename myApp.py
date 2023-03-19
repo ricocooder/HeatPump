@@ -34,7 +34,8 @@ def scheduleTask():
     print("This test runs every 4 seconds")
 
 def scheduleTask1s():
-    #g.BaseEfiInPercent = setOutputs(g.heatObject, g.readTemp[g.heatObject], g.pumpEfi)
+    g.BaseEfiInPercent = setOutputs(g.heatObject, g.readTemp[g.heatObject], g.pumpEfi)
+    db.checkValues(1)
     #FIXME włczyc po zakonczeniu testow
     # g.pumpI = mapValue(443, 0, 1000, 0, 30)
     # g.pumpV = mapValue(935, 0, 1000, 0, 250)
@@ -65,9 +66,9 @@ def result():
         g.heatObject = 2
         
     #FIXME do skasowania po testach    
-    if request.form.get('SaveDB'):
-        flash('Zmiana Trybu Pracy', 'success')
-        db.log_values(g.readTemp[0], g.readTemp[1],g.readTemp[2], g.pumpI, g.pumpV, g.BaseEfiInPercent)
+#     if request.form.get('SaveDB'):
+#         flash('Zmiana Trybu Pracy', 'success')
+#         db.checkValues(1)
         
     #FIXME do skasowania po testach    
     if request.form.get('Switch'):
@@ -200,7 +201,7 @@ def validate_date(d):
         datetime.datetime.strptime(d, '%Y-%m-%d %H:%M')
         return True
     except ValueError:
-        flash('Zly format zakresu daty', 'danger')
+        flash('Zly format zakresu daty sprobuj tak: /history?from=2023-03-19 21:32&to=2023-03-19 22:00', 'danger')
         return False
 
 

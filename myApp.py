@@ -24,6 +24,10 @@ import saveToDB as db
 # TODO Zrobic obsluge czujnokow w preli po sprawdzeniu ile jest czujnikow w tablicy
 # TODO posprzatac PumpEfi (wywolujemy funkcje z parametrami wejsciowymi a mozna to zrobic bez parametrow i zaczytywac z globalsow w sanej funkcji)
 # TODO skasowalem to z histiry ale trzeba gdzies wrzucic  {% include 'ledStrip.html' %}
+# TODO stworzyc funkcjonalnosc do zapisywania fanych do db po wykryciu roznicy w wartosciach
+# TODO dodat parametr sprawdzajacy ilosc wolnej przestrzeni na karcie SD
+# TODO Esport danych do pliku xlsx
+# TODO Zapisywanie wszytkich nastaw na stale
 
 app = Flask(__name__)
 scheduler = APScheduler()

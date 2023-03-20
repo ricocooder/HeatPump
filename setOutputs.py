@@ -118,6 +118,7 @@ def setOutputs(heatObject, temp, pumpEfi):
             g.tempPins[2] = 0
         else:
             BaseEfiInPercent = 0
+            g.pumpI=round(g.pumpI*pumpEfi,2)
             GPIO.output(pins[0], GPIO.LOW)
             g.tempPins[0] = 1
             GPIO.output(pins[1], GPIO.LOW)

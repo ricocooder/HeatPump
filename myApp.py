@@ -11,20 +11,22 @@ import time
 import os
 import globals as g
 import saveToDB as db
+import checkDispSpace as diskSpace
 
-# TODO uporzadkowac ekran ustawienia - #DONE
-# TODO dodac obrazek obok temepratur - #DONE
-# TODO dodac baze danych
-# TODO dodac logike momenty zapisu do abzy dancyh
-# TODO implementacje wykresow i danych histor
+# DONE uporzadkowac ekran ustawienia
+# DONE dodac obrazek obok temepratur
+# DONE dodac baze danych
+# DONE dodac logike momenty zapisu do abzy dancyh
+# BUG 20.03.2023 23:16 ['/dev/root', '15G', '5,7G', '7,9G', '42%', '/']
+# TODO implementacja wykresow i danych historycznych
 # TODO Podlaczyc modol wejsc analogowych
 # TODO podlaczyc potencjoimetry w celu symulacji czujnika napiecia i pradu
 # TODO rozwiazac problem kiedy mamy za duzo odczytanych czujnikow - sheduler wpada w blad i zawiszeja sie wejscia wyjscia
 # TODO Dodac mechanizm sprawdzania ile jest przypisanych czjenikow przez utzytkowniaka a ile zostalo wyktytych w tablicy i obsluge bledu
-# TODO Zrobic obsluge czujnokow w preli po sprawdzeniu ile jest czujnikow w tablicy
+# DONE Zrobic obsluge czujnokow w preli po sprawdzeniu ile jest czujnikow w tablicy
 # TODO posprzatac PumpEfi (wywolujemy funkcje z parametrami wejsciowymi a mozna to zrobic bez parametrow i zaczytywac z globalsow w sanej funkcji)
 # TODO skasowalem to z histiry ale trzeba gdzies wrzucic  {% include 'ledStrip.html' %}
-# TODO stworzyc funkcjonalnosc do zapisywania fanych do db po wykryciu roznicy w wartosciach
+# DONE stworzyc funkcjonalnosc do zapisywania fanych do db po wykryciu roznicy w wartosciach
 # TODO dodat parametr sprawdzajacy ilosc wolnej przestrzeni na karcie SD
 # TODO Esport danych do pliku xlsx
 # TODO Zapisywanie wszytkich nastaw na stale
@@ -38,7 +40,7 @@ def scheduleTask():
     print("This test runs every 4 seconds")
 
 def scheduleTask1s():
-    g.BaseEfiInPercent = setOutputs(g.heatObject, g.readTemp[g.heatObject], g.pumpEfi)
+    # g.BaseEfiInPercent = setOutputs(g.heatObject, g.readTemp[g.heatObject], g.pumpEfi)
     db.checkValues(1)
     #FIXME włczyc po zakonczeniu testow
     # g.pumpI = mapValue(443, 0, 1000, 0, 30)
@@ -69,10 +71,18 @@ def result():
         flash('Pompa załączona', 'success')
         g.heatObject = 2
         
-    #FIXME do skasowania po testach    
-#     if request.form.get('SaveDB'):
-#         flash('Zmiana Trybu Pracy', 'success')
-#         db.checkValues(1)
+    #FIXME zamiana odczytanej wartosci wolnego miejsca na int zeby gdzies to wyswietlic - zrobic z tego osobna funkcje i zapisywac gdzies
+    if request.form.get('SaveDB'):
+        flash('Zmiana Trybu Pracy', 'success')
+        diskSpace.checkDiskSpace(10)
+        # g.diskSpaceList = diskSpace.getDf()
+        # print(g.diskSpaceList)
+        # print(g.diskSpaceList[4])
+        # myvalue = g.diskSpaceList[4].replace('%','')
+        # print(myvalue)
+        # myvalue = int(myvalue)
+        # print(type(myvalue))
+        # print(myvalue)
         
     #FIXME do skasowania po testach    
     if request.form.get('Switch'):
@@ -121,6 +131,10 @@ def temp_sensor_config():
                 g.pumpEfi = 0
     return render_template("temp_sensor_config.html", sensFoundNumber = g.tempSensFoundNumber, sensFoundList=g.readTemp)
 
+@app.route("/raspberrypi", methods=["POST", "GET"])
+def raspberrypi():
+
+    return render_template("raspberrypi.html", diskSpaceList = g.diskSpaceList, sensFoundList=g.readTemp)
 
 @app.route("/settings", methods=["POST", "GET"])
 def settings():

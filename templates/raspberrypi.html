@@ -12,11 +12,13 @@
   {% endif %}
 {% endwith %}
 <body>
-    <form class = "grid" action = "/temp_sensor_config" method = "POST">
+    <form class = "grid" action = "/raspberrypi" method = "POST">
 
 <h1>Strona na ktorej mozna zmienic dane mikrokomputera Raspberry Pi</h1>
-<label>Dane karty pamieci: {{ diskSpaceList }}</label><br/><br/>
+<label>Dane karty pamieci: {{ diskSpaceList }}</label>
 
+<br><br>
+</label><input type="Submit" value="Odczyt Pi" name='SaveDB'/>
 </body>
 
 

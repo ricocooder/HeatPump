@@ -72,19 +72,6 @@ def result():
         flash('Pompa załączona', 'success')
         g.heatObject = 2
         
-    #FIXME zamiana odczytanej wartosci wolnego miejsca na int zeby gdzies to wyswietlic - zrobic z tego osobna funkcje i zapisywac gdzies
-    if request.form.get('SaveDB'):
-        flash('Zmiana Trybu Pracy', 'success')
-        diskSpace.checkDiskSpace(10)
-        # g.diskSpaceList = diskSpace.getDf()
-        # print(g.diskSpaceList)
-        # print(g.diskSpaceList[4])
-        # myvalue = g.diskSpaceList[4].replace('%','')
-        # print(myvalue)
-        # myvalue = int(myvalue)
-        # print(type(myvalue))
-        # print(myvalue)
-        
     #FIXME do skasowania po testach    
     if request.form.get('Switch'):
         flash('Zmiana Trybu Pracy', 'success')
@@ -134,6 +121,19 @@ def temp_sensor_config():
 
 @app.route("/raspberrypi", methods=["POST", "GET"])
 def raspberrypi():
+            
+    #FIXME zamiana odczytanej wartosci wolnego miejsca na int zeby gdzies to wyswietlic - zrobic z tego osobna funkcje i zapisywac gdzies
+    if request.form.get('SaveDB'):
+        flash('Odczyt z parametrow Raspberry Pi', 'success')
+        diskSpace.checkDiskSpace(10)
+        # g.diskSpaceList = diskSpace.getDf()
+        # print(g.diskSpaceList)
+        # print(g.diskSpaceList[4])
+        # myvalue = g.diskSpaceList[4].replace('%','')
+        # print(myvalue)
+        # myvalue = int(myvalue)
+        # print(type(myvalue))
+        # print(myvalue)
 
     return render_template("raspberrypi.html", diskSpaceList = g.diskSpaceList, sensFoundList=g.readTemp)
 

@@ -27,7 +27,8 @@ import checkDispSpace as diskSpace
 # TODO posprzatac PumpEfi (wywolujemy funkcje z parametrami wejsciowymi a mozna to zrobic bez parametrow i zaczytywac z globalsow w sanej funkcji)
 # TODO skasowalem to z histiry ale trzeba gdzies wrzucic  {% include 'ledStrip.html' %}
 # DONE stworzyc funkcjonalnosc do zapisywania fanych do db po wykryciu roznicy w wartosciach
-# TODO dodat parametr sprawdzajacy ilosc wolnej przestrzeni na karcie SD
+# DONE dodat parametr sprawdzajacy ilosc wolnej przestrzeni na karcie SD
+# TODO Dodac logike wyswietlania alarmu jak pojemosc karty jest bliska max 
 # TODO Esport danych do pliku xlsx
 # TODO Zapisywanie wszytkich nastaw na stale
 
@@ -40,7 +41,7 @@ def scheduleTask():
     print("This test runs every 4 seconds")
 
 def scheduleTask1s():
-    # g.BaseEfiInPercent = setOutputs(g.heatObject, g.readTemp[g.heatObject], g.pumpEfi)
+    g.BaseEfiInPercent = setOutputs(g.heatObject, g.readTemp[g.heatObject], g.pumpEfi)
     db.checkValues(1)
     #FIXME włczyc po zakonczeniu testow
     # g.pumpI = mapValue(443, 0, 1000, 0, 30)

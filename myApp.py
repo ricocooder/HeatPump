@@ -41,7 +41,7 @@ def scheduleTask():
     print("This test runs every 4 seconds")
 
 def scheduleTask1s():
-    g.BaseEfiInPercent = setOutputs(g.heatObject, g.readTemp[g.heatObject], g.pumpEfi)
+    # g.BaseEfiInPercent = setOutputs(g.heatObject, g.readTemp[g.heatObject], g.pumpEfi)
     db.checkValues(1)
     #FIXME włczyc po zakonczeniu testow
     # g.pumpI = mapValue(443, 0, 1000, 0, 30)
@@ -203,12 +203,28 @@ def history():
     from_date_str   = request.args.get('from',time.strftime("%Y-%m-%d %H:%M")) #Get the from date value from the URL
     to_date_str     = request.args.get('to',time.strftime("%Y-%m-%d %H:%M"))   #Get the to date value from the URL
     
+    range_h_int = "nan"
+
+    if request.form.get('SaveRange'):
+        try:
+            range_h_int = int(request.form['range_h'])
+            print(type(range_h_int), range_h_int)
+        except:
+            print("data tyme error")
+            range_h_int = 48
+
     
     if not validate_date(from_date_str):      # Validate date before sending it to the DB
         from_date_str = time.strftime("%Y-%m-%d 00:00")
     if not validate_date(to_date_str):
         to_date_str = time.strftime("%Y-%m-%d %H:%M")  # Validate date before sending it to the DB
 
+    if isinstance(range_h_int, int):
+        time_now = datetime.datetime.now()
+        time_from = time_now - datetime.timedelta(hours = range_h_int)
+        time_to = time_now
+        from_date_str = time_from.strftime(("%Y-%m-%d %H:%M"))
+        to_date_str = time_to.strftime(("%Y-%m-%d %H:%M"))
     
     temp1, temp2, temp3, volt, curr, efi = getDataFromDB(from_date_str, to_date_str)
     return render_template("history.html", sensFoundList=g.readTemp, ledStrip = g.tempPins, ledStripDiscription=g.ledStripDiscription,

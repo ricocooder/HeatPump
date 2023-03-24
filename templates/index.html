@@ -32,7 +32,7 @@
             <label >Moc pompy : {{pumpP}} [kW] </label><br><br>
             
             {% for sensor in sensFoundList %}
-                {% if sensFoundList[loop.index-1] != -999 %}
+                {% if sensFoundList[loop.index-1] != 3.14 %}
                     {% if heatObject == loop.index-1 and heatObject > 0 %}
                         <label><h5>{{discriptionList[loop.index-1]}}: {{sensor}} <span>&#8451;</span></h5></label> <br/><br/>
                     {% else %}

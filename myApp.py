@@ -41,7 +41,7 @@ def scheduleTask():
     print("This test runs every 4 seconds")
 
 def scheduleTask1s():
-    # g.BaseEfiInPercent = setOutputs(g.heatObject, g.readTemp[g.heatObject], g.pumpEfi)
+    g.BaseEfiInPercent = setOutputs(g.heatObject, g.readTemp[g.heatObject], g.pumpEfi)
     db.checkValues(1)
     #FIXME włczyc po zakonczeniu testow
     # g.pumpI = mapValue(443, 0, 1000, 0, 30)
@@ -227,8 +227,9 @@ def history():
         to_date_str = time_to.strftime(("%Y-%m-%d %H:%M"))
     
     temp1, temp2, temp3, volt, curr, efi = getDataFromDB(from_date_str, to_date_str)
-    return render_template("history.html", sensFoundList=g.readTemp, ledStrip = g.tempPins, ledStripDiscription=g.ledStripDiscription,
-                           temp1=temp1, temp2=temp2, temp3=temp3, volt=volt, curr=curr, efi=efi, temp_items1=len(temp1), temp_items2=len(temp2), temp_items3=len(temp3), volt_items=len(volt), curr_items=len(curr), efi_items=len(efi))
+    return render_template("history.html", sensFoundList=g.readTemp, ledStrip = g.tempPins, ledStripDiscription=g.ledStripDiscription, temp1=temp1, temp2=temp2, temp3=temp3, 
+                           volt=volt, curr=curr, efi=efi, temp_items1=len(temp1), temp_items2=len(temp2), temp_items3=len(temp3), volt_items=len(volt), curr_items=len(curr), 
+                           efi_items=len(efi), from_date = from_date_str, to_date = to_date_str)
 
 
 def validate_date(d):

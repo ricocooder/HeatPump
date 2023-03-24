@@ -5,6 +5,24 @@
 Historia/Wykresy
 <br/><br/>
          
+<div class="row">
+  <form id="datetime_range" action="/lab_env_db" method="GET"> 
+      <div class="three columns">
+        <label for="from">From date</label>
+        <input class="u-full-width" id="datetimepicker1" type="text" value="{{from_date}}" name="from">
+      </div>        
+      <div class="three columns">
+        <label for="to">To date</label>           
+        <input class="u-full-width" id="datetimepicker2" type="text" value="{{to_date}}" name="to">
+      </div>           
+      <div class="two columns">           
+        <input class="button-primary" type="submit" value="Submit" style="position:relative; top: 28px" id="submit_button" />
+      </div>        
+  </form> 
+</div>
+
+
+
   <div class="row">
     <form id="range_select" action = "/history" method="POST">        
         <div class="column">
@@ -26,5 +44,24 @@ Historia/Wykresy
 
             {% include 'dataDB.html' %}
 
+  <script src="//code.jquery.com/jquery-3.5.0.slim.min.js"></script>
+  <!-- Datetimepicker files start -->
+  <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.min.css"/ >
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.full.min.js"></script>
+  <script>
+    jQuery('#datetimepicker1').datetimepicker(
+      {
+        format:'Y-m-d H:i',
+        defaultDate:'{{from_date}}'
+      });
+    jQuery('#datetimepicker2').datetimepicker({
+        format:'Y-m-d H:i',
+        defaultDate:'{{to_date}}'
+      });
 
+      jQuery("#range_select input[type=radio]").click(function(){ 
+        jQuery("#range_select").submit();
+      });
+  </script>
+  <!-- Datetimepicker files end -->
 {% endblock %}

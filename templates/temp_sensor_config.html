@@ -19,7 +19,7 @@
 
 <label>Wykryta liczba czujnikow: {{ sensFoundNumber }}</label><br/><br/>
 {% for sensor in sensFoundList %}
-        {% if sensFoundList[loop.index-1] != -999 %}
+        {% if sensFoundList[loop.index-1] != 3.14 %}
           <label>[{{loop.index -1}}] - Wykryto czujnik w tablicy o indeksie {{loop.index -1}}, wskazanie: {{sensor}} <span>&#8451;</span></label> <br/><br/>
         {% endif %}
 {% endfor %}

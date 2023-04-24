@@ -1,7 +1,7 @@
 <h1>Jak ustawic stale IP</h1>
 http://bbmagic.net/to-proste-jak-ustawic-statyczne-ip-w-raspberry-pi/
 
-trzeba zainstalowac biblioteki adafruit
+trzeba zainstalowac biblioteki adafruit do obslugi rozszerzenie wejsc analogowych
 
 
 To add support for OneWire, we first need to open up the boot config file, and this can be done by running the following command. to do that I have used a nano text editor, you can use Terminal for that by entering the below command

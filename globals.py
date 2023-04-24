@@ -1,5 +1,5 @@
 acTimePLusInterwal=0
-pins = [26,5,6,12,25,24,23,22]
+pins = [26,5,6,12,25,24,23,16]
 tempPins = [0,0,0,0,0,0,0,0]
 pumpEfi = 1
 diskSpaceList=[]

@@ -1,5 +1,6 @@
 from flask import Flask, flash, render_template, request
 from ReadTemp import read_temp
+from read_curr_woltage import read_CurrAndVolt
 from flask_apscheduler import APScheduler
 from setOutputs import setOutputs
 from checkPumpEfi import checkPumpEfi
@@ -44,9 +45,10 @@ def scheduleTask1s():
     g.BaseEfiInPercent = setOutputs(g.heatObject, g.readTemp[g.heatObject], g.pumpEfi)
     db.checkValues(1)
     #FIXME włczyc po zakonczeniu testow
-    # g.pumpI = mapValue(443, 0, 1000, 0, 30)
-    # g.pumpV = mapValue(935, 0, 1000, 0, 250)
+    g.pumpI = mapValue(g.pumpIread, 0, 1000, 0, 30)
+    g.pumpV = mapValue(g.pumpVread, 0, 1000, 0, 250)
     g.pumpP = g.pumpI*g.pumpV/1000
+    read_CurrAndVolt()
 
 app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'
 pickFolder = os.path.join("static")

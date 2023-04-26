@@ -7,23 +7,23 @@ def checkValues(dif):
         print("Wykryto roznice pomiedzy g.readTemp[0], g.readTempTemp[0]: ", g.readTemp[0], g.readTempTemp[0])
         log_values()
         saveTempData()
-    elif abs(g.readTemp[1] - g.readTempTemp[1])>=dif:
+    if abs(g.readTemp[1] - g.readTempTemp[1])>=dif:
         print("Wykryto roznice pomiedzy g.readTemp[1], g.readTempTemp[1]: ", g.readTemp[1], g.readTempTemp[1])
         log_values()
         saveTempData()
-    elif abs(g.readTemp[2] - g.readTempTemp[2])>=dif:
+    if abs(g.readTemp[2] - g.readTempTemp[2])>=dif:
         print("Wykryto roznice pomiedzy g.readTemp[2], g.readTempTemp[2]: ", g.readTemp[2], g.readTempTemp[2])
         log_values()
         saveTempData()
-    elif abs(g.pumpV - g.pumpVtemp)>=dif:
+    if abs(g.pumpV - g.pumpVtemp)>=dif:
         print("Wykryto roznice pomiedzy g.pumpV, g.pumpVtemp: ", g.pumpV, g.pumpVtemp)
         log_values()
         saveTempData()
-    elif abs(g.pumpI - g.pumpItemp)>=dif:
+    if abs(g.pumpI - g.pumpItemp)>=dif:
         print("Wykryto roznice pomiedzy g.pumpI, g.pumpItemp: ", g.pumpI, g.pumpItemp)
         log_values()
         saveTempData()
-    elif abs(g.BaseEfiInPercent - g.BaseEfiInPercentTemp)>=dif:
+    if abs(g.BaseEfiInPercent - g.BaseEfiInPercentTemp)>=dif:
         print("Wykryto roznice pomiedzy g.BaseEfiInPercent, g.BaseEfiInPercentTemp: ", g.BaseEfiInPercent, g.BaseEfiInPercentTemp)
         log_values()
         saveTempData()

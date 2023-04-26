@@ -43,12 +43,12 @@ def scheduleTask():
 
 def scheduleTask1s():
     g.BaseEfiInPercent = setOutputs(g.heatObject, g.readTemp[g.heatObject], g.pumpEfi)
-    db.checkValues(1)
-    #FIXME włczyc po zakonczeniu testow
-    g.pumpI = mapValue(g.pumpIread, 0, 1000, 0, 30)
-    g.pumpV = mapValue(g.pumpVread, 0, 1000, 0, 250)
-    g.pumpP = g.pumpI*g.pumpV/1000
     read_CurrAndVolt()
+    #FIXME włczyc po zakonczeniu testow
+    g.pumpI = mapValue(g.pumpIread, 0, 1023, 0, 30)
+    g.pumpV = mapValue(g.pumpVread, 0, 1023, 0, 250)
+    g.pumpP = g.pumpI*g.pumpV/1000
+    db.checkValues(1.0)
 
 app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'
 pickFolder = os.path.join("static")

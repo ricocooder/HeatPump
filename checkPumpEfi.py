@@ -7,7 +7,7 @@ def checkPumpEfi(t_set: float, t_accual: float, offset: int, interval: int, heat
     accualTime = time.time()
     if accualTime >g.acTimePLusInterwal + interval[heatObject]:
         g.acTimePLusInterwal=accualTime
-        if t_accual > (t_set + float(offset[heatObject])) and g.pumpEfi >= 0:
+        if t_accual > (t_set + float(offset[heatObject])) and g.pumpEfi > 0:
             g.pumpEfi-=1
         elif t_accual < (t_set - float(offset[heatObject])) and g.pumpEfi < 7:
             g.pumpEfi+=1

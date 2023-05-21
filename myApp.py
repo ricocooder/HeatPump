@@ -32,6 +32,7 @@ import checkDispSpace as diskSpace
 # TODO Dodac logike wyswietlania alarmu jak pojemosc karty jest bliska max 
 # TODO Esport danych do pliku xlsx
 # TODO Zapisywanie wszytkich nastaw na stale
+# TODO pomiar zuzycia pradu/mocy moze warto tez dodac wykres mocy ?
 
 app = Flask(__name__)
 scheduler = APScheduler()
@@ -43,7 +44,7 @@ def scheduleTask():
 
 def scheduleTask1s():
     g.BaseEfiInPercent = setOutputs(g.heatObject, g.readTemp[g.heatObject], g.pumpEfi)
-    read_CurrAndVolt()
+    #read_CurrAndVolt()
     #FIXME włczyc po zakonczeniu testow
     g.pumpI = mapValue(g.pumpIread, 0, 1023, 0, 30)
     g.pumpV = mapValue(g.pumpVread, 0, 1023, 0, 250)

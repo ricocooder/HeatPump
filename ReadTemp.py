@@ -24,8 +24,8 @@ def read_temp():
     tempfile = open('/sys/bus/w1/devices/w1_bus_master1/w1_master_slave_count')
     g.tempSensFoundNumber = int(tempfile.read())
     tempfile.close()
-    # print('Znalziono',g.tempSensFoundNumber,'podlaczonych czujnikow')
-    # print(type(int(g.tempSensFoundNumber)))
+    print('Znalziono',g.tempSensFoundNumber,'podlaczonych czujnikow')
+    print(type(int(g.tempSensFoundNumber)))
     for x in range(int(g.tempSensFoundNumber)):
         #print('przypisuje wartosc dla',x, 'czujnika', datetime.now())
 

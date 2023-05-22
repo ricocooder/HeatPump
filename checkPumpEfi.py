@@ -16,17 +16,17 @@ def checkPumpEfi(t_set: float, t_accual: float, offset: int, interval: int, heat
         actualTime = d.datetime.now()
         actualHour = actualTime.hour
         dayOfWeek = actualTime.today().weekday()
-        print(g.sezon, actualHour, dayOfWeek)
+        print('aktualnie wybrany sezon: ', g.sezon, ' Aktualna godzina: ', actualHour, ' Dzien tygodnia: ', dayOfWeek)
         if dayOfWeek < 5:
             #ustalam harmonogram od poniedzialku do piatku dni tygodnie to zakres 0-6
-            print('zwracam dzien tygodnia', dayOfWeek)
+            # print('zwracam dzien tygodnia', dayOfWeek)
             if actualHour >=7 and actualHour < 9 or actualHour >= 18 and actualHour < 22:
                 g.heatObject = 1
                 #wieczorne grzanie
                 print('wieczoren grzanie')
         else:
             #pozostale dni tygodnia czyli sobota i niedziela
-            print('zwracam dzien tygodnia', dayOfWeek)
+            # print('zwracam dzien tygodnia', dayOfWeek)
             if actualHour >= 7 and actualHour < 22:
                 g.heatObject = 1
                 #ustawiam harmonogram od 7 do 22 godziny w niedziele i sobote

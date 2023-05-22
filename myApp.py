@@ -101,7 +101,8 @@ def result():
         #pompa pracuje - grzenia podlogi
         pick1 = os.path.join(app.config["UPLOAD_FOLDER"], "PonWU_v3.jpg")
     return render_template("index.html", pumpI=g.pumpI, pumpV=g.pumpV, pumpP=round(g.pumpP, 2), image1=pick1, pump=g.BaseEfiInPercent, sensFoundList=g.readTemp,
-                           discriptionList=g.discriptions, heatObject=g.heatObject, trybDiscriptions=g.trybDiscriptions, setTempList = g.setTemp, sezon=g.sezon)
+                           discriptionList=g.discriptions, heatObject=g.heatObject, trybDiscriptions=g.trybDiscriptions, setTempList = g.setTemp, sezon=g.sezon, 
+                           pins = g.pins, pinsDisc = g.pinsDisc, pinsLogic = g.pinsLogic, tempPins = g.tempPins)
 
 
 @app.route("/temp_sensor_config", methods=["POST", "GET"])
@@ -211,7 +212,7 @@ def history():
     if request.form.get('SaveRange'):
         try:
             range_h_int = int(request.form['range_h'])
-            print(type(range_h_int), range_h_int)
+            # print(type(range_h_int), range_h_int)
         except:
             print("data tyme error")
             range_h_int = 48

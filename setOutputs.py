@@ -19,14 +19,6 @@ def setOutputs(heatObject, temp, pumpEfi):
         GPIO.setup(pins[7], GPIO.OUT)
         accualTime = time.time()
 
-        if heatObject != 0:
-            GPIO.output(pins[7], GPIO.HIGH)
-            g.tempPins[7] = 0
-
-        else:
-           GPIO.output(pins[7], GPIO.LOW)
-           g.tempPins[7] = 1
-
         if pumpEfi < 1:
             GPIO.output(pins[6], GPIO.HIGH)
             g.tempPins[6] = 1
@@ -38,11 +30,11 @@ def setOutputs(heatObject, temp, pumpEfi):
            
         if g.heatObject == 1:
             GPIO.output(pins[3], GPIO.HIGH)
-            g.tempPins[3] = 0
+            g.tempPins[3] = 1
 
         else:
            GPIO.output(pins[3], GPIO.LOW)
-           g.tempPins[3] = 1
+           g.tempPins[3] = 0
            
         
         if pumpEfi==7 and heatObject != 0:
@@ -50,97 +42,91 @@ def setOutputs(heatObject, temp, pumpEfi):
             g.pumpI=round(g.pumpI*pumpEfi,2)
             g.pumpV = 235
             GPIO.output(pins[0], GPIO.LOW)
-            g.tempPins[0] = 1
+            g.tempPins[0] = 0
             GPIO.output(pins[1], GPIO.LOW)
-            g.tempPins[1] = 1
+            g.tempPins[1] = 0
             GPIO.output(pins[2], GPIO.LOW)
-            g.tempPins[2] = 1
+            g.tempPins[2] = 0
         elif pumpEfi==6 and heatObject != 0:
             BaseEfiInPercent = BaseEfiInPercent*pumpEfi
             g.pumpI=round(g.pumpI*pumpEfi,2)
             g.pumpV = 234
             GPIO.output(pins[0], GPIO.LOW)
-            g.tempPins[0] = 1
+            g.tempPins[0] = 0
             GPIO.output(pins[1], GPIO.LOW)
-            g.tempPins[1] = 1
+            g.tempPins[1] = 0
             GPIO.output(pins[2], GPIO.HIGH)
-            g.tempPins[2] = 0
+            g.tempPins[2] = 1
         elif pumpEfi == 5 and heatObject != 0:
             BaseEfiInPercent = BaseEfiInPercent*pumpEfi
             g.pumpI=round(g.pumpI*pumpEfi,2)
             g.pumpV = 233
             GPIO.output(pins[0], GPIO.LOW)
-            g.tempPins[0] = 1
+            g.tempPins[0] = 0
             GPIO.output(pins[1], GPIO.HIGH)
-            g.tempPins[1] = 0
+            g.tempPins[1] = 1
             GPIO.output(pins[2], GPIO.LOW)
-            g.tempPins[2] = 1
+            g.tempPins[2] = 0
         elif pumpEfi == 4 and heatObject != 0:
             BaseEfiInPercent = BaseEfiInPercent*pumpEfi
             g.pumpI=round(g.pumpI*pumpEfi,2)
             g.pumpV = 232
             GPIO.output(pins[0], GPIO.HIGH)
-            g.tempPins[0] = 0
+            g.tempPins[0] = 1
             GPIO.output(pins[1], GPIO.LOW)
-            g.tempPins[1] = 1
+            g.tempPins[1] = 0
             GPIO.output(pins[2], GPIO.LOW)
-            g.tempPins[2] = 1
+            g.tempPins[2] = 0
         elif pumpEfi == 3 and heatObject != 0:
             BaseEfiInPercent = BaseEfiInPercent*pumpEfi
             g.pumpI=round(g.pumpI*pumpEfi,2)
             g.pumpV = 231
             GPIO.output(pins[0], GPIO.LOW)
-            g.tempPins[0] = 1
+            g.tempPins[0] = 0
             GPIO.output(pins[1], GPIO.HIGH)
-            g.tempPins[1] = 0
+            g.tempPins[1] = 1
             GPIO.output(pins[2], GPIO.HIGH)
-            g.tempPins[2] = 0
+            g.tempPins[2] = 1
         elif pumpEfi == 2 and heatObject != 0:
             BaseEfiInPercent = BaseEfiInPercent*pumpEfi
             g.pumpI=round(g.pumpI*pumpEfi,2)
             g.pumpV = 230
             GPIO.output(pins[0], GPIO.HIGH)
-            g.tempPins[0] = 0
-            GPIO.output(pins[1], GPIO.LOW)
             g.tempPins[0] = 1
+            GPIO.output(pins[1], GPIO.LOW)
+            g.tempPins[0] = 0
             GPIO.output(pins[2], GPIO.HIGH)
-            g.tempPins[2] = 0
+            g.tempPins[2] = 1
         elif pumpEfi == 1 and heatObject != 0:
             BaseEfiInPercent = BaseEfiInPercent*pumpEfi
             g.pumpI=round(g.pumpI*pumpEfi,2)
             g.pumpV = 229
             GPIO.output(pins[0], GPIO.HIGH)
-            g.tempPins[0] = 0
+            g.tempPins[0] = 1
             GPIO.output(pins[1], GPIO.HIGH)
-            g.tempPins[1] = 0
+            g.tempPins[1] = 1
             GPIO.output(pins[2], GPIO.LOW)
-            g.tempPins[2] = 1
+            g.tempPins[2] = 0
         elif pumpEfi == 0 and heatObject != 0:
             BaseEfiInPercent = BaseEfiInPercent*pumpEfi
             g.pumpI=round(g.pumpI*pumpEfi,2)
             g.pumpV = 228
             GPIO.output(pins[0], GPIO.HIGH)
-            g.tempPins[0] = 0
+            g.tempPins[0] = 1
             GPIO.output(pins[1], GPIO.HIGH)
-            g.tempPins[1] = 0
+            g.tempPins[1] = 1
             GPIO.output(pins[2], GPIO.HIGH)
-            g.tempPins[2] = 0
+            g.tempPins[2] = 1
         else:
             BaseEfiInPercent = 0
             g.pumpI=round(g.pumpI*pumpEfi,2)
             GPIO.output(pins[0], GPIO.HIGH)
-            g.tempPins[0] = 0
+            g.tempPins[0] = 1
             GPIO.output(pins[1], GPIO.HIGH)
-            g.tempPins[1] = 0
+            g.tempPins[1] = 1
             GPIO.output(pins[2], GPIO.HIGH)
-            g.tempPins[2] = 0
+            g.tempPins[2] = 1
             
-        for x,pin in enumerate(pins):
-            state = GPIO.input(pin)
-            print('pin numer: ', pin, ', ktory przypisany jest do: ', g.pinsDisc[x],'ustawiony jest: ', state)
-            
-        print('pumpEfi: ', pumpEfi)
-                   
            
         
         return round(BaseEfiInPercent,1)

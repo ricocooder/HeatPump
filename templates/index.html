@@ -11,7 +11,16 @@
              }
         meter{
             width: 300px;
+            }
+        table{
+            margin-top: 20px;
+            border-spacing: 1;
+            text-align: center;
             }   
+          td{
+            padding: 2px;
+
+            }        
     </style>
     {% extends 'base.html' %}
     {% block content %}
@@ -75,10 +84,21 @@
             </label><input type="Submit" value="Switch" name='Switch'/>
             <!-- <br><br>
             </label><input type="Submit" value="SaveDB" name='SaveDB'/> -->
+            <table>
+              <tr>
+                {%for header in tempPins%}
+                <th>{{header}}</th>
+                {% endfor %}
+              </tr>
+                {% for row in pinsLogic %}
+                <td>{{ row }}</td> 
+                {% endfor %}
+            </table>
           </div>
 
           <div class="col-7 order-last">
             <img src="{{image1}}" class="img-fluid" alt="..." width=100%>
+            
           </div>
         </div>
       </div>

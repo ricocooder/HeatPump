@@ -2,6 +2,28 @@
 
 {% block content %}
 <br/>
+<style>
+.on{
+  background-color: green;
+  width: 150px;
+}
+.off{
+  background-color: red;
+  width: 150px;
+}
+.number{
+  background-color: cornflowerblue;
+  width: 140px;
+}
+.title{
+  text-align: center;
+}
+.harmonogramTable{
+  text-align: center;
+  position: absolute;
+}
+
+</style>
 
 <body>
     <form class = "grid" action = "/settings" method = "POST">
@@ -67,7 +89,33 @@
     </div>
 
   </div>
-</div>
+</div><br><br>
+<h1 class="title">Harmonogram</h1><br><br>
+<table clas="harmonogramTable">
+  <tr>
+    {%for day in dni%}
+    <th>{{day}}</th>
+    {% endfor %}
+  </tr>
+    {% for row in godzina %}
+    <tr>
+      {% for cell in row %}
+      <td><input type="Submit" onclick="getValue(this)" 
+        class="{%if cell == 'ON' %}on{%elif cell == 'OFF' %}off{% else %}number{%endif%}"  
+        value="{{cell}}" 
+        name="{{row[0]}}-{{loop.index0}}"/>
+        <!-- {{row[0]}}-{{loop.index0}} -->
+      </td>
+      {% endfor %}
+    </tr> 
+    {% endfor %}
+</table>
+<script>
+  function getValue(Submit) {
+      var value = 'Are you sure you want to change the logic for this cell?' // Tutaj możesz ustawić wartość, którą chcesz zwrócić
+      alert(value);
+  }
+</script>
  </form>
 
 </body>

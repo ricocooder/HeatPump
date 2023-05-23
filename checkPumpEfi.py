@@ -20,14 +20,18 @@ def checkPumpEfi(t_set: float, t_accual: float, offset: int, interval: int, heat
         if dayOfWeek < 5:
             #ustalam harmonogram od poniedzialku do piatku dni tygodnie to zakres 0-6
             # print('zwracam dzien tygodnia', dayOfWeek)
-            if actualHour >=7 and actualHour < 9 or actualHour >= 18 and actualHour < 22:
+            if (7 <= actualHour <= 9) or (18 <= actualHour <= 22):
                 g.heatObject = 1
                 #wieczorne grzanie
                 print('wieczoren grzanie')
+            else:
+                #wylaczam pompe
+                g.heatObject = 0
+                print('pompa wylaczona')
         else:
             #pozostale dni tygodnia czyli sobota i niedziela
             # print('zwracam dzien tygodnia', dayOfWeek)
-            if actualHour >= 7 and actualHour < 22:
+            if 7 <= actualHour <= 22:
                 g.heatObject = 1
                 #ustawiam harmonogram od 7 do 22 godziny w niedziele i sobote
                 print('praca od 7 do 22')
@@ -52,4 +56,8 @@ def checkPumpEfi(t_set: float, t_accual: float, offset: int, interval: int, heat
             #grzanie podlogowki ustawiam pompe na "srodkowy" tryb
             g.heatObject = 2
             # g.pumpEfi = 3
+        else:
+            #wylaczam pompe
+            g.heatObject = 0
+            print('pompa wylaczona')
         

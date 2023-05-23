@@ -14,25 +14,30 @@ import globals as g
 import saveToDB as db
 import checkDispSpace as diskSpace
 
-# DONE uporzadkowac ekran ustawienia
-# DONE dodac obrazek obok temepratur
-# DONE dodac baze danych
-# DONE dodac logike momenty zapisu do abzy dancyh
-# BUG 20.03.2023 23:16 ['/dev/root', '15G', '5,7G', '7,9G', '42%', '/']
-# TODO implementacja wykresow i danych historycznych
-# TODO Podlaczyc modol wejsc analogowych
-# TODO podlaczyc potencjoimetry w celu symulacji czujnika napiecia i pradu
-# TODO rozwiazac problem kiedy mamy za duzo odczytanych czujnikow - sheduler wpada w blad i zawiszeja sie wejscia wyjscia
-# TODO Dodac mechanizm sprawdzania ile jest przypisanych czjenikow przez utzytkowniaka a ile zostalo wyktytych w tablicy i obsluge bledu
-# DONE Zrobic obsluge czujnokow w preli po sprawdzeniu ile jest czujnikow w tablicy
-# TODO posprzatac PumpEfi (wywolujemy funkcje z parametrami wejsciowymi a mozna to zrobic bez parametrow i zaczytywac z globalsow w sanej funkcji)
-# TODO skasowalem to z histiry ale trzeba gdzies wrzucic  {% include 'ledStrip.html' %}
-# DONE stworzyc funkcjonalnosc do zapisywania fanych do db po wykryciu roznicy w wartosciach
-# DONE dodat parametr sprawdzajacy ilosc wolnej przestrzeni na karcie SD
+
 # TODO Dodac logike wyswietlania alarmu jak pojemosc karty jest bliska max 
 # TODO Esport danych do pliku xlsx
 # TODO Zapisywanie wszytkich nastaw na stale
 # TODO pomiar zuzycia pradu/mocy moze warto tez dodac wykres mocy ?
+# TODO dodac reczne sterowanie
+# BUG 20.03.2023 23:16 ['/dev/root', '15G', '5,7G', '7,9G', '42%', '/']
+# DONE implementacja wykresow i danych historycznych
+    # TODO bardziej czytelne wykresy, kolumny z danymi zawijane?
+    # TODO poprawic style wyswietlania
+# TODO Podlaczyc modol wejsc analogowych
+# TODO posprzatac PumpEfi (wywolujemy funkcje z parametrami wejsciowymi a mozna to zrobic bez parametrow i zaczytywac z globalsow w sanej funkcji)
+# DONE Dodac mechanizm sprawdzania ile jest przypisanych czjenikow przez utzytkowniaka a ile zostalo wyktytych w tablicy i obsluge bledu
+    #TODO poprawic przypisywanie temperatury, od ktorej bedziemy regolowac (problem pojawia sie po wymianie czujnika lub po jego blednym przypisaniu)
+# DONE uporzadkowac ekran ustawienia
+# DONE dodac obrazek obok temepratur
+# DONE dodac baze danych
+# DONE dodac logike momenty zapisu do abzy dancyh
+# DONE podlaczyc potencjoimetry w celu symulacji czujnika napiecia i pradu
+# DONE rozwiazac problem kiedy mamy za duzo odczytanych czujnikow - sheduler wpada w blad i zawiszeja sie wejscia wyjscia - zwiekszyc interwal
+# DONE Zrobic obsluge czujnokow w preli po sprawdzeniu ile jest czujnikow w tablicy
+# DONE skasowalem to z histiry ale trzeba gdzies wrzucic  {% include 'ledStrip.html' %} tableka ze stanem przekaznikow - zrobione
+# DONE stworzyc funkcjonalnosc do zapisywania fanych do db po wykryciu roznicy w wartosciach
+# DONE dodat parametr sprawdzajacy ilosc wolnej przestrzeni na karcie SD
 
 app = Flask(__name__)
 scheduler = APScheduler()
@@ -60,8 +65,9 @@ pick1 = os.path.join(app.config["UPLOAD_FOLDER"], "P_off_v3.jpg")
 def hello_world():
     output = request.form.to_dict()
     global pick1
-    return render_template("index.html", tz1=g.tz1, pumpI=g.pumpI, pumpV=g.pumpV, pumpP=round(g.pumpP, 2),
-                            tzo2=g.tzo2, image1=pick1, pump=g.BaseEfiInPercent)
+    return render_template("index.html", pumpI=g.pumpI, pumpV=g.pumpV, pumpP=round(g.pumpP, 2), image1=pick1, pump=g.BaseEfiInPercent, sensFoundList=g.readTemp,
+                           discriptionList=g.discriptions, heatObject=g.heatObject, trybDiscriptions=g.trybDiscriptions, setTempList = g.setTemp, sezon=g.sezon, 
+                           pins = g.pins, pinsDisc = g.pinsDisc, pinsLogic = g.pinsLogic, tempPins = g.tempPins)
 
 
 @app.route("/result", methods=["POST", "GET"])
@@ -181,8 +187,65 @@ def settings():
             try:
                 g.pumpTempOfset[1] = float(request.form['setAmplitude2'])
             except ValueError:
-                flash('Error wrong input variable - dont use "," - use "." ', 'danger')  
-    return render_template("settings.html", setTempList=g.setTemp, pumpIntervalList=g.pumpInterval, 
+                flash('Error wrong input variable - dont use "," - use "." ', 'danger') 
+        # obsluga przycisku zapisu harmonogramu
+        if request.form.get('0-1'):
+            try:
+                print(g.godzina[0][1])
+                if g.godzina[0][1] == "ON":
+                    g.godzina[0][1] = "OFF"
+                else: g.godzina[0][1] = "ON"
+            except ValueError:
+                flash('Error cant asign value') 
+        if request.form.get('0-2'):
+            try:
+                print(g.godzina[0][2])
+                if g.godzina[0][2] == "ON":
+                    g.godzina[0][2] = "OFF"
+                else: g.godzina[0][2] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('0-3'):
+            try:
+                print(g.godzina[0][3])
+                if g.godzina[0][3] == "ON":
+                    g.godzina[0][3] = "OFF"
+                else: g.godzina[0][3] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('0-4'):
+            try:
+                print(g.godzina[0][4])
+                if g.godzina[0][4] == "ON":
+                    g.godzina[0][4] = "OFF"
+                else: g.godzina[0][4] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('0-5'):
+            try:
+                print(g.godzina[0][5])
+                if g.godzina[0][5] == "ON":
+                    g.godzina[0][5] = "OFF"
+                else: g.godzina[0][5] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('0-6'):
+            try:
+                print(g.godzina[0][6])
+                if g.godzina[0][6] == "ON":
+                    g.godzina[0][6] = "OFF"
+                else: g.godzina[0][6] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('0-7'):
+            try:
+                print(g.godzina[0][7])
+                if g.godzina[0][7] == "ON":
+                    g.godzina[0][7] = "OFF"
+                else: g.godzina[0][7] = "ON"
+            except ValueError:
+                flash('Error cant asign value')               
+    return render_template("settings.html", setTempList=g.setTemp, pumpIntervalList=g.pumpInterval, dni = g.dni, godzina = g.godzina,
                             pumpTempOfsetList=g.pumpTempOfset, sensFoundList=g.readTemp )
 def getDataFromDB(from_date_str, to_date_str):
     conn=sqlite3.connect('/home/pi/Documents/HeatPump/myDB.db')

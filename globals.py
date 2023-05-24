@@ -2,7 +2,7 @@ acTimePLusInterwal=0
 pins = [26,5,6,12,25,24,23,16]
 pinsDisc = ['Sterowanie pompy1 (NC)', 'Sterowanie pompy2 (NC)',
             'Sterowanie pompy3 (NC)', 'Zawor trojdrogowy (NO)',
-            'sterownik piec (NC)', 'zal/wyl 24V (NC)', 'pompa obiegowa (NC)', 'Spare']
+            'Sterownik piec (NC)', 'Zal/Wyl 24V (NC)', 'Pompa obiegowa (NC)', 'Spare']
 pinsLogic = ['NC', 'NC', 'NC', 'NO', 'NC', 'NC', 'NC', 'TBD']
 tempPins = [0,0,0,0,0,0,0,0]
 pumpEfi = 1

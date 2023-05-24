@@ -15,6 +15,7 @@ import saveToDB as db
 import checkDispSpace as diskSpace
 
 
+
 # TODO Dodac logike wyswietlania alarmu jak pojemosc karty jest bliska max 
 # TODO Esport danych do pliku xlsx
 # TODO Zapisywanie wszytkich nastaw na stale
@@ -29,6 +30,7 @@ import checkDispSpace as diskSpace
 # DONE Dodac mechanizm sprawdzania ile jest przypisanych czjenikow przez utzytkowniaka a ile zostalo wyktytych w tablicy i obsluge bledu
     #TODO poprawic przypisywanie temperatury, od ktorej bedziemy regolowac (problem pojawia sie po wymianie czujnika lub po jego blednym przypisaniu)
 # DONE uporzadkowac ekran ustawienia
+# DONE harmonogram pracy pompy
 # DONE dodac obrazek obok temepratur
 # DONE dodac baze danych
 # DONE dodac logike momenty zapisu do abzy dancyh
@@ -187,8 +189,18 @@ def settings():
             try:
                 g.pumpTempOfset[1] = float(request.form['setAmplitude2'])
             except ValueError:
-                flash('Error wrong input variable - dont use "," - use "." ', 'danger') 
-        # obsluga przycisku zapisu harmonogramu
+                flash('Error wrong input variable - dont use "," - use "." ', 'danger')            
+    return render_template("settings.html", setTempList=g.setTemp, pumpIntervalList=g.pumpInterval,
+                            pumpTempOfsetList=g.pumpTempOfset, sensFoundList=g.readTemp )
+
+
+                            
+@app.route("/harmonogram", methods=["POST", "GET"])
+def harmonogram():
+    global pick1
+    output = request.form.to_dict()
+    if request.method == 'POST': 
+        # obsluga przycisku zapisu harmonogramu godzina 0
         if request.form.get('0-1'):
             try:
                 print(g.godzina[0][1])
@@ -244,9 +256,1320 @@ def settings():
                     g.godzina[0][7] = "OFF"
                 else: g.godzina[0][7] = "ON"
             except ValueError:
-                flash('Error cant asign value')               
-    return render_template("settings.html", setTempList=g.setTemp, pumpIntervalList=g.pumpInterval, dni = g.dni, godzina = g.godzina,
-                            pumpTempOfsetList=g.pumpTempOfset, sensFoundList=g.readTemp )
+                flash('Error cant asign value')    
+        # obsluga przycisku zapisu harmonogramu godzina 1
+        if request.form.get('1-1'):
+            try:
+                print(g.godzina[1][1])
+                if g.godzina[1][1] == "ON":
+                    g.godzina[1][1] = "OFF"
+                else: g.godzina[1][1] = "ON"
+            except ValueError:
+                flash('Error cant asign value') 
+        if request.form.get('1-2'):
+            try:
+                print(g.godzina[1][2])
+                if g.godzina[1][2] == "ON":
+                    g.godzina[1][2] = "OFF"
+                else: g.godzina[1][2] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('1-3'):
+            try:
+                print(g.godzina[1][3])
+                if g.godzina[1][3] == "ON":
+                    g.godzina[1][3] = "OFF"
+                else: g.godzina[1][3] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('1-4'):
+            try:
+                print(g.godzina[1][4])
+                if g.godzina[1][4] == "ON":
+                    g.godzina[1][4] = "OFF"
+                else: g.godzina[1][4] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('1-5'):
+            try:
+                print(g.godzina[1][5])
+                if g.godzina[1][5] == "ON":
+                    g.godzina[1][5] = "OFF"
+                else: g.godzina[1][5] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('1-6'):
+            try:
+                print(g.godzina[1][6])
+                if g.godzina[1][6] == "ON":
+                    g.godzina[1][6] = "OFF"
+                else: g.godzina[1][6] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('1-7'):
+            try:
+                print(g.godzina[1][7])
+                if g.godzina[1][7] == "ON":
+                    g.godzina[1][7] = "OFF"
+                else: g.godzina[1][7] = "ON"
+            except ValueError:
+                flash('Error cant asign value') 
+        # obsluga przycisku zapisu harmonogramu 2
+        if request.form.get('2-1'):
+            try:
+                print(g.godzina[2][1])
+                if g.godzina[2][1] == "ON":
+                    g.godzina[2][1] = "OFF"
+                else: g.godzina[2][1] = "ON"
+            except ValueError:
+                flash('Error cant asign value') 
+        if request.form.get('2-2'):
+            try:
+                print(g.godzina[2][2])
+                if g.godzina[2][2] == "ON":
+                    g.godzina[2][2] = "OFF"
+                else: g.godzina[2][2] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('2-3'):
+            try:
+                print(g.godzina[2][3])
+                if g.godzina[2][3] == "ON":
+                    g.godzina[2][3] = "OFF"
+                else: g.godzina[2][3] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('2-4'):
+            try:
+                print(g.godzina[2][4])
+                if g.godzina[2][4] == "ON":
+                    g.godzina[2][4] = "OFF"
+                else: g.godzina[2][4] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('2-5'):
+            try:
+                print(g.godzina[2][5])
+                if g.godzina[2][5] == "ON":
+                    g.godzina[2][5] = "OFF"
+                else: g.godzina[2][5] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('2-6'):
+            try:
+                print(g.godzina[2][6])
+                if g.godzina[2][6] == "ON":
+                    g.godzina[2][6] = "OFF"
+                else: g.godzina[2][6] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('2-7'):
+            try:
+                print(g.godzina[2][7])
+                if g.godzina[2][7] == "ON":
+                    g.godzina[2][7] = "OFF"
+                else: g.godzina[2][7] = "ON"
+            except ValueError:
+                flash('Error cant asign value') 
+        # obsluga przycisku zapisu harmonogramu 3
+        if request.form.get('3-1'):
+            try:
+                print(g.godzina[3][1])
+                if g.godzina[3][1] == "ON":
+                    g.godzina[3][1] = "OFF"
+                else: g.godzina[3][1] = "ON"
+            except ValueError:
+                flash('Error cant asign value') 
+        if request.form.get('3-2'):
+            try:
+                print(g.godzina[3][2])
+                if g.godzina[3][2] == "ON":
+                    g.godzina[3][2] = "OFF"
+                else: g.godzina[3][2] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('3-3'):
+            try:
+                print(g.godzina[3][3])
+                if g.godzina[3][3] == "ON":
+                    g.godzina[3][3] = "OFF"
+                else: g.godzina[3][3] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('3-4'):
+            try:
+                print(g.godzina[3][4])
+                if g.godzina[3][4] == "ON":
+                    g.godzina[3][4] = "OFF"
+                else: g.godzina[3][4] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('3-5'):
+            try:
+                print(g.godzina[3][5])
+                if g.godzina[3][5] == "ON":
+                    g.godzina[3][5] = "OFF"
+                else: g.godzina[3][5] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('3-6'):
+            try:
+                print(g.godzina[3][6])
+                if g.godzina[3][6] == "ON":
+                    g.godzina[3][6] = "OFF"
+                else: g.godzina[3][6] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('3-7'):
+            try:
+                print(g.godzina[3][7])
+                if g.godzina[3][7] == "ON":
+                    g.godzina[3][7] = "OFF"
+                else: g.godzina[3][7] = "ON"
+            except ValueError:
+                flash('Error cant asign value') 
+        # obsluga przycisku zapisu harmonogramu 4
+        if request.form.get('4-1'):
+            try:
+                print(g.godzina[4][1])
+                if g.godzina[4][1] == "ON":
+                    g.godzina[4][1] = "OFF"
+                else: g.godzina[4][1] = "ON"
+            except ValueError:
+                flash('Error cant asign value') 
+        if request.form.get('4-2'):
+            try:
+                print(g.godzina[4][2])
+                if g.godzina[4][2] == "ON":
+                    g.godzina[4][2] = "OFF"
+                else: g.godzina[4][2] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('4-3'):
+            try:
+                print(g.godzina[4][3])
+                if g.godzina[4][3] == "ON":
+                    g.godzina[4][3] = "OFF"
+                else: g.godzina[4][3] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('4-4'):
+            try:
+                print(g.godzina[4][4])
+                if g.godzina[4][4] == "ON":
+                    g.godzina[4][4] = "OFF"
+                else: g.godzina[4][4] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('4-5'):
+            try:
+                print(g.godzina[4][5])
+                if g.godzina[4][5] == "ON":
+                    g.godzina[4][5] = "OFF"
+                else: g.godzina[4][5] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('4-6'):
+            try:
+                print(g.godzina[4][6])
+                if g.godzina[4][6] == "ON":
+                    g.godzina[4][6] = "OFF"
+                else: g.godzina[4][6] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('4-7'):
+            try:
+                print(g.godzina[4][7])
+                if g.godzina[4][7] == "ON":
+                    g.godzina[4][7] = "OFF"
+                else: g.godzina[4][7] = "ON"
+            except ValueError:
+                flash('Error cant asign value') 
+        # obsluga przycisku zapisu harmonogramu 5
+        if request.form.get('5-1'):
+            try:
+                print(g.godzina[5][1])
+                if g.godzina[5][1] == "ON":
+                    g.godzina[5][1] = "OFF"
+                else: g.godzina[5][1] = "ON"
+            except ValueError:
+                flash('Error cant asign value') 
+        if request.form.get('5-2'):
+            try:
+                print(g.godzina[5][2])
+                if g.godzina[5][2] == "ON":
+                    g.godzina[5][2] = "OFF"
+                else: g.godzina[5][2] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('5-3'):
+            try:
+                print(g.godzina[5][3])
+                if g.godzina[5][3] == "ON":
+                    g.godzina[5][3] = "OFF"
+                else: g.godzina[5][3] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('5-4'):
+            try:
+                print(g.godzina[5][4])
+                if g.godzina[5][4] == "ON":
+                    g.godzina[5][4] = "OFF"
+                else: g.godzina[5][4] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('5-5'):
+            try:
+                print(g.godzina[5][5])
+                if g.godzina[5][5] == "ON":
+                    g.godzina[5][5] = "OFF"
+                else: g.godzina[5][5] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('5-6'):
+            try:
+                print(g.godzina[5][6])
+                if g.godzina[5][6] == "ON":
+                    g.godzina[5][6] = "OFF"
+                else: g.godzina[5][6] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('5-7'):
+            try:
+                print(g.godzina[5][7])
+                if g.godzina[5][7] == "ON":
+                    g.godzina[5][7] = "OFF"
+                else: g.godzina[5][7] = "ON"
+            except ValueError:
+                flash('Error cant asign value') 
+        # obsluga przycisku zapisu harmonogramu 6
+        if request.form.get('6-1'):
+            try:
+                print(g.godzina[6][1])
+                if g.godzina[6][1] == "ON":
+                    g.godzina[6][1] = "OFF"
+                else: g.godzina[6][1] = "ON"
+            except ValueError:
+                flash('Error cant asign value') 
+        if request.form.get('6-2'):
+            try:
+                print(g.godzina[6][2])
+                if g.godzina[6][2] == "ON":
+                    g.godzina[6][2] = "OFF"
+                else: g.godzina[6][2] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('6-3'):
+            try:
+                print(g.godzina[6][3])
+                if g.godzina[6][3] == "ON":
+                    g.godzina[6][3] = "OFF"
+                else: g.godzina[6][3] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('6-4'):
+            try:
+                print(g.godzina[6][4])
+                if g.godzina[6][4] == "ON":
+                    g.godzina[6][4] = "OFF"
+                else: g.godzina[6][4] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('6-5'):
+            try:
+                print(g.godzina[6][5])
+                if g.godzina[6][5] == "ON":
+                    g.godzina[6][5] = "OFF"
+                else: g.godzina[6][5] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('6-6'):
+            try:
+                print(g.godzina[6][6])
+                if g.godzina[6][6] == "ON":
+                    g.godzina[6][6] = "OFF"
+                else: g.godzina[6][6] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('6-7'):
+            try:
+                print(g.godzina[6][7])
+                if g.godzina[6][7] == "ON":
+                    g.godzina[6][7] = "OFF"
+                else: g.godzina[6][7] = "ON"
+            except ValueError:
+                flash('Error cant asign value') 
+        # obsluga przycisku zapisu harmonogramu 7
+        if request.form.get('7-1'):
+            try:
+                print(g.godzina[7][1])
+                if g.godzina[7][1] == "ON":
+                    g.godzina[7][1] = "OFF"
+                else: g.godzina[7][1] = "ON"
+            except ValueError:
+                flash('Error cant asign value') 
+        if request.form.get('7-2'):
+            try:
+                print(g.godzina[7][2])
+                if g.godzina[7][2] == "ON":
+                    g.godzina[7][2] = "OFF"
+                else: g.godzina[7][2] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('7-3'):
+            try:
+                print(g.godzina[7][3])
+                if g.godzina[7][3] == "ON":
+                    g.godzina[7][3] = "OFF"
+                else: g.godzina[7][3] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('7-4'):
+            try:
+                print(g.godzina[7][4])
+                if g.godzina[7][4] == "ON":
+                    g.godzina[7][4] = "OFF"
+                else: g.godzina[7][4] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('7-5'):
+            try:
+                print(g.godzina[7][5])
+                if g.godzina[7][5] == "ON":
+                    g.godzina[7][5] = "OFF"
+                else: g.godzina[7][5] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('7-6'):
+            try:
+                print(g.godzina[7][6])
+                if g.godzina[7][6] == "ON":
+                    g.godzina[7][6] = "OFF"
+                else: g.godzina[7][6] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('7-7'):
+            try:
+                print(g.godzina[7][7])
+                if g.godzina[7][7] == "ON":
+                    g.godzina[7][7] = "OFF"
+                else: g.godzina[7][7] = "ON"
+            except ValueError:
+                flash('Error cant asign value') 
+        # obsluga przycisku zapisu harmonogramu 8
+        if request.form.get('8-1'):
+            try:
+                print(g.godzina[8][1])
+                if g.godzina[8][1] == "ON":
+                    g.godzina[8][1] = "OFF"
+                else: g.godzina[8][1] = "ON"
+            except ValueError:
+                flash('Error cant asign value') 
+        if request.form.get('8-2'):
+            try:
+                print(g.godzina[8][2])
+                if g.godzina[8][2] == "ON":
+                    g.godzina[8][2] = "OFF"
+                else: g.godzina[8][2] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('8-3'):
+            try:
+                print(g.godzina[8][3])
+                if g.godzina[8][3] == "ON":
+                    g.godzina[8][3] = "OFF"
+                else: g.godzina[8][3] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('8-4'):
+            try:
+                print(g.godzina[8][4])
+                if g.godzina[8][4] == "ON":
+                    g.godzina[8][4] = "OFF"
+                else: g.godzina[8][4] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('8-5'):
+            try:
+                print(g.godzina[8][5])
+                if g.godzina[8][5] == "ON":
+                    g.godzina[8][5] = "OFF"
+                else: g.godzina[8][5] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('8-6'):
+            try:
+                print(g.godzina[8][6])
+                if g.godzina[8][6] == "ON":
+                    g.godzina[8][6] = "OFF"
+                else: g.godzina[8][6] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('8-7'):
+            try:
+                print(g.godzina[8][7])
+                if g.godzina[8][7] == "ON":
+                    g.godzina[8][7] = "OFF"
+                else: g.godzina[8][7] = "ON"
+            except ValueError:
+                flash('Error cant asign value') 
+        # obsluga przycisku zapisu harmonogramu 9
+        if request.form.get('9-1'):
+            try:
+                print(g.godzina[9][1])
+                if g.godzina[9][1] == "ON":
+                    g.godzina[9][1] = "OFF"
+                else: g.godzina[9][1] = "ON"
+            except ValueError:
+                flash('Error cant asign value') 
+        if request.form.get('9-2'):
+            try:
+                print(g.godzina[9][2])
+                if g.godzina[9][2] == "ON":
+                    g.godzina[9][2] = "OFF"
+                else: g.godzina[9][2] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('9-3'):
+            try:
+                print(g.godzina[9][3])
+                if g.godzina[9][3] == "ON":
+                    g.godzina[9][3] = "OFF"
+                else: g.godzina[9][3] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('9-4'):
+            try:
+                print(g.godzina[9][4])
+                if g.godzina[9][4] == "ON":
+                    g.godzina[9][4] = "OFF"
+                else: g.godzina[9][4] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('9-5'):
+            try:
+                print(g.godzina[9][5])
+                if g.godzina[9][5] == "ON":
+                    g.godzina[9][5] = "OFF"
+                else: g.godzina[9][5] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('9-6'):
+            try:
+                print(g.godzina[9][6])
+                if g.godzina[9][6] == "ON":
+                    g.godzina[9][6] = "OFF"
+                else: g.godzina[9][6] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('9-7'):
+            try:
+                print(g.godzina[9][7])
+                if g.godzina[9][7] == "ON":
+                    g.godzina[9][7] = "OFF"
+                else: g.godzina[9][7] = "ON"
+            except ValueError:
+                flash('Error cant asign value') 
+        # obsluga przycisku zapisu harmonogramu 10
+        if request.form.get('10-1'):
+            try:
+                print(g.godzina[10][1])
+                if g.godzina[10][1] == "ON":
+                    g.godzina[10][1] = "OFF"
+                else: g.godzina[10][1] = "ON"
+            except ValueError:
+                flash('Error cant asign value') 
+        if request.form.get('10-2'):
+            try:
+                print(g.godzina[10][2])
+                if g.godzina[10][2] == "ON":
+                    g.godzina[10][2] = "OFF"
+                else: g.godzina[10][2] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('10-3'):
+            try:
+                print(g.godzina[10][3])
+                if g.godzina[10][3] == "ON":
+                    g.godzina[10][3] = "OFF"
+                else: g.godzina[10][3] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('10-4'):
+            try:
+                print(g.godzina[10][4])
+                if g.godzina[10][4] == "ON":
+                    g.godzina[10][4] = "OFF"
+                else: g.godzina[10][4] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('10-5'):
+            try:
+                print(g.godzina[10][5])
+                if g.godzina[10][5] == "ON":
+                    g.godzina[10][5] = "OFF"
+                else: g.godzina[10][5] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('10-6'):
+            try:
+                print(g.godzina[10][6])
+                if g.godzina[10][6] == "ON":
+                    g.godzina[10][6] = "OFF"
+                else: g.godzina[10][6] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('10-7'):
+            try:
+                print(g.godzina[10][7])
+                if g.godzina[10][7] == "ON":
+                    g.godzina[10][7] = "OFF"
+                else: g.godzina[10][7] = "ON"
+            except ValueError:
+                flash('Error cant asign value') 
+        # obsluga przycisku zapisu harmonogramu 11
+        if request.form.get('11-1'):
+            try:
+                print(g.godzina[11][1])
+                if g.godzina[11][1] == "ON":
+                    g.godzina[11][1] = "OFF"
+                else: g.godzina[11][1] = "ON"
+            except ValueError:
+                flash('Error cant asign value') 
+        if request.form.get('11-2'):
+            try:
+                print(g.godzina[11][2])
+                if g.godzina[11][2] == "ON":
+                    g.godzina[11][2] = "OFF"
+                else: g.godzina[11][2] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('11-3'):
+            try:
+                print(g.godzina[11][3])
+                if g.godzina[11][3] == "ON":
+                    g.godzina[11][3] = "OFF"
+                else: g.godzina[11][3] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('11-4'):
+            try:
+                print(g.godzina[11][4])
+                if g.godzina[11][4] == "ON":
+                    g.godzina[11][4] = "OFF"
+                else: g.godzina[11][4] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('11-5'):
+            try:
+                print(g.godzina[11][5])
+                if g.godzina[11][5] == "ON":
+                    g.godzina[11][5] = "OFF"
+                else: g.godzina[11][5] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('11-6'):
+            try:
+                print(g.godzina[11][6])
+                if g.godzina[11][6] == "ON":
+                    g.godzina[11][6] = "OFF"
+                else: g.godzina[11][6] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('11-7'):
+            try:
+                print(g.godzina[11][7])
+                if g.godzina[11][7] == "ON":
+                    g.godzina[11][7] = "OFF"
+                else: g.godzina[11][7] = "ON"
+            except ValueError:
+                flash('Error cant asign value') 
+        # obsluga przycisku zapisu harmonogramu 12
+        if request.form.get('12-1'):
+            try:
+                print(g.godzina[12][1])
+                if g.godzina[12][1] == "ON":
+                    g.godzina[12][1] = "OFF"
+                else: g.godzina[12][1] = "ON"
+            except ValueError:
+                flash('Error cant asign value') 
+        if request.form.get('12-2'):
+            try:
+                print(g.godzina[12][2])
+                if g.godzina[12][2] == "ON":
+                    g.godzina[12][2] = "OFF"
+                else: g.godzina[12][2] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('12-3'):
+            try:
+                print(g.godzina[12][3])
+                if g.godzina[12][3] == "ON":
+                    g.godzina[12][3] = "OFF"
+                else: g.godzina[12][3] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('12-4'):
+            try:
+                print(g.godzina[12][4])
+                if g.godzina[12][4] == "ON":
+                    g.godzina[12][4] = "OFF"
+                else: g.godzina[12][4] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('12-5'):
+            try:
+                print(g.godzina[12][5])
+                if g.godzina[12][5] == "ON":
+                    g.godzina[12][5] = "OFF"
+                else: g.godzina[12][5] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('12-6'):
+            try:
+                print(g.godzina[12][6])
+                if g.godzina[12][6] == "ON":
+                    g.godzina[12][6] = "OFF"
+                else: g.godzina[12][6] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('12-7'):
+            try:
+                print(g.godzina[12][7])
+                if g.godzina[12][7] == "ON":
+                    g.godzina[12][7] = "OFF"
+                else: g.godzina[12][7] = "ON"
+            except ValueError:
+                flash('Error cant asign value') 
+        # obsluga przycisku zapisu harmonogramu 13
+        if request.form.get('13-1'):
+            try:
+                print(g.godzina[13][1])
+                if g.godzina[13][1] == "ON":
+                    g.godzina[13][1] = "OFF"
+                else: g.godzina[13][1] = "ON"
+            except ValueError:
+                flash('Error cant asign value') 
+        if request.form.get('13-2'):
+            try:
+                print(g.godzina[13][2])
+                if g.godzina[13][2] == "ON":
+                    g.godzina[13][2] = "OFF"
+                else: g.godzina[13][2] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('13-3'):
+            try:
+                print(g.godzina[13][3])
+                if g.godzina[13][3] == "ON":
+                    g.godzina[13][3] = "OFF"
+                else: g.godzina[13][3] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('13-4'):
+            try:
+                print(g.godzina[13][4])
+                if g.godzina[13][4] == "ON":
+                    g.godzina[13][4] = "OFF"
+                else: g.godzina[13][4] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('13-5'):
+            try:
+                print(g.godzina[13][5])
+                if g.godzina[13][5] == "ON":
+                    g.godzina[13][5] = "OFF"
+                else: g.godzina[13][5] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('13-6'):
+            try:
+                print(g.godzina[13][6])
+                if g.godzina[13][6] == "ON":
+                    g.godzina[13][6] = "OFF"
+                else: g.godzina[13][6] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('13-7'):
+            try:
+                print(g.godzina[13][7])
+                if g.godzina[13][7] == "ON":
+                    g.godzina[13][7] = "OFF"
+                else: g.godzina[13][7] = "ON"
+            except ValueError:
+                flash('Error cant asign value') 
+        # obsluga przycisku zapisu harmonogramu 14
+        if request.form.get('14-1'):
+            try:
+                print(g.godzina[14][1])
+                if g.godzina[14][1] == "ON":
+                    g.godzina[14][1] = "OFF"
+                else: g.godzina[14][1] = "ON"
+            except ValueError:
+                flash('Error cant asign value') 
+        if request.form.get('14-2'):
+            try:
+                print(g.godzina[14][2])
+                if g.godzina[14][2] == "ON":
+                    g.godzina[14][2] = "OFF"
+                else: g.godzina[14][2] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('14-3'):
+            try:
+                print(g.godzina[14][3])
+                if g.godzina[14][3] == "ON":
+                    g.godzina[14][3] = "OFF"
+                else: g.godzina[14][3] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('14-4'):
+            try:
+                print(g.godzina[14][4])
+                if g.godzina[14][4] == "ON":
+                    g.godzina[14][4] = "OFF"
+                else: g.godzina[14][4] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('14-5'):
+            try:
+                print(g.godzina[14][5])
+                if g.godzina[14][5] == "ON":
+                    g.godzina[14][5] = "OFF"
+                else: g.godzina[14][5] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('14-6'):
+            try:
+                print(g.godzina[14][6])
+                if g.godzina[14][6] == "ON":
+                    g.godzina[14][6] = "OFF"
+                else: g.godzina[14][6] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('14-7'):
+            try:
+                print(g.godzina[14][7])
+                if g.godzina[14][7] == "ON":
+                    g.godzina[14][7] = "OFF"
+                else: g.godzina[14][7] = "ON"
+            except ValueError:
+                flash('Error cant asign value') 
+        # obsluga przycisku zapisu harmonogramu 15
+        if request.form.get('15-1'):
+            try:
+                print(g.godzina[15][1])
+                if g.godzina[15][1] == "ON":
+                    g.godzina[15][1] = "OFF"
+                else: g.godzina[15][1] = "ON"
+            except ValueError:
+                flash('Error cant asign value') 
+        if request.form.get('15-2'):
+            try:
+                print(g.godzina[15][2])
+                if g.godzina[15][2] == "ON":
+                    g.godzina[15][2] = "OFF"
+                else: g.godzina[15][2] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('15-3'):
+            try:
+                print(g.godzina[15][3])
+                if g.godzina[15][3] == "ON":
+                    g.godzina[15][3] = "OFF"
+                else: g.godzina[15][3] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('15-4'):
+            try:
+                print(g.godzina[15][4])
+                if g.godzina[15][4] == "ON":
+                    g.godzina[15][4] = "OFF"
+                else: g.godzina[15][4] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('15-5'):
+            try:
+                print(g.godzina[15][5])
+                if g.godzina[15][5] == "ON":
+                    g.godzina[15][5] = "OFF"
+                else: g.godzina[15][5] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('15-6'):
+            try:
+                print(g.godzina[15][6])
+                if g.godzina[15][6] == "ON":
+                    g.godzina[15][6] = "OFF"
+                else: g.godzina[15][6] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('15-7'):
+            try:
+                print(g.godzina[15][7])
+                if g.godzina[15][7] == "ON":
+                    g.godzina[15][7] = "OFF"
+                else: g.godzina[15][7] = "ON"
+            except ValueError:
+                flash('Error cant asign value') 
+        # obsluga przycisku zapisu harmonogramu 16
+        if request.form.get('16-1'):
+            try:
+                print(g.godzina[16][1])
+                if g.godzina[16][1] == "ON":
+                    g.godzina[16][1] = "OFF"
+                else: g.godzina[16][1] = "ON"
+            except ValueError:
+                flash('Error cant asign value') 
+        if request.form.get('16-2'):
+            try:
+                print(g.godzina[16][2])
+                if g.godzina[16][2] == "ON":
+                    g.godzina[16][2] = "OFF"
+                else: g.godzina[16][2] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('16-3'):
+            try:
+                print(g.godzina[16][3])
+                if g.godzina[16][3] == "ON":
+                    g.godzina[16][3] = "OFF"
+                else: g.godzina[16][3] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('16-4'):
+            try:
+                print(g.godzina[16][4])
+                if g.godzina[16][4] == "ON":
+                    g.godzina[16][4] = "OFF"
+                else: g.godzina[16][4] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('16-5'):
+            try:
+                print(g.godzina[16][5])
+                if g.godzina[16][5] == "ON":
+                    g.godzina[16][5] = "OFF"
+                else: g.godzina[16][5] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('16-6'):
+            try:
+                print(g.godzina[16][6])
+                if g.godzina[16][6] == "ON":
+                    g.godzina[16][6] = "OFF"
+                else: g.godzina[16][6] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('16-7'):
+            try:
+                print(g.godzina[16][7])
+                if g.godzina[16][7] == "ON":
+                    g.godzina[16][7] = "OFF"
+                else: g.godzina[16][7] = "ON"
+            except ValueError:
+                flash('Error cant asign value') 
+        # obsluga przycisku zapisu harmonogramu 17
+        if request.form.get('17-1'):
+            try:
+                print(g.godzina[17][1])
+                if g.godzina[17][1] == "ON":
+                    g.godzina[17][1] = "OFF"
+                else: g.godzina[17][1] = "ON"
+            except ValueError:
+                flash('Error cant asign value') 
+        if request.form.get('17-2'):
+            try:
+                print(g.godzina[17][2])
+                if g.godzina[17][2] == "ON":
+                    g.godzina[17][2] = "OFF"
+                else: g.godzina[17][2] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('17-3'):
+            try:
+                print(g.godzina[17][3])
+                if g.godzina[17][3] == "ON":
+                    g.godzina[17][3] = "OFF"
+                else: g.godzina[17][3] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('17-4'):
+            try:
+                print(g.godzina[17][4])
+                if g.godzina[17][4] == "ON":
+                    g.godzina[17][4] = "OFF"
+                else: g.godzina[17][4] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('17-5'):
+            try:
+                print(g.godzina[17][5])
+                if g.godzina[17][5] == "ON":
+                    g.godzina[17][5] = "OFF"
+                else: g.godzina[17][5] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('17-6'):
+            try:
+                print(g.godzina[17][6])
+                if g.godzina[17][6] == "ON":
+                    g.godzina[17][6] = "OFF"
+                else: g.godzina[17][6] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('17-7'):
+            try:
+                print(g.godzina[17][7])
+                if g.godzina[17][7] == "ON":
+                    g.godzina[17][7] = "OFF"
+                else: g.godzina[17][7] = "ON"
+            except ValueError:
+                flash('Error cant asign value') 
+        # obsluga przycisku zapisu harmonogramu 18
+        if request.form.get('18-1'):
+            try:
+                print(g.godzina[18][1])
+                if g.godzina[18][1] == "ON":
+                    g.godzina[18][1] = "OFF"
+                else: g.godzina[18][1] = "ON"
+            except ValueError:
+                flash('Error cant asign value') 
+        if request.form.get('18-2'):
+            try:
+                print(g.godzina[18][2])
+                if g.godzina[18][2] == "ON":
+                    g.godzina[18][2] = "OFF"
+                else: g.godzina[18][2] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('18-3'):
+            try:
+                print(g.godzina[18][3])
+                if g.godzina[18][3] == "ON":
+                    g.godzina[18][3] = "OFF"
+                else: g.godzina[18][3] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('18-4'):
+            try:
+                print(g.godzina[18][4])
+                if g.godzina[18][4] == "ON":
+                    g.godzina[18][4] = "OFF"
+                else: g.godzina[18][4] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('18-5'):
+            try:
+                print(g.godzina[18][5])
+                if g.godzina[18][5] == "ON":
+                    g.godzina[18][5] = "OFF"
+                else: g.godzina[18][5] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('18-6'):
+            try:
+                print(g.godzina[18][6])
+                if g.godzina[18][6] == "ON":
+                    g.godzina[18][6] = "OFF"
+                else: g.godzina[18][6] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('18-7'):
+            try:
+                print(g.godzina[18][7])
+                if g.godzina[18][7] == "ON":
+                    g.godzina[18][7] = "OFF"
+                else: g.godzina[18][7] = "ON"
+            except ValueError:
+                flash('Error cant asign value') 
+        # obsluga przycisku zapisu harmonogramu 19
+        if request.form.get('19-1'):
+            try:
+                print(g.godzina[19][1])
+                if g.godzina[19][1] == "ON":
+                    g.godzina[19][1] = "OFF"
+                else: g.godzina[19][1] = "ON"
+            except ValueError:
+                flash('Error cant asign value') 
+        if request.form.get('19-2'):
+            try:
+                print(g.godzina[19][2])
+                if g.godzina[19][2] == "ON":
+                    g.godzina[19][2] = "OFF"
+                else: g.godzina[19][2] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('19-3'):
+            try:
+                print(g.godzina[19][3])
+                if g.godzina[19][3] == "ON":
+                    g.godzina[19][3] = "OFF"
+                else: g.godzina[19][3] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('19-4'):
+            try:
+                print(g.godzina[19][4])
+                if g.godzina[19][4] == "ON":
+                    g.godzina[19][4] = "OFF"
+                else: g.godzina[19][4] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('19-5'):
+            try:
+                print(g.godzina[19][5])
+                if g.godzina[19][5] == "ON":
+                    g.godzina[19][5] = "OFF"
+                else: g.godzina[19][5] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('19-6'):
+            try:
+                print(g.godzina[19][6])
+                if g.godzina[19][6] == "ON":
+                    g.godzina[19][6] = "OFF"
+                else: g.godzina[19][6] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('19-7'):
+            try:
+                print(g.godzina[19][7])
+                if g.godzina[19][7] == "ON":
+                    g.godzina[19][7] = "OFF"
+                else: g.godzina[19][7] = "ON"
+            except ValueError:
+                flash('Error cant asign value') 
+        # obsluga przycisku zapisu harmonogramu 20
+        if request.form.get('20-1'):
+            try:
+                print(g.godzina[20][1])
+                if g.godzina[20][1] == "ON":
+                    g.godzina[20][1] = "OFF"
+                else: g.godzina[20][1] = "ON"
+            except ValueError:
+                flash('Error cant asign value') 
+        if request.form.get('20-2'):
+            try:
+                print(g.godzina[20][2])
+                if g.godzina[20][2] == "ON":
+                    g.godzina[20][2] = "OFF"
+                else: g.godzina[20][2] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('20-3'):
+            try:
+                print(g.godzina[20][3])
+                if g.godzina[20][3] == "ON":
+                    g.godzina[20][3] = "OFF"
+                else: g.godzina[20][3] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('20-4'):
+            try:
+                print(g.godzina[20][4])
+                if g.godzina[20][4] == "ON":
+                    g.godzina[20][4] = "OFF"
+                else: g.godzina[20][4] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('20-5'):
+            try:
+                print(g.godzina[20][5])
+                if g.godzina[20][5] == "ON":
+                    g.godzina[20][5] = "OFF"
+                else: g.godzina[20][5] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('20-6'):
+            try:
+                print(g.godzina[20][6])
+                if g.godzina[20][6] == "ON":
+                    g.godzina[20][6] = "OFF"
+                else: g.godzina[20][6] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('20-7'):
+            try:
+                print(g.godzina[20][7])
+                if g.godzina[20][7] == "ON":
+                    g.godzina[20][7] = "OFF"
+                else: g.godzina[20][7] = "ON"
+            except ValueError:
+                flash('Error cant asign value') 
+        # obsluga przycisku zapisu harmonogramu 21
+        if request.form.get('21-1'):
+            try:
+                print(g.godzina[21][1])
+                if g.godzina[21][1] == "ON":
+                    g.godzina[21][1] = "OFF"
+                else: g.godzina[21][1] = "ON"
+            except ValueError:
+                flash('Error cant asign value') 
+        if request.form.get('21-2'):
+            try:
+                print(g.godzina[21][2])
+                if g.godzina[21][2] == "ON":
+                    g.godzina[21][2] = "OFF"
+                else: g.godzina[21][2] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('21-3'):
+            try:
+                print(g.godzina[21][3])
+                if g.godzina[21][3] == "ON":
+                    g.godzina[21][3] = "OFF"
+                else: g.godzina[21][3] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('21-4'):
+            try:
+                print(g.godzina[21][4])
+                if g.godzina[21][4] == "ON":
+                    g.godzina[21][4] = "OFF"
+                else: g.godzina[21][4] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('21-5'):
+            try:
+                print(g.godzina[21][5])
+                if g.godzina[21][5] == "ON":
+                    g.godzina[21][5] = "OFF"
+                else: g.godzina[21][5] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('21-6'):
+            try:
+                print(g.godzina[21][6])
+                if g.godzina[21][6] == "ON":
+                    g.godzina[21][6] = "OFF"
+                else: g.godzina[21][6] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('21-7'):
+            try:
+                print(g.godzina[21][7])
+                if g.godzina[21][7] == "ON":
+                    g.godzina[21][7] = "OFF"
+                else: g.godzina[21][7] = "ON"
+            except ValueError:
+                flash('Error cant asign value') 
+        # obsluga przycisku zapisu harmonogramu 22
+        if request.form.get('22-1'):
+            try:
+                print(g.godzina[22][1])
+                if g.godzina[22][1] == "ON":
+                    g.godzina[22][1] = "OFF"
+                else: g.godzina[22][1] = "ON"
+            except ValueError:
+                flash('Error cant asign value') 
+        if request.form.get('22-2'):
+            try:
+                print(g.godzina[22][2])
+                if g.godzina[22][2] == "ON":
+                    g.godzina[22][2] = "OFF"
+                else: g.godzina[22][2] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('22-3'):
+            try:
+                print(g.godzina[22][3])
+                if g.godzina[22][3] == "ON":
+                    g.godzina[22][3] = "OFF"
+                else: g.godzina[22][3] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('22-4'):
+            try:
+                print(g.godzina[22][4])
+                if g.godzina[22][4] == "ON":
+                    g.godzina[22][4] = "OFF"
+                else: g.godzina[22][4] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('22-5'):
+            try:
+                print(g.godzina[22][5])
+                if g.godzina[22][5] == "ON":
+                    g.godzina[22][5] = "OFF"
+                else: g.godzina[22][5] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('22-6'):
+            try:
+                print(g.godzina[22][6])
+                if g.godzina[22][6] == "ON":
+                    g.godzina[22][6] = "OFF"
+                else: g.godzina[22][6] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('22-7'):
+            try:
+                print(g.godzina[22][7])
+                if g.godzina[22][7] == "ON":
+                    g.godzina[22][7] = "OFF"
+                else: g.godzina[22][7] = "ON"
+            except ValueError:
+                flash('Error cant asign value') 
+        # obsluga przycisku zapisu harmonogramu 23
+        if request.form.get('23-1'):
+            try:
+                print(g.godzina[23][1])
+                if g.godzina[23][1] == "ON":
+                    g.godzina[23][1] = "OFF"
+                else: g.godzina[23][1] = "ON"
+            except ValueError:
+                flash('Error cant asign value') 
+        if request.form.get('23-2'):
+            try:
+                print(g.godzina[23][2])
+                if g.godzina[23][2] == "ON":
+                    g.godzina[23][2] = "OFF"
+                else: g.godzina[23][2] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('23-3'):
+            try:
+                print(g.godzina[23][3])
+                if g.godzina[23][3] == "ON":
+                    g.godzina[23][3] = "OFF"
+                else: g.godzina[23][3] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('23-4'):
+            try:
+                print(g.godzina[23][4])
+                if g.godzina[23][4] == "ON":
+                    g.godzina[23][4] = "OFF"
+                else: g.godzina[23][4] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('23-5'):
+            try:
+                print(g.godzina[23][5])
+                if g.godzina[23][5] == "ON":
+                    g.godzina[23][5] = "OFF"
+                else: g.godzina[23][5] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('23-6'):
+            try:
+                print(g.godzina[23][6])
+                if g.godzina[23][6] == "ON":
+                    g.godzina[23][6] = "OFF"
+                else: g.godzina[23][6] = "ON"
+            except ValueError:
+                flash('Error cant asign value')
+        if request.form.get('23-7'):
+            try:
+                print(g.godzina[23][7])
+                if g.godzina[23][7] == "ON":
+                    g.godzina[23][7] = "OFF"
+                else: g.godzina[23][7] = "ON"
+            except ValueError:
+                flash('Error cant asign value')            
+    return render_template("harmonogram.html", dni = g.dni, godzina = g.godzina, sensFoundList=g.readTemp)
+
 def getDataFromDB(from_date_str, to_date_str):
     conn=sqlite3.connect('/home/pi/Documents/HeatPump/myDB.db')
     curs=conn.cursor()

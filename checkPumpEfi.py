@@ -16,29 +16,13 @@ def checkPumpEfi(t_set: float, t_accual: float, offset: int, interval: int, heat
         actualTime = d.datetime.now()
         actualHour = actualTime.hour
         dayOfWeek = actualTime.today().weekday()
-        print('aktualnie wybrany sezon: ', g.sezon, ' Aktualna godzina: ', actualHour, ' Dzien tygodnia: ', dayOfWeek)
-        if dayOfWeek < 5:
-            #ustalam harmonogram od poniedzialku do piatku dni tygodnie to zakres 0-6
-            # print('zwracam dzien tygodnia', dayOfWeek)
-            if (7 <= actualHour <= 9) or (18 <= actualHour <= 22):
-                g.heatObject = 1
-                #wieczorne grzanie
-                print('wieczoren grzanie')
-            else:
-                #wylaczam pompe
-                g.heatObject = 0
-                print('pompa wylaczona')
+        print('aktualnie wybrany sezon: ', g.sezon, ' Aktualna godzina: ', actualHour, ' Dzien tygodnia: ', dayOfWeek+1, 'watrosc komurki w tablicy: ', g.godzina[actualHour][dayOfWeek+1])
+        if g.godzina[actualHour][dayOfWeek+1] == "ON":
+            print('pompa pracuje')
+            g.heatObject = 1
         else:
-            #pozostale dni tygodnia czyli sobota i niedziela
-            # print('zwracam dzien tygodnia', dayOfWeek)
-            if 7 <= actualHour <= 22:
-                g.heatObject = 1
-                #ustawiam harmonogram od 7 do 22 godziny w niedziele i sobote
-                print('praca od 7 do 22')
-            else:
-                #wylaczam pompe
-                g.heatObject = 0
-                print('pompa wylaczona')
+            print('pompa nie pracuje')
+            g.heatObject = 0
             
     #logika pracy pompy zima    
     else:

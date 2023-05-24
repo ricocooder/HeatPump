@@ -2,6 +2,27 @@
 <meta http-equiv="refresh" content="5">
 <head>
     <style>
+      .open{
+        background-color: rgb(124, 211, 124);
+        /* width: 150px;
+        padding: auto;
+        font-size: 12px; */
+      }
+      .close{
+        background-color: rgb(194, 110, 110);
+        /* width: 150px;
+        font-size: 12px; */
+      }
+      .tbd{
+        background-color: rgb(141, 140, 209);
+        /* width: 150px;
+        font-size: 12px; */
+      }
+      .text_vertical{
+        writing-mode: vertical-rl;
+        /* text-orientation:initial; */
+        text-align: start;
+      }
         body {
             background-repeat:no-repeat; /* wylaczenia powtarzanie tzn jak zdjecie bedzie zamale to nie bedzie ustawiana kolo siebie*/
             background-attached:fixed;
@@ -86,13 +107,30 @@
             </label><input type="Submit" value="SaveDB" name='SaveDB'/> -->
             <table>
               <tr>
+                {%for header in pinsDisc%}
+                <th class="text_vertical" >{{header}}</th>
+                {% endfor %}
+              </tr>
+              <tr>
                 {%for header in tempPins%}
-                <th>{{header}}</th>
+                <th class="{%if header == 0 %}close{%elif header == 1 %}open{% else %}tbd{%endif%}" >{{header}}</th>
                 {% endfor %}
               </tr>
                 {% for row in pinsLogic %}
-                <td>{{ row }}</td> 
+                <td class="{%if row == 'NC' %}close{%elif row == 'NO' %}open{% else %}tbd{%endif%}">{{ row }}</td> 
                 {% endfor %}
+                <tr>
+                  {%for header in tempPins%}
+                    {%  if header == 0 and pinsLogic[loop.index0] == 'NC'%}
+                    <th class="open" >1</th>
+                    {%  elif header == 1 and pinsLogic[loop.index0] == 'NO'%}
+                    <th class="open" >1</th>
+                    {%  else %}
+                    <th class="close" >0</th>
+                    {% endif %}
+                  {% endfor %}
+                </tr>
+                
             </table>
           </div>
 

@@ -15,7 +15,9 @@ import saveToDB as db
 import checkDispSpace as diskSpace
 
 
-
+# DONE Dodac mechanizm sprawdzania ile jest przypisanych czjenikow przez utzytkowniaka a ile zostalo wyktytych w tablicy i obsluge bledu
+    #TODO poprawic przypisywanie temperatury, od ktorej bedziemy regolowac (problem pojawia sie po wymianie czujnika lub po jego blednym przypisaniu)
+# TODO sprawdzic i potwierdzic poprawne sterowanie wszystkimi pinami
 # TODO Dodac logike wyswietlania alarmu jak pojemosc karty jest bliska max 
 # TODO Esport danych do pliku xlsx
 # TODO Zapisywanie wszytkich nastaw na stale
@@ -27,8 +29,6 @@ import checkDispSpace as diskSpace
     # TODO poprawic style wyswietlania
 # TODO Podlaczyc modol wejsc analogowych
 # TODO posprzatac PumpEfi (wywolujemy funkcje z parametrami wejsciowymi a mozna to zrobic bez parametrow i zaczytywac z globalsow w sanej funkcji)
-# DONE Dodac mechanizm sprawdzania ile jest przypisanych czjenikow przez utzytkowniaka a ile zostalo wyktytych w tablicy i obsluge bledu
-    #TODO poprawic przypisywanie temperatury, od ktorej bedziemy regolowac (problem pojawia sie po wymianie czujnika lub po jego blednym przypisaniu)
 # DONE uporzadkowac ekran ustawienia
 # DONE harmonogram pracy pompy
 # DONE dodac obrazek obok temepratur

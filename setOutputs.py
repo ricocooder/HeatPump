@@ -34,7 +34,16 @@ def setOutputs(heatObject, temp, pumpEfi):
 
         else:
            GPIO.output(pins[3], GPIO.LOW)
-           g.tempPins[3] = 0
+           g.tempPins[3] = 0        
+           
+           
+        if g.heatObject == 0:
+            GPIO.output(pins[4], GPIO.LOW)
+            g.tempPins[4] = 0
+
+        else:
+           GPIO.output(pins[4], GPIO.HIGH)
+           g.tempPins[4] = 1
            
         
         if pumpEfi==7 and heatObject != 0:

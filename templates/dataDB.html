@@ -23,7 +23,6 @@
   <!-- <link rel="icon" type="image/png" href="/static/images/favicon.png"> -->
 </head>
 
-<body>
   <style>
     .display_table,
     tr,
@@ -31,7 +30,6 @@
     td {
       border: 1px solid black;
       padding: 5px;
-      width: auto;
 
     }
 
@@ -39,16 +37,47 @@
       max-height: 600px;
       overflow-y: scroll;
     }
+    .container{
+      display: flex;
+      flex-wrap: wrap;
+      width: 150%;
+      /* margin-left: 0;
+      margin-right: 0; */
+    }
+    .row{
+      /* display: flex; */
+      /* width: 100%; */
+      /* justify-content:baseline; */
+      flex-wrap: nowrap;
+      margin-bottom: 10px;
+    }
+    .column{
+      height: 30%;
+      width: fit-content;
+      padding-top: 10px;
+      box-sizing: border-box;
+    }
+    .column-table{
+      height: 30%;
+      width: fit-content;
+      padding-top: 120px;
+      box-sizing: border-box;
+    }
+    .column-diagram{
+      padding: 0px;
+      height: auto;
+      width: fit-content;
+    }
+    .body{
+      margin: 0;
+      padding: 0;
+    }
+
   </style>
-
-
-
-
+<body>
   <div class="container">
     <div class="row">
-      <div class="col-2">
-        <strong>Showing all records</strong>
-        <h4>Temperatures</h4>
+      <div class="column-table">
         <div class="display_container">
           <table class="display_table">
             <thead>
@@ -66,8 +95,15 @@
               {% endfor %}
             </tbody>
           </table>
-        </div>
-        <h4>Temperatures</h4>
+        </div>      
+      </div>
+      <div class="column-diagram">
+        <div id="chart_temps1"></div>
+      </div>
+
+    </div>
+    <div class="row">
+      <div class="column-table">
         <div class="display_container">
           <table class="display_table">
             <thead>
@@ -85,9 +121,15 @@
               {% endfor %}
             </tbody>
           </table>
-        </div>
+        </div>       
+      </div>
+      <div class="column-diagram">
+        <div id="chart_temps2"></div>
+      </div>
 
-        <h4>Temperatures</h4>
+    </div>
+    <div class="row">
+      <div class="column-table">
         <div class="display_container">
           <table class="display_table">
             <thead>
@@ -105,9 +147,15 @@
               {% endfor %}
             </tbody>
           </table>
-        </div>
+        </div>      
+      </div>
+      <div class="column-diagram">
+        <div id="chart_temps3"></div>
+      </div>
 
-        <h4>Current</h4>
+    </div>
+    <div class="row">
+      <div class="column-table">  
         <div class="display_container">
           <table class="display_table">
             <thead>
@@ -125,9 +173,15 @@
               {% endfor %}
             </tbody>
           </table>
-        </div>
+        </div>      
+      </div>
+      <div class="column">
+        <div id="chart_curr"></div>
+      </div>
 
-        <h4>Pump Efi</h4>
+    </div>
+    <div class="row">
+      <div class="column-table">
         <div class="display_container">
           <table class="display_table">
             <thead>
@@ -145,10 +199,15 @@
               {% endfor %}
             </tbody>
           </table>
-        </div>
+        </div>     
+      </div>
+      <div class="column">
+        <div id="chart_efi"></div>
+      </div>
 
-
-        <h4>Pump Voltage</h4>
+    </div>
+    <div class="row">
+      <div class="column-table">
         <div class="display_container">
           <table class="display_table">
             <thead>
@@ -166,11 +225,16 @@
               {% endfor %}
             </tbody>
           </table>
-        </div>
-
-
+        </div>    
+      </div>
+      <div class="column">
+        <div id="chart_volt"></div>
       </div>
 
+    </div>
+
+
+  </div>
       <!-- Google Charts Code start -->
       <div class="col-1">
         <div id="chart_temps1"></div>
@@ -207,6 +271,7 @@
   var options = {
     width: 1200,
     height: 900,
+  
     hAxis: {
       title: "Date",
       gridlines: { count: {{ temp_items1 }}, color: '#CCC' },
@@ -214,7 +279,7 @@
   vAxis: {
     title: 'Stopnie [C]'
   },
-  title: 'Temperature',
+  title: 'Temperatura zewnętrzna',
     curveType: 'function'  //Makes line curved
       };
 
@@ -251,7 +316,7 @@
   vAxis: {
     title: 'Stopnie [C]'
   },
-  title: 'Temperature',
+  title: 'Temperatura zasilania',
     curveType: 'function'  //Makes line curved
       };
 
@@ -288,7 +353,7 @@
   vAxis: {
     title: 'Stopnie [C]'
   },
-  title: 'Temperature',
+  title: 'Temperatura boiler',
     curveType: 'function'  //Makes line curved
       };
 

@@ -23,10 +23,11 @@ import checkDispSpace as diskSpace
 # TODO Zapisywanie wszytkich nastaw na stale
 # TODO pomiar zuzycia pradu/mocy moze warto tez dodac wykres mocy ?
 # TODO dodac reczne sterowanie
+    # TODO poprawic wizualizacje - dodac opis trybu pracy przez "popa pracuje/piec pracuje"
 # BUG 20.03.2023 23:16 ['/dev/root', '15G', '5,7G', '7,9G', '42%', '/']
 # DONE implementacja wykresow i danych historycznych
-    # TODO bardziej czytelne wykresy, kolumny z danymi zawijane?
-    # TODO poprawic style wyswietlania
+    # DONE bardziej czytelne wykresy, kolumny z danymi zawijane?
+    # DONE poprawic style wyswietlania
 # TODO Podlaczyc modol wejsc analogowych
 # TODO posprzatac PumpEfi (wywolujemy funkcje z parametrami wejsciowymi a mozna to zrobic bez parametrow i zaczytywac z globalsow w sanej funkcji)
 # DONE uporzadkowac ekran ustawienia
@@ -77,10 +78,12 @@ def result():
     output = request.form.to_dict()
     global pick1
     if request.form.get('Turn OFF Pump') == 'Turn OFF Pump':
+        g.pumpMode = 'manual'
         g.heatObject = 0
-        flash('Pompa wyłączona', 'primary')
+        flash('Włączony tryb ręczny', 'primary')
     if request.form.get('Turn ON Pump') == 'Turn ON Pump':
-        flash('Pompa załączona', 'success')
+        flash('Włączony tryb automatyczny', 'success')
+        g.pumpMode = 'auto'
         g.heatObject = 2
         
     #FIXME do skasowania po testach    

@@ -10,6 +10,7 @@ diskSpaceList=[]
 heatObject=1 #0-nie dziala, 1-boiler, 2-podloga, 
 pumpInterval = [0, 30, 60]
 pumpTempOfset = [0, 2.0, 2.0]
+pumpMode = 'auto'
 sezon='Lato'
 BaseEfiInPercent=0
 BaseEfiInPercentTemp=0

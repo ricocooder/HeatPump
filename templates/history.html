@@ -5,23 +5,26 @@
   .container{
     display: flex;
     flex-wrap: wrap;
+    /* width: 1000px; */
   }
   .column{
     height: 30%;
-    width: fit-content;
+    /* width: fit-content; */
     padding: 10px;
     box-sizing: border-box;
   }
-  .u-full-width {
-  width: 100%;
-  box-sizing: border-box; }
-  .button-primary {
-  color: #FFF;
-  background-color: #33C3F0;
-  border-color: #33C3F0; }
+  .rounded-button {
+    border: none;
+    border-radius: 20px;
+    padding: 5px 10px;   
+    text-align: center;
+    text-decoration: none;
+    display: inline-block; 
+    cursor: pointer;
+    color: #FFF;
+    background-color: #33C3F0;
+    border-color: #33C3F0; }
 </style>
-Historia/Wykresy
-<br/>
 <form id="datetime_range" action="/history" method="GET"> 
 <div class="container">
       <div class="column">
@@ -33,7 +36,7 @@ Historia/Wykresy
         <input class="text" id="datetimepicker2" type="text" value="{{to_date}}" name="to">
       </div>           
       <div class="column">           
-        <input class="button-primary" type="submit" value="Submit" style="position:relative" id="submit_button" />
+        <input class="rounded-button" type="submit" value="Submit" style="position:relative" id="submit_button" />
       </div>  
 </div>      
 </form> 

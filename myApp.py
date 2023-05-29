@@ -77,14 +77,24 @@ def hello_world():
 def result():
     output = request.form.to_dict()
     global pick1
-    if request.form.get('Turn OFF Pump') == 'Turn OFF Pump':
-        g.pumpMode = 'manual'
-        g.heatObject = 0
-        flash('Włączony tryb ręczny', 'primary')
-    if request.form.get('Turn ON Pump') == 'Turn ON Pump':
-        flash('Włączony tryb automatyczny', 'success')
-        g.pumpMode = 'auto'
-        g.heatObject = 2
+    if request.form.get('Switch_mode'):
+        if g.pumpMode == 'manual':
+            flash('Włączony tryb Auto', 'primary')
+            g.pumpMode = 'auto'
+            g.heatObject = 2
+        else:
+            flash('Włączony tryb ręczny', 'primary')
+            g.pumpMode = 'manual'
+            g.heatObject = 0
+            
+            
+    #     g.pumpMode = 'manual'
+    #     g.heatObject = 0
+    #     flash('Włączony tryb ręczny', 'primary')
+    # if request.form.get('Turn ON Pump') == 'Turn ON Pump':
+    #     flash('Włączony tryb automatyczny', 'success')
+    #     g.pumpMode = 'auto'
+    #     g.heatObject = 2
         
     #FIXME do skasowania po testach    
     if request.form.get('Switch'):

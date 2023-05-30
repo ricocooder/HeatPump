@@ -15,21 +15,23 @@ import saveToDB as db
 import checkDispSpace as diskSpace
 
 
-# DONE Dodac mechanizm sprawdzania ile jest przypisanych czjenikow przez utzytkowniaka a ile zostalo wyktytych w tablicy i obsluge bledu
-    #TODO poprawic przypisywanie temperatury, od ktorej bedziemy regolowac (problem pojawia sie po wymianie czujnika lub po jego blednym przypisaniu)
+# TODO Podlaczyc modol wejsc analogowych
 # TODO sprawdzic i potwierdzic poprawne sterowanie wszystkimi pinami
 # TODO Dodac logike wyswietlania alarmu jak pojemosc karty jest bliska max 
 # TODO Esport danych do pliku xlsx
 # TODO Zapisywanie wszytkich nastaw na stale
 # TODO pomiar zuzycia pradu/mocy moze warto tez dodac wykres mocy ?
-# TODO dodac reczne sterowanie
-    # TODO poprawic wizualizacje - dodac opis trybu pracy przez "popa pracuje/piec pracuje"
 # BUG 20.03.2023 23:16 ['/dev/root', '15G', '5,7G', '7,9G', '42%', '/']
+# TODO posprzatac PumpEfi (wywolujemy funkcje z parametrami wejsciowymi a mozna to zrobic bez parametrow i zaczytywac z globalsow w sanej funkcji)
+# DONE Dodac mechanizm sprawdzania ile jest przypisanych czjenikow przez utzytkowniaka a ile zostalo wyktytych w tablicy i obsluge bledu
+    #TODO poprawic przypisywanie temperatury, od ktorej bedziemy regolowac (problem pojawia sie po wymianie czujnika lub po jego blednym przypisaniu)
+# TODO Sprawdzic mozliwosc wygaszacza ekranu na pi oraz automatycznego odpalania tej strony full size
+# TODO wyczyscic baze danych 
+# DONE dodac reczne sterowanie
+    # DONE poprawic wizualizacje - dodac opis trybu pracy przez "popa pracuje/piec pracuje"
 # DONE implementacja wykresow i danych historycznych
     # DONE bardziej czytelne wykresy, kolumny z danymi zawijane?
     # DONE poprawic style wyswietlania
-# TODO Podlaczyc modol wejsc analogowych
-# TODO posprzatac PumpEfi (wywolujemy funkcje z parametrami wejsciowymi a mozna to zrobic bez parametrow i zaczytywac z globalsow w sanej funkcji)
 # DONE uporzadkowac ekran ustawienia
 # DONE harmonogram pracy pompy
 # DONE dodac obrazek obok temepratur

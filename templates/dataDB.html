@@ -263,7 +263,7 @@
     data.addColumn('number', 'Temperature');
     data.addRows([
       {% for row in temp1 %}
-  [new Date({{ row[0][0: 4] }}, {{ row[0][5: 7] }}, {{ row[0][8: 10] }}, {{ row[0][11: 13] }}, {{ row[0][14: 16] }}),
+  [new Date({{ row[0][0: 4] }}, {{ row[0][5: 7] }}-1, {{ row[0][8: 10] }}, {{ row[0][11: 13] }}, {{ row[0][14: 16] }}),
   {{ '%0.2f'| format(row[2]) }}],
     {% endfor %}
         ]);
@@ -301,7 +301,7 @@
     data.addColumn('number', 'Temperature');
     data.addRows([
       {% for row in temp2 %}
-  [new Date({{ row[0][0: 4] }}, {{ row[0][5: 7] }}, {{ row[0][8: 10] }}, {{ row[0][11: 13] }}, {{ row[0][14: 16] }}),
+  [new Date({{ row[0][0: 4] }}, {{ row[0][5: 7] }}-1, {{ row[0][8: 10] }}, {{ row[0][11: 13] }}, {{ row[0][14: 16] }}),
   {{ '%0.2f'| format(row[2]) }}],
     {% endfor %}
         ]);
@@ -338,10 +338,10 @@
     data.addColumn('number', 'Temperature');
     data.addRows([
       {% for row in temp3 %}
-  [new Date({{ row[0][0: 4] }}, {{ row[0][5: 7] }}, {{ row[0][8: 10] }}, {{ row[0][11: 13] }}, {{ row[0][14: 16] }}),
-  {{ '%0.2f'| format(row[2]) }}],
-    {% endfor %}
-        ]);
+        [new Date({{ row[0][0: 4] }}, {{ row[0][5: 7] }}-1, {{ row[0][8: 10] }}, {{ row[0][11: 13] }}, {{ row[0][14: 16] }}),
+        {{ '%0.2f'| format(row[2]) }}],
+      {% endfor %}
+                ]);
 
   var options = {
     width: 1200,
@@ -375,7 +375,7 @@
     data.addColumn('number', 'Current');
     data.addRows([
       {% for row in curr %}
-  [new Date({{ row[0][0: 4] }}, {{ row[0][5: 7] }}, {{ row[0][8: 10] }}, {{ row[0][11: 13] }}, {{ row[0][14: 16] }}), {{ '%0.2f'| format(row[2]) }}],
+  [new Date({{ row[0][0: 4] }}, {{ row[0][5: 7] }}-1, {{ row[0][8: 10] }}, {{ row[0][11: 13] }}, {{ row[0][14: 16] }}), {{ '%0.2f'| format(row[2]) }}],
     {% endfor %}
         ]);
 
@@ -413,7 +413,7 @@
     data.addColumn('number', 'Wydajność');
     data.addRows([
       {% for row in efi %}
-  [new Date({{ row[0][0: 4] }}, {{ row[0][5: 7] }}, {{ row[0][8: 10] }}, {{ row[0][11: 13] }}, {{ row[0][14: 16] }}), {{ '%0.2f'| format(row[2]) }}],
+  [new Date({{ row[0][0: 4] }}, {{ row[0][5: 7] }}-1, {{ row[0][8: 10] }}, {{ row[0][11: 13] }}, {{ row[0][14: 16] }}), {{ '%0.2f'| format(row[2]) }}],
     {% endfor %}
         ]);
 
@@ -450,7 +450,7 @@
     data.addColumn('number', 'Napięcie');
     data.addRows([
       {% for row in volt %}
-  [new Date({{ row[0][0: 4] }}, {{ row[0][5: 7] }}, {{ row[0][8: 10] }}, {{ row[0][11: 13] }}, {{ row[0][14: 16] }}), {{ '%0.2f'| format(row[2]) }}],
+  [new Date({{ row[0][0: 4] }}, {{ row[0][5: 7] }}-1, {{ row[0][8: 10] }}, {{ row[0][11: 13] }}, {{ row[0][14: 16] }}), {{ '%0.2f'| format(row[2]) }}],
     {% endfor %}
         ]);
 

@@ -27,6 +27,7 @@ import checkDispSpace as diskSpace
     #TODO poprawic przypisywanie temperatury, od ktorej bedziemy regolowac (problem pojawia sie po wymianie czujnika lub po jego blednym przypisaniu)
 # TODO Sprawdzic mozliwosc wygaszacza ekranu na pi oraz automatycznego odpalania tej strony full size
 # TODO wyczyscic baze danych 
+# DONE autostart aplikacji przy starcie systemu
 # DONE dodac reczne sterowanie
     # DONE poprawic wizualizacje - dodac opis trybu pracy przez "popa pracuje/piec pracuje"
 # DONE implementacja wykresow i danych historycznych
@@ -1608,7 +1609,7 @@ def history():
     from_date_str   = request.args.get('from',time.strftime("%Y-%m-%d %H:%M")) #Get the from date value from the URL
     to_date_str     = request.args.get('to',time.strftime("%Y-%m-%d %H:%M"))   #Get the to date value from the URL
     
-    range_h_int = "nan"
+    range_h_int = 24
 
     if request.form.get('SaveRange'):
         try:

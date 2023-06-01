@@ -27,3 +27,17 @@ List the file and a 28-xxxxxxxxxxxx device directory (e.g. here is 28-0000067486
 
 ![RasGPIO](https://user-images.githubusercontent.com/49715875/222986709-da9dd3c8-94d3-4a31-a984-e5ee746206e3.png)
 
+
+
+czyszczenie bazy danych :
+sqlite3 myDB.db
+SQLite version 3.27.2 2019-02-25 16:06:06
+Enter ".help" for usage hints.
+sqlite> .tables
+cur    efi    temp1  temp2  temp3  temp4  temp5  volt 
+sqlite> DELETE FROM temp1;
+sqlite> DELETE FROM temp2;
+sqlite> DELETE FROM temp3;
+sqlite> DELETE FROM temp4;
+sqlite> DELETE FROM temp5;
+sqlite> 

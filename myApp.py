@@ -90,7 +90,61 @@ def result():
             g.pumpMode = 'manual'
             g.heatObject = 0
             
-            
+ 
+             
+              
+
+
+
+
+    if request.form.get('0'):
+        flash('Wcisniety przycisk odpowiadajcay za pin 0: Sterowanie pompy1 (NC)', 'success')
+        if g.tempPins[0] == 1:
+            g.tempPins[0] = 0
+        else:
+            g.tempPins[0] = 1
+    if request.form.get('1'):
+        flash('Wcisniety przycisk odpowiadajcay za pin 1: Sterowanie pompy2 (NC)','success')
+        if g.tempPins[1] == 1:
+            g.tempPins[1] = 0
+        else:
+            g.tempPins[1] = 1  
+    if request.form.get('2'):
+        flash('Wcisniety przycisk odpowiadajcay za pin 2: Sterowanie pompy3 (NC)', 'success')
+        if g.tempPins[2] == 1:
+            g.tempPins[2] = 0
+        else:
+            g.tempPins[2] = 1  
+    if request.form.get('3'):
+        flash('Wcisniety przycisk odpowiadajcay za pin 3: Zawor trojdrogowy (NO)', 'success')
+        if g.tempPins[3] == 1:
+            g.tempPins[3] = 0
+        else:
+            g.tempPins[3] = 1  
+    if request.form.get('4'):
+        flash('Wcisniety przycisk odpowiadajcay za pin 4: Sterownik piec (NC)', 'success')
+        if g.tempPins[4] == 1:
+            g.tempPins[4] = 0
+        else:
+            g.tempPins[4] = 1     
+    if request.form.get('5'):
+        flash('Wcisniety przycisk odpowiadajcay za pin 5: Zal/Wyl 24V (NC)', 'success')
+        if g.tempPins[5] == 1:
+            g.tempPins[5] = 0
+        else:
+            g.tempPins[5] = 1   
+    if request.form.get('6'):
+        flash('Wcisniety przycisk odpowiadajcay za pin 6: Pompa obiegowa (NC)', 'success')
+        if g.tempPins[6] == 1:
+            g.tempPins[6] = 0
+        else:
+            g.tempPins[6] = 1   
+    if request.form.get('7'):
+        flash('Wcisniety przycisk odpowiadajcay za pin 7: Spare', 'success')
+        if g.tempPins[7] == 1:
+            g.tempPins[7] = 0
+        else:
+            g.tempPins[7] = 1
     #     g.pumpMode = 'manual'
     #     g.heatObject = 0
     #     flash('Włączony tryb ręczny', 'primary')
@@ -126,7 +180,7 @@ def result():
         pick1 = os.path.join(app.config["UPLOAD_FOLDER"], "PonWU_v3.jpg")
     return render_template("index.html", pumpI=g.pumpI, pumpV=g.pumpV, pumpP=round(g.pumpP, 2), image1=pick1, pump=g.BaseEfiInPercent, sensFoundList=g.readTemp,
                            discriptionList=g.discriptions, heatObject=g.heatObject, trybDiscriptions=g.trybDiscriptions, setTempList = g.setTemp, sezon=g.sezon, 
-                           pins = g.pins, pinsDisc = g.pinsDisc, pinsLogic = g.pinsLogic, tempPins = g.tempPins)
+                           pins = g.pins, pinsDisc = g.pinsDisc, pinsLogic = g.pinsLogic, tempPins = g.tempPins, pumpMode = g.pumpMode)
 
 
 @app.route("/temp_sensor_config", methods=["POST", "GET"])
@@ -1591,6 +1645,7 @@ def getDataFromDB(from_date_str, to_date_str):
     curs=conn.cursor()
     curs.execute("SELECT * FROM temp1 WHERE rDateTime BETWEEN ? AND ?", (from_date_str, to_date_str))
     temp1 = curs.fetchall()
+    print(temp1)
     curs.execute("SELECT * FROM temp2 WHERE rDateTime BETWEEN ? AND ?", (from_date_str, to_date_str))
     temp2 = curs.fetchall()
     curs.execute("SELECT * FROM temp3 WHERE rDateTime BETWEEN ? AND ?", (from_date_str, to_date_str))

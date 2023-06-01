@@ -94,7 +94,7 @@
             {%endif%}
             <br><br>
                   
-                  
+            <!-- <label > Aktualnie wybrany heatobject: {{heatObject}} </label>       -->
             <label > Aktualnie wybrany tryb pracy: {{sezon}} </label>
             <!-- <br><br> -->
             {% if sezon == 'Lato' %}
@@ -114,7 +114,11 @@
               </tr>
               <tr>
                 {%for header in tempPins%}
-                <th class="{%if header == 0 %}close{%elif header == 1 %}open{% else %}tbd{%endif%}" >{{header}}</th>
+                  {% if pumpMode == "auto"%}
+                    <th class="{%if header == 0 %}close{%elif header == 1 %}open{% else %}tbd{%endif%}" >{{header}}</th>
+                  {% else %}
+                    <th><input type="Submit" value={{header}} name="{{loop.index0}}"/></th>
+                  {% endif %}
                 {% endfor %}
               </tr>
                 {% for row in pinsLogic %}

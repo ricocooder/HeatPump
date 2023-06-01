@@ -75,6 +75,14 @@
 
   </style>
 <body>
+
+  {% for row in temp1 %}
+  {{loop.index0, "-->", row[0][0: 19] }}
+  odstep jest rowny jakis odstep :D
+    {% endfor %}
+
+<br><br>
+  {{temp1}}
   <div class="container">
     <div class="row">
       <div class="column-table">
@@ -247,6 +255,7 @@
       <!-- Google Charts Code end -->
     </div>
 </body>
+
 
 <!-- Google Charts JS start -->
 <script type="text/javascript"

@@ -75,14 +75,19 @@
 
   </style>
 <body>
+  <br><br><br>
+  <label > Aktualnie wybrany zakres to od {{from_date}} do {{to_date}} co daje nam 24h. W tym okresie zuzyles xxxx bilionow KWh </label>
 
-  {% for row in temp1 %}
-  {{loop.index0, "-->", row[0][0: 19] }}
-  odstep jest rowny jakis odstep :D
-    {% endfor %}
+  <!-- {% for row in temp1 %}
+  {{loop.index0, "--", row[0]}}
+  dla tego zapisy wartosc pradu jest rowna: 
+  {{curr[loop.index0][2]}}
+    {% endfor %} -->
 
-<br><br>
+<!-- <br><br> -->
   {{temp1}}
+  <br><br><br><br><br><br>
+  {{temp2}}
   <div class="container">
     <div class="row">
       <div class="column-table">

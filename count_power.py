@@ -132,25 +132,28 @@ volt_table = [('2023-06-02 00:03:56', '1', 231), ('2023-06-02 00:36:03', '1', 23
 
 diferencess = []
 def countPowerBaseOnCurr_Volt_Time(curr, volt):
+#     with open('wynik.txt', 'w') as file:
+#     print("To jest wynik mojego programu.", file=file)
     powerOverAll=0
+
     for i in range(len(curr) - 1):
         current_date = curr[i][0]
         next_date = curr[i+1][0]
-        print('next_date: ', next_date)
-        print('current_date: ', current_date)
         difference = datetime.datetime.strptime(next_date, '%Y-%m-%d %H:%M:%S') - datetime.datetime.strptime(current_date, '%Y-%m-%d %H:%M:%S')
-        print('difference: ', difference)
         diference_in_sec = difference.seconds
-        print('diference_in_sec: ', diference_in_sec)
-        print('Liczymy moc przy zalozeniu ze napiecie jest rowne: ',volt[i][2] ,' oraz prac jest rowny: ', curr[i][2],'[A]', ' czas jest rowny: ', diference_in_sec)
         power=volt[i][2]*curr[i][2]*diference_in_sec
         powerInMin= power/60
         powerInH=powerInMin/60
         powerInKWH=powerInH/1000
-        print('Mnozymy napiecie ', volt[i][2],' * ', curr[i][2],'[A] * ', diference_in_sec,  'co daje nam: ', power, 'Ws dzielimy przez minuty: ', powerInMin, 'dzielimy przez godziny: ',powerInH,'Wh, dzielimy przez 1000 i otrzymujemy: ', powerInKWH, 'KWh' )
         powerOverAll=powerOverAll+powerInKWH
-        print(round(powerOverAll,2), 'KWh')
-
+        with open('wynik.txt', 'a') as file:
+                print('next_date: ', next_date, file=file)
+                print('current_date: ', current_date, file=file)
+                print('difference: ', difference, file=file)
+                print('diference_in_sec: ', diference_in_sec, file=file)
+                print('Liczymy moc przy zalozeniu ze napiecie jest rowne: ',volt[i][2] ,' oraz prac jest rowny: ', curr[i][2],'[A]', ' czas jest rowny: ', diference_in_sec, file=file)
+                print('Mnozymy napiecie ', volt[i][2],' * ', curr[i][2],'[A] * ', diference_in_sec,  'co daje nam: ', power, 'Ws dzielimy przez minuty: ', powerInMin, 'dzielimy przez godziny: ',powerInH,'Wh, dzielimy przez 1000 i otrzymujemy: ', powerInKWH, 'KWh', file=file )
+                print(round(powerOverAll,2), 'KWh', file=file)
 countPowerBaseOnCurr_Volt_Time(curr_table, volt_table)
 
 

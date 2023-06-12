@@ -27,6 +27,9 @@ import checkDispSpace as diskSpace
     #TODO poprawic przypisywanie temperatury, od ktorej bedziemy regolowac (problem pojawia sie po wymianie czujnika lub po jego blednym przypisaniu)
 # TODO Sprawdzic mozliwosc wygaszacza ekranu na pi oraz automatycznego odpalania tej strony full size
 # TODO wyczyscic baze danych 
+# TODO zmniejszyc czcionke w navbar
+# TODO dodac klawiature dotykowa na ekranie
+# TODO dodac automatycznie otwierana przegladarke w trybie fullscreen
 # DONE autostart aplikacji przy starcie systemu
 # DONE dodac reczne sterowanie
     # DONE poprawic wizualizacje - dodac opis trybu pracy przez "popa pracuje/piec pracuje"

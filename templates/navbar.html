@@ -1,3 +1,17 @@
+
+<style>
+  .navbar-brand{
+    font-size: 18;
+    /* height: 5; */
+  }
+  .nav-item{
+    font-size: 18;
+  }
+  .nav-link active{
+    font-size: 10;
+  }
+  /* .navbar-brand-font-size: 10 */
+</style>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
       <a class="navbar-brand" href="{{url_for('result')}}">Home</a>
@@ -15,21 +29,21 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="{{url_for('history')}}">Historia/Wykresy</a>
+            <a class="nav-link active" aria-current="page" href="{{url_for('history')}}">Historia</a>
           </li>
           
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="{{url_for('temp_sensor_config')}}">Konfiguracja czujnikow</a>
+            <a class="nav-link active" aria-current="page" href="{{url_for('temp_sensor_config')}}">Konfig. czujnikow</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="{{url_for('raspberrypi')}}">Raspberry Pi</a>
+            <a class="nav-link active" aria-current="page" href="{{url_for('raspberrypi')}}">Rasp. Pi</a>
           </li>
             
         </ul>
         
         <a class="nav-link active" aria-current="page" href="">
-            Temperatura: {{ sensFoundList[0] }} <span>&#8451;</span>
+            Temp. zew.: {{ sensFoundList[0] }} <span>&#8451;</span>
           </a>
 
   

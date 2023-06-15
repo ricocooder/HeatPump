@@ -15,8 +15,9 @@ import saveToDB as db
 import checkDispSpace as diskSpace
 
 
-# TODO Podlaczyc modol wejsc analogowych
-# TODO sprawdzic i potwierdzic poprawne sterowanie wszystkimi pinami
+# DONE Podlaczyc modol wejsc analogowych
+    # TODO podlaczyc czujnik natezenia i napiecia pradu
+# DONE sprawdzic i potwierdzic poprawne sterowanie wszystkimi pinami
 # TODO Dodac logike wyswietlania alarmu jak pojemosc karty jest bliska max 
 # TODO Esport danych do pliku xlsx
 # TODO Zapisywanie wszytkich nastaw na stale
@@ -27,7 +28,8 @@ import checkDispSpace as diskSpace
     #TODO poprawic przypisywanie temperatury, od ktorej bedziemy regolowac (problem pojawia sie po wymianie czujnika lub po jego blednym przypisaniu)
 # TODO Sprawdzic mozliwosc wygaszacza ekranu na pi oraz automatycznego odpalania tej strony full size
 # TODO wyczyscic baze danych 
-# TODO zmniejszyc czcionke w navbar
+# DONE zmniejszyc czcionke w navbar
+# DONE skasowac range picker z histori oraz poprawic wybieranie zakresu
 # TODO dodac klawiature dotykowa na ekranie
 # TODO dodac automatycznie otwierana przegladarke w trybie fullscreen
 # DONE autostart aplikacji przy starcie systemu

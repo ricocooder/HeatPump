@@ -1669,13 +1669,13 @@ def history():
     
     range_h_int = 24
 
-    if request.form.get('SaveRange'):
-        try:
-            range_h_int = int(request.form['range_h'])
-            # print(type(range_h_int), range_h_int)
-        except:
-            print("data tyme error")
-            range_h_int = 48
+    # if request.form.get('SaveRange'):
+    #     try:
+    #         range_h_int = int(request.form['range_h'])
+    #         # print(type(range_h_int), range_h_int)
+    #     except:
+    #         print("data tyme error")
+    #         range_h_int = 48
 
     
     if not validate_date(from_date_str):      # Validate date before sending it to the DB
@@ -1683,7 +1683,7 @@ def history():
     if not validate_date(to_date_str):
         to_date_str = time.strftime("%Y-%m-%d %H:%M")  # Validate date before sending it to the DB
 
-    if isinstance(range_h_int, int):
+    if from_date_str == to_date_str:
         time_now = datetime.datetime.now()
         time_from = time_now - datetime.timedelta(hours = range_h_int)
         time_to = time_now

@@ -1741,3 +1741,1746 @@ diference_in_sec:  1256
 Liczymy moc przy zalozeniu ze napiecie jest rowne:  233  oraz prac jest rowny:  7.1 [A]  czas jest rowny:  1256
 Mnozymy napiecie  233  *  7.1 [A] *  1256 co daje nam:  2077800.8 Ws dzielimy przez minuty:  34630.013333333336 dzielimy przez godziny:  577.1668888888889 Wh, dzielimy przez 1000 i otrzymujemy:  0.5771668888888889 KWh
 76.69 KWh
+next_date:  2023-06-02 00:36:03
+current_date:  2023-06-02 00:03:56
+difference:  0:32:07
+diference_in_sec:  1927
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  231  oraz prac jest rowny:  14.4 [A]  czas jest rowny:  1927
+Mnozymy napiecie  231  *  14.4 [A] *  1927 co daje nam:  6409972.8 Ws dzielimy przez minuty:  106832.87999999999 dzielimy przez godziny:  1780.5479999999998 Wh, dzielimy przez 1000 i otrzymujemy:  1.7805479999999998 KWh
+1.78 KWh
+next_date:  2023-06-02 01:34:03
+current_date:  2023-06-02 00:36:03
+difference:  0:58:00
+diference_in_sec:  3480
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  231  oraz prac jest rowny:  13.4 [A]  czas jest rowny:  3480
+Mnozymy napiecie  231  *  13.4 [A] *  3480 co daje nam:  10771992.0 Ws dzielimy przez minuty:  179533.2 dzielimy przez godziny:  2992.2200000000003 Wh, dzielimy przez 1000 i otrzymujemy:  2.99222 KWh
+4.77 KWh
+next_date:  2023-06-02 02:45:39
+current_date:  2023-06-02 01:34:03
+difference:  1:11:36
+diference_in_sec:  4296
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  230  oraz prac jest rowny:  12.6 [A]  czas jest rowny:  4296
+Mnozymy napiecie  230  *  12.6 [A] *  4296 co daje nam:  12449808.0 Ws dzielimy przez minuty:  207496.8 dzielimy przez godziny:  3458.2799999999997 Wh, dzielimy przez 1000 i otrzymujemy:  3.45828 KWh
+8.23 KWh
+next_date:  2023-06-02 03:47:19
+current_date:  2023-06-02 02:45:39
+difference:  1:01:40
+diference_in_sec:  3700
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  229.5  oraz prac jest rowny:  11.6 [A]  czas jest rowny:  3700
+Mnozymy napiecie  229.5  *  11.6 [A] *  3700 co daje nam:  9850140.0 Ws dzielimy przez minuty:  164169.0 dzielimy przez godziny:  2736.15 Wh, dzielimy przez 1000 i otrzymujemy:  2.7361500000000003 KWh
+10.97 KWh
+next_date:  2023-06-02 05:33:11
+current_date:  2023-06-02 03:47:19
+difference:  1:45:52
+diference_in_sec:  6352
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  229  oraz prac jest rowny:  10.6 [A]  czas jest rowny:  6352
+Mnozymy napiecie  229  *  10.6 [A] *  6352 co daje nam:  15418844.8 Ws dzielimy przez minuty:  256980.74666666667 dzielimy przez godziny:  4283.012444444445 Wh, dzielimy przez 1000 i otrzymujemy:  4.283012444444444 KWh
+15.25 KWh
+next_date:  2023-06-02 06:05:03
+current_date:  2023-06-02 05:33:11
+difference:  0:31:52
+diference_in_sec:  1912
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  228  oraz prac jest rowny:  10.6 [A]  czas jest rowny:  1912
+Mnozymy napiecie  228  *  10.6 [A] *  1912 co daje nam:  4620921.6 Ws dzielimy przez minuty:  77015.36 dzielimy przez godziny:  1283.5893333333333 Wh, dzielimy przez 1000 i otrzymujemy:  1.2835893333333332 KWh
+16.53 KWh
+next_date:  2023-06-02 06:29:31
+current_date:  2023-06-02 06:05:03
+difference:  0:24:28
+diference_in_sec:  1468
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  228  oraz prac jest rowny:  11.6 [A]  czas jest rowny:  1468
+Mnozymy napiecie  228  *  11.6 [A] *  1468 co daje nam:  3882566.3999999994 Ws dzielimy przez minuty:  64709.43999999999 dzielimy przez godziny:  1078.4906666666664 Wh, dzielimy przez 1000 i otrzymujemy:  1.0784906666666663 KWh
+17.61 KWh
+next_date:  2023-06-02 07:00:32
+current_date:  2023-06-02 06:29:31
+difference:  0:31:01
+diference_in_sec:  1861
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  228  oraz prac jest rowny:  12.6 [A]  czas jest rowny:  1861
+Mnozymy napiecie  228  *  12.6 [A] *  1861 co daje nam:  5346280.8 Ws dzielimy przez minuty:  89104.68 dzielimy przez godziny:  1485.078 Wh, dzielimy przez 1000 i otrzymujemy:  1.485078 KWh
+19.1 KWh
+next_date:  2023-06-02 07:01:00
+current_date:  2023-06-02 07:00:32
+difference:  0:00:28
+diference_in_sec:  28
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  227.5  oraz prac jest rowny:  13.1 [A]  czas jest rowny:  28
+Mnozymy napiecie  227.5  *  13.1 [A] *  28 co daje nam:  83447.0 Ws dzielimy przez minuty:  1390.7833333333333 dzielimy przez godziny:  23.17972222222222 Wh, dzielimy przez 1000 i otrzymujemy:  0.02317972222222222 KWh
+19.12 KWh
+next_date:  2023-06-02 07:01:04
+current_date:  2023-06-02 07:01:00
+difference:  0:00:04
+diference_in_sec:  4
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  227.5  oraz prac jest rowny:  13.2 [A]  czas jest rowny:  4
+Mnozymy napiecie  227.5  *  13.2 [A] *  4 co daje nam:  12012.0 Ws dzielimy przez minuty:  200.2 dzielimy przez godziny:  3.3366666666666664 Wh, dzielimy przez 1000 i otrzymujemy:  0.0033366666666666666 KWh
+19.12 KWh
+next_date:  2023-06-02 07:01:12
+current_date:  2023-06-02 07:01:04
+difference:  0:00:08
+diference_in_sec:  8
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  227.5  oraz prac jest rowny:  13.2 [A]  czas jest rowny:  8
+Mnozymy napiecie  227.5  *  13.2 [A] *  8 co daje nam:  24024.0 Ws dzielimy przez minuty:  400.4 dzielimy przez godziny:  6.673333333333333 Wh, dzielimy przez 1000 i otrzymujemy:  0.006673333333333333 KWh
+19.13 KWh
+next_date:  2023-06-02 07:01:36
+current_date:  2023-06-02 07:01:12
+difference:  0:00:24
+diference_in_sec:  24
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  227.5  oraz prac jest rowny:  13.2 [A]  czas jest rowny:  24
+Mnozymy napiecie  227.5  *  13.2 [A] *  24 co daje nam:  72072.0 Ws dzielimy przez minuty:  1201.2 dzielimy przez godziny:  20.02 Wh, dzielimy przez 1000 i otrzymujemy:  0.02002 KWh
+19.15 KWh
+next_date:  2023-06-02 07:02:08
+current_date:  2023-06-02 07:01:36
+difference:  0:00:32
+diference_in_sec:  32
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  227.5  oraz prac jest rowny:  13.2 [A]  czas jest rowny:  32
+Mnozymy napiecie  227.5  *  13.2 [A] *  32 co daje nam:  96096.0 Ws dzielimy przez minuty:  1601.6 dzielimy przez godziny:  26.69333333333333 Wh, dzielimy przez 1000 i otrzymujemy:  0.026693333333333333 KWh
+19.18 KWh
+next_date:  2023-06-02 07:02:24
+current_date:  2023-06-02 07:02:08
+difference:  0:00:16
+diference_in_sec:  16
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  227.5  oraz prac jest rowny:  13.2 [A]  czas jest rowny:  16
+Mnozymy napiecie  227.5  *  13.2 [A] *  16 co daje nam:  48048.0 Ws dzielimy przez minuty:  800.8 dzielimy przez godziny:  13.346666666666666 Wh, dzielimy przez 1000 i otrzymujemy:  0.013346666666666666 KWh
+19.19 KWh
+next_date:  2023-06-02 07:02:40
+current_date:  2023-06-02 07:02:24
+difference:  0:00:16
+diference_in_sec:  16
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  227.5  oraz prac jest rowny:  13.3 [A]  czas jest rowny:  16
+Mnozymy napiecie  227.5  *  13.3 [A] *  16 co daje nam:  48412.0 Ws dzielimy przez minuty:  806.8666666666667 dzielimy przez godziny:  13.447777777777778 Wh, dzielimy przez 1000 i otrzymujemy:  0.013447777777777779 KWh
+19.2 KWh
+next_date:  2023-06-02 07:03:12
+current_date:  2023-06-02 07:02:40
+difference:  0:00:32
+diference_in_sec:  32
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  227.5  oraz prac jest rowny:  13.2 [A]  czas jest rowny:  32
+Mnozymy napiecie  227.5  *  13.2 [A] *  32 co daje nam:  96096.0 Ws dzielimy przez minuty:  1601.6 dzielimy przez godziny:  26.69333333333333 Wh, dzielimy przez 1000 i otrzymujemy:  0.026693333333333333 KWh
+19.23 KWh
+next_date:  2023-06-02 07:03:40
+current_date:  2023-06-02 07:03:12
+difference:  0:00:28
+diference_in_sec:  28
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  227.5  oraz prac jest rowny:  13.2 [A]  czas jest rowny:  28
+Mnozymy napiecie  227.5  *  13.2 [A] *  28 co daje nam:  84084.0 Ws dzielimy przez minuty:  1401.4 dzielimy przez godziny:  23.35666666666667 Wh, dzielimy przez 1000 i otrzymujemy:  0.023356666666666668 KWh
+19.25 KWh
+next_date:  2023-06-02 07:03:44
+current_date:  2023-06-02 07:03:40
+difference:  0:00:04
+diference_in_sec:  4
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  227.5  oraz prac jest rowny:  13.2 [A]  czas jest rowny:  4
+Mnozymy napiecie  227.5  *  13.2 [A] *  4 co daje nam:  12012.0 Ws dzielimy przez minuty:  200.2 dzielimy przez godziny:  3.3366666666666664 Wh, dzielimy przez 1000 i otrzymujemy:  0.0033366666666666666 KWh
+19.26 KWh
+next_date:  2023-06-02 07:04:24
+current_date:  2023-06-02 07:03:44
+difference:  0:00:40
+diference_in_sec:  40
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  227.5  oraz prac jest rowny:  13.2 [A]  czas jest rowny:  40
+Mnozymy napiecie  227.5  *  13.2 [A] *  40 co daje nam:  120120.0 Ws dzielimy przez minuty:  2002.0 dzielimy przez godziny:  33.36666666666667 Wh, dzielimy przez 1000 i otrzymujemy:  0.03336666666666667 KWh
+19.29 KWh
+next_date:  2023-06-02 07:05:00
+current_date:  2023-06-02 07:04:24
+difference:  0:00:36
+diference_in_sec:  36
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  227.5  oraz prac jest rowny:  13.3 [A]  czas jest rowny:  36
+Mnozymy napiecie  227.5  *  13.3 [A] *  36 co daje nam:  108927.0 Ws dzielimy przez minuty:  1815.45 dzielimy przez godziny:  30.2575 Wh, dzielimy przez 1000 i otrzymujemy:  0.0302575 KWh
+19.32 KWh
+next_date:  2023-06-02 07:05:32
+current_date:  2023-06-02 07:05:00
+difference:  0:00:32
+diference_in_sec:  32
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  227.5  oraz prac jest rowny:  13.4 [A]  czas jest rowny:  32
+Mnozymy napiecie  227.5  *  13.4 [A] *  32 co daje nam:  97552.0 Ws dzielimy przez minuty:  1625.8666666666666 dzielimy przez godziny:  27.097777777777775 Wh, dzielimy przez 1000 i otrzymujemy:  0.027097777777777776 KWh
+19.35 KWh
+next_date:  2023-06-02 07:06:00
+current_date:  2023-06-02 07:05:32
+difference:  0:00:28
+diference_in_sec:  28
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  227.5  oraz prac jest rowny:  13.3 [A]  czas jest rowny:  28
+Mnozymy napiecie  227.5  *  13.3 [A] *  28 co daje nam:  84721.0 Ws dzielimy przez minuty:  1412.0166666666667 dzielimy przez godziny:  23.53361111111111 Wh, dzielimy przez 1000 i otrzymujemy:  0.02353361111111111 KWh
+19.37 KWh
+next_date:  2023-06-02 07:06:24
+current_date:  2023-06-02 07:06:00
+difference:  0:00:24
+diference_in_sec:  24
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  227.5  oraz prac jest rowny:  13.2 [A]  czas jest rowny:  24
+Mnozymy napiecie  227.5  *  13.2 [A] *  24 co daje nam:  72072.0 Ws dzielimy przez minuty:  1201.2 dzielimy przez godziny:  20.02 Wh, dzielimy przez 1000 i otrzymujemy:  0.02002 KWh
+19.39 KWh
+next_date:  2023-06-02 07:06:48
+current_date:  2023-06-02 07:06:24
+difference:  0:00:24
+diference_in_sec:  24
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  227.5  oraz prac jest rowny:  13.3 [A]  czas jest rowny:  24
+Mnozymy napiecie  227.5  *  13.3 [A] *  24 co daje nam:  72618.0 Ws dzielimy przez minuty:  1210.3 dzielimy przez godziny:  20.171666666666667 Wh, dzielimy przez 1000 i otrzymujemy:  0.020171666666666668 KWh
+19.41 KWh
+next_date:  2023-06-02 07:07:16
+current_date:  2023-06-02 07:06:48
+difference:  0:00:28
+diference_in_sec:  28
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  227.5  oraz prac jest rowny:  13.4 [A]  czas jest rowny:  28
+Mnozymy napiecie  227.5  *  13.4 [A] *  28 co daje nam:  85358.0 Ws dzielimy przez minuty:  1422.6333333333334 dzielimy przez godziny:  23.71055555555556 Wh, dzielimy przez 1000 i otrzymujemy:  0.023710555555555558 KWh
+19.44 KWh
+next_date:  2023-06-02 07:07:48
+current_date:  2023-06-02 07:07:16
+difference:  0:00:32
+diference_in_sec:  32
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  227.5  oraz prac jest rowny:  13.3 [A]  czas jest rowny:  32
+Mnozymy napiecie  227.5  *  13.3 [A] *  32 co daje nam:  96824.0 Ws dzielimy przez minuty:  1613.7333333333333 dzielimy przez godziny:  26.895555555555557 Wh, dzielimy przez 1000 i otrzymujemy:  0.026895555555555558 KWh
+19.46 KWh
+next_date:  2023-06-02 07:08:16
+current_date:  2023-06-02 07:07:48
+difference:  0:00:28
+diference_in_sec:  28
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  227.5  oraz prac jest rowny:  13.3 [A]  czas jest rowny:  28
+Mnozymy napiecie  227.5  *  13.3 [A] *  28 co daje nam:  84721.0 Ws dzielimy przez minuty:  1412.0166666666667 dzielimy przez godziny:  23.53361111111111 Wh, dzielimy przez 1000 i otrzymujemy:  0.02353361111111111 KWh
+19.49 KWh
+next_date:  2023-06-02 07:08:48
+current_date:  2023-06-02 07:08:16
+difference:  0:00:32
+diference_in_sec:  32
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  227.5  oraz prac jest rowny:  13.2 [A]  czas jest rowny:  32
+Mnozymy napiecie  227.5  *  13.2 [A] *  32 co daje nam:  96096.0 Ws dzielimy przez minuty:  1601.6 dzielimy przez godziny:  26.69333333333333 Wh, dzielimy przez 1000 i otrzymujemy:  0.026693333333333333 KWh
+19.51 KWh
+next_date:  2023-06-02 07:09:20
+current_date:  2023-06-02 07:08:48
+difference:  0:00:32
+diference_in_sec:  32
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  227.5  oraz prac jest rowny:  13.2 [A]  czas jest rowny:  32
+Mnozymy napiecie  227.5  *  13.2 [A] *  32 co daje nam:  96096.0 Ws dzielimy przez minuty:  1601.6 dzielimy przez godziny:  26.69333333333333 Wh, dzielimy przez 1000 i otrzymujemy:  0.026693333333333333 KWh
+19.54 KWh
+next_date:  2023-06-02 07:09:52
+current_date:  2023-06-02 07:09:20
+difference:  0:00:32
+diference_in_sec:  32
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  227.5  oraz prac jest rowny:  13.2 [A]  czas jest rowny:  32
+Mnozymy napiecie  227.5  *  13.2 [A] *  32 co daje nam:  96096.0 Ws dzielimy przez minuty:  1601.6 dzielimy przez godziny:  26.69333333333333 Wh, dzielimy przez 1000 i otrzymujemy:  0.026693333333333333 KWh
+19.57 KWh
+next_date:  2023-06-02 07:10:28
+current_date:  2023-06-02 07:09:52
+difference:  0:00:36
+diference_in_sec:  36
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  227.5  oraz prac jest rowny:  13.4 [A]  czas jest rowny:  36
+Mnozymy napiecie  227.5  *  13.4 [A] *  36 co daje nam:  109746.0 Ws dzielimy przez minuty:  1829.1 dzielimy przez godziny:  30.485 Wh, dzielimy przez 1000 i otrzymujemy:  0.030484999999999998 KWh
+19.6 KWh
+next_date:  2023-06-02 07:11:16
+current_date:  2023-06-02 07:10:28
+difference:  0:00:48
+diference_in_sec:  48
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  227.5  oraz prac jest rowny:  13.4 [A]  czas jest rowny:  48
+Mnozymy napiecie  227.5  *  13.4 [A] *  48 co daje nam:  146328.0 Ws dzielimy przez minuty:  2438.8 dzielimy przez godziny:  40.64666666666667 Wh, dzielimy przez 1000 i otrzymujemy:  0.04064666666666667 KWh
+19.64 KWh
+next_date:  2023-06-02 07:12:20
+current_date:  2023-06-02 07:11:16
+difference:  0:01:04
+diference_in_sec:  64
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  227.5  oraz prac jest rowny:  13.5 [A]  czas jest rowny:  64
+Mnozymy napiecie  227.5  *  13.5 [A] *  64 co daje nam:  196560.0 Ws dzielimy przez minuty:  3276.0 dzielimy przez godziny:  54.6 Wh, dzielimy przez 1000 i otrzymujemy:  0.0546 KWh
+19.69 KWh
+next_date:  2023-06-02 07:13:36
+current_date:  2023-06-02 07:12:20
+difference:  0:01:16
+diference_in_sec:  76
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  227.5  oraz prac jest rowny:  13.6 [A]  czas jest rowny:  76
+Mnozymy napiecie  227.5  *  13.6 [A] *  76 co daje nam:  235144.0 Ws dzielimy przez minuty:  3919.0666666666666 dzielimy przez godziny:  65.31777777777778 Wh, dzielimy przez 1000 i otrzymujemy:  0.06531777777777778 KWh
+19.76 KWh
+next_date:  2023-06-02 07:14:52
+current_date:  2023-06-02 07:13:36
+difference:  0:01:16
+diference_in_sec:  76
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  227.5  oraz prac jest rowny:  13.5 [A]  czas jest rowny:  76
+Mnozymy napiecie  227.5  *  13.5 [A] *  76 co daje nam:  233415.0 Ws dzielimy przez minuty:  3890.25 dzielimy przez godziny:  64.8375 Wh, dzielimy przez 1000 i otrzymujemy:  0.0648375 KWh
+19.82 KWh
+next_date:  2023-06-02 07:15:56
+current_date:  2023-06-02 07:14:52
+difference:  0:01:04
+diference_in_sec:  64
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  227.5  oraz prac jest rowny:  13.7 [A]  czas jest rowny:  64
+Mnozymy napiecie  227.5  *  13.7 [A] *  64 co daje nam:  199472.0 Ws dzielimy przez minuty:  3324.5333333333333 dzielimy przez godziny:  55.40888888888889 Wh, dzielimy przez 1000 i otrzymujemy:  0.05540888888888889 KWh
+19.88 KWh
+next_date:  2023-06-02 07:16:56
+current_date:  2023-06-02 07:15:56
+difference:  0:01:00
+diference_in_sec:  60
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  227.5  oraz prac jest rowny:  13.6 [A]  czas jest rowny:  60
+Mnozymy napiecie  227.5  *  13.6 [A] *  60 co daje nam:  185640.0 Ws dzielimy przez minuty:  3094.0 dzielimy przez godziny:  51.56666666666667 Wh, dzielimy przez 1000 i otrzymujemy:  0.05156666666666667 KWh
+19.93 KWh
+next_date:  2023-06-02 07:17:52
+current_date:  2023-06-02 07:16:56
+difference:  0:00:56
+diference_in_sec:  56
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  227.5  oraz prac jest rowny:  13.4 [A]  czas jest rowny:  56
+Mnozymy napiecie  227.5  *  13.4 [A] *  56 co daje nam:  170716.0 Ws dzielimy przez minuty:  2845.266666666667 dzielimy przez godziny:  47.42111111111112 Wh, dzielimy przez 1000 i otrzymujemy:  0.047421111111111115 KWh
+19.98 KWh
+next_date:  2023-06-02 07:18:48
+current_date:  2023-06-02 07:17:52
+difference:  0:00:56
+diference_in_sec:  56
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  227.5  oraz prac jest rowny:  13.4 [A]  czas jest rowny:  56
+Mnozymy napiecie  227.5  *  13.4 [A] *  56 co daje nam:  170716.0 Ws dzielimy przez minuty:  2845.266666666667 dzielimy przez godziny:  47.42111111111112 Wh, dzielimy przez 1000 i otrzymujemy:  0.047421111111111115 KWh
+20.02 KWh
+next_date:  2023-06-02 07:19:44
+current_date:  2023-06-02 07:18:48
+difference:  0:00:56
+diference_in_sec:  56
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  227.5  oraz prac jest rowny:  13.5 [A]  czas jest rowny:  56
+Mnozymy napiecie  227.5  *  13.5 [A] *  56 co daje nam:  171990.0 Ws dzielimy przez minuty:  2866.5 dzielimy przez godziny:  47.775 Wh, dzielimy przez 1000 i otrzymujemy:  0.047775 KWh
+20.07 KWh
+next_date:  2023-06-02 07:20:44
+current_date:  2023-06-02 07:19:44
+difference:  0:01:00
+diference_in_sec:  60
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  227.5  oraz prac jest rowny:  13.6 [A]  czas jest rowny:  60
+Mnozymy napiecie  227.5  *  13.6 [A] *  60 co daje nam:  185640.0 Ws dzielimy przez minuty:  3094.0 dzielimy przez godziny:  51.56666666666667 Wh, dzielimy przez 1000 i otrzymujemy:  0.05156666666666667 KWh
+20.12 KWh
+next_date:  2023-06-02 07:21:44
+current_date:  2023-06-02 07:20:44
+difference:  0:01:00
+diference_in_sec:  60
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  227.5  oraz prac jest rowny:  13.7 [A]  czas jest rowny:  60
+Mnozymy napiecie  227.5  *  13.7 [A] *  60 co daje nam:  187005.0 Ws dzielimy przez minuty:  3116.75 dzielimy przez godziny:  51.94583333333333 Wh, dzielimy przez 1000 i otrzymujemy:  0.05194583333333333 KWh
+20.18 KWh
+next_date:  2023-06-02 07:22:52
+current_date:  2023-06-02 07:21:44
+difference:  0:01:08
+diference_in_sec:  68
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  227.5  oraz prac jest rowny:  13.8 [A]  czas jest rowny:  68
+Mnozymy napiecie  227.5  *  13.8 [A] *  68 co daje nam:  213486.0 Ws dzielimy przez minuty:  3558.1 dzielimy przez godziny:  59.30166666666666 Wh, dzielimy przez 1000 i otrzymujemy:  0.05930166666666666 KWh
+20.23 KWh
+next_date:  2023-06-02 07:24:16
+current_date:  2023-06-02 07:22:52
+difference:  0:01:24
+diference_in_sec:  84
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  227.5  oraz prac jest rowny:  13.9 [A]  czas jest rowny:  84
+Mnozymy napiecie  227.5  *  13.9 [A] *  84 co daje nam:  265629.0 Ws dzielimy przez minuty:  4427.15 dzielimy przez godziny:  73.78583333333333 Wh, dzielimy przez 1000 i otrzymujemy:  0.07378583333333333 KWh
+20.31 KWh
+next_date:  2023-06-02 07:26:48
+current_date:  2023-06-02 07:24:16
+difference:  0:02:32
+diference_in_sec:  152
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  227.5  oraz prac jest rowny:  13.8 [A]  czas jest rowny:  152
+Mnozymy napiecie  227.5  *  13.8 [A] *  152 co daje nam:  477204.0 Ws dzielimy przez minuty:  7953.4 dzielimy przez godziny:  132.55666666666667 Wh, dzielimy przez 1000 i otrzymujemy:  0.13255666666666668 KWh
+20.44 KWh
+next_date:  2023-06-02 07:34:31
+current_date:  2023-06-02 07:26:48
+difference:  0:07:43
+diference_in_sec:  463
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  227.5  oraz prac jest rowny:  13.8 [A]  czas jest rowny:  463
+Mnozymy napiecie  227.5  *  13.8 [A] *  463 co daje nam:  1453588.5 Ws dzielimy przez minuty:  24226.475 dzielimy przez godziny:  403.7745833333333 Wh, dzielimy przez 1000 i otrzymujemy:  0.40377458333333327 KWh
+20.84 KWh
+next_date:  2023-06-02 07:37:00
+current_date:  2023-06-02 07:34:31
+difference:  0:02:29
+diference_in_sec:  149
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  228.5  oraz prac jest rowny:  13.8 [A]  czas jest rowny:  149
+Mnozymy napiecie  228.5  *  13.8 [A] *  149 co daje nam:  469841.7 Ws dzielimy przez minuty:  7830.695000000001 dzielimy przez godziny:  130.51158333333333 Wh, dzielimy przez 1000 i otrzymujemy:  0.13051158333333335 KWh
+20.98 KWh
+next_date:  2023-06-02 07:39:59
+current_date:  2023-06-02 07:37:00
+difference:  0:02:59
+diference_in_sec:  179
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  228.5  oraz prac jest rowny:  13.9 [A]  czas jest rowny:  179
+Mnozymy napiecie  228.5  *  13.9 [A] *  179 co daje nam:  568530.85 Ws dzielimy przez minuty:  9475.514166666666 dzielimy przez godziny:  157.9252361111111 Wh, dzielimy przez 1000 i otrzymujemy:  0.15792523611111112 KWh
+21.13 KWh
+next_date:  2023-06-02 07:45:27
+current_date:  2023-06-02 07:39:59
+difference:  0:05:28
+diference_in_sec:  328
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  229.5  oraz prac jest rowny:  14.3 [A]  czas jest rowny:  328
+Mnozymy napiecie  229.5  *  14.3 [A] *  328 co daje nam:  1076446.8 Ws dzielimy przez minuty:  17940.780000000002 dzielimy przez godziny:  299.01300000000003 Wh, dzielimy przez 1000 i otrzymujemy:  0.29901300000000003 KWh
+21.43 KWh
+next_date:  2023-06-02 07:50:27
+current_date:  2023-06-02 07:45:27
+difference:  0:05:00
+diference_in_sec:  300
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  230.5  oraz prac jest rowny:  14.2 [A]  czas jest rowny:  300
+Mnozymy napiecie  230.5  *  14.2 [A] *  300 co daje nam:  981930.0 Ws dzielimy przez minuty:  16365.5 dzielimy przez godziny:  272.7583333333333 Wh, dzielimy przez 1000 i otrzymujemy:  0.2727583333333333 KWh
+21.7 KWh
+next_date:  2023-06-02 07:51:28
+current_date:  2023-06-02 07:50:27
+difference:  0:01:01
+diference_in_sec:  61
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  231.5  oraz prac jest rowny:  14.4 [A]  czas jest rowny:  61
+Mnozymy napiecie  231.5  *  14.4 [A] *  61 co daje nam:  203349.6 Ws dzielimy przez minuty:  3389.1600000000003 dzielimy przez godziny:  56.486000000000004 Wh, dzielimy przez 1000 i otrzymujemy:  0.056486 KWh
+21.76 KWh
+next_date:  2023-06-02 07:52:36
+current_date:  2023-06-02 07:51:28
+difference:  0:01:08
+diference_in_sec:  68
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  231.5  oraz prac jest rowny:  14.4 [A]  czas jest rowny:  68
+Mnozymy napiecie  231.5  *  14.4 [A] *  68 co daje nam:  226684.8 Ws dzielimy przez minuty:  3778.08 dzielimy przez godziny:  62.967999999999996 Wh, dzielimy przez 1000 i otrzymujemy:  0.062968 KWh
+21.82 KWh
+next_date:  2023-06-02 07:57:48
+current_date:  2023-06-02 07:52:36
+difference:  0:05:12
+diference_in_sec:  312
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  231.5  oraz prac jest rowny:  14.5 [A]  czas jest rowny:  312
+Mnozymy napiecie  231.5  *  14.5 [A] *  312 co daje nam:  1047306.0 Ws dzielimy przez minuty:  17455.1 dzielimy przez godziny:  290.9183333333333 Wh, dzielimy przez 1000 i otrzymujemy:  0.2909183333333333 KWh
+22.12 KWh
+next_date:  2023-06-02 08:00:00
+current_date:  2023-06-02 07:57:48
+difference:  0:02:12
+diference_in_sec:  132
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  232  oraz prac jest rowny:  14.2 [A]  czas jest rowny:  132
+Mnozymy napiecie  232  *  14.2 [A] *  132 co daje nam:  434860.79999999993 Ws dzielimy przez minuty:  7247.6799999999985 dzielimy przez godziny:  120.79466666666664 Wh, dzielimy przez 1000 i otrzymujemy:  0.12079466666666665 KWh
+22.24 KWh
+next_date:  2023-06-02 08:00:48
+current_date:  2023-06-02 08:00:00
+difference:  0:00:48
+diference_in_sec:  48
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  232  oraz prac jest rowny:  13.9 [A]  czas jest rowny:  48
+Mnozymy napiecie  232  *  13.9 [A] *  48 co daje nam:  154790.40000000002 Ws dzielimy przez minuty:  2579.8400000000006 dzielimy przez godziny:  42.997333333333344 Wh, dzielimy przez 1000 i otrzymujemy:  0.042997333333333346 KWh
+22.28 KWh
+next_date:  2023-06-02 08:01:20
+current_date:  2023-06-02 08:00:48
+difference:  0:00:32
+diference_in_sec:  32
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  232.5  oraz prac jest rowny:  14 [A]  czas jest rowny:  32
+Mnozymy napiecie  232.5  *  14 [A] *  32 co daje nam:  104160.0 Ws dzielimy przez minuty:  1736.0 dzielimy przez godziny:  28.933333333333334 Wh, dzielimy przez 1000 i otrzymujemy:  0.028933333333333335 KWh
+22.31 KWh
+next_date:  2023-06-02 08:01:52
+current_date:  2023-06-02 08:01:20
+difference:  0:00:32
+diference_in_sec:  32
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  232.5  oraz prac jest rowny:  14.2 [A]  czas jest rowny:  32
+Mnozymy napiecie  232.5  *  14.2 [A] *  32 co daje nam:  105648.0 Ws dzielimy przez minuty:  1760.8 dzielimy przez godziny:  29.346666666666668 Wh, dzielimy przez 1000 i otrzymujemy:  0.029346666666666667 KWh
+22.34 KWh
+next_date:  2023-06-02 08:02:24
+current_date:  2023-06-02 08:01:52
+difference:  0:00:32
+diference_in_sec:  32
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  232.5  oraz prac jest rowny:  14.2 [A]  czas jest rowny:  32
+Mnozymy napiecie  232.5  *  14.2 [A] *  32 co daje nam:  105648.0 Ws dzielimy przez minuty:  1760.8 dzielimy przez godziny:  29.346666666666668 Wh, dzielimy przez 1000 i otrzymujemy:  0.029346666666666667 KWh
+22.37 KWh
+next_date:  2023-06-02 08:02:56
+current_date:  2023-06-02 08:02:24
+difference:  0:00:32
+diference_in_sec:  32
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  232.5  oraz prac jest rowny:  14.1 [A]  czas jest rowny:  32
+Mnozymy napiecie  232.5  *  14.1 [A] *  32 co daje nam:  104904.0 Ws dzielimy przez minuty:  1748.4 dzielimy przez godziny:  29.14 Wh, dzielimy przez 1000 i otrzymujemy:  0.02914 KWh
+22.4 KWh
+next_date:  2023-06-02 08:03:28
+current_date:  2023-06-02 08:02:56
+difference:  0:00:32
+diference_in_sec:  32
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  232.5  oraz prac jest rowny:  14.2 [A]  czas jest rowny:  32
+Mnozymy napiecie  232.5  *  14.2 [A] *  32 co daje nam:  105648.0 Ws dzielimy przez minuty:  1760.8 dzielimy przez godziny:  29.346666666666668 Wh, dzielimy przez 1000 i otrzymujemy:  0.029346666666666667 KWh
+22.43 KWh
+next_date:  2023-06-02 08:04:00
+current_date:  2023-06-02 08:03:28
+difference:  0:00:32
+diference_in_sec:  32
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  232.5  oraz prac jest rowny:  14.2 [A]  czas jest rowny:  32
+Mnozymy napiecie  232.5  *  14.2 [A] *  32 co daje nam:  105648.0 Ws dzielimy przez minuty:  1760.8 dzielimy przez godziny:  29.346666666666668 Wh, dzielimy przez 1000 i otrzymujemy:  0.029346666666666667 KWh
+22.45 KWh
+next_date:  2023-06-02 08:08:40
+current_date:  2023-06-02 08:04:00
+difference:  0:04:40
+diference_in_sec:  280
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  232.5  oraz prac jest rowny:  14.3 [A]  czas jest rowny:  280
+Mnozymy napiecie  232.5  *  14.3 [A] *  280 co daje nam:  930930.0 Ws dzielimy przez minuty:  15515.5 dzielimy przez godziny:  258.59166666666664 Wh, dzielimy przez 1000 i otrzymujemy:  0.25859166666666666 KWh
+22.71 KWh
+next_date:  2023-06-02 08:11:20
+current_date:  2023-06-02 08:08:40
+difference:  0:02:40
+diference_in_sec:  160
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  233  oraz prac jest rowny:  15.2 [A]  czas jest rowny:  160
+Mnozymy napiecie  233  *  15.2 [A] *  160 co daje nam:  566656.0 Ws dzielimy przez minuty:  9444.266666666666 dzielimy przez godziny:  157.40444444444444 Wh, dzielimy przez 1000 i otrzymujemy:  0.15740444444444443 KWh
+22.87 KWh
+next_date:  2023-06-02 08:13:32
+current_date:  2023-06-02 08:11:20
+difference:  0:02:12
+diference_in_sec:  132
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  233  oraz prac jest rowny:  15.2 [A]  czas jest rowny:  132
+Mnozymy napiecie  233  *  15.2 [A] *  132 co daje nam:  467491.2 Ws dzielimy przez minuty:  7791.52 dzielimy przez godziny:  129.85866666666666 Wh, dzielimy przez 1000 i otrzymujemy:  0.12985866666666668 KWh
+23.0 KWh
+next_date:  2023-06-02 08:15:28
+current_date:  2023-06-02 08:13:32
+difference:  0:01:56
+diference_in_sec:  116
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  233.5  oraz prac jest rowny:  15.7 [A]  czas jest rowny:  116
+Mnozymy napiecie  233.5  *  15.7 [A] *  116 co daje nam:  425250.19999999995 Ws dzielimy przez minuty:  7087.503333333332 dzielimy przez godziny:  118.12505555555553 Wh, dzielimy przez 1000 i otrzymujemy:  0.11812505555555554 KWh
+23.12 KWh
+next_date:  2023-06-02 08:17:20
+current_date:  2023-06-02 08:15:28
+difference:  0:01:52
+diference_in_sec:  112
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  233.5  oraz prac jest rowny:  15.7 [A]  czas jest rowny:  112
+Mnozymy napiecie  233.5  *  15.7 [A] *  112 co daje nam:  410586.39999999997 Ws dzielimy przez minuty:  6843.106666666666 dzielimy przez godziny:  114.05177777777776 Wh, dzielimy przez 1000 i otrzymujemy:  0.11405177777777775 KWh
+23.23 KWh
+next_date:  2023-06-02 08:19:12
+current_date:  2023-06-02 08:17:20
+difference:  0:01:52
+diference_in_sec:  112
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  233.5  oraz prac jest rowny:  15.4 [A]  czas jest rowny:  112
+Mnozymy napiecie  233.5  *  15.4 [A] *  112 co daje nam:  402740.8 Ws dzielimy przez minuty:  6712.346666666666 dzielimy przez godziny:  111.87244444444444 Wh, dzielimy przez 1000 i otrzymujemy:  0.11187244444444444 KWh
+23.34 KWh
+next_date:  2023-06-02 08:21:16
+current_date:  2023-06-02 08:19:12
+difference:  0:02:04
+diference_in_sec:  124
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  233.5  oraz prac jest rowny:  15.8 [A]  czas jest rowny:  124
+Mnozymy napiecie  233.5  *  15.8 [A] *  124 co daje nam:  457473.2 Ws dzielimy przez minuty:  7624.553333333333 dzielimy przez godziny:  127.07588888888888 Wh, dzielimy przez 1000 i otrzymujemy:  0.12707588888888888 KWh
+23.47 KWh
+next_date:  2023-06-02 08:23:24
+current_date:  2023-06-02 08:21:16
+difference:  0:02:08
+diference_in_sec:  128
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  233.5  oraz prac jest rowny:  15.8 [A]  czas jest rowny:  128
+Mnozymy napiecie  233.5  *  15.8 [A] *  128 co daje nam:  472230.4 Ws dzielimy przez minuty:  7870.506666666667 dzielimy przez godziny:  131.1751111111111 Wh, dzielimy przez 1000 i otrzymujemy:  0.1311751111111111 KWh
+23.6 KWh
+next_date:  2023-06-02 08:26:00
+current_date:  2023-06-02 08:23:24
+difference:  0:02:36
+diference_in_sec:  156
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  233.5  oraz prac jest rowny:  15.8 [A]  czas jest rowny:  156
+Mnozymy napiecie  233.5  *  15.8 [A] *  156 co daje nam:  575530.8 Ws dzielimy przez minuty:  9592.18 dzielimy przez godziny:  159.86966666666666 Wh, dzielimy przez 1000 i otrzymujemy:  0.15986966666666666 KWh
+23.76 KWh
+next_date:  2023-06-02 08:30:48
+current_date:  2023-06-02 08:26:00
+difference:  0:04:48
+diference_in_sec:  288
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  233.5  oraz prac jest rowny:  15.6 [A]  czas jest rowny:  288
+Mnozymy napiecie  233.5  *  15.6 [A] *  288 co daje nam:  1049068.8 Ws dzielimy przez minuty:  17484.48 dzielimy przez godziny:  291.408 Wh, dzielimy przez 1000 i otrzymujemy:  0.291408 KWh
+24.05 KWh
+next_date:  2023-06-02 08:40:44
+current_date:  2023-06-02 08:30:48
+difference:  0:09:56
+diference_in_sec:  596
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  233.5  oraz prac jest rowny:  15.8 [A]  czas jest rowny:  596
+Mnozymy napiecie  233.5  *  15.8 [A] *  596 co daje nam:  2198822.8000000003 Ws dzielimy przez minuty:  36647.04666666667 dzielimy przez godziny:  610.7841111111112 Wh, dzielimy przez 1000 i otrzymujemy:  0.6107841111111112 KWh
+24.66 KWh
+next_date:  2023-06-02 08:45:20
+current_date:  2023-06-02 08:40:44
+difference:  0:04:36
+diference_in_sec:  276
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  233  oraz prac jest rowny:  15.9 [A]  czas jest rowny:  276
+Mnozymy napiecie  233  *  15.9 [A] *  276 co daje nam:  1022497.2000000001 Ws dzielimy przez minuty:  17041.620000000003 dzielimy przez godziny:  284.02700000000004 Wh, dzielimy przez 1000 i otrzymujemy:  0.28402700000000003 KWh
+24.95 KWh
+next_date:  2023-06-02 08:49:24
+current_date:  2023-06-02 08:45:20
+difference:  0:04:04
+diference_in_sec:  244
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  233  oraz prac jest rowny:  16.2 [A]  czas jest rowny:  244
+Mnozymy napiecie  233  *  16.2 [A] *  244 co daje nam:  921002.4 Ws dzielimy przez minuty:  15350.04 dzielimy przez godziny:  255.834 Wh, dzielimy przez 1000 i otrzymujemy:  0.255834 KWh
+25.2 KWh
+next_date:  2023-06-02 08:53:40
+current_date:  2023-06-02 08:49:24
+difference:  0:04:16
+diference_in_sec:  256
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  233  oraz prac jest rowny:  15.9 [A]  czas jest rowny:  256
+Mnozymy napiecie  233  *  15.9 [A] *  256 co daje nam:  948403.2000000001 Ws dzielimy przez minuty:  15806.720000000001 dzielimy przez godziny:  263.44533333333334 Wh, dzielimy przez 1000 i otrzymujemy:  0.26344533333333336 KWh
+25.47 KWh
+next_date:  2023-06-02 08:58:04
+current_date:  2023-06-02 08:53:40
+difference:  0:04:24
+diference_in_sec:  264
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  233  oraz prac jest rowny:  15.9 [A]  czas jest rowny:  264
+Mnozymy napiecie  233  *  15.9 [A] *  264 co daje nam:  978040.8 Ws dzielimy przez minuty:  16300.68 dzielimy przez godziny:  271.678 Wh, dzielimy przez 1000 i otrzymujemy:  0.271678 KWh
+25.74 KWh
+next_date:  2023-06-02 09:03:04
+current_date:  2023-06-02 08:58:04
+difference:  0:05:00
+diference_in_sec:  300
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  233  oraz prac jest rowny:  16.3 [A]  czas jest rowny:  300
+Mnozymy napiecie  233  *  16.3 [A] *  300 co daje nam:  1139370.0 Ws dzielimy przez minuty:  18989.5 dzielimy przez godziny:  316.4916666666667 Wh, dzielimy przez 1000 i otrzymujemy:  0.31649166666666667 KWh
+26.06 KWh
+next_date:  2023-06-02 09:07:52
+current_date:  2023-06-02 09:03:04
+difference:  0:04:48
+diference_in_sec:  288
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  233  oraz prac jest rowny:  16.6 [A]  czas jest rowny:  288
+Mnozymy napiecie  233  *  16.6 [A] *  288 co daje nam:  1113926.4000000001 Ws dzielimy przez minuty:  18565.440000000002 dzielimy przez godziny:  309.42400000000004 Wh, dzielimy przez 1000 i otrzymujemy:  0.30942400000000003 KWh
+26.37 KWh
+next_date:  2023-06-02 09:12:44
+current_date:  2023-06-02 09:07:52
+difference:  0:04:52
+diference_in_sec:  292
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  233  oraz prac jest rowny:  16.8 [A]  czas jest rowny:  292
+Mnozymy napiecie  233  *  16.8 [A] *  292 co daje nam:  1143004.8 Ws dzielimy przez minuty:  19050.08 dzielimy przez godziny:  317.5013333333334 Wh, dzielimy przez 1000 i otrzymujemy:  0.31750133333333336 KWh
+26.68 KWh
+next_date:  2023-06-02 09:17:24
+current_date:  2023-06-02 09:12:44
+difference:  0:04:40
+diference_in_sec:  280
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  233  oraz prac jest rowny:  16.1 [A]  czas jest rowny:  280
+Mnozymy napiecie  233  *  16.1 [A] *  280 co daje nam:  1050364.0 Ws dzielimy przez minuty:  17506.066666666666 dzielimy przez godziny:  291.7677777777778 Wh, dzielimy przez 1000 i otrzymujemy:  0.2917677777777778 KWh
+26.97 KWh
+next_date:  2023-06-02 09:20:20
+current_date:  2023-06-02 09:17:24
+difference:  0:02:56
+diference_in_sec:  176
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  233  oraz prac jest rowny:  16.1 [A]  czas jest rowny:  176
+Mnozymy napiecie  233  *  16.1 [A] *  176 co daje nam:  660228.8 Ws dzielimy przez minuty:  11003.813333333334 dzielimy przez godziny:  183.3968888888889 Wh, dzielimy przez 1000 i otrzymujemy:  0.1833968888888889 KWh
+27.16 KWh
+next_date:  2023-06-02 09:22:28
+current_date:  2023-06-02 09:20:20
+difference:  0:02:08
+diference_in_sec:  128
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  233  oraz prac jest rowny:  16.2 [A]  czas jest rowny:  128
+Mnozymy napiecie  233  *  16.2 [A] *  128 co daje nam:  483148.8 Ws dzielimy przez minuty:  8052.48 dzielimy przez godziny:  134.208 Wh, dzielimy przez 1000 i otrzymujemy:  0.134208 KWh
+27.29 KWh
+next_date:  2023-06-02 09:24:24
+current_date:  2023-06-02 09:22:28
+difference:  0:01:56
+diference_in_sec:  116
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  233  oraz prac jest rowny:  16.6 [A]  czas jest rowny:  116
+Mnozymy napiecie  233  *  16.6 [A] *  116 co daje nam:  448664.80000000005 Ws dzielimy przez minuty:  7477.746666666668 dzielimy przez godziny:  124.62911111111113 Wh, dzielimy przez 1000 i otrzymujemy:  0.12462911111111113 KWh
+27.42 KWh
+next_date:  2023-06-02 09:25:31
+current_date:  2023-06-02 09:24:24
+difference:  0:01:07
+diference_in_sec:  67
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  233  oraz prac jest rowny:  16.9 [A]  czas jest rowny:  67
+Mnozymy napiecie  233  *  16.9 [A] *  67 co daje nam:  263825.89999999997 Ws dzielimy przez minuty:  4397.098333333332 dzielimy przez godziny:  73.28497222222221 Wh, dzielimy przez 1000 i otrzymujemy:  0.0732849722222222 KWh
+27.49 KWh
+next_date:  2023-06-02 09:27:20
+current_date:  2023-06-02 09:25:31
+difference:  0:01:49
+diference_in_sec:  109
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  233  oraz prac jest rowny:  17.9 [A]  czas jest rowny:  109
+Mnozymy napiecie  233  *  17.9 [A] *  109 co daje nam:  454606.3 Ws dzielimy przez minuty:  7576.7716666666665 dzielimy przez godziny:  126.27952777777777 Wh, dzielimy przez 1000 i otrzymujemy:  0.12627952777777776 KWh
+27.62 KWh
+next_date:  2023-06-02 09:29:20
+current_date:  2023-06-02 09:27:20
+difference:  0:02:00
+diference_in_sec:  120
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  233  oraz prac jest rowny:  17.8 [A]  czas jest rowny:  120
+Mnozymy napiecie  233  *  17.8 [A] *  120 co daje nam:  497688.00000000006 Ws dzielimy przez minuty:  8294.800000000001 dzielimy przez godziny:  138.2466666666667 Wh, dzielimy przez 1000 i otrzymujemy:  0.13824666666666668 KWh
+27.75 KWh
+next_date:  2023-06-02 09:31:32
+current_date:  2023-06-02 09:29:20
+difference:  0:02:12
+diference_in_sec:  132
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  233  oraz prac jest rowny:  17.9 [A]  czas jest rowny:  132
+Mnozymy napiecie  233  *  17.9 [A] *  132 co daje nam:  550532.4 Ws dzielimy przez minuty:  9175.54 dzielimy przez godziny:  152.92566666666667 Wh, dzielimy przez 1000 i otrzymujemy:  0.15292566666666668 KWh
+27.91 KWh
+next_date:  2023-06-02 09:34:04
+current_date:  2023-06-02 09:31:32
+difference:  0:02:32
+diference_in_sec:  152
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  233  oraz prac jest rowny:  17.9 [A]  czas jest rowny:  152
+Mnozymy napiecie  233  *  17.9 [A] *  152 co daje nam:  633946.4 Ws dzielimy przez minuty:  10565.773333333334 dzielimy przez godziny:  176.09622222222225 Wh, dzielimy przez 1000 i otrzymujemy:  0.17609622222222227 KWh
+28.08 KWh
+next_date:  2023-06-02 09:36:44
+current_date:  2023-06-02 09:34:04
+difference:  0:02:40
+diference_in_sec:  160
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  233  oraz prac jest rowny:  17.2 [A]  czas jest rowny:  160
+Mnozymy napiecie  233  *  17.2 [A] *  160 co daje nam:  641216.0 Ws dzielimy przez minuty:  10686.933333333332 dzielimy przez godziny:  178.11555555555555 Wh, dzielimy przez 1000 i otrzymujemy:  0.17811555555555555 KWh
+28.26 KWh
+next_date:  2023-06-02 09:39:03
+current_date:  2023-06-02 09:36:44
+difference:  0:02:19
+diference_in_sec:  139
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  233  oraz prac jest rowny:  16.8 [A]  czas jest rowny:  139
+Mnozymy napiecie  233  *  16.8 [A] *  139 co daje nam:  544101.6 Ws dzielimy przez minuty:  9068.359999999999 dzielimy przez godziny:  151.13933333333333 Wh, dzielimy przez 1000 i otrzymujemy:  0.15113933333333332 KWh
+28.41 KWh
+next_date:  2023-06-02 09:42:48
+current_date:  2023-06-02 09:39:03
+difference:  0:03:45
+diference_in_sec:  225
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  233  oraz prac jest rowny:  17.8 [A]  czas jest rowny:  225
+Mnozymy napiecie  233  *  17.8 [A] *  225 co daje nam:  933165.0000000001 Ws dzielimy przez minuty:  15552.750000000002 dzielimy przez godziny:  259.21250000000003 Wh, dzielimy przez 1000 i otrzymujemy:  0.2592125 KWh
+28.67 KWh
+next_date:  2023-06-02 09:47:36
+current_date:  2023-06-02 09:42:48
+difference:  0:04:48
+diference_in_sec:  288
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  233  oraz prac jest rowny:  18.1 [A]  czas jest rowny:  288
+Mnozymy napiecie  233  *  18.1 [A] *  288 co daje nam:  1214582.4000000001 Ws dzielimy przez minuty:  20243.04 dzielimy przez godziny:  337.384 Wh, dzielimy przez 1000 i otrzymujemy:  0.337384 KWh
+29.01 KWh
+next_date:  2023-06-02 09:48:39
+current_date:  2023-06-02 09:47:36
+difference:  0:01:03
+diference_in_sec:  63
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  233  oraz prac jest rowny:  18.2 [A]  czas jest rowny:  63
+Mnozymy napiecie  233  *  18.2 [A] *  63 co daje nam:  267157.8 Ws dzielimy przez minuty:  4452.63 dzielimy przez godziny:  74.2105 Wh, dzielimy przez 1000 i otrzymujemy:  0.0742105 KWh
+29.08 KWh
+next_date:  2023-06-02 09:55:48
+current_date:  2023-06-02 09:48:39
+difference:  0:07:09
+diference_in_sec:  429
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  233  oraz prac jest rowny:  19.2 [A]  czas jest rowny:  429
+Mnozymy napiecie  233  *  19.2 [A] *  429 co daje nam:  1919174.3999999997 Ws dzielimy przez minuty:  31986.239999999994 dzielimy przez godziny:  533.1039999999999 Wh, dzielimy przez 1000 i otrzymujemy:  0.5331039999999999 KWh
+29.62 KWh
+next_date:  2023-06-02 09:58:03
+current_date:  2023-06-02 09:55:48
+difference:  0:02:15
+diference_in_sec:  135
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  233  oraz prac jest rowny:  18.8 [A]  czas jest rowny:  135
+Mnozymy napiecie  233  *  18.8 [A] *  135 co daje nam:  591354.0000000001 Ws dzielimy przez minuty:  9855.900000000001 dzielimy przez godziny:  164.26500000000001 Wh, dzielimy przez 1000 i otrzymujemy:  0.16426500000000002 KWh
+29.78 KWh
+next_date:  2023-06-02 09:59:55
+current_date:  2023-06-02 09:58:03
+difference:  0:01:52
+diference_in_sec:  112
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  233  oraz prac jest rowny:  17.8 [A]  czas jest rowny:  112
+Mnozymy napiecie  233  *  17.8 [A] *  112 co daje nam:  464508.80000000005 Ws dzielimy przez minuty:  7741.813333333334 dzielimy przez godziny:  129.03022222222225 Wh, dzielimy przez 1000 i otrzymujemy:  0.12903022222222224 KWh
+29.91 KWh
+next_date:  2023-06-02 10:04:23
+current_date:  2023-06-02 09:59:55
+difference:  0:04:28
+diference_in_sec:  268
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  233  oraz prac jest rowny:  18.8 [A]  czas jest rowny:  268
+Mnozymy napiecie  233  *  18.8 [A] *  268 co daje nam:  1173947.2000000002 Ws dzielimy przez minuty:  19565.78666666667 dzielimy przez godziny:  326.0964444444445 Wh, dzielimy przez 1000 i otrzymujemy:  0.3260964444444445 KWh
+30.24 KWh
+next_date:  2023-06-02 10:19:28
+current_date:  2023-06-02 10:04:23
+difference:  0:15:05
+diference_in_sec:  905
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  232.5  oraz prac jest rowny:  17.8 [A]  czas jest rowny:  905
+Mnozymy napiecie  232.5  *  17.8 [A] *  905 co daje nam:  3745342.5 Ws dzielimy przez minuty:  62422.375 dzielimy przez godziny:  1040.3729166666667 Wh, dzielimy przez 1000 i otrzymujemy:  1.0403729166666666 KWh
+31.28 KWh
+next_date:  2023-06-02 10:44:40
+current_date:  2023-06-02 10:19:28
+difference:  0:25:12
+diference_in_sec:  1512
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  232.5  oraz prac jest rowny:  17 [A]  czas jest rowny:  1512
+Mnozymy napiecie  232.5  *  17 [A] *  1512 co daje nam:  5976180.0 Ws dzielimy przez minuty:  99603.0 dzielimy przez godziny:  1660.05 Wh, dzielimy przez 1000 i otrzymujemy:  1.66005 KWh
+32.94 KWh
+next_date:  2023-06-02 10:46:51
+current_date:  2023-06-02 10:44:40
+difference:  0:02:11
+diference_in_sec:  131
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  232.5  oraz prac jest rowny:  17.1 [A]  czas jest rowny:  131
+Mnozymy napiecie  232.5  *  17.1 [A] *  131 co daje nam:  520823.25000000006 Ws dzielimy przez minuty:  8680.3875 dzielimy przez godziny:  144.673125 Wh, dzielimy przez 1000 i otrzymujemy:  0.14467312499999999 KWh
+33.08 KWh
+next_date:  2023-06-02 10:55:31
+current_date:  2023-06-02 10:46:51
+difference:  0:08:40
+diference_in_sec:  520
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  232.5  oraz prac jest rowny:  18.1 [A]  czas jest rowny:  520
+Mnozymy napiecie  232.5  *  18.1 [A] *  520 co daje nam:  2188290.0 Ws dzielimy przez minuty:  36471.5 dzielimy przez godziny:  607.8583333333333 Wh, dzielimy przez 1000 i otrzymujemy:  0.6078583333333334 KWh
+33.69 KWh
+next_date:  2023-06-02 11:08:27
+current_date:  2023-06-02 10:55:31
+difference:  0:12:56
+diference_in_sec:  776
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  232.5  oraz prac jest rowny:  17.1 [A]  czas jest rowny:  776
+Mnozymy napiecie  232.5  *  17.1 [A] *  776 co daje nam:  3085182.0000000005 Ws dzielimy przez minuty:  51419.700000000004 dzielimy przez godziny:  856.9950000000001 Wh, dzielimy przez 1000 i otrzymujemy:  0.8569950000000002 KWh
+34.55 KWh
+next_date:  2023-06-02 11:16:07
+current_date:  2023-06-02 11:08:27
+difference:  0:07:40
+diference_in_sec:  460
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  232.5  oraz prac jest rowny:  18.1 [A]  czas jest rowny:  460
+Mnozymy napiecie  232.5  *  18.1 [A] *  460 co daje nam:  1935795.0 Ws dzielimy przez minuty:  32263.25 dzielimy przez godziny:  537.7208333333333 Wh, dzielimy przez 1000 i otrzymujemy:  0.5377208333333333 KWh
+35.08 KWh
+next_date:  2023-06-02 11:28:19
+current_date:  2023-06-02 11:16:07
+difference:  0:12:12
+diference_in_sec:  732
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  232.5  oraz prac jest rowny:  19.1 [A]  czas jest rowny:  732
+Mnozymy napiecie  232.5  *  19.1 [A] *  732 co daje nam:  3250629.0 Ws dzielimy przez minuty:  54177.15 dzielimy przez godziny:  902.9525 Wh, dzielimy przez 1000 i otrzymujemy:  0.9029524999999999 KWh
+35.99 KWh
+next_date:  2023-06-02 12:16:23
+current_date:  2023-06-02 11:28:19
+difference:  0:48:04
+diference_in_sec:  2884
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  232  oraz prac jest rowny:  18.1 [A]  czas jest rowny:  2884
+Mnozymy napiecie  232  *  18.1 [A] *  2884 co daje nam:  12110492.800000003 Ws dzielimy przez minuty:  201841.54666666672 dzielimy przez godziny:  3364.025777777779 Wh, dzielimy przez 1000 i otrzymujemy:  3.364025777777779 KWh
+39.35 KWh
+next_date:  2023-06-02 12:18:27
+current_date:  2023-06-02 12:16:23
+difference:  0:02:04
+diference_in_sec:  124
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  232  oraz prac jest rowny:  17.1 [A]  czas jest rowny:  124
+Mnozymy napiecie  232  *  17.1 [A] *  124 co daje nam:  491932.80000000005 Ws dzielimy przez minuty:  8198.880000000001 dzielimy przez godziny:  136.64800000000002 Wh, dzielimy przez 1000 i otrzymujemy:  0.13664800000000002 KWh
+39.49 KWh
+next_date:  2023-06-02 12:32:43
+current_date:  2023-06-02 12:18:27
+difference:  0:14:16
+diference_in_sec:  856
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  232  oraz prac jest rowny:  16.1 [A]  czas jest rowny:  856
+Mnozymy napiecie  232  *  16.1 [A] *  856 co daje nam:  3197331.2 Ws dzielimy przez minuty:  53288.85333333334 dzielimy przez godziny:  888.1475555555556 Wh, dzielimy przez 1000 i otrzymujemy:  0.8881475555555557 KWh
+40.38 KWh
+next_date:  2023-06-02 12:42:23
+current_date:  2023-06-02 12:32:43
+difference:  0:09:40
+diference_in_sec:  580
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  232  oraz prac jest rowny:  15.1 [A]  czas jest rowny:  580
+Mnozymy napiecie  232  *  15.1 [A] *  580 co daje nam:  2031856.0 Ws dzielimy przez minuty:  33864.26666666667 dzielimy przez godziny:  564.4044444444445 Wh, dzielimy przez 1000 i otrzymujemy:  0.5644044444444445 KWh
+40.94 KWh
+next_date:  2023-06-02 13:35:35
+current_date:  2023-06-02 12:42:23
+difference:  0:53:12
+diference_in_sec:  3192
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  231.5  oraz prac jest rowny:  14.1 [A]  czas jest rowny:  3192
+Mnozymy napiecie  231.5  *  14.1 [A] *  3192 co daje nam:  10419166.8 Ws dzielimy przez minuty:  173652.78 dzielimy przez godziny:  2894.213 Wh, dzielimy przez 1000 i otrzymujemy:  2.894213 KWh
+43.83 KWh
+next_date:  2023-06-02 13:49:27
+current_date:  2023-06-02 13:35:35
+difference:  0:13:52
+diference_in_sec:  832
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  231.5  oraz prac jest rowny:  15.1 [A]  czas jest rowny:  832
+Mnozymy napiecie  231.5  *  15.1 [A] *  832 co daje nam:  2908380.8000000003 Ws dzielimy przez minuty:  48473.013333333336 dzielimy przez godziny:  807.8835555555556 Wh, dzielimy przez 1000 i otrzymujemy:  0.8078835555555556 KWh
+44.64 KWh
+next_date:  2023-06-02 14:04:43
+current_date:  2023-06-02 13:49:27
+difference:  0:15:16
+diference_in_sec:  916
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  231.5  oraz prac jest rowny:  16.1 [A]  czas jest rowny:  916
+Mnozymy napiecie  231.5  *  16.1 [A] *  916 co daje nam:  3414069.4000000004 Ws dzielimy przez minuty:  56901.15666666667 dzielimy przez godziny:  948.3526111111112 Wh, dzielimy przez 1000 i otrzymujemy:  0.9483526111111111 KWh
+45.59 KWh
+next_date:  2023-06-02 14:27:11
+current_date:  2023-06-02 14:04:43
+difference:  0:22:28
+diference_in_sec:  1348
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  231  oraz prac jest rowny:  17.1 [A]  czas jest rowny:  1348
+Mnozymy napiecie  231  *  17.1 [A] *  1348 co daje nam:  5324734.800000001 Ws dzielimy przez minuty:  88745.58000000002 dzielimy przez godziny:  1479.0930000000003 Wh, dzielimy przez 1000 i otrzymujemy:  1.4790930000000002 KWh
+47.07 KWh
+next_date:  2023-06-02 14:27:51
+current_date:  2023-06-02 14:27:11
+difference:  0:00:40
+diference_in_sec:  40
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  231  oraz prac jest rowny:  18.1 [A]  czas jest rowny:  40
+Mnozymy napiecie  231  *  18.1 [A] *  40 co daje nam:  167244.0 Ws dzielimy przez minuty:  2787.4 dzielimy przez godziny:  46.45666666666667 Wh, dzielimy przez 1000 i otrzymujemy:  0.046456666666666674 KWh
+47.12 KWh
+next_date:  2023-06-02 14:28:43
+current_date:  2023-06-02 14:27:51
+difference:  0:00:52
+diference_in_sec:  52
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  231  oraz prac jest rowny:  19.2 [A]  czas jest rowny:  52
+Mnozymy napiecie  231  *  19.2 [A] *  52 co daje nam:  230630.4 Ws dzielimy przez minuty:  3843.8399999999997 dzielimy przez godziny:  64.064 Wh, dzielimy przez 1000 i otrzymujemy:  0.064064 KWh
+47.18 KWh
+next_date:  2023-06-02 14:30:23
+current_date:  2023-06-02 14:28:43
+difference:  0:01:40
+diference_in_sec:  100
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  231  oraz prac jest rowny:  20.2 [A]  czas jest rowny:  100
+Mnozymy napiecie  231  *  20.2 [A] *  100 co daje nam:  466620.0 Ws dzielimy przez minuty:  7777.0 dzielimy przez godziny:  129.61666666666667 Wh, dzielimy przez 1000 i otrzymujemy:  0.12961666666666669 KWh
+47.31 KWh
+next_date:  2023-06-02 14:33:19
+current_date:  2023-06-02 14:30:23
+difference:  0:02:56
+diference_in_sec:  176
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  231  oraz prac jest rowny:  19.2 [A]  czas jest rowny:  176
+Mnozymy napiecie  231  *  19.2 [A] *  176 co daje nam:  780595.2 Ws dzielimy przez minuty:  13009.92 dzielimy przez godziny:  216.832 Wh, dzielimy przez 1000 i otrzymujemy:  0.216832 KWh
+47.53 KWh
+next_date:  2023-06-02 14:38:51
+current_date:  2023-06-02 14:33:19
+difference:  0:05:32
+diference_in_sec:  332
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  231  oraz prac jest rowny:  20.2 [A]  czas jest rowny:  332
+Mnozymy napiecie  231  *  20.2 [A] *  332 co daje nam:  1549178.4 Ws dzielimy przez minuty:  25819.64 dzielimy przez godziny:  430.32733333333334 Wh, dzielimy przez 1000 i otrzymujemy:  0.43032733333333334 KWh
+47.96 KWh
+next_date:  2023-06-02 14:40:39
+current_date:  2023-06-02 14:38:51
+difference:  0:01:48
+diference_in_sec:  108
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  231  oraz prac jest rowny:  21.2 [A]  czas jest rowny:  108
+Mnozymy napiecie  231  *  21.2 [A] *  108 co daje nam:  528897.6 Ws dzielimy przez minuty:  8814.96 dzielimy przez godziny:  146.916 Wh, dzielimy przez 1000 i otrzymujemy:  0.146916 KWh
+48.1 KWh
+next_date:  2023-06-02 14:44:55
+current_date:  2023-06-02 14:40:39
+difference:  0:04:16
+diference_in_sec:  256
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  231  oraz prac jest rowny:  20.2 [A]  czas jest rowny:  256
+Mnozymy napiecie  231  *  20.2 [A] *  256 co daje nam:  1194547.2 Ws dzielimy przez minuty:  19909.12 dzielimy przez godziny:  331.8186666666667 Wh, dzielimy przez 1000 i otrzymujemy:  0.33181866666666665 KWh
+48.44 KWh
+next_date:  2023-06-02 14:46:19
+current_date:  2023-06-02 14:44:55
+difference:  0:01:24
+diference_in_sec:  84
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  231  oraz prac jest rowny:  19.2 [A]  czas jest rowny:  84
+Mnozymy napiecie  231  *  19.2 [A] *  84 co daje nam:  372556.8 Ws dzielimy przez minuty:  6209.28 dzielimy przez godziny:  103.488 Wh, dzielimy przez 1000 i otrzymujemy:  0.103488 KWh
+48.54 KWh
+next_date:  2023-06-02 14:48:39
+current_date:  2023-06-02 14:46:19
+difference:  0:02:20
+diference_in_sec:  140
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  321  oraz prac jest rowny:  18.2 [A]  czas jest rowny:  140
+Mnozymy napiecie  321  *  18.2 [A] *  140 co daje nam:  817908.0 Ws dzielimy przez minuty:  13631.8 dzielimy przez godziny:  227.19666666666666 Wh, dzielimy przez 1000 i otrzymujemy:  0.22719666666666666 KWh
+48.77 KWh
+next_date:  2023-06-02 14:52:47
+current_date:  2023-06-02 14:48:39
+difference:  0:04:08
+diference_in_sec:  248
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  231  oraz prac jest rowny:  17.2 [A]  czas jest rowny:  248
+Mnozymy napiecie  231  *  17.2 [A] *  248 co daje nam:  985353.6 Ws dzielimy przez minuty:  16422.56 dzielimy przez godziny:  273.70933333333335 Wh, dzielimy przez 1000 i otrzymujemy:  0.27370933333333336 KWh
+49.04 KWh
+next_date:  2023-06-02 14:59:07
+current_date:  2023-06-02 14:52:47
+difference:  0:06:20
+diference_in_sec:  380
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  231  oraz prac jest rowny:  16.2 [A]  czas jest rowny:  380
+Mnozymy napiecie  231  *  16.2 [A] *  380 co daje nam:  1422036.0 Ws dzielimy przez minuty:  23700.6 dzielimy przez godziny:  395.01 Wh, dzielimy przez 1000 i otrzymujemy:  0.39501 KWh
+49.44 KWh
+next_date:  2023-06-02 16:31:11
+current_date:  2023-06-02 14:59:07
+difference:  1:32:04
+diference_in_sec:  5524
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  231  oraz prac jest rowny:  15.2 [A]  czas jest rowny:  5524
+Mnozymy napiecie  231  *  15.2 [A] *  5524 co daje nam:  19395868.8 Ws dzielimy przez minuty:  323264.48000000004 dzielimy przez godziny:  5387.741333333334 Wh, dzielimy przez 1000 i otrzymujemy:  5.387741333333334 KWh
+54.82 KWh
+next_date:  2023-06-02 16:33:39
+current_date:  2023-06-02 16:31:11
+difference:  0:02:28
+diference_in_sec:  148
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  230.5  oraz prac jest rowny:  16.2 [A]  czas jest rowny:  148
+Mnozymy napiecie  230.5  *  16.2 [A] *  148 co daje nam:  552646.7999999999 Ws dzielimy przez minuty:  9210.779999999999 dzielimy przez godziny:  153.51299999999998 Wh, dzielimy przez 1000 i otrzymujemy:  0.15351299999999998 KWh
+54.98 KWh
+next_date:  2023-06-02 16:41:55
+current_date:  2023-06-02 16:33:39
+difference:  0:08:16
+diference_in_sec:  496
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  230.5  oraz prac jest rowny:  17.2 [A]  czas jest rowny:  496
+Mnozymy napiecie  230.5  *  17.2 [A] *  496 co daje nam:  1966441.5999999999 Ws dzielimy przez minuty:  32774.026666666665 dzielimy przez godziny:  546.2337777777777 Wh, dzielimy przez 1000 i otrzymujemy:  0.5462337777777777 KWh
+55.52 KWh
+next_date:  2023-06-02 16:43:07
+current_date:  2023-06-02 16:41:55
+difference:  0:01:12
+diference_in_sec:  72
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  230  oraz prac jest rowny:  18.2 [A]  czas jest rowny:  72
+Mnozymy napiecie  230  *  18.2 [A] *  72 co daje nam:  301392.0 Ws dzielimy przez minuty:  5023.2 dzielimy przez godziny:  83.72 Wh, dzielimy przez 1000 i otrzymujemy:  0.08372 KWh
+55.61 KWh
+next_date:  2023-06-02 16:44:43
+current_date:  2023-06-02 16:43:07
+difference:  0:01:36
+diference_in_sec:  96
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  230.5  oraz prac jest rowny:  19.2 [A]  czas jest rowny:  96
+Mnozymy napiecie  230.5  *  19.2 [A] *  96 co daje nam:  424857.6 Ws dzielimy przez minuty:  7080.96 dzielimy przez godziny:  118.016 Wh, dzielimy przez 1000 i otrzymujemy:  0.11801600000000001 KWh
+55.72 KWh
+next_date:  2023-06-02 16:46:39
+current_date:  2023-06-02 16:44:43
+difference:  0:01:56
+diference_in_sec:  116
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  230  oraz prac jest rowny:  20.3 [A]  czas jest rowny:  116
+Mnozymy napiecie  230  *  20.3 [A] *  116 co daje nam:  541604.0 Ws dzielimy przez minuty:  9026.733333333334 dzielimy przez godziny:  150.44555555555556 Wh, dzielimy przez 1000 i otrzymujemy:  0.15044555555555555 KWh
+55.87 KWh
+next_date:  2023-06-02 16:47:43
+current_date:  2023-06-02 16:46:39
+difference:  0:01:04
+diference_in_sec:  64
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  230  oraz prac jest rowny:  21.3 [A]  czas jest rowny:  64
+Mnozymy napiecie  230  *  21.3 [A] *  64 co daje nam:  313536.0 Ws dzielimy przez minuty:  5225.6 dzielimy przez godziny:  87.09333333333333 Wh, dzielimy przez 1000 i otrzymujemy:  0.08709333333333333 KWh
+55.96 KWh
+next_date:  2023-06-02 16:48:23
+current_date:  2023-06-02 16:47:43
+difference:  0:00:40
+diference_in_sec:  40
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  230  oraz prac jest rowny:  22.4 [A]  czas jest rowny:  40
+Mnozymy napiecie  230  *  22.4 [A] *  40 co daje nam:  206080.0 Ws dzielimy przez minuty:  3434.6666666666665 dzielimy przez godziny:  57.24444444444444 Wh, dzielimy przez 1000 i otrzymujemy:  0.05724444444444444 KWh
+56.02 KWh
+next_date:  2023-06-02 16:55:31
+current_date:  2023-06-02 16:48:23
+difference:  0:07:08
+diference_in_sec:  428
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  230  oraz prac jest rowny:  23.4 [A]  czas jest rowny:  428
+Mnozymy napiecie  230  *  23.4 [A] *  428 co daje nam:  2303496.0 Ws dzielimy przez minuty:  38391.6 dzielimy przez godziny:  639.86 Wh, dzielimy przez 1000 i otrzymujemy:  0.63986 KWh
+56.66 KWh
+next_date:  2023-06-02 16:55:55
+current_date:  2023-06-02 16:55:31
+difference:  0:00:24
+diference_in_sec:  24
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  230  oraz prac jest rowny:  22.4 [A]  czas jest rowny:  24
+Mnozymy napiecie  230  *  22.4 [A] *  24 co daje nam:  123648.0 Ws dzielimy przez minuty:  2060.8 dzielimy przez godziny:  34.34666666666667 Wh, dzielimy przez 1000 i otrzymujemy:  0.03434666666666667 KWh
+56.69 KWh
+next_date:  2023-06-02 16:56:15
+current_date:  2023-06-02 16:55:55
+difference:  0:00:20
+diference_in_sec:  20
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  230  oraz prac jest rowny:  21.3 [A]  czas jest rowny:  20
+Mnozymy napiecie  230  *  21.3 [A] *  20 co daje nam:  97980.0 Ws dzielimy przez minuty:  1633.0 dzielimy przez godziny:  27.216666666666665 Wh, dzielimy przez 1000 i otrzymujemy:  0.027216666666666663 KWh
+56.72 KWh
+next_date:  2023-06-02 16:56:59
+current_date:  2023-06-02 16:56:15
+difference:  0:00:44
+diference_in_sec:  44
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  230  oraz prac jest rowny:  20.3 [A]  czas jest rowny:  44
+Mnozymy napiecie  230  *  20.3 [A] *  44 co daje nam:  205436.0 Ws dzielimy przez minuty:  3423.9333333333334 dzielimy przez godziny:  57.065555555555555 Wh, dzielimy przez 1000 i otrzymujemy:  0.05706555555555556 KWh
+56.78 KWh
+next_date:  2023-06-02 16:57:55
+current_date:  2023-06-02 16:56:59
+difference:  0:00:56
+diference_in_sec:  56
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  230  oraz prac jest rowny:  19.3 [A]  czas jest rowny:  56
+Mnozymy napiecie  230  *  19.3 [A] *  56 co daje nam:  248584.0 Ws dzielimy przez minuty:  4143.066666666667 dzielimy przez godziny:  69.05111111111111 Wh, dzielimy przez 1000 i otrzymujemy:  0.06905111111111112 KWh
+56.85 KWh
+next_date:  2023-06-02 17:00:19
+current_date:  2023-06-02 16:57:55
+difference:  0:02:24
+diference_in_sec:  144
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  230  oraz prac jest rowny:  18.3 [A]  czas jest rowny:  144
+Mnozymy napiecie  230  *  18.3 [A] *  144 co daje nam:  606096.0 Ws dzielimy przez minuty:  10101.6 dzielimy przez godziny:  168.36 Wh, dzielimy przez 1000 i otrzymujemy:  0.16836 KWh
+57.02 KWh
+next_date:  2023-06-02 17:08:39
+current_date:  2023-06-02 17:00:19
+difference:  0:08:20
+diference_in_sec:  500
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  230  oraz prac jest rowny:  17.3 [A]  czas jest rowny:  500
+Mnozymy napiecie  230  *  17.3 [A] *  500 co daje nam:  1989500.0 Ws dzielimy przez minuty:  33158.333333333336 dzielimy przez godziny:  552.6388888888889 Wh, dzielimy przez 1000 i otrzymujemy:  0.5526388888888889 KWh
+57.57 KWh
+next_date:  2023-06-02 17:47:35
+current_date:  2023-06-02 17:08:39
+difference:  0:38:56
+diference_in_sec:  2336
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  230  oraz prac jest rowny:  16.3 [A]  czas jest rowny:  2336
+Mnozymy napiecie  230  *  16.3 [A] *  2336 co daje nam:  8757664.0 Ws dzielimy przez minuty:  145961.06666666668 dzielimy przez godziny:  2432.6844444444446 Wh, dzielimy przez 1000 i otrzymujemy:  2.4326844444444444 KWh
+60.0 KWh
+next_date:  2023-06-02 17:48:39
+current_date:  2023-06-02 17:47:35
+difference:  0:01:04
+diference_in_sec:  64
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  230  oraz prac jest rowny:  17.3 [A]  czas jest rowny:  64
+Mnozymy napiecie  230  *  17.3 [A] *  64 co daje nam:  254656.0 Ws dzielimy przez minuty:  4244.266666666666 dzielimy przez godziny:  70.73777777777778 Wh, dzielimy przez 1000 i otrzymujemy:  0.07073777777777777 KWh
+60.07 KWh
+next_date:  2023-06-02 17:55:27
+current_date:  2023-06-02 17:48:39
+difference:  0:06:48
+diference_in_sec:  408
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  230  oraz prac jest rowny:  18.3 [A]  czas jest rowny:  408
+Mnozymy napiecie  230  *  18.3 [A] *  408 co daje nam:  1717272.0 Ws dzielimy przez minuty:  28621.2 dzielimy przez godziny:  477.02000000000004 Wh, dzielimy przez 1000 i otrzymujemy:  0.47702000000000006 KWh
+60.55 KWh
+next_date:  2023-06-02 18:04:47
+current_date:  2023-06-02 17:55:27
+difference:  0:09:20
+diference_in_sec:  560
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  230  oraz prac jest rowny:  17.3 [A]  czas jest rowny:  560
+Mnozymy napiecie  230  *  17.3 [A] *  560 co daje nam:  2228240.0 Ws dzielimy przez minuty:  37137.333333333336 dzielimy przez godziny:  618.9555555555556 Wh, dzielimy przez 1000 i otrzymujemy:  0.6189555555555556 KWh
+61.17 KWh
+next_date:  2023-06-02 18:27:48
+current_date:  2023-06-02 18:04:47
+difference:  0:23:01
+diference_in_sec:  1381
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  230  oraz prac jest rowny:  16.3 [A]  czas jest rowny:  1381
+Mnozymy napiecie  230  *  16.3 [A] *  1381 co daje nam:  5177369.0 Ws dzielimy przez minuty:  86289.48333333334 dzielimy przez godziny:  1438.1580555555556 Wh, dzielimy przez 1000 i otrzymujemy:  1.4381580555555555 KWh
+62.61 KWh
+next_date:  2023-06-02 18:29:12
+current_date:  2023-06-02 18:27:48
+difference:  0:01:24
+diference_in_sec:  84
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  229.5  oraz prac jest rowny:  17 [A]  czas jest rowny:  84
+Mnozymy napiecie  229.5  *  17 [A] *  84 co daje nam:  327726.0 Ws dzielimy przez minuty:  5462.1 dzielimy przez godziny:  91.03500000000001 Wh, dzielimy przez 1000 i otrzymujemy:  0.091035 KWh
+62.7 KWh
+next_date:  2023-06-02 18:30:24
+current_date:  2023-06-02 18:29:12
+difference:  0:01:12
+diference_in_sec:  72
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  239.5  oraz prac jest rowny:  17.1 [A]  czas jest rowny:  72
+Mnozymy napiecie  239.5  *  17.1 [A] *  72 co daje nam:  294872.4 Ws dzielimy przez minuty:  4914.54 dzielimy przez godziny:  81.909 Wh, dzielimy przez 1000 i otrzymujemy:  0.08190900000000001 KWh
+62.78 KWh
+next_date:  2023-06-02 18:31:28
+current_date:  2023-06-02 18:30:24
+difference:  0:01:04
+diference_in_sec:  64
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  229.5  oraz prac jest rowny:  16.6 [A]  czas jest rowny:  64
+Mnozymy napiecie  229.5  *  16.6 [A] *  64 co daje nam:  243820.80000000002 Ws dzielimy przez minuty:  4063.6800000000003 dzielimy przez godziny:  67.72800000000001 Wh, dzielimy przez 1000 i otrzymujemy:  0.06772800000000001 KWh
+62.85 KWh
+next_date:  2023-06-02 18:32:32
+current_date:  2023-06-02 18:31:28
+difference:  0:01:04
+diference_in_sec:  64
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  239.5  oraz prac jest rowny:  16.4 [A]  czas jest rowny:  64
+Mnozymy napiecie  239.5  *  16.4 [A] *  64 co daje nam:  251379.19999999998 Ws dzielimy przez minuty:  4189.653333333333 dzielimy przez godziny:  69.82755555555555 Wh, dzielimy przez 1000 i otrzymujemy:  0.06982755555555555 KWh
+62.92 KWh
+next_date:  2023-06-02 18:33:32
+current_date:  2023-06-02 18:32:32
+difference:  0:01:00
+diference_in_sec:  60
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  229.5  oraz prac jest rowny:  16.4 [A]  czas jest rowny:  60
+Mnozymy napiecie  229.5  *  16.4 [A] *  60 co daje nam:  225827.99999999997 Ws dzielimy przez minuty:  3763.7999999999997 dzielimy przez godziny:  62.73 Wh, dzielimy przez 1000 i otrzymujemy:  0.06273 KWh
+62.98 KWh
+next_date:  2023-06-02 18:34:40
+current_date:  2023-06-02 18:33:32
+difference:  0:01:08
+diference_in_sec:  68
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  239.5  oraz prac jest rowny:  16.3 [A]  czas jest rowny:  68
+Mnozymy napiecie  239.5  *  16.3 [A] *  68 co daje nam:  265461.80000000005 Ws dzielimy przez minuty:  4424.363333333334 dzielimy przez godziny:  73.7393888888889 Wh, dzielimy przez 1000 i otrzymujemy:  0.0737393888888889 KWh
+63.05 KWh
+next_date:  2023-06-02 18:35:48
+current_date:  2023-06-02 18:34:40
+difference:  0:01:08
+diference_in_sec:  68
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  229.5  oraz prac jest rowny:  16.2 [A]  czas jest rowny:  68
+Mnozymy napiecie  229.5  *  16.2 [A] *  68 co daje nam:  252817.19999999998 Ws dzielimy przez minuty:  4213.62 dzielimy przez godziny:  70.227 Wh, dzielimy przez 1000 i otrzymujemy:  0.070227 KWh
+63.12 KWh
+next_date:  2023-06-02 18:37:08
+current_date:  2023-06-02 18:35:48
+difference:  0:01:20
+diference_in_sec:  80
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  239.5  oraz prac jest rowny:  16.1 [A]  czas jest rowny:  80
+Mnozymy napiecie  239.5  *  16.1 [A] *  80 co daje nam:  308476.0 Ws dzielimy przez minuty:  5141.266666666666 dzielimy przez godziny:  85.68777777777777 Wh, dzielimy przez 1000 i otrzymujemy:  0.08568777777777777 KWh
+63.21 KWh
+next_date:  2023-06-02 18:38:32
+current_date:  2023-06-02 18:37:08
+difference:  0:01:24
+diference_in_sec:  84
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  229.5  oraz prac jest rowny:  16.1 [A]  czas jest rowny:  84
+Mnozymy napiecie  229.5  *  16.1 [A] *  84 co daje nam:  310375.80000000005 Ws dzielimy przez minuty:  5172.930000000001 dzielimy przez godziny:  86.21550000000002 Wh, dzielimy przez 1000 i otrzymujemy:  0.08621550000000001 KWh
+63.29 KWh
+next_date:  2023-06-02 18:40:08
+current_date:  2023-06-02 18:38:32
+difference:  0:01:36
+diference_in_sec:  96
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  239.5  oraz prac jest rowny:  16 [A]  czas jest rowny:  96
+Mnozymy napiecie  239.5  *  16 [A] *  96 co daje nam:  367872.0 Ws dzielimy przez minuty:  6131.2 dzielimy przez godziny:  102.18666666666667 Wh, dzielimy przez 1000 i otrzymujemy:  0.10218666666666666 KWh
+63.4 KWh
+next_date:  2023-06-02 18:41:56
+current_date:  2023-06-02 18:40:08
+difference:  0:01:48
+diference_in_sec:  108
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  229.5  oraz prac jest rowny:  16.1 [A]  czas jest rowny:  108
+Mnozymy napiecie  229.5  *  16.1 [A] *  108 co daje nam:  399054.60000000003 Ws dzielimy przez minuty:  6650.910000000001 dzielimy przez godziny:  110.84850000000002 Wh, dzielimy przez 1000 i otrzymujemy:  0.11084850000000002 KWh
+63.51 KWh
+next_date:  2023-06-02 18:44:12
+current_date:  2023-06-02 18:41:56
+difference:  0:02:16
+diference_in_sec:  136
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  239.5  oraz prac jest rowny:  16.1 [A]  czas jest rowny:  136
+Mnozymy napiecie  239.5  *  16.1 [A] *  136 co daje nam:  524409.2000000001 Ws dzielimy przez minuty:  8740.153333333334 dzielimy przez godziny:  145.66922222222223 Wh, dzielimy przez 1000 i otrzymujemy:  0.14566922222222223 KWh
+63.65 KWh
+next_date:  2023-06-02 18:47:44
+current_date:  2023-06-02 18:44:12
+difference:  0:03:32
+diference_in_sec:  212
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  229.5  oraz prac jest rowny:  15.9 [A]  czas jest rowny:  212
+Mnozymy napiecie  229.5  *  15.9 [A] *  212 co daje nam:  773598.6000000001 Ws dzielimy przez minuty:  12893.310000000001 dzielimy przez godziny:  214.88850000000002 Wh, dzielimy przez 1000 i otrzymujemy:  0.2148885 KWh
+63.87 KWh
+next_date:  2023-06-02 18:53:56
+current_date:  2023-06-02 18:47:44
+difference:  0:06:12
+diference_in_sec:  372
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  239.5  oraz prac jest rowny:  15.6 [A]  czas jest rowny:  372
+Mnozymy napiecie  239.5  *  15.6 [A] *  372 co daje nam:  1389866.4 Ws dzielimy przez minuty:  23164.44 dzielimy przez godziny:  386.07399999999996 Wh, dzielimy przez 1000 i otrzymujemy:  0.386074 KWh
+64.25 KWh
+next_date:  2023-06-02 19:25:00
+current_date:  2023-06-02 18:53:56
+difference:  0:31:04
+diference_in_sec:  1864
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  229.5  oraz prac jest rowny:  16.1 [A]  czas jest rowny:  1864
+Mnozymy napiecie  229.5  *  16.1 [A] *  1864 co daje nam:  6887386.800000001 Ws dzielimy przez minuty:  114789.78000000001 dzielimy przez godziny:  1913.1630000000002 Wh, dzielimy przez 1000 i otrzymujemy:  1.9131630000000002 KWh
+66.17 KWh
+next_date:  2023-06-02 19:34:32
+current_date:  2023-06-02 19:25:00
+difference:  0:09:32
+diference_in_sec:  572
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  229.5  oraz prac jest rowny:  15.2 [A]  czas jest rowny:  572
+Mnozymy napiecie  229.5  *  15.2 [A] *  572 co daje nam:  1995364.7999999998 Ws dzielimy przez minuty:  33256.079999999994 dzielimy przez godziny:  554.2679999999999 Wh, dzielimy przez 1000 i otrzymujemy:  0.5542679999999999 KWh
+66.72 KWh
+next_date:  2023-06-02 19:39:56
+current_date:  2023-06-02 19:34:32
+difference:  0:05:24
+diference_in_sec:  324
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  229  oraz prac jest rowny:  15.1 [A]  czas jest rowny:  324
+Mnozymy napiecie  229  *  15.1 [A] *  324 co daje nam:  1120359.6 Ws dzielimy przez minuty:  18672.66 dzielimy przez godziny:  311.211 Wh, dzielimy przez 1000 i otrzymujemy:  0.311211 KWh
+67.03 KWh
+next_date:  2023-06-02 19:46:48
+current_date:  2023-06-02 19:39:56
+difference:  0:06:52
+diference_in_sec:  412
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  239  oraz prac jest rowny:  14.9 [A]  czas jest rowny:  412
+Mnozymy napiecie  239  *  14.9 [A] *  412 co daje nam:  1467173.2 Ws dzielimy przez minuty:  24452.886666666665 dzielimy przez godziny:  407.5481111111111 Wh, dzielimy przez 1000 i otrzymujemy:  0.4075481111111111 KWh
+67.44 KWh
+next_date:  2023-06-02 19:55:44
+current_date:  2023-06-02 19:46:48
+difference:  0:08:56
+diference_in_sec:  536
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  228.5  oraz prac jest rowny:  14.8 [A]  czas jest rowny:  536
+Mnozymy napiecie  228.5  *  14.8 [A] *  536 co daje nam:  1812644.8 Ws dzielimy przez minuty:  30210.746666666666 dzielimy przez godziny:  503.51244444444444 Wh, dzielimy przez 1000 i otrzymujemy:  0.5035124444444444 KWh
+67.94 KWh
+next_date:  2023-06-02 20:01:51
+current_date:  2023-06-02 19:55:44
+difference:  0:06:07
+diference_in_sec:  367
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  228.5  oraz prac jest rowny:  14.6 [A]  czas jest rowny:  367
+Mnozymy napiecie  228.5  *  14.6 [A] *  367 co daje nam:  1224348.7 Ws dzielimy przez minuty:  20405.811666666665 dzielimy przez godziny:  340.0968611111111 Wh, dzielimy przez 1000 i otrzymujemy:  0.3400968611111111 KWh
+68.28 KWh
+next_date:  2023-06-02 20:02:08
+current_date:  2023-06-02 20:01:51
+difference:  0:00:17
+diference_in_sec:  17
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  227.5  oraz prac jest rowny:  14.2 [A]  czas jest rowny:  17
+Mnozymy napiecie  227.5  *  14.2 [A] *  17 co daje nam:  54918.5 Ws dzielimy przez minuty:  915.3083333333333 dzielimy przez godziny:  15.255138888888888 Wh, dzielimy przez 1000 i otrzymujemy:  0.015255138888888888 KWh
+68.3 KWh
+next_date:  2023-06-02 20:02:24
+current_date:  2023-06-02 20:02:08
+difference:  0:00:16
+diference_in_sec:  16
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  237.5  oraz prac jest rowny:  14.2 [A]  czas jest rowny:  16
+Mnozymy napiecie  237.5  *  14.2 [A] *  16 co daje nam:  53960.0 Ws dzielimy przez minuty:  899.3333333333334 dzielimy przez godziny:  14.988888888888889 Wh, dzielimy przez 1000 i otrzymujemy:  0.014988888888888888 KWh
+68.31 KWh
+next_date:  2023-06-02 20:02:32
+current_date:  2023-06-02 20:02:24
+difference:  0:00:08
+diference_in_sec:  8
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  227.5  oraz prac jest rowny:  14.1 [A]  czas jest rowny:  8
+Mnozymy napiecie  227.5  *  14.1 [A] *  8 co daje nam:  25662.0 Ws dzielimy przez minuty:  427.7 dzielimy przez godziny:  7.128333333333333 Wh, dzielimy przez 1000 i otrzymujemy:  0.007128333333333333 KWh
+68.32 KWh
+next_date:  2023-06-02 20:02:40
+current_date:  2023-06-02 20:02:32
+difference:  0:00:08
+diference_in_sec:  8
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  227.5  oraz prac jest rowny:  14.1 [A]  czas jest rowny:  8
+Mnozymy napiecie  227.5  *  14.1 [A] *  8 co daje nam:  25662.0 Ws dzielimy przez minuty:  427.7 dzielimy przez godziny:  7.128333333333333 Wh, dzielimy przez 1000 i otrzymujemy:  0.007128333333333333 KWh
+68.33 KWh
+next_date:  2023-06-02 20:03:12
+current_date:  2023-06-02 20:02:40
+difference:  0:00:32
+diference_in_sec:  32
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  227.5  oraz prac jest rowny:  14.1 [A]  czas jest rowny:  32
+Mnozymy napiecie  227.5  *  14.1 [A] *  32 co daje nam:  102648.0 Ws dzielimy przez minuty:  1710.8 dzielimy przez godziny:  28.513333333333332 Wh, dzielimy przez 1000 i otrzymujemy:  0.02851333333333333 KWh
+68.36 KWh
+next_date:  2023-06-02 20:03:44
+current_date:  2023-06-02 20:03:12
+difference:  0:00:32
+diference_in_sec:  32
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  237.5  oraz prac jest rowny:  14 [A]  czas jest rowny:  32
+Mnozymy napiecie  237.5  *  14 [A] *  32 co daje nam:  106400.0 Ws dzielimy przez minuty:  1773.3333333333333 dzielimy przez godziny:  29.555555555555554 Wh, dzielimy przez 1000 i otrzymujemy:  0.029555555555555554 KWh
+68.39 KWh
+next_date:  2023-06-02 20:04:16
+current_date:  2023-06-02 20:03:44
+difference:  0:00:32
+diference_in_sec:  32
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  227.5  oraz prac jest rowny:  13.9 [A]  czas jest rowny:  32
+Mnozymy napiecie  227.5  *  13.9 [A] *  32 co daje nam:  101192.0 Ws dzielimy przez minuty:  1686.5333333333333 dzielimy przez godziny:  28.108888888888888 Wh, dzielimy przez 1000 i otrzymujemy:  0.028108888888888888 KWh
+68.41 KWh
+next_date:  2023-06-02 20:04:48
+current_date:  2023-06-02 20:04:16
+difference:  0:00:32
+diference_in_sec:  32
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  227.5  oraz prac jest rowny:  13.8 [A]  czas jest rowny:  32
+Mnozymy napiecie  227.5  *  13.8 [A] *  32 co daje nam:  100464.0 Ws dzielimy przez minuty:  1674.4 dzielimy przez godziny:  27.90666666666667 Wh, dzielimy przez 1000 i otrzymujemy:  0.02790666666666667 KWh
+68.44 KWh
+next_date:  2023-06-02 20:05:20
+current_date:  2023-06-02 20:04:48
+difference:  0:00:32
+diference_in_sec:  32
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  227  oraz prac jest rowny:  13.7 [A]  czas jest rowny:  32
+Mnozymy napiecie  227  *  13.7 [A] *  32 co daje nam:  99516.79999999999 Ws dzielimy przez minuty:  1658.6133333333332 dzielimy przez godziny:  27.643555555555555 Wh, dzielimy przez 1000 i otrzymujemy:  0.027643555555555553 KWh
+68.47 KWh
+next_date:  2023-06-02 20:06:52
+current_date:  2023-06-02 20:05:20
+difference:  0:01:32
+diference_in_sec:  92
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  237  oraz prac jest rowny:  13.7 [A]  czas jest rowny:  92
+Mnozymy napiecie  237  *  13.7 [A] *  92 co daje nam:  298714.8 Ws dzielimy przez minuty:  4978.58 dzielimy przez godziny:  82.97633333333333 Wh, dzielimy przez 1000 i otrzymujemy:  0.08297633333333333 KWh
+68.55 KWh
+next_date:  2023-06-02 20:07:32
+current_date:  2023-06-02 20:06:52
+difference:  0:00:40
+diference_in_sec:  40
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  227  oraz prac jest rowny:  13.6 [A]  czas jest rowny:  40
+Mnozymy napiecie  227  *  13.6 [A] *  40 co daje nam:  123488.0 Ws dzielimy przez minuty:  2058.133333333333 dzielimy przez godziny:  34.30222222222222 Wh, dzielimy przez 1000 i otrzymujemy:  0.03430222222222222 KWh
+68.59 KWh
+next_date:  2023-06-02 20:08:04
+current_date:  2023-06-02 20:07:32
+difference:  0:00:32
+diference_in_sec:  32
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  227  oraz prac jest rowny:  13.5 [A]  czas jest rowny:  32
+Mnozymy napiecie  227  *  13.5 [A] *  32 co daje nam:  98064.0 Ws dzielimy przez minuty:  1634.4 dzielimy przez godziny:  27.240000000000002 Wh, dzielimy przez 1000 i otrzymujemy:  0.02724 KWh
+68.61 KWh
+next_date:  2023-06-02 20:08:40
+current_date:  2023-06-02 20:08:04
+difference:  0:00:36
+diference_in_sec:  36
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  227  oraz prac jest rowny:  13.4 [A]  czas jest rowny:  36
+Mnozymy napiecie  227  *  13.4 [A] *  36 co daje nam:  109504.8 Ws dzielimy przez minuty:  1825.0800000000002 dzielimy przez godziny:  30.418000000000003 Wh, dzielimy przez 1000 i otrzymujemy:  0.030418000000000004 KWh
+68.65 KWh
+next_date:  2023-06-02 20:09:16
+current_date:  2023-06-02 20:08:40
+difference:  0:00:36
+diference_in_sec:  36
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  237  oraz prac jest rowny:  13.2 [A]  czas jest rowny:  36
+Mnozymy napiecie  237  *  13.2 [A] *  36 co daje nam:  112622.4 Ws dzielimy przez minuty:  1877.04 dzielimy przez godziny:  31.284 Wh, dzielimy przez 1000 i otrzymujemy:  0.031284 KWh
+68.68 KWh
+next_date:  2023-06-02 20:09:56
+current_date:  2023-06-02 20:09:16
+difference:  0:00:40
+diference_in_sec:  40
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  227  oraz prac jest rowny:  13.1 [A]  czas jest rowny:  40
+Mnozymy napiecie  227  *  13.1 [A] *  40 co daje nam:  118948.0 Ws dzielimy przez minuty:  1982.4666666666667 dzielimy przez godziny:  33.041111111111114 Wh, dzielimy przez 1000 i otrzymujemy:  0.03304111111111111 KWh
+68.71 KWh
+next_date:  2023-06-02 20:10:32
+current_date:  2023-06-02 20:09:56
+difference:  0:00:36
+diference_in_sec:  36
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  227  oraz prac jest rowny:  13 [A]  czas jest rowny:  36
+Mnozymy napiecie  227  *  13 [A] *  36 co daje nam:  106236 Ws dzielimy przez minuty:  1770.6 dzielimy przez godziny:  29.509999999999998 Wh, dzielimy przez 1000 i otrzymujemy:  0.029509999999999998 KWh
+68.74 KWh
+next_date:  2023-06-02 20:11:16
+current_date:  2023-06-02 20:10:32
+difference:  0:00:44
+diference_in_sec:  44
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  227  oraz prac jest rowny:  13 [A]  czas jest rowny:  44
+Mnozymy napiecie  227  *  13 [A] *  44 co daje nam:  129844 Ws dzielimy przez minuty:  2164.0666666666666 dzielimy przez godziny:  36.06777777777778 Wh, dzielimy przez 1000 i otrzymujemy:  0.036067777777777775 KWh
+68.77 KWh
+next_date:  2023-06-02 20:12:36
+current_date:  2023-06-02 20:11:16
+difference:  0:01:20
+diference_in_sec:  80
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  237  oraz prac jest rowny:  13 [A]  czas jest rowny:  80
+Mnozymy napiecie  237  *  13 [A] *  80 co daje nam:  246480 Ws dzielimy przez minuty:  4108.0 dzielimy przez godziny:  68.46666666666667 Wh, dzielimy przez 1000 i otrzymujemy:  0.06846666666666666 KWh
+68.84 KWh
+next_date:  2023-06-02 20:13:44
+current_date:  2023-06-02 20:12:36
+difference:  0:01:08
+diference_in_sec:  68
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  227  oraz prac jest rowny:  13 [A]  czas jest rowny:  68
+Mnozymy napiecie  227  *  13 [A] *  68 co daje nam:  200668 Ws dzielimy przez minuty:  3344.4666666666667 dzielimy przez godziny:  55.74111111111111 Wh, dzielimy przez 1000 i otrzymujemy:  0.05574111111111111 KWh
+68.9 KWh
+next_date:  2023-06-02 20:14:48
+current_date:  2023-06-02 20:13:44
+difference:  0:01:04
+diference_in_sec:  64
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  227  oraz prac jest rowny:  13 [A]  czas jest rowny:  64
+Mnozymy napiecie  227  *  13 [A] *  64 co daje nam:  188864 Ws dzielimy przez minuty:  3147.733333333333 dzielimy przez godziny:  52.462222222222216 Wh, dzielimy przez 1000 i otrzymujemy:  0.052462222222222216 KWh
+68.95 KWh
+next_date:  2023-06-02 20:15:52
+current_date:  2023-06-02 20:14:48
+difference:  0:01:04
+diference_in_sec:  64
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  227  oraz prac jest rowny:  12.9 [A]  czas jest rowny:  64
+Mnozymy napiecie  227  *  12.9 [A] *  64 co daje nam:  187411.2 Ws dzielimy przez minuty:  3123.52 dzielimy przez godziny:  52.05866666666667 Wh, dzielimy przez 1000 i otrzymujemy:  0.05205866666666667 KWh
+69.0 KWh
+next_date:  2023-06-02 20:16:44
+current_date:  2023-06-02 20:15:52
+difference:  0:00:52
+diference_in_sec:  52
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  237  oraz prac jest rowny:  12.9 [A]  czas jest rowny:  52
+Mnozymy napiecie  237  *  12.9 [A] *  52 co daje nam:  158979.6 Ws dzielimy przez minuty:  2649.6600000000003 dzielimy przez godziny:  44.16100000000001 Wh, dzielimy przez 1000 i otrzymujemy:  0.044161000000000006 KWh
+69.05 KWh
+next_date:  2023-06-02 20:17:40
+current_date:  2023-06-02 20:16:44
+difference:  0:00:56
+diference_in_sec:  56
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  227  oraz prac jest rowny:  12.8 [A]  czas jest rowny:  56
+Mnozymy napiecie  227  *  12.8 [A] *  56 co daje nam:  162713.60000000003 Ws dzielimy przez minuty:  2711.893333333334 dzielimy przez godziny:  45.198222222222235 Wh, dzielimy przez 1000 i otrzymujemy:  0.04519822222222224 KWh
+69.09 KWh
+next_date:  2023-06-02 20:18:40
+current_date:  2023-06-02 20:17:40
+difference:  0:01:00
+diference_in_sec:  60
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  227  oraz prac jest rowny:  12.7 [A]  czas jest rowny:  60
+Mnozymy napiecie  227  *  12.7 [A] *  60 co daje nam:  172973.99999999997 Ws dzielimy przez minuty:  2882.8999999999996 dzielimy przez godziny:  48.048333333333325 Wh, dzielimy przez 1000 i otrzymujemy:  0.048048333333333325 KWh
+69.14 KWh
+next_date:  2023-06-02 20:19:44
+current_date:  2023-06-02 20:18:40
+difference:  0:01:04
+diference_in_sec:  64
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  226.5  oraz prac jest rowny:  12.7 [A]  czas jest rowny:  64
+Mnozymy napiecie  226.5  *  12.7 [A] *  64 co daje nam:  184099.19999999998 Ws dzielimy przez minuty:  3068.3199999999997 dzielimy przez godziny:  51.13866666666666 Wh, dzielimy przez 1000 i otrzymujemy:  0.05113866666666666 KWh
+69.19 KWh
+next_date:  2023-06-02 20:21:00
+current_date:  2023-06-02 20:19:44
+difference:  0:01:16
+diference_in_sec:  76
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  237  oraz prac jest rowny:  12.6 [A]  czas jest rowny:  76
+Mnozymy napiecie  237  *  12.6 [A] *  76 co daje nam:  226951.19999999998 Ws dzielimy przez minuty:  3782.5199999999995 dzielimy przez godziny:  63.041999999999994 Wh, dzielimy przez 1000 i otrzymujemy:  0.063042 KWh
+69.26 KWh
+next_date:  2023-06-02 20:22:20
+current_date:  2023-06-02 20:21:00
+difference:  0:01:20
+diference_in_sec:  80
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  227  oraz prac jest rowny:  12.6 [A]  czas jest rowny:  80
+Mnozymy napiecie  227  *  12.6 [A] *  80 co daje nam:  228816.0 Ws dzielimy przez minuty:  3813.6 dzielimy przez godziny:  63.559999999999995 Wh, dzielimy przez 1000 i otrzymujemy:  0.06355999999999999 KWh
+69.32 KWh
+next_date:  2023-06-02 20:23:40
+current_date:  2023-06-02 20:22:20
+difference:  0:01:20
+diference_in_sec:  80
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  227  oraz prac jest rowny:  12.4 [A]  czas jest rowny:  80
+Mnozymy napiecie  227  *  12.4 [A] *  80 co daje nam:  225184.0 Ws dzielimy przez minuty:  3753.0666666666666 dzielimy przez godziny:  62.55111111111111 Wh, dzielimy przez 1000 i otrzymujemy:  0.06255111111111111 KWh
+69.38 KWh
+next_date:  2023-06-02 20:24:52
+current_date:  2023-06-02 20:23:40
+difference:  0:01:12
+diference_in_sec:  72
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  226.5  oraz prac jest rowny:  12.4 [A]  czas jest rowny:  72
+Mnozymy napiecie  226.5  *  12.4 [A] *  72 co daje nam:  202219.19999999998 Ws dzielimy przez minuty:  3370.3199999999997 dzielimy przez godziny:  56.172 Wh, dzielimy przez 1000 i otrzymujemy:  0.056172 KWh
+69.44 KWh
+next_date:  2023-06-02 20:26:04
+current_date:  2023-06-02 20:24:52
+difference:  0:01:12
+diference_in_sec:  72
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  236.5  oraz prac jest rowny:  12.4 [A]  czas jest rowny:  72
+Mnozymy napiecie  236.5  *  12.4 [A] *  72 co daje nam:  211147.19999999998 Ws dzielimy przez minuty:  3519.12 dzielimy przez godziny:  58.652 Wh, dzielimy przez 1000 i otrzymujemy:  0.058652 KWh
+69.5 KWh
+next_date:  2023-06-02 20:27:20
+current_date:  2023-06-02 20:26:04
+difference:  0:01:16
+diference_in_sec:  76
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  226.5  oraz prac jest rowny:  12.5 [A]  czas jest rowny:  76
+Mnozymy napiecie  226.5  *  12.5 [A] *  76 co daje nam:  215175.0 Ws dzielimy przez minuty:  3586.25 dzielimy przez godziny:  59.770833333333336 Wh, dzielimy przez 1000 i otrzymujemy:  0.059770833333333336 KWh
+69.56 KWh
+next_date:  2023-06-02 20:28:40
+current_date:  2023-06-02 20:27:20
+difference:  0:01:20
+diference_in_sec:  80
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  226.5  oraz prac jest rowny:  12.4 [A]  czas jest rowny:  80
+Mnozymy napiecie  226.5  *  12.4 [A] *  80 co daje nam:  224688.0 Ws dzielimy przez minuty:  3744.8 dzielimy przez godziny:  62.413333333333334 Wh, dzielimy przez 1000 i otrzymujemy:  0.062413333333333335 KWh
+69.62 KWh
+next_date:  2023-06-02 20:30:04
+current_date:  2023-06-02 20:28:40
+difference:  0:01:24
+diference_in_sec:  84
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  226.5  oraz prac jest rowny:  12.4 [A]  czas jest rowny:  84
+Mnozymy napiecie  226.5  *  12.4 [A] *  84 co daje nam:  235922.4 Ws dzielimy przez minuty:  3932.04 dzielimy przez godziny:  65.534 Wh, dzielimy przez 1000 i otrzymujemy:  0.06553400000000001 KWh
+69.68 KWh
+next_date:  2023-06-02 20:31:28
+current_date:  2023-06-02 20:30:04
+difference:  0:01:24
+diference_in_sec:  84
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  236.5  oraz prac jest rowny:  12.2 [A]  czas jest rowny:  84
+Mnozymy napiecie  236.5  *  12.2 [A] *  84 co daje nam:  242365.19999999998 Ws dzielimy przez minuty:  4039.4199999999996 dzielimy przez godziny:  67.32366666666665 Wh, dzielimy przez 1000 i otrzymujemy:  0.06732366666666666 KWh
+69.75 KWh
+next_date:  2023-06-02 20:33:00
+current_date:  2023-06-02 20:31:28
+difference:  0:01:32
+diference_in_sec:  92
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  226.5  oraz prac jest rowny:  12.2 [A]  czas jest rowny:  92
+Mnozymy napiecie  226.5  *  12.2 [A] *  92 co daje nam:  254223.59999999998 Ws dzielimy przez minuty:  4237.0599999999995 dzielimy przez godziny:  70.61766666666666 Wh, dzielimy przez 1000 i otrzymujemy:  0.07061766666666666 KWh
+69.82 KWh
+next_date:  2023-06-02 20:34:36
+current_date:  2023-06-02 20:33:00
+difference:  0:01:36
+diference_in_sec:  96
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  226.5  oraz prac jest rowny:  12.1 [A]  czas jest rowny:  96
+Mnozymy napiecie  226.5  *  12.1 [A] *  96 co daje nam:  263102.4 Ws dzielimy przez minuty:  4385.04 dzielimy przez godziny:  73.084 Wh, dzielimy przez 1000 i otrzymujemy:  0.07308400000000001 KWh
+69.89 KWh
+next_date:  2023-06-02 20:36:40
+current_date:  2023-06-02 20:34:36
+difference:  0:02:04
+diference_in_sec:  124
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  226.5  oraz prac jest rowny:  12 [A]  czas jest rowny:  124
+Mnozymy napiecie  226.5  *  12 [A] *  124 co daje nam:  337032.0 Ws dzielimy przez minuty:  5617.2 dzielimy przez godziny:  93.61999999999999 Wh, dzielimy przez 1000 i otrzymujemy:  0.09362 KWh
+69.99 KWh
+next_date:  2023-06-02 20:48:23
+current_date:  2023-06-02 20:36:40
+difference:  0:11:43
+diference_in_sec:  703
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  236.5  oraz prac jest rowny:  11.9 [A]  czas jest rowny:  703
+Mnozymy napiecie  236.5  *  11.9 [A] *  703 co daje nam:  1978488.05 Ws dzielimy przez minuty:  32974.800833333335 dzielimy przez godziny:  549.5800138888889 Wh, dzielimy przez 1000 i otrzymujemy:  0.5495800138888889 KWh
+70.54 KWh
+next_date:  2023-06-02 20:50:56
+current_date:  2023-06-02 20:48:23
+difference:  0:02:33
+diference_in_sec:  153
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  227.5  oraz prac jest rowny:  12.1 [A]  czas jest rowny:  153
+Mnozymy napiecie  227.5  *  12.1 [A] *  153 co daje nam:  421170.75 Ws dzielimy przez minuty:  7019.5125 dzielimy przez godziny:  116.991875 Wh, dzielimy przez 1000 i otrzymujemy:  0.116991875 KWh
+70.66 KWh
+next_date:  2023-06-02 20:53:43
+current_date:  2023-06-02 20:50:56
+difference:  0:02:47
+diference_in_sec:  167
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  227.5  oraz prac jest rowny:  11.7 [A]  czas jest rowny:  167
+Mnozymy napiecie  227.5  *  11.7 [A] *  167 co daje nam:  444512.25 Ws dzielimy przez minuty:  7408.5375 dzielimy przez godziny:  123.47562500000001 Wh, dzielimy przez 1000 i otrzymujemy:  0.123475625 KWh
+70.78 KWh
+next_date:  2023-06-02 20:57:55
+current_date:  2023-06-02 20:53:43
+difference:  0:04:12
+diference_in_sec:  252
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  228.5  oraz prac jest rowny:  11.6 [A]  czas jest rowny:  252
+Mnozymy napiecie  228.5  *  11.6 [A] *  252 co daje nam:  667951.2 Ws dzielimy przez minuty:  11132.519999999999 dzielimy przez godziny:  185.54199999999997 Wh, dzielimy przez 1000 i otrzymujemy:  0.18554199999999998 KWh
+70.96 KWh
+next_date:  2023-06-02 21:02:43
+current_date:  2023-06-02 20:57:55
+difference:  0:04:48
+diference_in_sec:  288
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  239.5  oraz prac jest rowny:  11.3 [A]  czas jest rowny:  288
+Mnozymy napiecie  239.5  *  11.3 [A] *  288 co daje nam:  779428.8 Ws dzielimy przez minuty:  12990.480000000001 dzielimy przez godziny:  216.508 Wh, dzielimy przez 1000 i otrzymujemy:  0.216508 KWh
+71.18 KWh
+next_date:  2023-06-02 21:07:27
+current_date:  2023-06-02 21:02:43
+difference:  0:04:44
+diference_in_sec:  284
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  220.5  oraz prac jest rowny:  11.4 [A]  czas jest rowny:  284
+Mnozymy napiecie  220.5  *  11.4 [A] *  284 co daje nam:  713890.8 Ws dzielimy przez minuty:  11898.18 dzielimy przez godziny:  198.303 Wh, dzielimy przez 1000 i otrzymujemy:  0.198303 KWh
+71.38 KWh
+next_date:  2023-06-02 21:14:03
+current_date:  2023-06-02 21:07:27
+difference:  0:06:36
+diference_in_sec:  396
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  231.5  oraz prac jest rowny:  11.4 [A]  czas jest rowny:  396
+Mnozymy napiecie  231.5  *  11.4 [A] *  396 co daje nam:  1045083.6 Ws dzielimy przez minuty:  17418.06 dzielimy przez godziny:  290.30100000000004 Wh, dzielimy przez 1000 i otrzymujemy:  0.29030100000000003 KWh
+71.67 KWh
+next_date:  2023-06-02 21:14:40
+current_date:  2023-06-02 21:14:03
+difference:  0:00:37
+diference_in_sec:  37
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  232.5  oraz prac jest rowny:  10.9 [A]  czas jest rowny:  37
+Mnozymy napiecie  232.5  *  10.9 [A] *  37 co daje nam:  93767.25 Ws dzielimy przez minuty:  1562.7875 dzielimy przez godziny:  26.04645833333333 Wh, dzielimy przez 1000 i otrzymujemy:  0.02604645833333333 KWh
+71.7 KWh
+next_date:  2023-06-02 21:15:12
+current_date:  2023-06-02 21:14:40
+difference:  0:00:32
+diference_in_sec:  32
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  232.5  oraz prac jest rowny:  10.9 [A]  czas jest rowny:  32
+Mnozymy napiecie  232.5  *  10.9 [A] *  32 co daje nam:  81096.0 Ws dzielimy przez minuty:  1351.6 dzielimy przez godziny:  22.526666666666664 Wh, dzielimy przez 1000 i otrzymujemy:  0.022526666666666664 KWh
+71.72 KWh
+next_date:  2023-06-02 21:15:44
+current_date:  2023-06-02 21:15:12
+difference:  0:00:32
+diference_in_sec:  32
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  222.5  oraz prac jest rowny:  10.9 [A]  czas jest rowny:  32
+Mnozymy napiecie  222.5  *  10.9 [A] *  32 co daje nam:  77608.0 Ws dzielimy przez minuty:  1293.4666666666667 dzielimy przez godziny:  21.55777777777778 Wh, dzielimy przez 1000 i otrzymujemy:  0.02155777777777778 KWh
+71.74 KWh
+next_date:  2023-06-02 21:16:16
+current_date:  2023-06-02 21:15:44
+difference:  0:00:32
+diference_in_sec:  32
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  232.5  oraz prac jest rowny:  10.8 [A]  czas jest rowny:  32
+Mnozymy napiecie  232.5  *  10.8 [A] *  32 co daje nam:  80352.0 Ws dzielimy przez minuty:  1339.2 dzielimy przez godziny:  22.32 Wh, dzielimy przez 1000 i otrzymujemy:  0.02232 KWh
+71.76 KWh
+next_date:  2023-06-02 21:16:48
+current_date:  2023-06-02 21:16:16
+difference:  0:00:32
+diference_in_sec:  32
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  232.5  oraz prac jest rowny:  10.9 [A]  czas jest rowny:  32
+Mnozymy napiecie  232.5  *  10.9 [A] *  32 co daje nam:  81096.0 Ws dzielimy przez minuty:  1351.6 dzielimy przez godziny:  22.526666666666664 Wh, dzielimy przez 1000 i otrzymujemy:  0.022526666666666664 KWh
+71.78 KWh
+next_date:  2023-06-02 21:17:20
+current_date:  2023-06-02 21:16:48
+difference:  0:00:32
+diference_in_sec:  32
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  232.5  oraz prac jest rowny:  10.9 [A]  czas jest rowny:  32
+Mnozymy napiecie  232.5  *  10.9 [A] *  32 co daje nam:  81096.0 Ws dzielimy przez minuty:  1351.6 dzielimy przez godziny:  22.526666666666664 Wh, dzielimy przez 1000 i otrzymujemy:  0.022526666666666664 KWh
+71.81 KWh
+next_date:  2023-06-02 21:17:52
+current_date:  2023-06-02 21:17:20
+difference:  0:00:32
+diference_in_sec:  32
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  222.5  oraz prac jest rowny:  10.9 [A]  czas jest rowny:  32
+Mnozymy napiecie  222.5  *  10.9 [A] *  32 co daje nam:  77608.0 Ws dzielimy przez minuty:  1293.4666666666667 dzielimy przez godziny:  21.55777777777778 Wh, dzielimy przez 1000 i otrzymujemy:  0.02155777777777778 KWh
+71.83 KWh
+next_date:  2023-06-02 21:19:20
+current_date:  2023-06-02 21:17:52
+difference:  0:01:28
+diference_in_sec:  88
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  233  oraz prac jest rowny:  10.8 [A]  czas jest rowny:  88
+Mnozymy napiecie  233  *  10.8 [A] *  88 co daje nam:  221443.2 Ws dzielimy przez minuty:  3690.7200000000003 dzielimy przez godziny:  61.51200000000001 Wh, dzielimy przez 1000 i otrzymujemy:  0.061512000000000004 KWh
+71.89 KWh
+next_date:  2023-06-02 21:22:12
+current_date:  2023-06-02 21:19:20
+difference:  0:02:52
+diference_in_sec:  172
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  233  oraz prac jest rowny:  10.7 [A]  czas jest rowny:  172
+Mnozymy napiecie  233  *  10.7 [A] *  172 co daje nam:  428813.2 Ws dzielimy przez minuty:  7146.886666666667 dzielimy przez godziny:  119.11477777777779 Wh, dzielimy przez 1000 i otrzymujemy:  0.11911477777777779 KWh
+72.01 KWh
+next_date:  2023-06-02 21:24:48
+current_date:  2023-06-02 21:22:12
+difference:  0:02:36
+diference_in_sec:  156
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  233  oraz prac jest rowny:  10.5 [A]  czas jest rowny:  156
+Mnozymy napiecie  233  *  10.5 [A] *  156 co daje nam:  381654.0 Ws dzielimy przez minuty:  6360.9 dzielimy przez godziny:  106.015 Wh, dzielimy przez 1000 i otrzymujemy:  0.106015 KWh
+72.11 KWh
+next_date:  2023-06-02 21:26:56
+current_date:  2023-06-02 21:24:48
+difference:  0:02:08
+diference_in_sec:  128
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  223.5  oraz prac jest rowny:  10.4 [A]  czas jest rowny:  128
+Mnozymy napiecie  223.5  *  10.4 [A] *  128 co daje nam:  297523.2 Ws dzielimy przez minuty:  4958.72 dzielimy przez godziny:  82.64533333333334 Wh, dzielimy przez 1000 i otrzymujemy:  0.08264533333333333 KWh
+72.2 KWh
+next_date:  2023-06-02 21:28:52
+current_date:  2023-06-02 21:26:56
+difference:  0:01:56
+diference_in_sec:  116
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  233.5  oraz prac jest rowny:  10.4 [A]  czas jest rowny:  116
+Mnozymy napiecie  233.5  *  10.4 [A] *  116 co daje nam:  281694.4 Ws dzielimy przez minuty:  4694.906666666667 dzielimy przez godziny:  78.24844444444444 Wh, dzielimy przez 1000 i otrzymujemy:  0.07824844444444444 KWh
+72.28 KWh
+next_date:  2023-06-02 21:30:56
+current_date:  2023-06-02 21:28:52
+difference:  0:02:04
+diference_in_sec:  124
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  233.5  oraz prac jest rowny:  10.2 [A]  czas jest rowny:  124
+Mnozymy napiecie  233.5  *  10.2 [A] *  124 co daje nam:  295330.8 Ws dzielimy przez minuty:  4922.179999999999 dzielimy przez godziny:  82.03633333333332 Wh, dzielimy przez 1000 i otrzymujemy:  0.08203633333333332 KWh
+72.36 KWh
+next_date:  2023-06-02 21:33:08
+current_date:  2023-06-02 21:30:56
+difference:  0:02:12
+diference_in_sec:  132
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  233.5  oraz prac jest rowny:  10.1 [A]  czas jest rowny:  132
+Mnozymy napiecie  233.5  *  10.1 [A] *  132 co daje nam:  311302.2 Ws dzielimy przez minuty:  5188.37 dzielimy przez godziny:  86.47283333333333 Wh, dzielimy przez 1000 i otrzymujemy:  0.08647283333333333 KWh
+72.44 KWh
+next_date:  2023-06-02 21:35:44
+current_date:  2023-06-02 21:33:08
+difference:  0:02:36
+diference_in_sec:  156
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  233.5  oraz prac jest rowny:  10.1 [A]  czas jest rowny:  156
+Mnozymy napiecie  233.5  *  10.1 [A] *  156 co daje nam:  367902.6 Ws dzielimy przez minuty:  6131.71 dzielimy przez godziny:  102.19516666666667 Wh, dzielimy przez 1000 i otrzymujemy:  0.10219516666666667 KWh
+72.55 KWh
+next_date:  2023-06-02 21:39:24
+current_date:  2023-06-02 21:35:44
+difference:  0:03:40
+diference_in_sec:  220
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  233.5  oraz prac jest rowny:  10 [A]  czas jest rowny:  220
+Mnozymy napiecie  233.5  *  10 [A] *  220 co daje nam:  513700.0 Ws dzielimy przez minuty:  8561.666666666666 dzielimy przez godziny:  142.69444444444443 Wh, dzielimy przez 1000 i otrzymujemy:  0.14269444444444443 KWh
+72.69 KWh
+next_date:  2023-06-02 21:47:36
+current_date:  2023-06-02 21:39:24
+difference:  0:08:12
+diference_in_sec:  492
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  233.5  oraz prac jest rowny:  9.9 [A]  czas jest rowny:  492
+Mnozymy napiecie  233.5  *  9.9 [A] *  492 co daje nam:  1137331.8 Ws dzielimy przez minuty:  18955.530000000002 dzielimy przez godziny:  315.92550000000006 Wh, dzielimy przez 1000 i otrzymujemy:  0.3159255000000001 KWh
+73.01 KWh
+next_date:  2023-06-02 21:52:16
+current_date:  2023-06-02 21:47:36
+difference:  0:04:40
+diference_in_sec:  280
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  233.5  oraz prac jest rowny:  9.8 [A]  czas jest rowny:  280
+Mnozymy napiecie  233.5  *  9.8 [A] *  280 co daje nam:  640724.0 Ws dzielimy przez minuty:  10678.733333333334 dzielimy przez godziny:  177.9788888888889 Wh, dzielimy przez 1000 i otrzymujemy:  0.17797888888888888 KWh
+73.18 KWh
+next_date:  2023-06-02 21:55:52
+current_date:  2023-06-02 21:52:16
+difference:  0:03:36
+diference_in_sec:  216
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  233.5  oraz prac jest rowny:  9.5 [A]  czas jest rowny:  216
+Mnozymy napiecie  233.5  *  9.5 [A] *  216 co daje nam:  479142.0 Ws dzielimy przez minuty:  7985.7 dzielimy przez godziny:  133.095 Wh, dzielimy przez 1000 i otrzymujemy:  0.133095 KWh
+73.32 KWh
+next_date:  2023-06-02 21:59:24
+current_date:  2023-06-02 21:55:52
+difference:  0:03:32
+diference_in_sec:  212
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  233.5  oraz prac jest rowny:  9.4 [A]  czas jest rowny:  212
+Mnozymy napiecie  233.5  *  9.4 [A] *  212 co daje nam:  465318.80000000005 Ws dzielimy przez minuty:  7755.313333333334 dzielimy przez godziny:  129.25522222222224 Wh, dzielimy przez 1000 i otrzymujemy:  0.12925522222222224 KWh
+73.45 KWh
+next_date:  2023-06-02 22:03:56
+current_date:  2023-06-02 21:59:24
+difference:  0:04:32
+diference_in_sec:  272
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  233  oraz prac jest rowny:  9.2 [A]  czas jest rowny:  272
+Mnozymy napiecie  233  *  9.2 [A] *  272 co daje nam:  583059.2 Ws dzielimy przez minuty:  9717.653333333332 dzielimy przez godziny:  161.96088888888886 Wh, dzielimy przez 1000 i otrzymujemy:  0.16196088888888885 KWh
+73.61 KWh
+next_date:  2023-06-02 22:08:08
+current_date:  2023-06-02 22:03:56
+difference:  0:04:12
+diference_in_sec:  252
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  233  oraz prac jest rowny:  9.1 [A]  czas jest rowny:  252
+Mnozymy napiecie  233  *  9.1 [A] *  252 co daje nam:  534315.6 Ws dzielimy przez minuty:  8905.26 dzielimy przez godziny:  148.421 Wh, dzielimy przez 1000 i otrzymujemy:  0.148421 KWh
+73.76 KWh
+next_date:  2023-06-02 22:12:16
+current_date:  2023-06-02 22:08:08
+difference:  0:04:08
+diference_in_sec:  248
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  233  oraz prac jest rowny:  8.6 [A]  czas jest rowny:  248
+Mnozymy napiecie  233  *  8.6 [A] *  248 co daje nam:  496942.39999999997 Ws dzielimy przez minuty:  8282.373333333333 dzielimy przez godziny:  138.03955555555555 Wh, dzielimy przez 1000 i otrzymujemy:  0.13803955555555555 KWh
+73.89 KWh
+next_date:  2023-06-02 22:16:24
+current_date:  2023-06-02 22:12:16
+difference:  0:04:08
+diference_in_sec:  248
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  233  oraz prac jest rowny:  8.5 [A]  czas jest rowny:  248
+Mnozymy napiecie  233  *  8.5 [A] *  248 co daje nam:  491164.0 Ws dzielimy przez minuty:  8186.066666666667 dzielimy przez godziny:  136.43444444444444 Wh, dzielimy przez 1000 i otrzymujemy:  0.13643444444444444 KWh
+74.03 KWh
+next_date:  2023-06-02 22:19:28
+current_date:  2023-06-02 22:16:24
+difference:  0:03:04
+diference_in_sec:  184
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  233  oraz prac jest rowny:  8.3 [A]  czas jest rowny:  184
+Mnozymy napiecie  233  *  8.3 [A] *  184 co daje nam:  355837.60000000003 Ws dzielimy przez minuty:  5930.626666666667 dzielimy przez godziny:  98.84377777777779 Wh, dzielimy przez 1000 i otrzymujemy:  0.0988437777777778 KWh
+74.13 KWh
+next_date:  2023-06-02 22:21:40
+current_date:  2023-06-02 22:19:28
+difference:  0:02:12
+diference_in_sec:  132
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  233  oraz prac jest rowny:  8.3 [A]  czas jest rowny:  132
+Mnozymy napiecie  233  *  8.3 [A] *  132 co daje nam:  255274.80000000002 Ws dzielimy przez minuty:  4254.58 dzielimy przez godziny:  70.90966666666667 Wh, dzielimy przez 1000 i otrzymujemy:  0.07090966666666666 KWh
+74.2 KWh
+next_date:  2023-06-02 22:23:36
+current_date:  2023-06-02 22:21:40
+difference:  0:01:56
+diference_in_sec:  116
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  233  oraz prac jest rowny:  8.2 [A]  czas jest rowny:  116
+Mnozymy napiecie  233  *  8.2 [A] *  116 co daje nam:  221629.59999999998 Ws dzielimy przez minuty:  3693.8266666666664 dzielimy przez godziny:  61.56377777777777 Wh, dzielimy przez 1000 i otrzymujemy:  0.06156377777777777 KWh
+74.26 KWh
+next_date:  2023-06-02 22:25:24
+current_date:  2023-06-02 22:23:36
+difference:  0:01:48
+diference_in_sec:  108
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  233  oraz prac jest rowny:  8.1 [A]  czas jest rowny:  108
+Mnozymy napiecie  233  *  8.1 [A] *  108 co daje nam:  203828.4 Ws dzielimy przez minuty:  3397.14 dzielimy przez godziny:  56.619 Wh, dzielimy przez 1000 i otrzymujemy:  0.056619 KWh
+74.32 KWh
+next_date:  2023-06-02 22:27:12
+current_date:  2023-06-02 22:25:24
+difference:  0:01:48
+diference_in_sec:  108
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  233  oraz prac jest rowny:  8.2 [A]  czas jest rowny:  108
+Mnozymy napiecie  233  *  8.2 [A] *  108 co daje nam:  206344.8 Ws dzielimy przez minuty:  3439.08 dzielimy przez godziny:  57.318 Wh, dzielimy przez 1000 i otrzymujemy:  0.057318 KWh
+74.38 KWh
+next_date:  2023-06-02 22:29:04
+current_date:  2023-06-02 22:27:12
+difference:  0:01:52
+diference_in_sec:  112
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  233  oraz prac jest rowny:  8.4 [A]  czas jest rowny:  112
+Mnozymy napiecie  233  *  8.4 [A] *  112 co daje nam:  219206.4 Ws dzielimy przez minuty:  3653.44 dzielimy przez godziny:  60.89066666666667 Wh, dzielimy przez 1000 i otrzymujemy:  0.06089066666666667 KWh
+74.44 KWh
+next_date:  2023-06-02 22:31:00
+current_date:  2023-06-02 22:29:04
+difference:  0:01:56
+diference_in_sec:  116
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  233  oraz prac jest rowny:  8.3 [A]  czas jest rowny:  116
+Mnozymy napiecie  233  *  8.3 [A] *  116 co daje nam:  224332.40000000002 Ws dzielimy przez minuty:  3738.873333333334 dzielimy przez godziny:  62.314555555555565 Wh, dzielimy przez 1000 i otrzymujemy:  0.06231455555555557 KWh
+74.5 KWh
+next_date:  2023-06-02 22:33:12
+current_date:  2023-06-02 22:31:00
+difference:  0:02:12
+diference_in_sec:  132
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  233  oraz prac jest rowny:  8.4 [A]  czas jest rowny:  132
+Mnozymy napiecie  233  *  8.4 [A] *  132 co daje nam:  258350.4 Ws dzielimy przez minuty:  4305.84 dzielimy przez godziny:  71.764 Wh, dzielimy przez 1000 i otrzymujemy:  0.071764 KWh
+74.57 KWh
+next_date:  2023-06-02 22:35:36
+current_date:  2023-06-02 22:33:12
+difference:  0:02:24
+diference_in_sec:  144
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  233  oraz prac jest rowny:  8.2 [A]  czas jest rowny:  144
+Mnozymy napiecie  233  *  8.2 [A] *  144 co daje nam:  275126.39999999997 Ws dzielimy przez minuty:  4585.44 dzielimy przez godziny:  76.42399999999999 Wh, dzielimy przez 1000 i otrzymujemy:  0.07642399999999999 KWh
+74.65 KWh
+next_date:  2023-06-02 22:38:12
+current_date:  2023-06-02 22:35:36
+difference:  0:02:36
+diference_in_sec:  156
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  233  oraz prac jest rowny:  8.1 [A]  czas jest rowny:  156
+Mnozymy napiecie  233  *  8.1 [A] *  156 co daje nam:  294418.8 Ws dzielimy przez minuty:  4906.98 dzielimy przez godziny:  81.78299999999999 Wh, dzielimy przez 1000 i otrzymujemy:  0.08178299999999998 KWh
+74.73 KWh
+next_date:  2023-06-02 22:41:20
+current_date:  2023-06-02 22:38:12
+difference:  0:03:08
+diference_in_sec:  188
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  233  oraz prac jest rowny:  8.1 [A]  czas jest rowny:  188
+Mnozymy napiecie  233  *  8.1 [A] *  188 co daje nam:  354812.39999999997 Ws dzielimy przez minuty:  5913.539999999999 dzielimy przez godziny:  98.55899999999998 Wh, dzielimy przez 1000 i otrzymujemy:  0.09855899999999998 KWh
+74.83 KWh
+next_date:  2023-06-02 22:44:52
+current_date:  2023-06-02 22:41:20
+difference:  0:03:32
+diference_in_sec:  212
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  233  oraz prac jest rowny:  8.2 [A]  czas jest rowny:  212
+Mnozymy napiecie  233  *  8.2 [A] *  212 co daje nam:  405047.19999999995 Ws dzielimy przez minuty:  6750.786666666666 dzielimy przez godziny:  112.5131111111111 Wh, dzielimy przez 1000 i otrzymujemy:  0.1125131111111111 KWh
+74.94 KWh
+next_date:  2023-06-02 22:49:12
+current_date:  2023-06-02 22:44:52
+difference:  0:04:20
+diference_in_sec:  260
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  233  oraz prac jest rowny:  8.1 [A]  czas jest rowny:  260
+Mnozymy napiecie  233  *  8.1 [A] *  260 co daje nam:  490698.0 Ws dzielimy przez minuty:  8178.3 dzielimy przez godziny:  136.305 Wh, dzielimy przez 1000 i otrzymujemy:  0.136305 KWh
+75.08 KWh
+next_date:  2023-06-02 22:54:32
+current_date:  2023-06-02 22:49:12
+difference:  0:05:20
+diference_in_sec:  320
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  233  oraz prac jest rowny:  7.8 [A]  czas jest rowny:  320
+Mnozymy napiecie  233  *  7.8 [A] *  320 co daje nam:  581568.0 Ws dzielimy przez minuty:  9692.8 dzielimy przez godziny:  161.54666666666665 Wh, dzielimy przez 1000 i otrzymujemy:  0.16154666666666664 KWh
+75.24 KWh
+next_date:  2023-06-02 23:01:16
+current_date:  2023-06-02 22:54:32
+difference:  0:06:44
+diference_in_sec:  404
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  233  oraz prac jest rowny:  7.9 [A]  czas jest rowny:  404
+Mnozymy napiecie  233  *  7.9 [A] *  404 co daje nam:  743642.8 Ws dzielimy przez minuty:  12394.046666666667 dzielimy przez godziny:  206.56744444444445 Wh, dzielimy przez 1000 i otrzymujemy:  0.20656744444444444 KWh
+75.44 KWh
+next_date:  2023-06-02 23:10:16
+current_date:  2023-06-02 23:01:16
+difference:  0:09:00
+diference_in_sec:  540
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  233  oraz prac jest rowny:  7.9 [A]  czas jest rowny:  540
+Mnozymy napiecie  233  *  7.9 [A] *  540 co daje nam:  993978.0 Ws dzielimy przez minuty:  16566.3 dzielimy przez godziny:  276.10499999999996 Wh, dzielimy przez 1000 i otrzymujemy:  0.27610499999999993 KWh
+75.72 KWh
+next_date:  2023-06-02 23:23:12
+current_date:  2023-06-02 23:10:16
+difference:  0:12:56
+diference_in_sec:  776
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  233  oraz prac jest rowny:  7.8 [A]  czas jest rowny:  776
+Mnozymy napiecie  233  *  7.8 [A] *  776 co daje nam:  1410302.4 Ws dzielimy przez minuty:  23505.039999999997 dzielimy przez godziny:  391.75066666666663 Wh, dzielimy przez 1000 i otrzymujemy:  0.39175066666666664 KWh
+76.11 KWh
+next_date:  2023-06-02 23:44:08
+current_date:  2023-06-02 23:23:12
+difference:  0:20:56
+diference_in_sec:  1256
+Liczymy moc przy zalozeniu ze napiecie jest rowne:  233  oraz prac jest rowny:  7.1 [A]  czas jest rowny:  1256
+Mnozymy napiecie  233  *  7.1 [A] *  1256 co daje nam:  2077800.8 Ws dzielimy przez minuty:  34630.013333333336 dzielimy przez godziny:  577.1668888888889 Wh, dzielimy przez 1000 i otrzymujemy:  0.5771668888888889 KWh
+76.69 KWh

@@ -14,14 +14,14 @@ import globals as g
 import saveToDB as db
 import checkDispSpace as diskSpace
 
-
+#TODO przygotowac kopie zapasowe kart
 # DONE Podlaczyc modol wejsc analogowych
     # TODO podlaczyc czujnik natezenia i napiecia pradu
 # DONE sprawdzic i potwierdzic poprawne sterowanie wszystkimi pinami
-# TODO Dodac logike wyswietlania alarmu jak pojemosc karty jest bliska max 
+# TODO Dodac logike wyswietlania alarmu jak pojemosc karty jest bliska max przygotowane trzeba w "diskSpace.checkDiskSpace(10)"wpisac 80 i dodac do schedulera
 # TODO Esport danych do pliku xlsx
 # TODO Zapisywanie wszytkich nastaw na stale
-# TODO pomiar zuzycia pradu/mocy moze warto tez dodac wykres mocy ?
+# TODO pomiar zuzycia pradu/mocy moze warto tez dodac wykres mocy ? przygotowane - do sprawdzenia po podlaczenie czujnikow
 # BUG 20.03.2023 23:16 ['/dev/root', '15G', '5,7G', '7,9G', '42%', '/']
 # TODO posprzatac PumpEfi (wywolujemy funkcje z parametrami wejsciowymi a mozna to zrobic bez parametrow i zaczytywac z globalsow w sanej funkcji)
 # DONE Dodac mechanizm sprawdzania ile jest przypisanych czjenikow przez utzytkowniaka a ile zostalo wyktytych w tablicy i obsluge bledu
@@ -60,7 +60,7 @@ def scheduleTask():
 
 def scheduleTask1s():
     g.BaseEfiInPercent = setOutputs(g.heatObject, g.readTemp[g.heatObject], g.pumpEfi)
-    #read_CurrAndVolt()
+    # read_CurrAndVolt()
     #FIXME włczyc po zakonczeniu testow
     g.pumpI = mapValue(g.pumpIread, 0, 1023, 0, 30)
     g.pumpV = mapValue(g.pumpVread, 0, 1023, 0, 250)

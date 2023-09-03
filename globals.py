@@ -1,3 +1,30 @@
+
+
+language ={
+    "home": ["Home", "Start"],
+    "Settings": ["Settings","Nastawy"],
+    "Schedule": ["Schedule", "Harmonogram"],
+    "History/Charts": ["History/Charts", "Historia/Wykresy"],
+    "Sensor configuration": ["Sensor configuration", "Konfigoracja czujnikow"],
+    "RaspberryPi": ["Raspberry Pi", "Raspberry Pi"],
+    "Temperature": ["Temperature", "Temperatura"],
+    "Language": ["Language", "Język"],
+    "Lang": ["en", "pl"],
+    "LangChange": ["Change Language", "Zmiana Języka"],
+    "OperatingMode": ["Operating mode", "Tryb pracy"],
+    "SetTemp": ["set temp.", "temp. zadana"],
+    "ActualVoltage": ["Actual Voltage", "Napięcie pompy"],
+    "ActualCurrent": ["Actual Current", "Prąd ponbierany"],
+    "ActualPower": ["Actual Power", "Moc pompy"],
+    "External": ["External", "Zewnętrzne"],
+    "PumpBoiler": ["Pump - boiler", "Pompa - bojler"],
+    "PumpFloorHeating": ["Pump - floor heating", "Pompa - ogrzewanie podłogowe"],
+    "PumpOn": ["PumpOn", "Pompa pracuje"],
+    "FiveOn": ["Five On", "Piec pracuje"],
+
+
+}
+
 acTimePLusInterwal=0
 pins = [26,5,6,12,25,24,23,16]
 pinsDisc = ['Sterowanie pompy1 (NC)', 'Sterowanie pompy2 (NC)',
@@ -6,6 +33,7 @@ pinsDisc = ['Sterowanie pompy1 (NC)', 'Sterowanie pompy2 (NC)',
 pinsLogic = ['NC', 'NC', 'NC', 'NO', 'NC', 'NC', 'NC', 'TBD']
 tempPins = [0,0,0,0,0,0,0,0]
 pumpEfi = 1
+pickedLang = 1 # 1 = pl; 0 = en
 diskSpaceList=[]
 heatObject=1 #0-nie dziala, 1-boiler, 2-podloga, 
 pumpInterval = [0, 30, 60]
@@ -15,17 +43,17 @@ sezon='Lato'
 BaseEfiInPercent=0
 BaseEfiInPercentTemp=0
 tempSensFoundNumber=0
-readTemp=[3.14]*64
-readTempTemp=[3.14]*64
-setTemp=[0, 45, 33]
+readTemp=[24.5,48.8,29.6,35.5]
+readTempTemp=[24.5,48.8,29.6,35.5]
+sensorIndexList=[0,1,2,3] #[outside, boiler, pumpIn, pumpOut]
+setTemp=[0, 50, 33]
 pumpIread=0
-pumpI=0
+pumpI=9.7
 pumpItemp=0
-pumpV=0
+pumpV=232
 pumpVread=0
 pumpVtemp=0
-pumpP=0
-trybDiscriptions=['Zew', 'Pompa - boiler', 'Pompa - podlogówka']
+pumpP=30
 discriptions=['T1 - Zew', 'T2 - Bouler', 'T4 - Pompa powrot', 'T3 - Pompa wyjscie', 'T5 - Temp. zewnetrzna']
 ledStripDiscription=['[1] Sterowanie bitowe wydajnosci pompy', '[2] Sterowanie bitowe wydajnosci pompy', '[3] Sterowanie bitowe wydajnosci pompy', 
                      '[4] Sterowanie bitowe wydajnosci pompy', '[5] Sterowanie bitowe wydajnosci pompy', '[6] Sterowanie bitowe wydajnosci pompy', 

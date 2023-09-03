@@ -76,9 +76,9 @@ pick1 = os.path.join(app.config["UPLOAD_FOLDER"], "P_off_v3.jpg")
 def hello_world():
     output = request.form.to_dict()
     global pick1
-    return render_template("index.html", pumpI=g.pumpI, pumpV=g.pumpV, pumpP=round(g.pumpP, 2), image1=pick1, pump=g.BaseEfiInPercent, sensFoundList=g.readTemp,
-                           discriptionList=g.discriptions, heatObject=g.heatObject, trybDiscriptions=g.trybDiscriptions, setTempList = g.setTemp, sezon=g.sezon, 
-                           pins = g.pins, pinsDisc = g.pinsDisc, pinsLogic = g.pinsLogic, tempPins = g.tempPins)
+    return render_template("index.html", pumpI=g.pumpI, pumpV=g.pumpV, pumpP=round(g.pumpP, 2), image1=pick1, pump=g.BaseEfiInPercent, sensFoundList=g.readTemp, sensorIndexList = g.sensorIndexList,
+                           discriptionList=g.discriptions, heatObject=g.heatObject, setTempList = g.setTemp, sezon=g.sezon, 
+                           pins = g.pins, pinsDisc = g.pinsDisc, pinsLogic = g.pinsLogic, tempPins = g.tempPins, pickedLang=g.pickedLang,lang = g.language)
 
 
 @app.route("/result", methods=["POST", "GET"])
@@ -183,28 +183,41 @@ def result():
     if g.heatObject == 1:
         #pompa pracuje - grzenia podlogi
         pick1 = os.path.join(app.config["UPLOAD_FOLDER"], "PonWU_v3.jpg")
-    return render_template("index.html", pumpI=g.pumpI, pumpV=g.pumpV, pumpP=round(g.pumpP, 2), image1=pick1, pump=g.BaseEfiInPercent, sensFoundList=g.readTemp,
-                           discriptionList=g.discriptions, heatObject=g.heatObject, trybDiscriptions=g.trybDiscriptions, setTempList = g.setTemp, sezon=g.sezon, 
-                           pins = g.pins, pinsDisc = g.pinsDisc, pinsLogic = g.pinsLogic, tempPins = g.tempPins, pumpMode = g.pumpMode)
+    return render_template("index.html", pumpI=g.pumpI, pumpV=g.pumpV, pumpP=round(g.pumpP, 2), image1=pick1, pump=g.BaseEfiInPercent, sensFoundList=g.readTemp, sensorIndexList = g.sensorIndexList,
+                           discriptionList=g.discriptions, heatObject=g.heatObject, setTempList = g.setTemp, sezon=g.sezon, 
+                           pins = g.pins, pinsDisc = g.pinsDisc, pinsLogic = g.pinsLogic, tempPins = g.tempPins, pickedLang=g.pickedLang,lang = g.language)
 
 
 @app.route("/temp_sensor_config", methods=["POST", "GET"])
 def temp_sensor_config():
-    output = request.form.to_dict()
-    if request.method == 'POST':
-        if request.form.get('Save1') == 'Save':
-            try:
-                g.tz1 = float(request.form['tempZad1'])
-            except ValueError:
-                flash('Error wrong input variable', 'danger')
-        if request.form.get('Save2') == 'Save':
-            g.tz2 = request.form['tempZad2']
-        if request.form.get('Przycisk_2') == 'Przycisk_2':
-            if g.pumpEfi >= 0:
-                g.pumpEfi = g.pumpEfi - 1
-            else:
-                g.pumpEfi = 0
-    return render_template("temp_sensor_config.html", sensFoundNumber = g.tempSensFoundNumber, sensFoundList=g.readTemp)
+    if request.form.get('setIndexBtn0') == 'Save':
+        try:
+            g.sensorIndexList[0] = int(request.form['setValueSensorIndex0'])
+        except ValueError:
+            flash('Error wrong input variable', 'danger')
+    if request.form.get('setIndexBtn1') == 'Save':
+        try:
+            g.sensorIndexList[1] = int(request.form['setValueSensorIndex1'])
+        except ValueError:
+            flash('Error wrong input variable', 'danger')
+    if request.form.get('setIndexBtn2') == 'Save':
+        try:
+            g.sensorIndexList[2] = int(request.form['setValueSensorIndex2'])
+        except ValueError:
+            flash('Error wrong input variable', 'danger')
+    if request.form.get('setIndexBtn3') == 'Save':
+        try:
+            g.sensorIndexList[3] = int(request.form['setValueSensorIndex3'])
+        except ValueError:
+            flash('Error wrong input variable', 'danger')
+    if request.form.get('setIndexBtn3_1') == 'Save':
+        try:
+            g.sensorIndexList[3] = int(request.form['setValueSensorIndex3_1'])
+        except ValueError:
+            flash('Error wrong input variable', 'danger')
+            
+    return render_template("temp_sensor_config.html", sensFoundNumber = g.tempSensFoundNumber, sensFoundList=g.readTemp, sensorIndexList = g.sensorIndexList, 
+                           pickedLang=g.pickedLang, lang = g.language)
 
 @app.route("/raspberrypi", methods=["POST", "GET"])
 def raspberrypi():
@@ -221,8 +234,17 @@ def raspberrypi():
         # myvalue = int(myvalue)
         # print(type(myvalue))
         # print(myvalue)
+    if request.form.get('LangChange'):
+    
+        if g.pickedLang == 1:
+            flash('Change the language to English', 'success')
+            g.pickedLang = 0
+        else:
+            flash('Zmiana jezyka na polski', 'success')
+            g.pickedLang = 1
 
-    return render_template("raspberrypi.html", diskSpaceList = g.diskSpaceList, sensFoundList=g.readTemp)
+    return render_template("raspberrypi.html", diskSpaceList = g.diskSpaceList, sensFoundList=g.readTemp, pickedLang=g.pickedLang,lang = g.language, 
+                           ledStrip = g.tempPins, ledStripDiscription = g.ledStripDiscription)
 
 @app.route("/settings", methods=["POST", "GET"])
 def settings():
@@ -266,7 +288,7 @@ def settings():
             except ValueError:
                 flash('Error wrong input variable - dont use "," - use "." ', 'danger')            
     return render_template("settings.html", setTempList=g.setTemp, pumpIntervalList=g.pumpInterval,
-                            pumpTempOfsetList=g.pumpTempOfset, sensFoundList=g.readTemp )
+                            pumpTempOfsetList=g.pumpTempOfset, sensFoundList=g.readTemp, pickedLang=g.pickedLang,lang = g.language )
 
 
                             
@@ -1643,7 +1665,7 @@ def harmonogram():
                 else: g.godzina[23][7] = "ON"
             except ValueError:
                 flash('Error cant asign value')            
-    return render_template("harmonogram.html", dni = g.dni, godzina = g.godzina, sensFoundList=g.readTemp)
+    return render_template("harmonogram.html", dni = g.dni, godzina = g.godzina, sensFoundList=g.readTemp, pickedLang=g.pickedLang,lang = g.language)
 
 def getDataFromDB(from_date_str, to_date_str):
     conn=sqlite3.connect('/home/pi/Documents/HeatPump/myDB.db')
@@ -1695,7 +1717,7 @@ def history():
     temp1, temp2, temp3, volt, curr, efi = getDataFromDB(from_date_str, to_date_str)
     return render_template("history.html", sensFoundList=g.readTemp, ledStrip = g.tempPins, ledStripDiscription=g.ledStripDiscription, temp1=temp1, temp2=temp2, temp3=temp3, 
                            volt=volt, curr=curr, efi=efi, temp_items1=len(temp1), temp_items2=len(temp2), temp_items3=len(temp3), volt_items=len(volt), curr_items=len(curr), 
-                           efi_items=len(efi), from_date = from_date_str, to_date = to_date_str)
+                           efi_items=len(efi), from_date = from_date_str, to_date = to_date_str, pickedLang=g.pickedLang, lang = g.language)
 
 
 def validate_date(d):

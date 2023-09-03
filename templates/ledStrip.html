@@ -1,4 +1,4 @@
 
-    {% for led in ledStrip %}
-        <label><h5>{{ledStrip[loop.index-1]}} - {{ledStripDiscription[loop.index-1]}}</label> <br/><br/>
-    {% endfor %}
+{% for led in ledStrip %}
+<label><h5>{{ledStrip[loop.index-1]}} - [{{loop.index}}] Sterowanie bitowe wydajnosci pompy</label> <br/><br/>
+{% endfor %}

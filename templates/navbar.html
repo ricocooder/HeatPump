@@ -1,55 +1,41 @@
-
-<style>
-  .navbar-brand{
-    font-size: 18;
-    /* height: 5; */
-  }
-  .nav-item{
-    font-size: 18;
-  }
-  .nav-link active{
-    font-size: 10;
-  }
-  /* .navbar-brand-font-size: 10 */
-</style>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="{{url_for('result')}}">Home</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="{{url_for('settings')}}">Nastawy</a>
-          </li>
-          
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="{{url_for('harmonogram')}}">Harmonogram</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="{{url_for('history')}}">Historia</a>
-          </li>
-          
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="{{url_for('temp_sensor_config')}}">Konfig. czujnikow</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="{{url_for('raspberrypi')}}">Rasp. Pi</a>
-          </li>
-            
-        </ul>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" method = "POST">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="{{url_for('result')}}">{{lang['home'][pickedLang]}}</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="{{url_for('settings')}}">{{lang['Settings'][pickedLang]}}</a>
+        </li>
         
-        <a class="nav-link active" aria-current="page" href="">
-            Temp. zew.: {{ sensFoundList[0] }} <span>&#8451;</span>
-          </a>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="{{url_for('harmonogram')}}">{{lang['Schedule'][pickedLang]}}</a>
+        </li>
 
-  
-          <a class="nav-link active" aria-current="page" href="">
-            {% include 'clock.html' %}
-          </a>
-      </div>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="{{url_for('history')}}">{{lang['History/Charts'][pickedLang]}}</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="{{url_for('temp_sensor_config')}}">{{lang['Sensor configuration'][pickedLang]}}</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="{{url_for('raspberrypi')}}">{{lang['RaspberryPi'][pickedLang]}}</a>
+        </li>
+          
+      </ul>
+      <a class="nav-link active" aria-current="page">{{lang['Language'][pickedLang]}}: {{lang['Lang'][pickedLang]}}</a>
+      <a class="nav-link active" aria-current="page" href="">
+        {{lang['Temperature'][pickedLang]}}: {{ sensFoundList[0] }} <span>&#8451;</span>
+        </a>
+
+
+        <a class="nav-link active" aria-current="page" href="">
+          {% include 'clock.html' %}
+        </a>
     </div>
-  </nav>
+  </div>
+</nav>

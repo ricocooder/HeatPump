@@ -14,6 +14,7 @@ import globals as g
 import saveToDB as db
 import checkDispSpace as diskSpace
 
+#TODO jak zmienic zrodlo temperatury to nie wszedzi widac efekt - sprawdzic pumpefi oraz navbar bo tamp zew nei zmienia sie po zmianai zrodla
 #TODO przygotowac kopie zapasowe kart
 # DONE Podlaczyc modol wejsc analogowych
     # TODO podlaczyc czujnik natezenia i napiecia pradu

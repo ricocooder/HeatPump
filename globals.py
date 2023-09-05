@@ -14,7 +14,7 @@ language ={
     "OperatingMode": ["Operating mode", "Tryb pracy"],
     "SetTemp": ["set temp.", "temp. zadana"],
     "ActualVoltage": ["Actual Voltage", "Napięcie pompy"],
-    "ActualCurrent": ["Actual Current", "Prąd ponbierany"],
+    "ActualCurrent": ["Actual Current", "Prąd pobierany"],
     "ActualPower": ["Actual Power", "Moc pompy"],
     "External": ["External", "Zewnętrzne"],
     "PumpBoiler": ["Pump - boiler", "Pompa - bojler"],
@@ -54,7 +54,7 @@ pumpV=232
 pumpVread=0
 pumpVtemp=0
 pumpP=30
-discriptions=['T1 - Zew', 'T2 - Bouler', 'T3 - Pompa wyjscie', 'T4 - Pompa powrot', 'T5 - Temp. zewnetrzna']
+discriptions=['T1 - Zew', 'T2 - Bojler', 'T3 - Pompa wyjscie', 'T4 - Pompa powrot', 'T5 - Temp. zewnetrzna']
 ledStripDiscription=['[1] Sterowanie bitowe wydajnosci pompy', '[2] Sterowanie bitowe wydajnosci pompy', '[3] Sterowanie bitowe wydajnosci pompy', 
                      '[4] Sterowanie bitowe wydajnosci pompy', '[5] Sterowanie bitowe wydajnosci pompy', '[6] Sterowanie bitowe wydajnosci pompy', 
                      '[7] Sterowanie bitowe wydajnosci pompy', '[8] Sterowanie bitowe wydajnosci pompy']

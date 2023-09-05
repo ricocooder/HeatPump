@@ -4,30 +4,21 @@
     <style>
       .open{
         background-color: rgb(124, 211, 124);
-        /* width: 150px;
-        padding: auto;
-        font-size: 12px; */
       }
       .close{
         background-color: rgb(194, 110, 110);
-        /* width: 150px;
-        font-size: 12px; */
       }
       .tbd{
         background-color: rgb(141, 140, 209);
-        /* width: 150px;
-        font-size: 12px; */
       }
       .text_vertical{
         writing-mode: vertical-rl;
-        /* text-orientation:initial; */
         text-align: start;
       }
         body {
-            background-repeat:no-repeat; /* wylaczenia powtarzanie tzn jak zdjecie bedzie zamale to nie bedzie ustawiana kolo siebie*/
+            background-repeat:no-repeat; 
             background-attached:fixed;
             background-size:cover;
-            /* background-image: url({{image1}}); */
             font-size: 40px;
              }
         meter{
@@ -95,7 +86,6 @@
                   <div class="text-warning">{{pump}}%</div>
                 </div>
               </div>
-            <!-- <meter low = '30' high = '50' optimum='80' max = '100' value={{pump}}></meter> -->
             </label>
             <br>
             <label > {{lang['PumpOn'][pickedLang]}} </label><br>
@@ -108,16 +98,11 @@
                   
                   
             <label > Aktualnie wybrany tryb pracy: {{sezon}} </label>
-            <!-- <br><br> -->
             {% if sezon == 'Lato' %}
             </label><input type="Submit" value="Przelacz na - Zima" name='sezonSwitch'/>
             {% else %}
             </label><input type="Submit" value="Przelacz na - Lato" name='sezonSwitch'/>
             {% endif %}
-            <!-- <br><br> -->
-            <!-- </label><input type="Submit" value="Switch" name='Switch'/> -->
-            <!-- <br><br>
-            </label><input type="Submit" value="SaveDB" name='SaveDB'/> -->
             <table>
               <tr>
                 {%for header in pinsDisc%}
@@ -126,7 +111,11 @@
               </tr>
               <tr>
                 {%for header in tempPins%}
-                <th class="{%if header == 0 %}close{%elif header == 1 %}open{% else %}tbd{%endif%}" >{{header}}</th>
+                  {% if pumpMode == "auto"%}
+                    <th class="{%if header == 0 %}close{%elif header == 1 %}open{% else %}tbd{%endif%}" >{{header}}</th>
+                  {% else %}
+                    <th><input type="Submit" value={{header}} name="{{loop.index0}}"/></th>
+                  {% endif %}
                 {% endfor %}
               </tr>
                 {% for row in pinsLogic %}
@@ -154,7 +143,7 @@
         </div>
       </div>
 
-
+      {% include 'ledStrip.html' %}
 
 
     </form>

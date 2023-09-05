@@ -21,6 +21,7 @@ def checkPumpEfi(t_set: float, t_accual: float, offset: int, interval: int, heat
             if g.godzina[actualHour][dayOfWeek+1] == "ON":
                 print('pompa pracuje')
                 g.heatObject = 1
+                # g.pumpEfi=7
             else:
                 print('pompa nie pracuje')
                 g.heatObject = 0
@@ -32,7 +33,7 @@ def checkPumpEfi(t_set: float, t_accual: float, offset: int, interval: int, heat
             if g.setTemp[1]-g.pumpTempOfset[1] > g.readTemp[g.sensorIndexList[1]]:
                 #grzanie boilera - przesterowanie zaworu ustawienie pompy na maxa?
                 g.heatObject = 1
-                # g.pumpEfi = 7
+                # g.pumpEfi=7
             #jesli temperatura zadana boiler jest wieksza temp odczytana 
             elif g.setTemp[1] < g.readTemp[g.sensorIndexList[1]]:
             # elif g.setTemp[1] < g.readTemp[1] and g.setTemp[2] > g.readTemp[2]:
@@ -40,7 +41,7 @@ def checkPumpEfi(t_set: float, t_accual: float, offset: int, interval: int, heat
             # elif g.setTemp[1] + g.pumpTempOfset[1] <= g.readTemp[1]:
                 #grzanie podlogowki ustawiam pompe na "srodkowy" tryb
                 g.heatObject = 2
-                # g.pumpEfi = 3
+                # g.pumpEfi=2
             else:
                 #wylaczam pompe
                 g.heatObject = 0

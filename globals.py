@@ -43,9 +43,9 @@ sezon='Lato'
 BaseEfiInPercent=0
 BaseEfiInPercentTemp=0
 tempSensFoundNumber=0
-readTemp=[24.5,48.8,29.6,35.5]
-readTempTemp=[24.5,48.8,29.6,35.5]
-sensorIndexList=[0,1,2,3] #[outside, boiler, pumpIn, pumpOut]
+readTemp=[3.14]*6
+readTempTemp=[2.14]*6
+sensorIndexList=[0,1,3,2] #[outside, boiler, pumpOut, pumpIn]
 setTemp=[0, 50, 33]
 pumpIread=0
 pumpI=9.7
@@ -54,7 +54,7 @@ pumpV=232
 pumpVread=0
 pumpVtemp=0
 pumpP=30
-discriptions=['T1 - Zew', 'T2 - Bouler', 'T4 - Pompa powrot', 'T3 - Pompa wyjscie', 'T5 - Temp. zewnetrzna']
+discriptions=['T1 - Zew', 'T2 - Bouler', 'T3 - Pompa wyjscie', 'T4 - Pompa powrot', 'T5 - Temp. zewnetrzna']
 ledStripDiscription=['[1] Sterowanie bitowe wydajnosci pompy', '[2] Sterowanie bitowe wydajnosci pompy', '[3] Sterowanie bitowe wydajnosci pompy', 
                      '[4] Sterowanie bitowe wydajnosci pompy', '[5] Sterowanie bitowe wydajnosci pompy', '[6] Sterowanie bitowe wydajnosci pompy', 
                      '[7] Sterowanie bitowe wydajnosci pompy', '[8] Sterowanie bitowe wydajnosci pompy']

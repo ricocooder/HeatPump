@@ -19,7 +19,7 @@ def setOutputs(heatObject, temp, pumpEfi):
         GPIO.setup(pins[7], GPIO.OUT)
         accualTime = time.time()
         if g.pumpMode == 'auto':
-            if pumpEfi < 1 or g.heatObject != 2:
+            if pumpEfi < 1 :
                 GPIO.output(pins[6], GPIO.HIGH)
                 g.tempPins[6] = 1
 

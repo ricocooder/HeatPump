@@ -14,7 +14,9 @@ import globals as g
 import saveToDB as db
 import checkDispSpace as diskSpace
 
-#TODO jak zmienic zrodlo temperatury to nie wszedzi widac efekt - sprawdzic pumpefi oraz navbar bo tamp zew nei zmienia sie po zmianai zrodla
+#TODO zastanowic sie jak przerobic logike - Problem: po przelaczeniu z boilera na podloge pumpefi spada do 0 co powoduje zatrzymanie pompy obiegowej, 
+    #TODO brak obiegu zakluce odczyt temperatury i pompa przestaje pracowac mimo ze temp podlogi spadla zbyt nisko
+#DONE jak zmienic zrodlo temperatury to nie wszedzi widac efekt - sprawdzic pumpefi oraz navbar bo tamp zew nei zmienia sie po zmianai zrodla
 #TODO przygotowac kopie zapasowe kart
 # DONE Podlaczyc modol wejsc analogowych
     # TODO podlaczyc czujnik natezenia i napiecia pradu
@@ -26,7 +28,7 @@ import checkDispSpace as diskSpace
 # BUG 20.03.2023 23:16 ['/dev/root', '15G', '5,7G', '7,9G', '42%', '/']
 # TODO posprzatac PumpEfi (wywolujemy funkcje z parametrami wejsciowymi a mozna to zrobic bez parametrow i zaczytywac z globalsow w sanej funkcji)
 # DONE Dodac mechanizm sprawdzania ile jest przypisanych czjenikow przez utzytkowniaka a ile zostalo wyktytych w tablicy i obsluge bledu
-    #TODO poprawic przypisywanie temperatury, od ktorej bedziemy regolowac (problem pojawia sie po wymianie czujnika lub po jego blednym przypisaniu)
+    #DONE poprawic przypisywanie temperatury, od ktorej bedziemy regolowac (problem pojawia sie po wymianie czujnika lub po jego blednym przypisaniu)
 # TODO Sprawdzic mozliwosc wygaszacza ekranu na pi oraz automatycznego odpalania tej strony full size
 # TODO wyczyscic baze danych 
 # DONE zmniejszyc czcionke w navbar
@@ -95,69 +97,61 @@ def result():
             flash('Włączony tryb ręczny', 'primary')
             g.pumpMode = 'manual'
             g.heatObject = 0
-            
- 
-             
-              
-
-
-
-
-    # if request.form.get('0'):
-    #     flash('Wcisniety przycisk odpowiadajcay za pin 0: Sterowanie pompy1 (NC)', 'success')
-    #     if g.tempPins[0] == 1:
-    #         g.tempPins[0] = 0
-    #     else:
-    #         g.tempPins[0] = 1
-    # if request.form.get('1'):
-    #     flash('Wcisniety przycisk odpowiadajcay za pin 1: Sterowanie pompy2 (NC)','success')
-    #     if g.tempPins[1] == 1:
-    #         g.tempPins[1] = 0
-    #     else:
-    #         g.tempPins[1] = 1  
-    # if request.form.get('2'):
-    #     flash('Wcisniety przycisk odpowiadajcay za pin 2: Sterowanie pompy3 (NC)', 'success')
-    #     if g.tempPins[2] == 1:
-    #         g.tempPins[2] = 0
-    #     else:
-    #         g.tempPins[2] = 1  
-    # if request.form.get('3'):
-    #     flash('Wcisniety przycisk odpowiadajcay za pin 3: Zawor trojdrogowy (NO)', 'success')
-    #     if g.tempPins[3] == 1:
-    #         g.tempPins[3] = 0
-    #     else:
-    #         g.tempPins[3] = 1  
-    # if request.form.get('4'):
-    #     flash('Wcisniety przycisk odpowiadajcay za pin 4: Sterownik piec (NC)', 'success')
-    #     if g.tempPins[4] == 1:
-    #         g.tempPins[4] = 0
-    #     else:
-    #         g.tempPins[4] = 1     
-    # if request.form.get('5'):
-    #     flash('Wcisniety przycisk odpowiadajcay za pin 5: Zal/Wyl 24V (NC)', 'success')
-    #     if g.tempPins[5] == 1:
-    #         g.tempPins[5] = 0
-    #     else:
-    #         g.tempPins[5] = 1   
-    # if request.form.get('6'):
-    #     flash('Wcisniety przycisk odpowiadajcay za pin 6: Pompa obiegowa (NC)', 'success')
-    #     if g.tempPins[6] == 1:
-    #         g.tempPins[6] = 0
-    #     else:
-    #         g.tempPins[6] = 1   
-    # if request.form.get('7'):
-    #     flash('Wcisniety przycisk odpowiadajcay za pin 7: Spare', 'success')
-    #     if g.tempPins[7] == 1:
-    #         g.tempPins[7] = 0
-    #     else:
-    #         g.tempPins[7] = 1
-    #     g.pumpMode = 'manual'
-    #     g.heatObject = 0
-    #     flash('Włączony tryb ręczny', 'primary')
-    # if request.form.get('Turn ON Pump') == 'Turn ON Pump':
-    #     flash('Włączony tryb automatyczny', 'success')
-    #     g.pumpMode = 'auto'
-    #     g.heatObject = 2
+    if request.form.get('0'):
+        flash('Wcisniety przycisk odpowiadajcay za pin 0: Sterowanie pompy1 (NC)', 'success')
+        if g.tempPins[0] == 1:
+            g.tempPins[0] = 0
+        else:
+            g.tempPins[0] = 1
+    if request.form.get('1'):
+        flash('Wcisniety przycisk odpowiadajcay za pin 1: Sterowanie pompy2 (NC)','success')
+        if g.tempPins[1] == 1:
+            g.tempPins[1] = 0
+        else:
+            g.tempPins[1] = 1  
+    if request.form.get('2'):
+        flash('Wcisniety przycisk odpowiadajcay za pin 2: Sterowanie pompy3 (NC)', 'success')
+        if g.tempPins[2] == 1:
+            g.tempPins[2] = 0
+        else:
+            g.tempPins[2] = 1  
+    if request.form.get('3'):
+        flash('Wcisniety przycisk odpowiadajcay za pin 3: Zawor trojdrogowy (NO)', 'success')
+        if g.tempPins[3] == 1:
+            g.tempPins[3] = 0
+        else:
+            g.tempPins[3] = 1  
+    if request.form.get('4'):
+        flash('Wcisniety przycisk odpowiadajcay za pin 4: Sterownik piec (NC)', 'success')
+        if g.tempPins[4] == 1:
+            g.tempPins[4] = 0
+        else:
+            g.tempPins[4] = 1     
+    if request.form.get('5'):
+        flash('Wcisniety przycisk odpowiadajcay za pin 5: Zal/Wyl 24V (NC)', 'success')
+        if g.tempPins[5] == 1:
+            g.tempPins[5] = 0
+        else:
+            g.tempPins[5] = 1   
+    if request.form.get('6'):
+        flash('Wcisniety przycisk odpowiadajcay za pin 6: Pompa obiegowa (NC)', 'success')
+        if g.tempPins[6] == 1:
+            g.tempPins[6] = 0
+        else:
+            g.tempPins[6] = 1   
+    if request.form.get('7'):
+        flash('Wcisniety przycisk odpowiadajcay za pin 7: Spare', 'success')
+        if g.tempPins[7] == 1:
+            g.tempPins[7] = 0
+        else:
+            g.tempPins[7] = 1
+        g.pumpMode = 'manual'
+        g.heatObject = 0
+        flash('Włączony tryb ręczny', 'primary')
+    if request.form.get('Turn ON Pump') == 'Turn ON Pump':
+        flash('Włączony tryb automatyczny', 'success')
+        g.pumpMode = 'auto'
+        g.heatObject = 2
         
     #FIXME do skasowania po testach    
     if request.form.get('Switch'):
@@ -185,7 +179,7 @@ def result():
         #pompa pracuje - grzenia podlogi
         pick1 = os.path.join(app.config["UPLOAD_FOLDER"], "PonWU_v3.jpg")
     return render_template("index.html", pumpI=g.pumpI, pumpV=g.pumpV, pumpP=round(g.pumpP, 2), image1=pick1, pump=g.BaseEfiInPercent, sensFoundList=g.readTemp, sensorIndexList = g.sensorIndexList,
-                           discriptionList=g.discriptions, heatObject=g.heatObject, setTempList = g.setTemp, sezon=g.sezon, 
+                           discriptionList=g.discriptions, heatObject=g.heatObject, setTempList = g.setTemp, sezon=g.sezon, ledStrip=g.tempPins, pumpMode = g.pumpMode,
                            pins = g.pins, pinsDisc = g.pinsDisc, pinsLogic = g.pinsLogic, tempPins = g.tempPins, pickedLang=g.pickedLang,lang = g.language)
 
 

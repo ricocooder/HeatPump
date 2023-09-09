@@ -32,11 +32,11 @@
     <form class = "grid" action = "/harmonogram" method = "POST">
 
 
-<h1 class="title">Harmonogram</h1>
+<h1 class="title">{{lang['Schedule'][pickedLang]}}</h1>
 <table clas="harmonogramTable">
   <tr>
     {%for day in dni%}
-    <th>{{day}}</th>
+    <th>{{dni[day][pickedLang]}}</th>
     {% endfor %}
   </tr>
     {% for row in godzina %}

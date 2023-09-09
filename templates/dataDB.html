@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<html lang="en">
 
 <head>
   <!-- Basic Page Needs
@@ -291,9 +290,11 @@
       gridlines: { count: {{ temp_items1 }}, color: '#CCC' },
   format: 'dd-MMM-yyyy HH:mm' },
   vAxis: {
-    title: 'Stopnie [C]'
+    // title: "dupa"
+    title: '{{lang['DataDBDegrees'][pickedLang]}}'
   },
-  title: 'Temperatura zewnętrzna',
+  // title: "dupa",
+  title: '{{lang['DataDBTempOut'][pickedLang]}}',
     curveType: 'function'  //Makes line curved
       };
 
@@ -328,9 +329,9 @@
       gridlines: { count: {{ temp_items2 }}, color: '#CCC' },
   format: 'dd-MMM-yyyy HH:mm' },
   vAxis: {
-    title: 'Stopnie [C]'
+    title: '{{lang['DataDBDegrees'][pickedLang]}}'
   },
-  title: 'Temperatura boiler',
+  title: '{{lang['DataDBBoilTemp'][pickedLang]}}',
     curveType: 'function'  //Makes line curved
       };
 
@@ -365,9 +366,9 @@
       gridlines: { count: {{ temp_items3 }}, color: '#CCC' },
   format: 'dd-MMM-yyyy HH:mm' },
   vAxis: {
-    title: 'Stopnie [C]'
+    title: '{{lang['DataDBDegrees'][pickedLang]}}'
   },
-  title: 'Temperatura zasilania',
+  title: '{{lang['DataDBBPumpTemp'][pickedLang]}}',
     curveType: 'function'  //Makes line curved
       };
 
@@ -402,9 +403,9 @@
       gridlines: { count: {{ curr_items }}, color: '#CCC' },
   format: 'dd-MMM-yyyy HH:mm'        },
   vAxis: {
-    title: 'Ampery[A]'
+    title: '{{lang['DataDBBPumpAmp'][pickedLang]}}'
   },
-  title: 'Current',
+  title: '{{lang['DataDBBPumpCurr'][pickedLang]}}',
     curveType: 'function'  //Makes line curved
       };
 
@@ -461,7 +462,7 @@
 
     var data = new google.visualization.DataTable();
     data.addColumn('datetime', 'Time');
-    data.addColumn('number', 'Napięcie');
+    data.addColumn('number', 'Voltage');
     data.addRows([
       {% for row in volt %}
   [new Date({{ row[0][0: 4] }}, {{ row[0][5: 7] }}-1, {{ row[0][8: 10] }}, {{ row[0][11: 13] }}, {{ row[0][14: 16] }}), {{ '%0.2f'| format(row[2]) }}],
@@ -476,9 +477,9 @@
       gridlines: { count: {{ volt_items }}, color: '#CCC' },
   format: 'dd-MMM-yyyy HH:mm'        },
   vAxis: {
-    title: 'Volt'
+    title: '{{lang['DataDBBPumpVolt'][pickedLang]}}'
   },
-  title: 'Napięcie',
+  title: '{{lang['DataDBBPumpVoltage'][pickedLang]}}',
     curveType: 'function'  //Makes line curved
       };
 

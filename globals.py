@@ -38,6 +38,15 @@ language ={
     "SensConfig3": ["Outside temperature reading?", "Odczyt temparatury zewnetrznej?"],
     "SensConfig4": ["Odczyt temparatury zewnetrznej?", "Odczyt temparatury na wejsciu do pompy (niska temp)?"],
     "SensConfig5": ["Temperature reading at the pump outlet (high temperature)?", "Odczyt temparatury na wyjsciu z pompy (wysoka temp)?"],
+    "DataDBDegrees": ["Degrees [C\xb0]", "Stopnie [C\xb0]"],
+    "DataDBTempOut": ["Outdoor temperature", "Temperatura zewnętrzna"],
+    "DataDBBoilTemp": ["Boiler temperature", "Temperatura bojlera"],
+    "DataDBBPumpTemp": ["Pump output temperature", "Temperatura wyjscie pompy"],
+    "DataDBBPumpAmp": ["Amperes [A]", "Ampery [A]"],
+    "DataDBBPumpCurr": ["Current", "Prąd"],
+    "DataDBBPumpVolt": ["Volt [V]", "Volt [V]"],
+    "DataDBBPumpVoltage": ["Voltage", "Napięcie"],
+
 
 }
 
@@ -74,7 +83,15 @@ discriptions=['T1 - Zew', 'T2 - Bojler', 'T3 - Pompa wyjscie', 'T4 - Pompa powro
 ledStripDiscription=['[1] Sterowanie bitowe wydajnosci pompy', '[2] Sterowanie bitowe wydajnosci pompy', '[3] Sterowanie bitowe wydajnosci pompy', 
                      '[4] Sterowanie bitowe wydajnosci pompy', '[5] Sterowanie bitowe wydajnosci pompy', '[6] Sterowanie bitowe wydajnosci pompy', 
                      '[7] Sterowanie bitowe wydajnosci pompy', '[8] Sterowanie bitowe wydajnosci pompy']
-dni = ['Godzina\Dzień', 'Poniedziałek', 'Wtorek', 'Środa', 'Czwartek', 'Piątek', 'Sobota', 'Niedziela']
+dni = {
+        "1":["Time\Day", "Godzina\Dzień"],
+        "2":["Monday", "Poniedziałek"],
+        "3":["Tuesday", "Wtorek"],
+        "4":["Wednesday", "Środa"],
+        "5":["Thursday", "Czwartek"],
+        "6":["Friday", "Piątek"],
+        "7":["Saturday", "Sobota"],
+        "8":["Sunday", "Niedziela"]}
 godzina = [
     ['0', 'OFF', 'OFF', 'OFF', 'OFF', 'OFF', 'OFF', 'OFF'],
     ['1', 'OFF', 'OFF', 'OFF', 'OFF', 'OFF', 'OFF', 'OFF'],

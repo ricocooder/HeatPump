@@ -14,30 +14,30 @@
 <body>
     <form class = "grid" action = "/temp_sensor_config" method = "POST">
 
-<h1>Strona na ktorej mozna zmienic konfigoracje czujnikow</h1>
-<label>Tu mozesz wybrac nazwe, przypisac numer czujnika - bedzie to bardzo wazne w przypadku wymiany czujnika.</label><br/><br/><br/>
+<h1>{{lang['SensConfig'][pickedLang]}}</h1>
+<label>{{lang['SensConfAssi'][pickedLang]}}</label><br/><br/><br/>
 
-<label>Wykryta liczba czujnikow: {{ sensFoundNumber }}</label><br/><br/>
+<label>{{lang['SensConfDet'][pickedLang]}}: {{ sensFoundNumber }}</label><br/><br/>
 {% for sensor in sensFoundList %}
         {% if sensFoundList[loop.index-1] != 3.14 %}
-          <label>[{{loop.index -1}}] - Wykryto czujnik w tablicy o indeksie {{loop.index -1}}, wskazanie: {{sensor}} <span>&#8451;</span></label> <br/><br/>
+          <label>[{{loop.index -1}}] - {{lang['SensConfigDetNr'][pickedLang]}} {{loop.index -1}}, {{lang['SensConfIndic'][pickedLang]}}: {{sensor}} <span>&#8451;</span></label> <br/><br/>
         {% endif %}
 {% endfor %}
 
-      <label>Umiejscowienie czujnikow na liscie, po wymianie czujnika trzeba zachowac ta kolejnosc: [outside, boiler, pumpOut, pumpIn]</label>  <br><br>
-      <label>Regulacja temparatury w trybie grzania boilera ma odbywac sie wzgledem czujnika? Obecnie: [{{sensorIndexList[1]}}] : {{sensFoundList[sensorIndexList[1]]}}<span>&#8451;</span> </label>  
+      <label>{{lang['SensConfOrder'][pickedLang]}}</label>  <br><br>
+      <label>{{lang['SensConfig1'][pickedLang]}} {{lang['SensConfigCurr'][pickedLang]}}: [{{sensorIndexList[1]}}] : {{sensFoundList[sensorIndexList[1]]}}<span>&#8451;</span> </label>  
       <input type='int' placeholder='new index' step ='0.1' name = 'setValueSensorIndex1'>
       <input type="Submit" value="Save" name='setIndexBtn1'/> <br><br>
-      <label>Regulacja temparatury w trybie grzania podłogówki ma odbywac sie wzgledem czujnika? Obecnie: [{{sensorIndexList[2]}}] : {{sensFoundList[sensorIndexList[2]]}}<span>&#8451;</span> </label>  
+      <label>{{lang['SensConfig2'][pickedLang]}} {{lang['SensConfigCurr'][pickedLang]}}: [{{sensorIndexList[2]}}] : {{sensFoundList[sensorIndexList[2]]}}<span>&#8451;</span> </label>  
       <input type='int' placeholder='new index' step ='0.1' name = 'setValueSensorIndex3'>
       <input type="Submit" value="Save" name='setIndexBtn3'/> <br><br>
-      <label>Odczyt temparatury zewnetrznej? Obecnie: [{{sensorIndexList[0]}}] : {{sensFoundList[sensorIndexList[0]]}}<span>&#8451;</span> </label>  
+      <label>{{lang['SensConfig3'][pickedLang]}} {{lang['SensConfigCurr'][pickedLang]}}: [{{sensorIndexList[0]}}] : {{sensFoundList[sensorIndexList[0]]}}<span>&#8451;</span> </label>  
       <input type='int' placeholder='new index' step ='0.1' name = 'setValueSensorIndex0'>
       <input type="Submit" value="Save" name='setIndexBtn0'/> <br><br>
-      <label>Odczyt temparatury na wejsciu do pompy (niska temp)? Obecnie: [{{sensorIndexList[2]}}] : {{sensFoundList[sensorIndexList[2]]}}<span>&#8451;</span> </label>  
+      <label>{{lang['SensConfig4'][pickedLang]}} {{lang['SensConfigCurr'][pickedLang]}}: [{{sensorIndexList[2]}}] : {{sensFoundList[sensorIndexList[2]]}}<span>&#8451;</span> </label>  
       <input type='int' placeholder='new index' step ='0.1' name = 'setValueSensorIndex2'>
       <input type="Submit" value="Save" name='setIndexBtn2'/> <br><br>
-      <label>Odczyt temparatury na wyjsciu z pompy (wysoka temp)? Obecnie: [{{sensorIndexList[3]}}] : {{sensFoundList[sensorIndexList[3]]}}<span>&#8451;</span> </label>  
+      <label>{{lang['SensConfig5'][pickedLang]}} {{lang['SensConfigCurr'][pickedLang]}}: [{{sensorIndexList[3]}}] : {{sensFoundList[sensorIndexList[3]]}}<span>&#8451;</span> </label>  
       <input type='int' placeholder='new index' step ='0.1' name = 'setValueSensorIndex3_1'>
       <input type="Submit" value="Save" name='setIndexBtn3_1'/> <br><br>
     </form>

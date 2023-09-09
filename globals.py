@@ -21,7 +21,23 @@ language ={
     "PumpFloorHeating": ["Pump - floor heating", "Pompa - ogrzewanie podłogowe"],
     "PumpOn": ["PumpOn", "Pompa pracuje"],
     "FiveOn": ["Five On", "Piec pracuje"],
-
+    "RaspPiSett": ["Raspberry Pi settings", "Ustawienia Raspberry Pi"],
+    "RaspPiDat": ["Memory card data", "Dane karty pamieci"],
+    "RaspPiMem": ["Reading Pi memory", "Odczyt pamieci Pi"],
+    "SensConfig": ["Sensor configuration", "Konfigoracja czujnikow"],
+    "SensConfAssi": ["Here you can choose a name and assign a sensor number - this will be very important in the event of replacing the sensor.", 
+                     "Tu mozesz wybrac nazwe, przypisac numer czujnika - bedzie to bardzo wazne w przypadku wymiany czujnika."],
+    "SensConfDet": ["Number of sensors detected", "Wykryta liczba czujnikow"],
+    "SensConfigDetNr": ["Sensor detected in array at index", "Sensor detected in array at index"],
+    "SensConfIndic": ["actual value", "wartosc aktualna"],
+    "SensConfOrder": ["Location of sensors on the list, after replacing the sensor, keep this order: [outside, boiler, pumpOut, pumpIn]", 
+                      "Umiejscowienie czujnikow na liscie, po wymianie czujnika trzeba zachowac ta kolejnosc: [outside, boiler, pumpOut, pumpIn]"],
+    "SensConfigCurr": ["Currently", "Obecnie"],
+    "SensConfig1": ["Should the temperature be regulated in the boiler heating mode in relation to the sensor?", "Regulacja temperatury w trybie grzania bojlera ma odbyc sie wzgledem czujnika? "],
+    "SensConfig2": ["Should the temperature be adjusted in the underfloor heating mode with respect to the sensor?", "Regulacja temperatury w trybie grzania podłogówki ma odbyc sie wzgledem czujnika?"],
+    "SensConfig3": ["Outside temperature reading?", "Odczyt temparatury zewnetrznej?"],
+    "SensConfig4": ["Odczyt temparatury zewnetrznej?", "Odczyt temparatury na wejsciu do pompy (niska temp)?"],
+    "SensConfig5": ["Temperature reading at the pump outlet (high temperature)?", "Odczyt temparatury na wyjsciu z pompy (wysoka temp)?"],
 
 }
 

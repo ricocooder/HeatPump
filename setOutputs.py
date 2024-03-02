@@ -18,16 +18,10 @@ def setOutputs(heatObject, temp, pumpEfi):
         GPIO.setup(pins[6], GPIO.OUT)#pompa obiegowa (NC)
         GPIO.setup(pins[7], GPIO.OUT)
         accualTime = time.time()
-        if g.pumpMode == 'auto':
-            if pumpEfi < 1 :
-                GPIO.output(pins[6], GPIO.HIGH)
-                g.tempPins[6] = 1
+        if g.pumpMode == 'auto':       
+            g.tempPins[6] = 0 
+            GPIO.output(pins[6], GPIO.LOW)   
 
-            else:
-                GPIO.output(pins[6], GPIO.LOW)
-                g.tempPins[6] = 0          
-            
-            
             if g.heatObject == 1:
                 GPIO.output(pins[3], GPIO.HIGH)
                 g.tempPins[3] = 1
@@ -135,7 +129,9 @@ def setOutputs(heatObject, temp, pumpEfi):
                 g.tempPins[1] = 1
                 GPIO.output(pins[2], GPIO.HIGH)
                 g.tempPins[2] = 1
-        else:
+        else:   
+            g.tempPins[6] = 1 
+            GPIO.output(pins[6], GPIO.HIGH) 
             # for pin in g.tempPins:
             #     if g.tempPins[pin] == 1:
             #         GPIO.output(pins[pin], GPIO.HIGH)

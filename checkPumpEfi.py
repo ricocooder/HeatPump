@@ -21,7 +21,7 @@ def checkPumpEfi(t_set: float, t_accual: float, offset: int, interval: int, heat
             actualHour = actualTime.hour
             dayOfWeek = actualTime.today().weekday()
             print('aktualnie wybrany sezon: ', g.sezon, ' Aktualna godzina: ', actualHour, ' Dzien tygodnia: ', dayOfWeek+1, 'watrosc komurki w tablicy: ', g.godzina[actualHour][dayOfWeek+1])
-            if g.godzina[actualHour][dayOfWeek+1] == "ON":
+            if g.godzina[actualHour][dayOfWeek+1] == "ON" and t_accual < (t_set + float(offset[heatObject])):
                 print('pompa pracuje')
                 g.heatObject = 1
                 # g.pumpEfi=7

@@ -58,8 +58,13 @@ scheduler = APScheduler()
 
 def scheduleTask():
     read_temp()
-    checkPumpEfi(g.setTemp[g.heatObject], g.readTemp[g.sensorIndexList[g.heatObject]], g.pumpTempOfset, g.pumpInterval, g.heatObject)
+    checkPumpEfi(t_set=g.setTemp, 
+                 t_accual=g.readTemp[g.sensorIndexList[g.heatObject]], 
+                 offset=g.pumpTempOfset, 
+                 interval=g.pumpInterval, 
+                 heatObject=g.heatObject)
     print("This test runs every 4 seconds")
+    
 
 def scheduleTask1s():
     g.BaseEfiInPercent = setOutputs(g.heatObject, g.readTemp[g.heatObject], g.pumpEfi)

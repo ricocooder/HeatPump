@@ -2,7 +2,7 @@ import time
 import datetime as d
 import globals as g
 
-def checkPumpEfi(t_set: float, t_accual: float, offset: int, interval: int, heatObject: int):
+def checkPumpEfi(*, t_set: list, t_accual: float, offset: int, interval: int, heatObject: int):
     print(t_set, t_accual, offset[heatObject], interval[heatObject])
     accualTime = time.time()
     if g.pumpMode == 'auto':
@@ -11,9 +11,9 @@ def checkPumpEfi(t_set: float, t_accual: float, offset: int, interval: int, heat
             if g.heatObject == 1:
                 g.pumpEfi = 7
             else:
-                if t_accual > (t_set + float(offset[heatObject])) and g.pumpEfi > 0:
+                if t_accual > (t_set[heatObject] + float(offset[heatObject])) and g.pumpEfi > 0:
                     g.pumpEfi-=1
-                elif t_accual < (t_set - float(offset[heatObject])) and g.pumpEfi < 7:
+                elif t_accual < (t_set[heatObject] - float(offset[heatObject])) and g.pumpEfi < 7:
                     g.pumpEfi+=1
         #logika pracy pompy latem
         if g.sezon == 'Lato':

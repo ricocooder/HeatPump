@@ -59,7 +59,8 @@ scheduler = APScheduler()
 def scheduleTask():
     read_temp()
     checkPumpEfi(t_set=g.setTemp, 
-                 t_accual=g.readTemp[g.sensorIndexList[g.heatObject]], 
+                 t_accual=g.readTemp, 
+                 sensorIndexList=g.sensorIndexList,
                  offset=g.pumpTempOfset, 
                  interval=g.pumpInterval, 
                  heatObject=g.heatObject)

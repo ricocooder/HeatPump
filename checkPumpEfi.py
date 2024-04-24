@@ -2,8 +2,8 @@ import time
 import datetime as d
 import globals as g
 
-def checkPumpEfi(*, t_set: list, t_accual: float, offset: int, interval: int, heatObject: int):
-    print(t_set, t_accual, offset[heatObject], interval[heatObject])
+def checkPumpEfi(*, t_set: list, t_accual: list, sensorIndexList: list,  offset: int, interval: int, heatObject: int):
+    print(t_set, t_accual[sensorIndexList[heatObject]], offset[heatObject], interval[heatObject])
     accualTime = time.time()
     if g.pumpMode == 'auto':
         if accualTime >g.acTimePLusInterwal + interval[heatObject]:
@@ -11,9 +11,9 @@ def checkPumpEfi(*, t_set: list, t_accual: float, offset: int, interval: int, he
             if g.heatObject == 1:
                 g.pumpEfi = 7
             else:
-                if t_accual > (t_set[heatObject] + float(offset[heatObject])) and g.pumpEfi > 0:
+                if t_accual[sensorIndexList[heatObject]] > (t_set[heatObject] + float(offset[heatObject])) and g.pumpEfi > 0:
                     g.pumpEfi-=1
-                elif t_accual < (t_set[heatObject] - float(offset[heatObject])) and g.pumpEfi < 7:
+                elif t_accual[sensorIndexList[heatObject]] < (t_set[heatObject] - float(offset[heatObject])) and g.pumpEfi < 7:
                     g.pumpEfi+=1
         #logika pracy pompy latem
         if g.sezon == 'Lato':
@@ -21,7 +21,7 @@ def checkPumpEfi(*, t_set: list, t_accual: float, offset: int, interval: int, he
             actualHour = actualTime.hour
             dayOfWeek = actualTime.today().weekday()
             print('aktualnie wybrany sezon: ', g.sezon, ' Aktualna godzina: ', actualHour, ' Dzien tygodnia: ', dayOfWeek+1, 'watrosc komurki w tablicy: ', g.godzina[actualHour][dayOfWeek+1])
-            if g.godzina[actualHour][dayOfWeek+1] == "ON":
+            if (g.godzina[actualHour][dayOfWeek+1] == "ON") and (float(t_set[1]) > t_accual[sensorIndexList[1]]):
                 print('pompa pracuje')
                 g.heatObject = 1
                 # g.pumpEfi=7

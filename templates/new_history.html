@@ -1,0 +1,209 @@
+{% extends 'new_base.html' %}
+
+{% block content %}
+<div class="row mb-3 align-items-end g-2">
+  <div class="col-auto">
+    <label class="form-label mb-1">Od</label>
+    <input type="datetime-local" id="from-dt" class="form-control form-control-sm"
+           value="{{ from_date | replace(' ', 'T') }}">
+  </div>
+  <div class="col-auto">
+    <label class="form-label mb-1">Do</label>
+    <input type="datetime-local" id="to-dt" class="form-control form-control-sm"
+           value="{{ to_date | replace(' ', 'T') }}">
+  </div>
+  <div class="col-auto">
+    <button class="btn btn-primary btn-sm" onclick="loadCharts()">Załaduj</button>
+  </div>
+  <div class="col-auto d-flex gap-1 flex-wrap">
+    <button class="btn btn-outline-secondary btn-sm" onclick="setRange(1)">1h</button>
+    <button class="btn btn-outline-secondary btn-sm" onclick="setRange(6)">6h</button>
+    <button class="btn btn-outline-secondary btn-sm" onclick="setRange(24)">24h</button>
+    <button class="btn btn-outline-secondary btn-sm" onclick="setRange(72)">3d</button>
+    <button class="btn btn-outline-secondary btn-sm" onclick="setRange(168)">7d</button>
+  </div>
+  <div class="col-auto ms-auto">
+    <span id="chart-status" class="text-muted small"></span>
+  </div>
+</div>
+
+<!-- Chart 1: All temperatures -->
+<div class="card shadow-sm mb-3">
+  <div class="card-header d-flex justify-content-between">
+    <strong>Temperatury</strong>
+    <span class="text-muted small" id="temp-count"></span>
+  </div>
+  <div class="card-body p-1">
+    <div id="chart-temps" style="height:320px"></div>
+  </div>
+</div>
+
+<!-- Chart 2: Current + Voltage (dual axis) -->
+<div class="card shadow-sm mb-3">
+  <div class="card-header"><strong>Prąd &amp; Napięcie</strong></div>
+  <div class="card-body p-1">
+    <div id="chart-power" style="height:260px"></div>
+  </div>
+</div>
+
+<!-- Chart 3: Pump efficiency -->
+<div class="card shadow-sm mb-3">
+  <div class="card-header"><strong>Wydajność pompy [%]</strong></div>
+  <div class="card-body p-1">
+    <div id="chart-efi" style="height:220px"></div>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+<!-- Plotly — served locally from static if offline, CDN as fallback -->
+<script src="https://cdn.plot.ly/plotly-2.27.0.min.js"
+        onerror="loadPlotlyLocal()"></script>
+<script>
+function loadPlotlyLocal(){
+  var s=document.createElement('script');
+  s.src='/static/plotly.min.js';
+  document.head.appendChild(s);
+}
+</script>
+<script>
+const LANG_DATA = {{ lang | tojson }};
+let pickedLang  = {{ pickedLang }};
+
+const LABELS = {
+  temp1: ["Outdoor temperature", "Temperatura zewnętrzna"],
+  temp2: ["Boiler temperature",  "Temperatura bojlera"],
+  temp3: ["Pump output",         "Wyjście pompy"],
+  curr:  ["Current [A]",         "Prąd [A]"],
+  volt:  ["Voltage [V]",         "Napięcie [V]"],
+  efi:   ["Efficiency [%]",      "Wydajność [%]"],
+};
+
+const COLORS = {
+  temp1: "#1f77b4",
+  temp2: "#d62728",
+  temp3: "#ff7f0e",
+  curr:  "#2ca02c",
+  volt:  "#9467bd",
+  efi:   "#8c564b",
+};
+
+const PLOTLY_LAYOUT_BASE = {
+  margin: { t: 10, r: 50, b: 60, l: 55 },
+  paper_bgcolor: "transparent",
+  plot_bgcolor:  "#f8f9fa",
+  xaxis: {
+    type: "date",
+    tickformat: "%d-%m %H:%M",
+    gridcolor: "#dee2e6",
+  },
+  legend: { orientation: "h", y: -0.2 },
+  hovermode: "x unified",
+};
+
+const PLOTLY_CONFIG = {
+  responsive: true,
+  displaylogo: false,
+  modeBarButtonsToRemove: ["lasso2d", "select2d"],
+};
+
+function fmtDT(el) {
+  return el.value.replace("T", " ");
+}
+
+function setRange(hours) {
+  const now  = new Date();
+  const from = new Date(now - hours * 3600000);
+  document.getElementById("to-dt").value   = toLocalISO(now);
+  document.getElementById("from-dt").value = toLocalISO(from);
+  loadCharts();
+}
+
+function toLocalISO(d) {
+  const pad = n => String(n).padStart(2, "0");
+  return d.getFullYear() + "-" + pad(d.getMonth()+1) + "-" + pad(d.getDate()) +
+         "T" + pad(d.getHours()) + ":" + pad(d.getMinutes());
+}
+
+async function loadCharts() {
+  const from = fmtDT(document.getElementById("from-dt"));
+  const to   = fmtDT(document.getElementById("to-dt"));
+  const status = document.getElementById("chart-status");
+  status.textContent = "Ładowanie…";
+
+  try {
+    const res = await fetch(
+      `/api/data?from_dt=${encodeURIComponent(from)}&to_dt=${encodeURIComponent(to)}`
+    );
+    const d = await res.json();
+    pickedLang = d.lang;
+
+    const tempCount = d.temp1.length + d.temp2.length + d.temp3.length;
+    document.getElementById("temp-count").textContent = tempCount + " próbek";
+    status.textContent = "Załadowano " + new Date().toLocaleTimeString();
+
+    // --- Chart 1: all temperatures ---
+    const tempTraces = ["temp1","temp2","temp3"].map(key => ({
+      x: d[key].map(r => r.ts),
+      y: d[key].map(r => r.v),
+      mode:  "lines",
+      type:  "scatter",
+      name:  LABELS[key][pickedLang],
+      line:  { color: COLORS[key], width: 2 },
+    }));
+    Plotly.react("chart-temps", tempTraces,
+      Object.assign({}, PLOTLY_LAYOUT_BASE, {
+        yaxis: { title: "°C", gridcolor: "#dee2e6" },
+      }), PLOTLY_CONFIG);
+
+    // --- Chart 2: current + voltage (dual axis) ---
+    const currTrace = {
+      x: d.curr.map(r => r.ts),
+      y: d.curr.map(r => r.v),
+      mode: "lines", type: "scatter",
+      name: LABELS.curr[pickedLang],
+      line: { color: COLORS.curr, width: 2 },
+      yaxis: "y",
+    };
+    const voltTrace = {
+      x: d.volt.map(r => r.ts),
+      y: d.volt.map(r => r.v),
+      mode: "lines", type: "scatter",
+      name: LABELS.volt[pickedLang],
+      line: { color: COLORS.volt, width: 2, dash: "dot" },
+      yaxis: "y2",
+    };
+    Plotly.react("chart-power", [currTrace, voltTrace],
+      Object.assign({}, PLOTLY_LAYOUT_BASE, {
+        yaxis:  { title: "A", gridcolor: "#dee2e6" },
+        yaxis2: { title: "V", overlaying: "y", side: "right", showgrid: false },
+      }), PLOTLY_CONFIG);
+
+    // --- Chart 3: efficiency ---
+    const efiTrace = {
+      x: d.efi.map(r => r.ts),
+      y: d.efi.map(r => r.v),
+      mode: "lines",
+      type: "scatter",
+      name: LABELS.efi[pickedLang],
+      fill: "tozeroy",
+      line: { color: COLORS.efi, width: 2 },
+    };
+    Plotly.react("chart-efi", [efiTrace],
+      Object.assign({}, PLOTLY_LAYOUT_BASE, {
+        yaxis: { title: "%", range: [0, 105], gridcolor: "#dee2e6" },
+      }), PLOTLY_CONFIG);
+
+  } catch (err) {
+    status.textContent = "Błąd: " + err.message;
+    console.error(err);
+  }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  // Load last 24h on page open
+  setRange(24);
+});
+</script>
+{% endblock %}

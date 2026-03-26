@@ -1,0 +1,35 @@
+<html>
+<meta http-equiv="refresh" content="5">
+<head>
+    <style>
+        body {
+            background-repeat:no-repeat; # wylaczenia powtarzanie tzn jak zdjecie bedzie zamale to nie bedzie ustawiana kolo siebie
+            background-attached:fixed;
+            background-size:cover;
+            background-image: url({{url_for('static',filename='3.jpg')}});
+            background-image: url({{url_for('static',filename='{{image1}}')}});
+             }
+    </style>
+</head>
+<body>
+    <form class = "grid" action = "/result" method = "POST">
+
+        <label >Tamperatura czujnika {{to1}} : {{t1}} <span>&#8451;</span> </label><br><br>
+        <label >Tamperatura czujnika {{to2}} : {{t2}} <span>&#8451;</span> </label><br><br>
+        <label >Tamperatura czujnika {{to3}} : {{t3}} <span>&#8451;</span> </label><br><br>
+        <label >Tamperatura czujnika {{to4}} : {{t4}} <span>&#8451;</span> </label><br><br>
+        <label >Tamperatura czujnika {{to5}} : {{t5}} <span>&#8451;</span> </label><br><br>
+        <label >Tamperatura czujnika {{to6}} : {{t6}} <span>&#8451;</span> </label><br><br><br><br><br><br>
+        <label >Tamperatura zadana boiler : {{tz1}}</label><span>&#8451;</span> </label><input type="Submit" class = "file_submit"><br><br>
+        
+        {%if tzo2 and tz2%}
+        <label >Tamperatura zadana {{tzo2}} : {{tz2}}</label><span>&#8451;</span> </label><input type="Submit" class = "file_submit"><br><br><br><br><br><br><br><br>
+        {%endif%}
+        <label > Wtopien wysterowania pompy --> {{pump}}</label>
+        
+#         <center><img src="{{image1}}"></center>
+    </form>
+
+
+</body>
+</html>
